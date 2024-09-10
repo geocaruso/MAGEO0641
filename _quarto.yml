@@ -2,13 +2,13 @@ project:
   type: book
 
 book:
-  title: "Introduction to geographical data analysis with R"
+  title: "Introduction to data analysis for geographers with R"
   subtitle: "MAGEO0641 (2024-2025 vintage)"
   author: "Geoffrey Caruso and Léandre Fabri"
   date: "9/10/2024"
   cover-image: cover.png
   favicon: cover.png
-  site-url: https://quadtrees.lu/
+  site-url: https://quadtrees.lu/teaching/MAGEO0641
   repo-url: https://github.com/geocaruso/MAGEO0641
   chapters:
     - index.qmd

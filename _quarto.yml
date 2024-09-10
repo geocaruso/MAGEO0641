@@ -1,0 +1,46 @@
+project:
+  type: book
+
+book:
+  title: "Introduction to geographical data analysis with R"
+  subtitle: "MAGEO0641 (2024-2025 vintage)"
+  author: "Geoffrey Caruso and Léandre Fabri"
+  date: "9/10/2024"
+  cover-image: cover.png
+  favicon: cover.png
+  site-url: https://quadtrees.lu/
+  repo-url: https://github.com/geocaruso/MAGEO0641
+  chapters:
+    - index.qmd
+    - timetable.qmd
+    - learning_outcomes.qmd
+    - part: "Spatial Data Analysis"
+      chapters: 
+      - space_axiom.qmd
+      - space_issues.qmd
+    - part: "R basics and visualisation"
+      chapters:
+      - R_basics.qmd
+      - ggplot.qmd
+    - part: "Univariate analysis and distributions"
+      chapters:
+      - univariate.qmd
+      - distributions.qmd
+    - part: "Bivariate analysis and regression"
+      chapters:
+      - correlation.qmd
+      - regression.qmd
+    - part: "Bibliography"
+      chapters:
+      - references.qmd
+    
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

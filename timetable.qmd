@@ -1,0 +1,35 @@
+# Timetable {.unnumbered}
+
+The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.
+
+We have attempted to balance theoretical explanations and R practice in each session. This syllabus material is divided up into pieces of 45 minutes (each corresponding to an Rmd/html file.)
+
+The 2024-2025 schedule is set as follows. However, please refer to your *student guichet* and the *Moodle* platform for potential changes during the semester.
+
+-   Scheduled: 16 Sep 2024 at 14:00 to 18:00, CEST
+
+-   Scheduled: 23 Sep 2024 at 14:00 to 18:00, CEST
+
+-   *No session on 30 Sep 2024*
+
+-   Scheduled: 7 Oct 2024 at 14:00 to 18:00, CEST
+
+-   Scheduled: 14 Oct 2024 at 14:00 to 18:00, CEST
+
+-   Scheduled: 21 Oct 2024 at 14:00 to 18:00, CEST
+
+-   Scheduled: 28 Oct 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 4 Nov 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 11 Nov 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 18 Nov 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 25 Nov 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 2 Dec 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 9 Dec 2024 at 14:00 to 18:00, CET
+
+-   Scheduled: 16 Dec 2024 at 14:00 to 18:00, CET

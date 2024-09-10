@@ -1,0 +1,120 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to geographical data analysis with R",
+    "section": "",
+    "text": "Preface\nThis is the syllabus for the course Introduction to Data Analysis for Geographers with R (MAGEO0641) at the Department of Geography and Spatial Planning at the University of Luxembourg. It has been produced as a Quarto book by Geoffrey Caruso and Léandre Fabri with the aim of aggregating and homogenizing different material accumulated over the past few years.\nAs of September 2024, the assemblage is still a work in progress. We kindly ask you to refer to your notes during class to prepare for the examination and assignments.\nThe general structure and base material shown here have been organized by Geoffrey Caruso, who originally inherited teaching material from Dominique Peeters. We are grateful to the previous teaching assistants, Mirjam Schindler and Marlène Boura, as well as to David Dabin and Jonathan Jones, for their contributions.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "timetable.html",
+    "href": "timetable.html",
+    "title": "Timetable",
+    "section": "",
+    "text": "The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.\nWe have attempted to balance theoretical explanations and R practice in each session. This syllabus material is divided up into pieces of 45 minutes (each corresponding to an Rmd/html file.)\nThe 2024-2025 schedule is set as follows. However, please refer to your student guichet and the Moodle platform for potential changes during the semester.\n\nScheduled: 16 Sep 2024 at 14:00 to 18:00, CEST\nScheduled: 23 Sep 2024 at 14:00 to 18:00, CEST\nNo session on 30 Sep 2024\nScheduled: 7 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 14 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 21 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 28 Oct 2024 at 14:00 to 18:00, CET\nScheduled: 4 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 11 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 18 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 25 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 2 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 9 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 16 Dec 2024 at 14:00 to 18:00, CET",
+    "crumbs": [
+      "Timetable"
+    ]
+  },
+  {
+    "objectID": "learning_outcomes.html",
+    "href": "learning_outcomes.html",
+    "title": "Learning outcomes",
+    "section": "",
+    "text": "The course aims at",
+    "crumbs": [
+      "Learning outcomes"
+    ]
+  },
+  {
+    "objectID": "space_axiom.html",
+    "href": "space_axiom.html",
+    "title": "Title",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "Spatial Data Analysis",
+      "Title"
+    ]
+  },
+  {
+    "objectID": "space_issues.html",
+    "href": "space_issues.html",
+    "title": "Title",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "Spatial Data Analysis",
+      "Title"
+    ]
+  },
+  {
+    "objectID": "R_basics.html",
+    "href": "R_basics.html",
+    "title": "Title",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "R basics and visualisation",
+      "Title"
+    ]
+  },
+  {
+    "objectID": "ggplot.html",
+    "href": "ggplot.html",
+    "title": "Graphics ggplot way",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "R basics and visualisation",
+      "Graphics ggplot way"
+    ]
+  },
+  {
+    "objectID": "univariate.html",
+    "href": "univariate.html",
+    "title": "Title",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "Univariate analysis and distributions",
+      "Title"
+    ]
+  },
+  {
+    "objectID": "distributions.html",
+    "href": "distributions.html",
+    "title": "Distributions",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "Univariate analysis and distributions",
+      "Distributions"
+    ]
+  },
+  {
+    "objectID": "correlation.html",
+    "href": "correlation.html",
+    "title": "Title",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "Bivariate analysis and regression",
+      "Title"
+    ]
+  },
+  {
+    "objectID": "regression.html",
+    "href": "regression.html",
+    "title": "Title",
+    "section": "",
+    "text": "Content",
+    "crumbs": [
+      "Bivariate analysis and regression",
+      "Title"
+    ]
+  }
+]

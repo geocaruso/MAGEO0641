@@ -1,4 +1,4 @@
-# Preface {.unnumbered}
+# Preface {#sec-preface .unnumbered}
 
 This is the syllabus for the course *Introduction to Data Analysis for Geographers with R* (MAGEO0641) at the Department of Geography and Spatial Planning at the University of Luxembourg. It has been produced as a Quarto book by Geoffrey Caruso and Léandre Fabri with the aim of aggregating and homogenizing different material accumulated over the past few years.
 

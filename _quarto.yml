@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Introduction to data analysis for geographers with R"
+  title: "Introduction to data analysis and R for geographers"
   subtitle: "MAGEO0641 (2024-2025 vintage)"
   author: "Geoffrey Caruso and Léandre Fabri"
   date: "9/10/2024"
@@ -13,11 +13,12 @@ book:
   chapters:
     - index.qmd
     - timetable.qmd
-    - learning_outcomes.qmd
-    - part: "Spatial Data Analysis"
-      chapters: 
-      - space_axiom.qmd
+    - learning.qmd
+    - part: intro.qmd
+      chapters:
+      - scope.qmd
       - space_issues.qmd
+      - space_axiom.qmd
     - part: "R basics and visualisation"
       chapters:
       - R_basics.qmd
@@ -44,3 +45,4 @@ format:
 
 editor: visual
 
+number-depth: 2

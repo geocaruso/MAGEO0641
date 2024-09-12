@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>References – Introduction to geographical data analysis with R</title>
+<title>References – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Introduction to geographical data analysis with R</a> 
+      <a href="./">Introduction to data analysis and R for geographers</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/geocaruso/MAGEO0641" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -142,14 +142,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./learning_outcomes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Learning outcomes</span></a>
+  <a href="./learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning outcomes and evaluation</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Spatial Data Analysis</span></a>
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -157,14 +157,20 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space_axiom.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+  <a href="./scope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./space_issues.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: definition and challenges</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space_axiom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geographical space</span></span></a>
   </div>
 </li>
       </ul>
@@ -181,13 +187,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./R_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text">R basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Graphics ggplot way</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics ggplot way</span></span></a>
   </div>
 </li>
       </ul>
@@ -204,13 +210,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./univariate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributions</span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
   </div>
 </li>
       </ul>
@@ -227,13 +233,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Covariance and correlation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text">Regression</span></a>
   </div>
 </li>
       </ul>
@@ -285,8 +291,13 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" role="list" style="display: none">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-beguin_axiomatic_1979" class="csl-entry" role="listitem">
+Beguin, Hubert, and Jacques-François Thisse. 1979. <span>“An
+<span>Axiomatic</span> <span>Approach</span> to
+<span>Geographical</span> <span>Space</span>.”</span> <em>Geographical
+Analysis</em> 11 (4): 325–41. <a href="https://doi.org/10.1111/j.1538-4632.1979.tb00700.x">https://doi.org/10.1111/j.1538-4632.1979.tb00700.x</a>.
+</div>
 </div>
 
 
@@ -714,8 +725,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./regression.html" class="pagination-link" aria-label="Title">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Title</span>
+      <a href="./regression.html" class="pagination-link" aria-label="Regression">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Regression</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

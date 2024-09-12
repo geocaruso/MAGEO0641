@@ -1,9 +1,5 @@
-# Introduction
+# Introduction {#sec-introduction}
 
-This is a book created from markdown and executable code.
+@sec-statistical-data-analysis-for-geographers
 
-See @knuth84 for additional discussion of literate programming.
-
-```{r}
-1 + 1
-```
+@sec-geographical-space

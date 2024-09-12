@@ -1,0 +1,34 @@
+# Learning outcomes and evaluation {#sec-learning-outcomes-and-evaluation .unnumbered}
+
+> *A journey from elementary statistics to spatial autocorrelation with a standard regression detour!*
+
+## Objectives:
+
+-   Overview of key concepts and formalisation in data analysis in geographical contexts
+-   Understanding and describing the statistical and spatial distribution of data (univariate statistical analysis)
+-   Understanding how a geographical pattern relate or can be understood from others (bivariate and regression analysis)
+-   Raising awareness as to the characteristics and difficulties of statistical and econometric (regression) analysis with geographical data.
+-   Mastering essential R software skills for tabular data management, uni and bi-variate analysis and regression, and producing graphics
+
+## Expected outcomes
+
+On completion, each student should be able to
+
+-   Describe the key concepts in spatial statistical analysis and the specificities of geographical space and spatial data
+-   Demonstrate a good command of R to handle statistical datasets and perform univariate, bivariate and multiple regressions analyses with good diagnostics
+-   Explain and use common univariate and bivariate statistics
+-   Explain and use exploratory methods
+-   Explain and apply standard regression methods and diagnostics, and discuss limits and problems when applied to geographical data
+-   Explain the principles and methods used to identify local effects and spatial autocorrelation
+-   Read and discuss detailed results of an empirical research article that deal with data analysis including a multivariate regression in a spatial or non-spatial context
+-   Explain and use mixed methods (Q-Methodology: hybrid approach between quantitative and qualitative methods)
+
+## Evaluation
+
+-   Individual
+
+-   20% Continuous assessment: small tests in class and weekly exercises:
+
+-   40% R exam (3h) in GIS room, perform R analysis, answer a questionnaire and provide script
+
+-   40% Oral exam (30min): presenting a paper and answering questions about its details and the course

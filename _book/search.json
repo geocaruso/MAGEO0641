@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Introduction to geographical data analysis with R",
+    "title": "Introduction to data analysis and R for geographers",
     "section": "",
     "text": "Preface\nThis is the syllabus for the course Introduction to Data Analysis for Geographers with R (MAGEO0641) at the Department of Geography and Spatial Planning at the University of Luxembourg. It has been produced as a Quarto book by Geoffrey Caruso and Léandre Fabri with the aim of aggregating and homogenizing different material accumulated over the past few years.\nAs of September 2024, the assemblage is still a work in progress. We kindly ask you to refer to your notes during class to prepare for the examination and assignments.\nThe general structure and base material shown here have been organized by Geoffrey Caruso, who originally inherited teaching material from Dominique Peeters. We are grateful to the previous teaching assistants, Mirjam Schindler and Marlène Boura, as well as to David Dabin and Jonathan Jones, for their contributions.",
     "crumbs": [
@@ -14,107 +14,257 @@
     "href": "timetable.html",
     "title": "Timetable",
     "section": "",
-    "text": "The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.\nWe have attempted to balance theoretical explanations and R practice in each session. This syllabus material is divided up into pieces of 45 minutes (each corresponding to an Rmd/html file.)\nThe 2024-2025 schedule is set as follows. However, please refer to your student guichet and the Moodle platform for potential changes during the semester.\n\nScheduled: 16 Sep 2024 at 14:00 to 18:00, CEST\nScheduled: 23 Sep 2024 at 14:00 to 18:00, CEST\nNo session on 30 Sep 2024\nScheduled: 7 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 14 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 21 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 28 Oct 2024 at 14:00 to 18:00, CET\nScheduled: 4 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 11 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 18 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 25 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 2 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 9 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 16 Dec 2024 at 14:00 to 18:00, CET",
+    "text": "The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.\nWe have attempted to balance theoretical explanations and R practice in each session.\nThe 2024-2025 schedule is set as follows. However, please refer to your student guichet and the Moodle platform for potential changes during the semester.\n\nScheduled: 16 Sep 2024 at 14:00 to 18:00, CEST\nScheduled: 23 Sep 2024 at 14:00 to 18:00, CEST\nNo session on 30 Sep 2024\nScheduled: 7 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 14 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 21 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 28 Oct 2024 at 14:00 to 18:00, CET\nScheduled: 4 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 11 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 18 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 25 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 2 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 9 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 16 Dec 2024 at 14:00 to 18:00, CET",
     "crumbs": [
       "Timetable"
     ]
   },
   {
-    "objectID": "learning_outcomes.html",
-    "href": "learning_outcomes.html",
-    "title": "Learning outcomes",
+    "objectID": "learning.html",
+    "href": "learning.html",
+    "title": "Learning outcomes and evaluation",
     "section": "",
-    "text": "The course aims at",
+    "text": "Objectives:",
     "crumbs": [
-      "Learning outcomes"
+      "Learning outcomes and evaluation"
     ]
   },
   {
-    "objectID": "space_axiom.html",
-    "href": "space_axiom.html",
-    "title": "Title",
+    "objectID": "learning.html#objectives",
+    "href": "learning.html#objectives",
+    "title": "Learning outcomes and evaluation",
     "section": "",
-    "text": "Content",
+    "text": "Overview of key concepts and formalisation in data analysis in geographical contexts\nUnderstanding and describing the statistical and spatial distribution of data (univariate statistical analysis)\nUnderstanding how a geographical pattern relate or can be understood from others (bivariate and regression analysis)\nRaising awareness as to the characteristics and difficulties of statistical and econometric (regression) analysis with geographical data.\nMastering essential R software skills for tabular data management, uni and bi-variate analysis and regression, and producing graphics",
     "crumbs": [
-      "Spatial Data Analysis",
-      "Title"
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "learning.html#expected-outcomes",
+    "href": "learning.html#expected-outcomes",
+    "title": "Learning outcomes and evaluation",
+    "section": "Expected outcomes",
+    "text": "Expected outcomes\nOn completion, each student should be able to\n\nDescribe the key concepts in spatial statistical analysis and the specificities of geographical space and spatial data\nDemonstrate a good command of R to handle statistical datasets and perform univariate, bivariate and multiple regressions analyses with good diagnostics\nExplain and use common univariate and bivariate statistics\nExplain and use exploratory methods\nExplain and apply standard regression methods and diagnostics, and discuss limits and problems when applied to geographical data\nExplain the principles and methods used to identify local effects and spatial autocorrelation\nRead and discuss detailed results of an empirical research article that deal with data analysis including a multivariate regression in a spatial or non-spatial context\nExplain and use mixed methods (Q-Methodology: hybrid approach between quantitative and qualitative methods)",
+    "crumbs": [
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "learning.html#evaluation",
+    "href": "learning.html#evaluation",
+    "title": "Learning outcomes and evaluation",
+    "section": "Evaluation",
+    "text": "Evaluation\n\nIndividual\n20% Continuous assessment: small tests in class and weekly exercises:\n40% R exam (3h) in GIS room, perform R analysis, answer a questionnaire and provide script\n40% Oral exam (30min): presenting a paper and answering questions about its details and the course",
+    "crumbs": [
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "scope.html",
+    "href": "scope.html",
+    "title": "1  Statistical data analysis for geographers",
+    "section": "",
+    "text": "1.1 Scope\nThis course is an introduction to standard statistical techniques that geographers often encounter. Being at the crossroads of different fields, it is necessary for geographers to have a basic set of tools with which to interact with other experts and modelers who, although they may use different wording and have their own technical habits, use a common set of concepts and tools to analyze data and test their hypotheses.\nIn their own work and in their interactions with others, it is also important for geographers to keep in mind that the data they use are quite specific because they are about located objects or subjects, about places and their interactions. Most of the time, the data they use is georeferenced in some way (accurately or not). This inherently geographic aspect brings with it a number of challenges. In this course, we will highlight these challenges when performing standard data analysis. However, we won’t solve any of these geographic problems, and we won’t even explicitly use geographic features, i.e., no mapping, no use of georeferencing as such. Our goal is to equip students with standard statistical methods also used in related fields, with some critical thinking about their geographical nature or underlying spatial processes. In a nutshell, this is a journey from elementary statistics to spatial autocorrelation with a standard regression detour.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistical data analysis for geographers</span>"
+    ]
+  },
+  {
+    "objectID": "scope.html#sec-transparent-geographical-analysis-empowered-with-r",
+    "href": "scope.html#sec-transparent-geographical-analysis-empowered-with-r",
+    "title": "1  Statistical data analysis for geographers",
+    "section": "1.2 Transparent geographical analysis empowered with R",
+    "text": "1.2 Transparent geographical analysis empowered with R\nThe course is a blend of theory and practice, which we believe enhances intuition and understanding. Direct practice also helps - especially for human geographers with little training in quantitative methods - to demystify statistical concepts and provide confidence after repeated applications and interpretations.\nSoftware for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.\nMost of our students have had some sort of theoretical statistics course so far in their studies, so they have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing. We chose R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the use of scripts and command lines, is absolutely necessary to bring robustness and trust.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistical data analysis for geographers</span>"
     ]
   },
   {
     "objectID": "space_issues.html",
     "href": "space_issues.html",
-    "title": "Title",
+    "title": "2  Spatial data analysis: definition and challenges",
     "section": "",
-    "text": "Content",
+    "text": "2.1 Interdisciplinarity and perspective\nData analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about spatial analysis. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.\nWithin geography, we understand the term spatial analysis to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to applied statistical approaches, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, this course is a spatial analysis course.\nHowever, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process, not just the consideration of geographic elements. See for example the (10.1007/978-3-642-03647-7?) handbook for discussion and examples.",
     "crumbs": [
-      "Spatial Data Analysis",
-      "Title"
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#equivalence-and-independence",
+    "href": "space_issues.html#equivalence-and-independence",
+    "title": "2  Spatial data analysis: definition and challenges",
+    "section": "2.3 Equivalence and Independence",
+    "text": "2.3 Equivalence and Independence\nStatistical analysis is based on two key principles, or invariants:\n\nAll observations must be statistically equivalent: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.\nAll observations must be independent from each other: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.\n\nHowever, both of these principles are challenged when applied in a spatial context. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations.\nThese challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.\n(Based on discussions in Jayet, p. 2-13)",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#interdisciplinary-nature-of-spatial-analysis",
+    "href": "space_issues.html#interdisciplinary-nature-of-spatial-analysis",
+    "title": "2  Spatial statistical data analysis: definition and challenges",
+    "section": "2.2 Interdisciplinary Nature of Spatial Analysis",
+    "text": "2.2 Interdisciplinary Nature of Spatial Analysis\nThe concept of spatial analysis is relevant across many scientific fields, each of which may define and approach it differently. These variations reflect distinct ways in which disciplines link spatial aspects with their specific models and methodologies.\nIn this course, the emphasis is placed on the socio-economic perspective, exploring spatial analysis through a statistical lens. This approach allows us to examine how spatial relationships influence socio-economic patterns and behaviors.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial statistical data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#quantitative-geography-viewpoint",
+    "href": "space_issues.html#quantitative-geography-viewpoint",
+    "title": "2  Spatial data analysis: definition and challenges",
+    "section": "2.2 Quantitative Geography Viewpoint",
+    "text": "2.2 Quantitative Geography Viewpoint\n(adapted from Pumain, Hypergeo)\nSpatial analysis in quantitative geography focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#spatial-economic-viewpoint-as-understood-by-a-european-quantitative-geographer",
+    "href": "space_issues.html#spatial-economic-viewpoint-as-understood-by-a-european-quantitative-geographer",
+    "title": "2  Spatial data analysis: definition and challenges",
+    "section": "2.2 Spatial Economic Viewpoint (as understood by a European Quantitative Geographer)",
+    "text": "2.2 Spatial Economic Viewpoint (as understood by a European Quantitative Geographer)\nSpatial analysis consists of a set of techniques designed to:\n\nDescribe the location of activities and how they change over time\nEstimate reduced form models\n\nUnlike structural form models, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.\nIn this course, the emphasis is placed on the socio-economic perspective, exploring spatial analysis through a statistical lens. This approach allows us to examine how spatial relationships influence socio-economic patterns and behaviors.\ntatistical Analysis and its Spatial Challenges",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_axiom.html",
+    "href": "space_axiom.html",
+    "title": "3  Geographical space",
+    "section": "",
+    "text": "Content\nAxiomatic Beguin and Thisse (1979)\n\n\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An Axiomatic Approach to Geographical Space.” Geographical Analysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
     ]
   },
   {
     "objectID": "R_basics.html",
     "href": "R_basics.html",
-    "title": "Title",
+    "title": "R basics",
     "section": "",
     "text": "Content",
     "crumbs": [
       "R basics and visualisation",
-      "Title"
+      "R basics"
     ]
   },
   {
     "objectID": "ggplot.html",
     "href": "ggplot.html",
-    "title": "Graphics ggplot way",
+    "title": "4  Graphics ggplot way",
     "section": "",
     "text": "Content",
     "crumbs": [
       "R basics and visualisation",
-      "Graphics ggplot way"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Graphics ggplot way</span>"
     ]
   },
   {
     "objectID": "univariate.html",
     "href": "univariate.html",
-    "title": "Title",
+    "title": "5  Univariate statistics",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Univariate analysis and distributions",
-      "Title"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Univariate statistics</span>"
     ]
   },
   {
     "objectID": "distributions.html",
     "href": "distributions.html",
-    "title": "Distributions",
+    "title": "6  Statistical distributions",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Univariate analysis and distributions",
-      "Distributions"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Statistical distributions</span>"
     ]
   },
   {
     "objectID": "correlation.html",
     "href": "correlation.html",
-    "title": "Title",
+    "title": "7  Covariance and correlation",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Bivariate analysis and regression",
-      "Title"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Covariance and correlation</span>"
     ]
   },
   {
     "objectID": "regression.html",
     "href": "regression.html",
-    "title": "Title",
+    "title": "Regression",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Bivariate analysis and regression",
-      "Title"
+      "Regression"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Beguin, Hubert, and Jacques-François Thisse. 1979. “An\nAxiomatic Approach to\nGeographical Space.” Geographical\nAnalysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
+    "crumbs": [
+      "Bibliography",
+      "References"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "1  Statistical data analysis for geographers\n3  Geographical space",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#section",
+    "href": "space_issues.html#section",
+    "title": "2  Spatial data analysis: definition and challenges",
+    "section": "2.4 ",
+    "text": "2.4",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#interdisciplinarity-and-perspective",
+    "href": "space_issues.html#interdisciplinarity-and-perspective",
+    "title": "2  Spatial data analysis: definition and challenges",
+    "section": "",
+    "text": "Quantitative Geography Viewpoint\n(adapted from Pumain, Hypergeo)\nSpatial analysis in quantitative geography focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#links-with-theory",
+    "href": "space_issues.html#links-with-theory",
+    "title": "2  Spatial data analysis: definition and challenges",
+    "section": "2.2 Links with theory",
+    "text": "2.2 Links with theory\nScience progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or subfields.\nFrom a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.\nFrom a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:\n\nDescribe the location of activities and how they change over time\nEstimate reduced form models\n\nUnlike structural form models, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.\nThere is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.\nWe very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients much more than to prediction using as many data as possible. If a variable is used it is because we have some idea of its importance and influence on others, not just to obtain a fit. Hence we won’t use automatic models constructions (no automated regression variable selection), and leave aside all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if they can be considered to belong to spatial analysis and use data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
     ]
   }
 ]

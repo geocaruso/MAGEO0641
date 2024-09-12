@@ -1,3 +1,46 @@
-# Title {.unnumbered}
+## Spatial data analysis: definition and challenges
 
-Content
+## Interdisciplinarity and perspective
+
+Data analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about **spatial analysis**. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.
+
+Within geography, we understand the term **spatial analysis** to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to **applied statistical approaches**, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, **this course is a spatial analysis course**.
+
+However, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms **spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process**, not just the consideration of geographic elements. See for example the @10.1007/978-3-642-03647-7 handbook for discussion and examples.
+
+## Links with theory
+
+Science progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or subfields.
+
+From a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on **uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks**.
+
+The ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.
+
+From a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:
+
+-   Describe the location of activities and how they change over time
+-   Estimate **reduced form models**
+
+Unlike **structural form models**, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.
+
+There is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.
+
+We very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients much more than to prediction using as many data as possible. If a variable is used it is because we have some idea of its importance and influence on others, not just to obtain a fit. Hence we won't use automatic models constructions (no automated regression variable selection), and leave aside all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if they can be considered to belong to spatial analysis and use data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.
+
+<!-- a -->
+
+## Equivalence and Independence
+
+Statistical analysis is based on two key principles, or invariants:
+
+1.  **All observations must be statistically equivalent**: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.
+
+2.  **All observations must be independent from each other**: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.
+
+However, both of these principles are challenged when applied in a **spatial context**. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations.
+
+These challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.
+
+(*Based on discussions in Jayet, p. 2-13*)
+
+## 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Timetable – Introduction to geographical data analysis with R</title>
+<title>Timetable – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./learning_outcomes.html" rel="next">
+<link href="./learning.html" rel="next">
 <link href="./index.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Introduction to geographical data analysis with R</a> 
+      <a href="./">Introduction to data analysis and R for geographers</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/geocaruso/MAGEO0641" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -124,14 +124,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./learning_outcomes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Learning outcomes</span></a>
+  <a href="./learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning outcomes and evaluation</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Spatial Data Analysis</span></a>
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -139,14 +139,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space_axiom.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+  <a href="./scope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./space_issues.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial statistical data analysis: definition and challenges</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space_axiom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geographical space</span></span></a>
   </div>
 </li>
       </ul>
@@ -163,13 +169,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./R_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text">R basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Graphics ggplot way</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics ggplot way</span></span></a>
   </div>
 </li>
       </ul>
@@ -186,13 +192,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./univariate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributions</span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
   </div>
 </li>
       </ul>
@@ -209,13 +215,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Covariance and correlation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text">Regression</span></a>
   </div>
 </li>
       </ul>
@@ -250,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Timetable</h1>
+<h1 class="title"><span id="sec-timetable" class="quarto-section-identifier">Timetable</span></h1>
 </div>
 
 
@@ -268,12 +274,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.</p>
-<p>We have attempted to balance theoretical explanations and R practice in each session. This syllabus material is divided up into pieces of 45 minutes (each corresponding to an Rmd/html file.)</p>
+<p>We have attempted to balance theoretical explanations and R practice in each session.</p>
 <p>The 2024-2025 schedule is set as follows. However, please refer to your <em>student guichet</em> and the <em>Moodle</em> platform for potential changes during the semester.</p>
 <ul>
 <li><p>Scheduled: 16 Sep 2024 at 14:00 to 18:00, CEST</p></li>
 <li><p>Scheduled: 23 Sep 2024 at 14:00 to 18:00, CEST</p></li>
-<li><p><em>No session on 30 Sep 2024</em></p></li>
+<li><p><strong>No session on 30 Sep 2024</strong></p></li>
 <li><p>Scheduled: 7 Oct 2024 at 14:00 to 18:00, CEST</p></li>
 <li><p>Scheduled: 14 Oct 2024 at 14:00 to 18:00, CEST</p></li>
 <li><p>Scheduled: 21 Oct 2024 at 14:00 to 18:00, CEST</p></li>
@@ -717,8 +723,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./learning_outcomes.html" class="pagination-link" aria-label="Learning outcomes">
-        <span class="nav-page-text">Learning outcomes</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./learning.html" class="pagination-link" aria-label="Learning outcomes and evaluation">
+        <span class="nav-page-text">Learning outcomes and evaluation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

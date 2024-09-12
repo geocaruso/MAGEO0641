@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Title – Introduction to geographical data analysis with R</title>
+<title>2&nbsp; Spatial data analysis: definition and challenges – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./R_basics.html" rel="next">
-<link href="./space_axiom.html" rel="prev">
+<link href="./space_axiom.html" rel="next">
+<link href="./scope.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./space_axiom.html">Spatial Data Analysis</a></li><li class="breadcrumb-item"><a href="./space_issues.html">Title</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="./space_issues.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: definition and challenges</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Introduction to geographical data analysis with R</a> 
+      <a href="./">Introduction to data analysis and R for geographers</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/geocaruso/MAGEO0641" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -124,14 +124,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./learning_outcomes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Learning outcomes</span></a>
+  <a href="./learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning outcomes and evaluation</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Spatial Data Analysis</span></a>
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -139,14 +139,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space_axiom.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+  <a href="./scope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./space_issues.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: definition and challenges</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space_axiom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geographical space</span></span></a>
   </div>
 </li>
       </ul>
@@ -163,13 +169,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./R_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text">R basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Graphics ggplot way</span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics ggplot way</span></span></a>
   </div>
 </li>
       </ul>
@@ -186,13 +192,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./univariate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributions</span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
   </div>
 </li>
       </ul>
@@ -209,13 +215,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Covariance and correlation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./regression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Title</span></a>
+ <span class="menu-text">Regression</span></a>
   </div>
 </li>
       </ul>
@@ -242,15 +248,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#interdisciplinarity-and-perspective" id="toc-interdisciplinarity-and-perspective" class="nav-link active" data-scroll-target="#interdisciplinarity-and-perspective"><span class="header-section-number">2.1</span> Interdisciplinarity and perspective</a></li>
+  <li><a href="#links-with-theory" id="toc-links-with-theory" class="nav-link" data-scroll-target="#links-with-theory"><span class="header-section-number">2.2</span> Links with theory</a></li>
+  <li><a href="#equivalence-and-independence" id="toc-equivalence-and-independence" class="nav-link" data-scroll-target="#equivalence-and-independence"><span class="header-section-number">2.3</span> Equivalence and Independence</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">2.4</span> </a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./space_axiom.html">Spatial Data Analysis</a></li><li class="breadcrumb-item"><a href="./space_issues.html">Title</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="./space_issues.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: definition and challenges</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Title</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: definition and challenges</span></h1>
 </div>
 
 
@@ -267,9 +282,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Content</p>
+<section id="interdisciplinarity-and-perspective" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="interdisciplinarity-and-perspective"><span class="header-section-number">2.1</span> Interdisciplinarity and perspective</h2>
+<p>Data analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about <strong>spatial analysis</strong>. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.</p>
+<p>Within geography, we understand the term <strong>spatial analysis</strong> to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to <strong>applied statistical approaches</strong>, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, <strong>this course is a spatial analysis course</strong>.</p>
+<p>However, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms <strong>spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process</strong>, not just the consideration of geographic elements. See for example the <span class="citation" data-cites="10.1007/978-3-642-03647-7">(<a href="references.html#ref-10.1007/978-3-642-03647-7" role="doc-biblioref"><strong>10.1007/978-3-642-03647-7?</strong></a>)</span> handbook for discussion and examples.</p>
+</section>
+<section id="links-with-theory" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="links-with-theory"><span class="header-section-number">2.2</span> Links with theory</h2>
+<p>Science progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or subfields.</p>
+<p>From a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on <strong>uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks</strong>.</p>
+<p>The ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.</p>
+<p>From a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:</p>
+<ul>
+<li>Describe the location of activities and how they change over time</li>
+<li>Estimate <strong>reduced form models</strong></li>
+</ul>
+<p>Unlike <strong>structural form models</strong>, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.</p>
+<p>There is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.</p>
+<p>We very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients much more than to prediction using as many data as possible. If a variable is used it is because we have some idea of its importance and influence on others, not just to obtain a fit. Hence we won’t use automatic models constructions (no automated regression variable selection), and leave aside all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if they can be considered to belong to spatial analysis and use data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.</p>
+<!-- a -->
+</section>
+<section id="equivalence-and-independence" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="equivalence-and-independence"><span class="header-section-number">2.3</span> Equivalence and Independence</h2>
+<p>Statistical analysis is based on two key principles, or invariants:</p>
+<ol type="1">
+<li><p><strong>All observations must be statistically equivalent</strong>: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.</p></li>
+<li><p><strong>All observations must be independent from each other</strong>: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.</p></li>
+</ol>
+<p>However, both of these principles are challenged when applied in a <strong>spatial context</strong>. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations.</p>
+<p>These challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.</p>
+<p>(<em>Based on discussions in Jayet, p.&nbsp;2-13</em>)</p>
+</section>
+<section id="section" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="section"><span class="header-section-number">2.4</span> </h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -694,13 +743,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./space_axiom.html" class="pagination-link" aria-label="Title">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Title</span>
+      <a href="./scope.html" class="pagination-link" aria-label="Statistical data analysis for geographers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./R_basics.html" class="pagination-link" aria-label="Title">
-        <span class="nav-page-text">Title</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./space_axiom.html" class="pagination-link" aria-label="Geographical space">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geographical space</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

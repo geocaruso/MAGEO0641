@@ -1,4 +1,4 @@
-## Spatial data analysis: definition and challenges
+## Spatial data analysis: definition and challenges {#sec-spatial-data-analysis-definition-and-challenges}
 
 ## Interdisciplinarity and perspective
 

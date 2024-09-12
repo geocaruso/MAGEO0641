@@ -1,0 +1,142 @@
+# Confidence interval of a regression"
+
+## Load Data and Packages
+
+We use the Scotland rain data an load the ggplot package plus an additional related ggplot package to ease some formatting
+
+```{r}
+RainScotland <- read.csv("data/Ferguson/RainScotland.csv")
+library(ggplot2)
+library(ggpmisc)
+```
+
+## Create the scatter plot
+
+We plot the data and add the OLS line, its equation, vertical residual lines and the confidence interval (pink area).
+
+We emphasize two points (the 7th and 18th) for which we later calculate the confidence interval. We see 18 is located outside of the confidence interval and 7 is located right on the estimated line but is also one of the largest in terms of elevation.
+
+```{r scatter CI}
+p<-ggplot(RainScotland, aes(x = Elevation, y = Rainfall))  +
+  stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")),formula = y ~ x, parse = TRUE) +
+  geom_smooth(method = "lm", se = TRUE, color = "black",fill="lightpink", alpha = 0.3)+
+  geom_segment(aes(xend = Elevation, yend = predict(lm(Rainfall ~ Elevation, data = RainScotland))), linetype = "dashed", color = "gray", size = 0.5) +
+  labs(title = "Rainfall as a function of Elevation", x = "Elevation (m)", y = "Rainfall (mm/yr)")+
+  geom_point(data=RainScotland[18,], size=5, color="red")+
+  geom_point(data=RainScotland[7,], size=5, color="lightblue")+
+  geom_point()+
+  theme_minimal()
+p
+```
+
+## CI calculation
+
+We show how the pink area representing the confidence is calculated.
+
+The lower and upper bound for each predicted value can be otbained using the predict function. We can ask prediction and bounds for any point (using newdata with the same variables as the original variables) but here we do it for all the observed ones and show the values for the 18th an 7th ones.
+
+```{r}
+model <- lm(Rainfall ~ Elevation, data = RainScotland)
+
+pred <- predict(model, newdata = data.frame(Elevation = RainScotland$Elevation), interval = "confidence")
+
+pred[c(7,18),]
+
+predicted_value18 <- pred[18,"fit"]
+predicted_value7 <- pred[7,"fit"]
+```
+
+We now compute the total residual standard error (RSE) of the model:
+
+$$RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}$$,
+
+which measures the average distance that the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical thin lines on the figure).
+
+The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have 20 individuals but 2 estimated parameters: the slope (2.38 mm) and the intercept (elevation 895m).
+
+We take the square root to get the RSE back to rainfall units, in this case it is equal to 243 mm
+
+```{r}
+RSE<-sqrt(sum(residuals(model)^2) / model$df.residual)
+RSE
+```
+
+For a specific observation, say the 18th or the 7th observation, we adjust the RSE for its known characteristics, i.e. its value along elevation, the predictor variable. More specifically if the observed elevation is very much away from the mean, it is going to have a large deviation to its mean, hence a large share of the total deviations (squared to avoid mixing pluses and minuses) to the mean elevation in the sample and thus potenitally more impact on th regression line.
+
+These relative deviations are
+
+```{r}
+elevation_relative_dev18<-(RainScotland$Elevation[18] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)
+
+elevation_relative_dev7<-(RainScotland$Elevation[7] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)
+
+elevation_lever18
+elevation_lever7
+```
+
+Suppose the observation is exactly at the mean of elevation we would not expect a larger variation, hence the observation would account for 1/n of the total RSE. See for example that this is larger for observation 7 than for observation 18.
+
+Mathematically, the standard error of the predicted value at a given point ( \hat{y} ) is given by: $$
+   \text{SE}(\hat{y}) = RSE\sqrt{1 + \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}}
+   $$
+
+where we see it increases with the global quality (variance of residuals) of the model, i.e. RSE, decreases with the sample size n, and increases with the distance to the mean along the x variable, which is the relative deviation quantity we just computed.
+
+Leaving aside from the RSE, which we already calculated, we can combine the last two terms within the square root to define the leverage of an observation (and simplify the standard error writing)
+
+$$L=\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}\\
+\text{SE}(\hat{y}) = RSE\sqrt{1 + L}$$
+
+Leverage values range between $\frac{1}{n}$ and 1, with higher values indicating greater influence on the regression model. 1 is for an observation that would stand extremely far from the mean and taking most of the variation in x.
+
+Points further from the mean of ( x ) have higher leverage, have a greater influence on the regression line and thus can increase the uncertainty of the predicted values. This is why the confidence intervals (pink area) usually get wider away from the mean of x. This process is usually reinforced by the density of data points, which is typically higher around the mean of ( x ). The higher density providing more information and reducing uncertainty in predictions near the mean.
+
+To compute the leverage for 7 and 18 we simply add $1/n$ to our relative deviation:
+
+```{r}
+lever7<-1/nrow(RainScotland)+elevation_relative_dev7
+lever18<-1/ nrow(RainScotland)+elevation_relative_dev18
+lever7
+lever18
+```
+
+With p predictors (here p=1) and n observations (here n=20), a rule of thumb is to consider a leverage is too high when $\frac{p+1}{n}$ is significantly different from the average leverage. In our case, we have $\frac{p+1}{n}=0.1$ and observation 7 may be considered having too much influence. In practice however, the significance of a leverage is examined after removing high leverage points and evaluating the effect of this removal on the regression coefficients and overall model fit.
+
+Pursuing, we compute the standard errors of the prediction at the level of our observations 7 and 18
+
+```{r}
+se7<-RSE*(1+lever7)^(1/2)
+se18<-RSE*(1+lever18)^(1/2)
+se7
+se18
+```
+
+The standard error and thus the pink area can be computed for any elevation, not just where observations were made, which is practical because you can evaluate the confidence in a model outside of measured observations. The pink ribbon is thus continuous.
+
+In order to draw the pink ribbon, we need to additionally set a level of confidence to our estimate. By default most researchers use a 95% confidence interval. We then multiply the prediction standard error by the corresponding t statistics for confidence, and add/remove it from the prediction to obtain the upper and lower bounds of the confidence interval area:
+
+We first get the critical value from the t-distribution, using half of the critical 5% (thus 0.975) on both side:
+
+```{r}
+t_value <- qt(0.975, df = model$df.residual)
+```
+
+then multiply by the se and add/remove to/from prediction:
+
+```{r}
+lower18<-predicted_value18-t_value*se18
+lower7<-predicted_value7-t_value*se7
+upper18<-predicted_value18+t_value*se18
+upper7<-predicted_value7+t_value*se7
+
+manualCI<-data.frame(
+  Elevation=RainScotland[c(7,18),"Elevation"],
+  UpperCI=c(upper7,upper18),
+  LowerCI=c(lower7,lower18)
+  )
+manualCI
+```
+
+```{r}
+p+geom_segment(data=manualCI, aes(x=Elevation,xend=Elevation,y=LowerCI, yend =UpperCI), color = "blue", size = 1)
+```

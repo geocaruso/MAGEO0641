@@ -31,6 +31,7 @@ book:
       chapters:
       - correlation.qmd
       - regression.qmd
+      - CIregression.qmd
     - part: "Bibliography"
       chapters:
       - references.qmd
@@ -45,4 +46,4 @@ format:
 
 editor: visual
 
-number-depth: 2
+number-depth: 3

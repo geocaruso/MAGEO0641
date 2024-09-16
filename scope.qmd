@@ -8,8 +8,12 @@ In their own work and in their interactions with others, it is also important fo
 
 ## Transparent geographical analysis empowered with R {#sec-transparent-geographical-analysis-empowered-with-r}
 
-The course is a blend of theory and practice, which we believe enhances intuition and understanding. Direct practice also helps - especially for human geographers with little training in quantitative methods - to demystify statistical concepts and provide confidence after repeated applications and interpretations.
+The course is a **blend of theory and practice**, which we believe enhances intuition and understanding. Direct practice also helps, especially for human geographers with little training in quantitative methods, to **demystify statistical concepts and provide confidence** after repeated applications and interpretations.
 
 Software for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.
 
-Most of our students have had some sort of theoretical statistics course so far in their studies, so they have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing. We chose R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the use of scripts and command lines, is absolutely necessary to bring robustness and trust.
+![](empowering.jpg){fig-align="center"}
+
+Most of our students have had some sort of theoretical statistics course so far in their studies, and have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing.
+
+We chose **R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take**. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the **use of scripts and command lines, is absolutely necessary to bring robustness and trust**.

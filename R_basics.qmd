@@ -1,3 +1,203 @@
-# R basics {.unnumbered}
+# R basics: classes, data frames and lists
 
-Content
+## Objects
+
+An object is not defined ex-ante and is automatically overwritten
+
+```{r echo=TRUE, eval=TRUE}
+X<-3 #This X will soon be replaced
+X<-seq(from=1,to=10, by=1) #In class we played with the 3 arguments of this function
+```
+
+R is case sensitive. The following returns an Error
+
+```{r echo=TRUE, eval=FALSE}
+x # x is lower case and does not exist
+```
+
+IMPORTANT:
+
+-   Always worry about **Errors**. They stop your process.
+
+-   Always read and understand **Warnings**. They do not stop your process.
+
+### Example 1
+
+```{r echo=TRUE, eval=TRUE}
+Y<-X
+Y-X #This should thus return a zero vector
+sum(Y-X) # and a zero sum
+
+#Exercising with conditions
+Y==X # is the same as? A single "=" is an assignment!
+Y!=X #is not the same as?
+sum(Y!=X)
+```
+
+### Different classes
+
+```{r echo=TRUE, eval=TRUE}
+class(sum)
+class(seq)
+class(class)
+#
+class(X)
+class(Y)
+#
+class(2)
+class(2L)
+#
+class(Y==X)
+```
+
+### Summary
+
+```{r echo=TRUE, eval=TRUE}
+summary(X)
+```
+
+## Data frames
+
+### Example 2 - A Data frame ... your beloved spreadsheet
+
+```{r echo=TRUE, eval=TRUE}
+df<-data.frame() #an empty one
+
+df<-data.frame(a = 1:5,
+           b = letters[1:5],
+           c = rnorm(n = 5))
+df
+```
+
+See how it is summarized
+
+```{r echo=TRUE, eval=TRUE}
+summary(df)
+```
+
+### Accessing and subsetting
+
+**!!! THIS IS EXTREMELY IMPORTANT !!!**
+
+Identifying
+```{r echo=TRUE, eval=TRUE}
+df[,"c"] #all rows but only named column "c"
+df$c #same !
+df$b
+```
+
+Subsetting based on position
+
+```{r echo=TRUE, eval=TRUE}
+df$c[1:2] #subsetting a vector: only first 2 values
+df[1:2,"c"]
+```
+
+Subsetting specific rows (not range as above):
+
+```{r echo=TRUE, eval=TRUE}
+df[1:3,"c"]
+df[c(1,3),"c"] #c stands for combine!
+```
+
+## Combine c()
+
+```{r echo=TRUE, eval=TRUE}
+c(1,3) #Combining elements to form a vector of elements
+c("Mom","Dad")
+c("Mom","Dad",3) #of any type?
+z<-c("Mom","Dad",3)
+```
+
+A vector and thus a data frame column must be of a single class! Hence 3 became "3"
+
+Each dataframe column must have the same number of elements.
+
+(Enjoy this condition after thinking of how many times you had misaligned and columns of different lengths in Ms Exc..)
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+df$z<-z #Should not work!
+```
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+length(df$a)
+length(z)
+
+#Beware. Length applied to the whole df means the number of columns!
+length(df) #i.e. a b and c
+```
+
+While length is general, for a data frame you can rather compute number of rows and columns this way
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+nrow(df)
+ncol(df)
+dim(df)
+nrow(df)==dim(df)[2] #What do you think?
+
+#But these won't work for a vector:
+dim(df$a)
+nrow(df$a)
+```
+
+
+Often times data frames have more complicated column names. It is useful to access those directly.
+
+This is also the way you change the name of a column:
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+names(df)[2]<-"blabla"
+df
+```
+
+## Lists
+
+### Example 3 - A list
+
+A List is a more general object than a dataframe.
+
+All "columns" are not necessarily
+
+-   of the same length
+-   nor of the same class
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+mylist<-list(a = 1:5,
+             b = letters[1:5],
+             c = rnorm(n = 5))
+mylist
+summary(mylist)
+```
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+mylist<-list(a = 1:3,#we removed 2 elements here
+             b = letters[1:5],
+             c = rnorm(n = 5))
+mylist
+summary(mylist)
+```
+
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+length(mylist) #number of elements in list
+length(mylist$b) #number of objects within that element of the list
+```
+
+### Into the lists: \[\[ \]\] vs \[ \]
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+mylist[2] # getting the list element displayed
+class(mylist[2])  # you see it is a list element
+mylist[[2]] # getting the corresponding vector
+class(mylist[[2]]) # you now see it is a character vector
+```
+
+And now subsetting:
+
+```{r echo=TRUE, eval=TRUE, error=TRUE}
+mylist
+mylist[[2]][1] #1st element of the 2nd element of the list
+mylist[[1]][2] #2nd element of the 1st element of the list
+M<-mylist[[3]]
+M[1] #Subsetting just as any vector
+```
+

@@ -2,4 +2,12 @@
 
 @sec-statistical-data-analysis-for-geographers
 
+@sec-spatial-data-analysis-a-definition
+
 @sec-geographical-space
+
+@sec-spatial-data-issues
+
+
+
+

@@ -34,7 +34,7 @@
     "href": "learning.html#objectives",
     "title": "Learning outcomes and evaluation",
     "section": "",
-    "text": "Overview of key concepts and formalisation in data analysis in geographical contexts\nUnderstanding and describing the statistical and spatial distribution of data (univariate statistical analysis)\nUnderstanding how a geographical pattern relate or can be understood from others (bivariate and regression analysis)\nRaising awareness as to the characteristics and difficulties of statistical and econometric (regression) analysis with geographical data.\nMastering essential R software skills for tabular data management, uni and bi-variate analysis and regression, and producing graphics",
+    "text": "Overview of key concepts and formalisation in data analysis in geographical contexts\nUnderstanding and describing the statistical and spatial distribution of data with univariate statistical analysis\nUnderstanding how a geographical pattern relate or can be understood from others with bivariate and regression analysis\nRaising awareness as to the characteristics and difficulties of statistical and econometric (regression) analysis with geographical data.\nMastering essential R software skills for tabular data management, uni and bi-variate analysis and regression, and producing graphics",
     "crumbs": [
       "Learning outcomes and evaluation"
     ]
@@ -75,54 +75,43 @@
     "href": "scope.html#sec-transparent-geographical-analysis-empowered-with-r",
     "title": "1  Statistical data analysis for geographers",
     "section": "1.2 Transparent geographical analysis empowered with R",
-    "text": "1.2 Transparent geographical analysis empowered with R\nThe course is a blend of theory and practice, which we believe enhances intuition and understanding. Direct practice also helps - especially for human geographers with little training in quantitative methods - to demystify statistical concepts and provide confidence after repeated applications and interpretations.\nSoftware for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.\nMost of our students have had some sort of theoretical statistics course so far in their studies, so they have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing. We chose R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the use of scripts and command lines, is absolutely necessary to bring robustness and trust.",
+    "text": "1.2 Transparent geographical analysis empowered with R\nThe course is a blend of theory and practice, which we believe enhances intuition and understanding. Direct practice also helps, especially for human geographers with little training in quantitative methods, to demystify statistical concepts and provide confidence after repeated applications and interpretations.\nSoftware for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.\n\n\n\n\n\nMost of our students have had some sort of theoretical statistics course so far in their studies, and have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing.\nWe chose R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the use of scripts and command lines, is absolutely necessary to bring robustness and trust.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistical data analysis for geographers</span>"
     ]
   },
   {
-    "objectID": "space_issues.html",
-    "href": "space_issues.html",
-    "title": "2  Spatial data analysis: definition and challenges",
+    "objectID": "spatial_analysis.html",
+    "href": "spatial_analysis.html",
+    "title": "2  Spatial data analysis: a definition",
     "section": "",
-    "text": "2.1 Interdisciplinarity and perspective\nData analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about spatial analysis. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.\nWithin geography, we understand the term spatial analysis to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to applied statistical approaches, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, this course is a spatial analysis course.\nHowever, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process, not just the consideration of geographic elements. See for example the (10.1007/978-3-642-03647-7?) handbook for discussion and examples.",
+    "text": "2.1 Interdisciplinarity and perspective\nData analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about spatial analysis. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.\nWithin geography, we understand the term spatial analysis to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to applied statistical approaches, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, this course is a spatial analysis course.\nHowever, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process, not just the consideration of geographic elements. See for example the handbook of Fischer and Getis for discussion and examples.\nSimilarly, Goodchild and Longley (https://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch40.pdf) suggest more broadly that spatial analysis could simply be a set of methods useful when the data are spatial (i.e. referenced in 2D frame). This definition however as they suggest would be too broad, if it does not address the question of whether the 2D frame actually matters. Rather spatial analysis is",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: a definition</span>"
     ]
   },
   {
-    "objectID": "space_issues.html#links-with-theory",
-    "href": "space_issues.html#links-with-theory",
-    "title": "2  Spatial data analysis: definition and challenges",
+    "objectID": "spatial_analysis.html#interdisciplinarity-and-perspective",
+    "href": "spatial_analysis.html#interdisciplinarity-and-perspective",
+    "title": "2  Spatial data analysis: a definition",
+    "section": "",
+    "text": "the subset of analytic techniques whose results will change if the frame changes, or if objects are repositioned within it.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: a definition</span>"
+    ]
+  },
+  {
+    "objectID": "spatial_analysis.html#links-with-theory",
+    "href": "spatial_analysis.html#links-with-theory",
+    "title": "2  Spatial data analysis: a definition",
     "section": "2.2 Links with theory",
-    "text": "2.2 Links with theory\nScience progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or subfields.\nFrom a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.\nFrom a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:\n\nDescribe the location of activities and how they change over time\nEstimate reduced form models\n\nUnlike structural form models, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.\nThere is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.\nWe very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients much more than to prediction using as many data as possible. If a variable is used it is because we have some idea of its importance and influence on others, not just to obtain a fit. Hence we won’t use automatic models constructions (no automated regression variable selection), and leave aside all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if they can be considered to belong to spatial analysis and use data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.",
+    "text": "2.2 Links with theory\nScience progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or sub-fields.\nFrom a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.\nFrom a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:\n\nDescribe the location of activities and how they change over time\nEstimate reduced form models\n\nUnlike structural form models, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.\nThere is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.\nWe very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients than to prediction using as many data as possible.\nIf a variable is used it is because we have some idea of its importance and influence on others or its relevance, not just to obtain a fit. Hence we won’t use automatic models constructions (no stepwise regression for example) and leave out all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if these methods can be considered to belong to spatial analysis and use geographic data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
-    ]
-  },
-  {
-    "objectID": "space_issues.html#equivalence-and-independence",
-    "href": "space_issues.html#equivalence-and-independence",
-    "title": "2  Spatial data analysis: definition and challenges",
-    "section": "2.3 Equivalence and Independence",
-    "text": "2.3 Equivalence and Independence\nStatistical analysis is based on two key principles, or invariants:\n\nAll observations must be statistically equivalent: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.\nAll observations must be independent from each other: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.\n\nHowever, both of these principles are challenged when applied in a spatial context. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations.\nThese challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.\n(Based on discussions in Jayet, p. 2-13)",
-    "crumbs": [
-      "Introduction",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
-    ]
-  },
-  {
-    "objectID": "space_issues.html#section",
-    "href": "space_issues.html#section",
-    "title": "2  Spatial data analysis: definition and challenges",
-    "section": "2.4 ",
-    "text": "2.4",
-    "crumbs": [
-      "Introduction",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: definition and challenges</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: a definition</span>"
     ]
   },
   {
@@ -130,65 +119,285 @@
     "href": "space_axiom.html",
     "title": "3  Geographical space",
     "section": "",
-    "text": "Content\nAxiomatic Beguin and Thisse (1979)\n\n\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An Axiomatic Approach to Geographical Space.” Geographical Analysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
+    "text": "3.1 Absolute or pre-geographical space:",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
     ]
   },
   {
+    "objectID": "space_axiom.html#absolute-or-pre-geographical-space",
+    "href": "space_axiom.html#absolute-or-pre-geographical-space",
+    "title": "3  Geographical space",
+    "section": "",
+    "text": "A set of places or locations \\(S\\)\nIdentified by their coordinates \\(x,y\\)\nSeparated by a distance \\(d(L)\\)\nDistance being measured along a given metric \\(L\\)",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
+    ]
+  },
+  {
+    "objectID": "space_axiom.html#geographical-space",
+    "href": "space_axiom.html#geographical-space",
+    "title": "3  Geographical space",
+    "section": "3.2 Geographical space:",
+    "text": "3.2 Geographical space:\nS can be endowed with various attributes to form a geographical space:\n\nThe surface attribute \\(m\\), measured along a given metric related to coordinates\nVarious attributes \\(Z\\)\nDensity measures, i.e. any \\(Z/m\\)\n\n\n\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An Axiomatic Approach to Geographical Space.” Geographical Analysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html",
+    "href": "space_issues.html",
+    "title": "4  Spatial data issues",
+    "section": "",
+    "text": "4.1 Equivalence and Independence\n(Based on discussions in Jayet, p. 2-13)\nStatistical analysis is based on two key principles, or invariants:\nHowever, both of these principles are challenged when applied in a spatial context. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations and because the spatial definition of objects may vary and their sampling irregular.\nThese challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#equivalence-and-independence",
+    "href": "space_issues.html#equivalence-and-independence",
+    "title": "4  Spatial data issues",
+    "section": "",
+    "text": "All observations must be statistically equivalent: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.\nAll observations must be independent from each other: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#equivalence",
+    "href": "space_issues.html#equivalence",
+    "title": "4  Spatial data issues",
+    "section": "4.2 Equivalence",
+    "text": "4.2 Equivalence\n\n4.2.1 Irregularity of observations and the nature of data\nWhile there are time cycles, making repetitive data logging along the time dimension doable, there is no such think as a spatial cycle for geographical data recording.\nMost spatial data has a irregular covering in space, which already challenges the equivalence of observations\n\n(source to be added, apologies if you are the author, I am happy to adapt)\n\nObservations (countries) are of different size, i.e. the surface attribute \\(m\\) matters here.\nSuppose \\(Z_{pop}\\) is the country population. One can expect \\(Z_{pop}\\) to relate to \\(m\\) if processes are homogeneous across space. However a \\(Z/m\\) density variables would still show these objects are very different.\nYet, other \\(Z_i\\) variables could still be compared using that \\(Z_{pop}\\) attributes. For example the active population of the place (country) as a percentage of its total population, or using other transformations (linear or not).\nNote that variations in volume/mass/size such as \\(Z_{pop}\\) are very common, with very few objects having a very large size compared to most others. Such a size effect\n\nimpacts on the total and central (mean, median) value of variables\nthe distribution of values when made in different observations’ regions\ntypically leads to outliers problems or heteroskedasticity (non constant variance)\n\nHowever, there are raster maps and some information is “regular”, such a precipitation, or can be “regularized”, such as population grids.\n\n(https://human-settlement.emergency.copernicus.eu/)\nThe discretization of geographic space should however be internally homogeneous, meaning the attributes within each grid cell (or other nwe objects) supposed to apply to every part of that cell.\nA difference is often made between continuous field data and discrete space objects.\nSee below the tabulation of these against the types of measurements by Haining (2010)\n\n\n\n4.2.2 Modifiable Areal unit Problem - MAUP\nOpenshaw (1984)\n\nAreal units = spatial objects such as zones or places or towns or regions\n\n\nGeography has consistently and dismally failed to tackle its entitation problems, and in that more than anything else lies the root of so many of its problems (Chapman 77)\n\n\nInsufficient thought is given to precisely what it is that is being studied. […] Little concern has been expressed about the nature and definition of the spatial objects under study\n\n\nFor many purposes the zones in a zoning system constitute the objects, or geographical individuals, that are the basic units for the observation and measurement of spatial phenomena.\n\n\nWith areal data, the spatial objects only exist after data collected for one set of entities (e.g. people) are subjected to an arbitrary aggregation (see also regularity discussion above) to produce a set of spatial units.\n\n\nHowever, there are no rules for areal aggregation, no standards, and no international conventions to guide the spatial aggregation process.\n\n\nThe areal units (zonal objects) used in many geographical studies are arbitrary, modifiable. Census areas have rarely an intrinsic geographical meaning\n\n\nA unmanageable combinatorial problem: There are approximately 10^12 different aggregations of 1,000 objects into 20 groups. If the aggregation process is constrained so that the groups consist of internally contiguous objects (i.e. all the objects assigned to the same group are geographical neighbours) then this huge number is reduced, but only by a few orders of magnitude.\n\nStan Openshaw distingues 2 interrelated issues, within the MAUP:\n\nThe scale problem: the variation in results that can often be obtained when data for one set of areal units are progressively aggregated into fewer and larger units for analysis.\nThe aggregation problem: the problem of alternative combinations of areal units at equal or similar scales. Any variation in results due to the use of alternative units of analysis when the number of units is held constant\n\n\nExample of effects on correlation coefficients:\n\nCorrelation between percentage vote for Republican candidates in the congressional election of 1968 and the percentage of the population over 60 years\nCorrelation at the 99 county level is 0.34\nAfter aggregation into six zones: 0.26 for the 6 congressional districts and 0.86 for a simple typology of Iowa into 6 rural-urban types (Openshaw and Taylor 77)\nCompare mean and dispersion of correlation coefficient after random zoning (using contiguity) and random sampling (grouping)\n\n\n\nNo systematic scale effect on correlation mean\nConsiderable variability about the mean values but reduces with increasing numbers of units\nThe standard deviations of the zoning distributions are considerably smaller than the corresponding sampling distributions but exhibit a greater degree of bias &gt; spatial autocorrelation effect",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "space_issues.html#spatial-in-dependence",
+    "href": "space_issues.html#spatial-in-dependence",
+    "title": "4  Spatial data issues",
+    "section": "4.3 Spatial (in-)dependence",
+    "text": "4.3 Spatial (in-)dependence\n\n4.3.1 Interactions between observations\n\nNot only the dimensions and structures of observations is of importance but also their relative position in space\nThe distance (between objects), \\(d(L)\\), is at the very heart of geographical analysis AND the source of statistical difficulties\nThe level of interactions increases with proximity (distance functions or contiguities) (see gravity-based theories)\n\n\n\n4.3.2 Tobler’s first law of geography\nTobler (1970)\n\n\n\n4.3.3 Spatial autocorrelation\nAnselin, Luc and Bera,I (1998)\n\n\n\n\n\n\nAnselin, Luc, and Bera,I. 1998. “Spatial Dependence in Linear Regression Models with an Introduction to Spatial Econometrics: Regression Models with an Anselin Bera i. INTRODUCTION.” In. CRC Press.\n\n\nHaining, Robert P. 2010. “The Nature of Georeferenced Data.” In, edited by Manfred M. Fischer and Arthur Getis, 197–217. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-03647-7_12.\n\n\nOpenshaw, Stan. 1984. The Modifiable Areal Unit Problem. Concepts and Techniques in Modern Geography 38. Norwich: Geo.\n\n\nTobler, W. R. 1970. “A Computer Model Simulation of Urban Growth in the Detroit Region in Economic Geography 46: 2, 234240.” Clark University, Worcester, MA.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html",
+    "href": "getting_started.html",
+    "title": "5  Getting started",
+    "section": "",
+    "text": "5.1 R, RStudio and its interface\nIn class demonstration of how to",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#r-rstudio-and-its-interface",
+    "href": "getting_started.html#r-rstudio-and-its-interface",
+    "title": "5  Getting started",
+    "section": "",
+    "text": "Get R and RStudio installed\nNavigating the R studio interface\nScripting area, console, files,…\nUsing colors and TOC outline in RStudio",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#projects-and-workflows",
+    "href": "getting_started.html#projects-and-workflows",
+    "title": "5  Getting started",
+    "section": "5.2 Projects and workflows",
+    "text": "5.2 Projects and workflows\nLet’s compute a value in the console and store it to an object first\n\n#This is a comment\n1+2 #This is also a comment\n\n[1] 3\n\na&lt;-3+4\na\n\n[1] 7\n\n\nSee that we now have an object in the environment!",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#working-directory",
+    "href": "getting_started.html#working-directory",
+    "title": "5  Getting started",
+    "section": "5.3 Working directory!!!",
+    "text": "5.3 Working directory!!!\nSuppose we want to produce a text from the above and save it to a file:\n\na_sentence&lt;-paste(\"I have computed a sum, which equals\", a)\na_sentence #Let's see this in the console\n\n[1] \"I have computed a sum, which equals 7\"\n\ncat(a_sentence,file=\"brol/a_sentence.txt\")\n\nWhere is the file? the directory? Have you been able to run this?\nAlways indicate where you work!\nThe classical way is\n\ngetwd() #get (default) working directory\nsetwd(\"/Users/geoffrey.caruso/Dropbox/GitHub/MAGEO0641/brol\") #set working directory to YOUR OWN NETWORK SPACE HERE!\n\nThere is a more practical way in RStudio: Make an .Rproj from/to a directory\nYou can create a directory in your finder/file explorer, or create a directory or subdirectory from within the R console. This will be very useful at a more advanced level when you create many outputs and directory names result from some data processing. Think of processing something across many countries/cities.\n\ndir.create(\"brol\")\ndir.create(\"Today\")",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+    ]
+  },
+  {
+    "objectID": "getting_started.html#commented-scripts-vs-markdown-documents",
+    "href": "getting_started.html#commented-scripts-vs-markdown-documents",
+    "title": "5  Getting started",
+    "section": "5.4 Commented scripts vs markdown documents",
+    "text": "5.4 Commented scripts vs markdown documents\nThe above is a commented script, using #, which you can save as an .R file and re-run later.\nThe problem with this approach is that you won’t see results of the codes until you run it. So you can’t really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.\nA more advanced approach is to make a document where you integrate text, code chunks and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.\nLet’s have a look at the structure of this syllabus, written using Quarto markdown.",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+    ]
+  },
+  {
     "objectID": "R_basics.html",
     "href": "R_basics.html",
-    "title": "R basics",
+    "title": "6  R basics: classes, data frames and lists",
     "section": "",
-    "text": "Content",
+    "text": "6.1 Objects\nAn object is not defined ex-ante and is automatically overwritten\nX&lt;-3 #This X will soon be replaced\nX&lt;-seq(from=1,to=10, by=1) #In class we played with the 3 arguments of this function\nR is case sensitive. The following returns an Error\nx # x is lower case and does not exist\nIMPORTANT:",
     "crumbs": [
-      "R basics and visualisation",
-      "R basics"
+      "Getting started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "R_basics.html#objects",
+    "href": "R_basics.html#objects",
+    "title": "6  R basics: classes, data frames and lists",
+    "section": "",
+    "text": "Always worry about Errors. They stop your process.\nAlways read and understand Warnings. They do not stop your process.\n\n\n6.1.1 Example 1\n\nY&lt;-X\nY-X #This should thus return a zero vector\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\nsum(Y-X) # and a zero sum\n\n[1] 0\n\n#Exercising with conditions\nY==X # is the same as? A single \"=\" is an assignment!\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE\n\nY!=X #is not the same as?\n\n [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n\nsum(Y!=X)\n\n[1] 0\n\n\n\n\n6.1.2 Different classes\n\nclass(sum)\n\n[1] \"function\"\n\nclass(seq)\n\n[1] \"function\"\n\nclass(class)\n\n[1] \"function\"\n\n#\nclass(X)\n\n[1] \"numeric\"\n\nclass(Y)\n\n[1] \"numeric\"\n\n#\nclass(2)\n\n[1] \"numeric\"\n\nclass(2L)\n\n[1] \"integer\"\n\n#\nclass(Y==X)\n\n[1] \"logical\"\n\n\n\n\n6.1.3 Summary\n\nsummary(X)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.00    3.25    5.50    5.50    7.75   10.00",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "R_basics.html#data-frames",
+    "href": "R_basics.html#data-frames",
+    "title": "6  R basics: classes, data frames and lists",
+    "section": "6.2 Data frames",
+    "text": "6.2 Data frames\n\n6.2.1 Example 2 - A Data frame … your beloved spreadsheet\n\ndf&lt;-data.frame() #an empty one\n\ndf&lt;-data.frame(a = 1:5,\n           b = letters[1:5],\n           c = rnorm(n = 5))\ndf\n\n  a b          c\n1 1 a  0.0875306\n2 2 b -0.5794876\n3 3 c  1.5653412\n4 4 d -1.7737205\n5 5 e  0.6603778\n\n\nSee how it is summarized\n\nsummary(df)\n\n       a          b                   c            \n Min.   :1   Length:5           Min.   :-1.773721  \n 1st Qu.:2   Class :character   1st Qu.:-0.579488  \n Median :3   Mode  :character   Median : 0.087531  \n Mean   :3                      Mean   :-0.007992  \n 3rd Qu.:4                      3rd Qu.: 0.660378  \n Max.   :5                      Max.   : 1.565341  \n\n\n\n\n6.2.2 Accessing and subsetting\n!!! THIS IS EXTREMELY IMPORTANT !!!\nIdentifying\n\ndf[,\"c\"] #all rows but only named column \"c\"\n\n[1]  0.0875306 -0.5794876  1.5653412 -1.7737205  0.6603778\n\ndf$c #same !\n\n[1]  0.0875306 -0.5794876  1.5653412 -1.7737205  0.6603778\n\ndf$b\n\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n\nSubsetting based on position\n\ndf$c[1:2] #subsetting a vector: only first 2 values\n\n[1]  0.0875306 -0.5794876\n\ndf[1:2,\"c\"]\n\n[1]  0.0875306 -0.5794876\n\n\nSubsetting specific rows (not range as above):\n\ndf[1:3,\"c\"]\n\n[1]  0.0875306 -0.5794876  1.5653412\n\ndf[c(1,3),\"c\"] #c stands for combine!\n\n[1] 0.0875306 1.5653412",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "R_basics.html#combine-c",
+    "href": "R_basics.html#combine-c",
+    "title": "6  R basics: classes, data frames and lists",
+    "section": "6.3 Combine c()",
+    "text": "6.3 Combine c()\n\nc(1,3) #Combining elements to form a vector of elements\n\n[1] 1 3\n\nc(\"Mom\",\"Dad\")\n\n[1] \"Mom\" \"Dad\"\n\nc(\"Mom\",\"Dad\",3) #of any type?\n\n[1] \"Mom\" \"Dad\" \"3\"  \n\nz&lt;-c(\"Mom\",\"Dad\",3)\n\nA vector and thus a data frame column must be of a single class! Hence 3 became “3”\nEach dataframe column must have the same number of elements.\n(Enjoy this condition after thinking of how many times you had misaligned and columns of different lengths in Ms Exc..)\n\ndf$z&lt;-z #Should not work!\n\nError in `$&lt;-.data.frame`(`*tmp*`, z, value = c(\"Mom\", \"Dad\", \"3\")): replacement has 3 rows, data has 5\n\n\n\nlength(df$a)\n\n[1] 5\n\nlength(z)\n\n[1] 3\n\n#Beware. Length applied to the whole df means the number of columns!\nlength(df) #i.e. a b and c\n\n[1] 3\n\n\nWhile length is general, for a data frame you can rather compute number of rows and columns this way\n\nnrow(df)\n\n[1] 5\n\nncol(df)\n\n[1] 3\n\ndim(df)\n\n[1] 5 3\n\nnrow(df)==dim(df)[2] #What do you think?\n\n[1] FALSE\n\n#But these won't work for a vector:\ndim(df$a)\n\nNULL\n\nnrow(df$a)\n\nNULL\n\n\nOften times data frames have more complicated column names. It is useful to access those directly.\nThis is also the way you change the name of a column:\n\nnames(df)[2]&lt;-\"blabla\"\ndf\n\n  a blabla          c\n1 1      a  0.0875306\n2 2      b -0.5794876\n3 3      c  1.5653412\n4 4      d -1.7737205\n5 5      e  0.6603778",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "R_basics.html#lists",
+    "href": "R_basics.html#lists",
+    "title": "6  R basics: classes, data frames and lists",
+    "section": "6.4 Lists",
+    "text": "6.4 Lists\n\n6.4.1 Example 3 - A list\nA List is a more general object than a dataframe.\nAll “columns” are not necessarily\n\nof the same length\nnor of the same class\n\n\nmylist&lt;-list(a = 1:5,\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n\n$a\n[1] 1 2 3 4 5\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n$c\n[1]  0.8424831 -0.5963192  1.6525650 -0.0431795  1.8361957\n\nsummary(mylist)\n\n  Length Class  Mode     \na 5      -none- numeric  \nb 5      -none- character\nc 5      -none- numeric  \n\n\n\nmylist&lt;-list(a = 1:3,#we removed 2 elements here\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n\n$a\n[1] 1 2 3\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n$c\n[1] -0.07402724 -1.01629757  1.21794299  0.03391977 -0.51174829\n\nsummary(mylist)\n\n  Length Class  Mode     \na 3      -none- numeric  \nb 5      -none- character\nc 5      -none- numeric  \n\n\n\nlength(mylist) #number of elements in list\n\n[1] 3\n\nlength(mylist$b) #number of objects within that element of the list\n\n[1] 5\n\n\n\n\n6.4.2 Into the lists: [[ ]] vs [ ]\n\nmylist[2] # getting the list element displayed\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nclass(mylist[2])  # you see it is a list element\n\n[1] \"list\"\n\nmylist[[2]] # getting the corresponding vector\n\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nclass(mylist[[2]]) # you now see it is a character vector\n\n[1] \"character\"\n\n\nAnd now subsetting:\n\nmylist\n\n$a\n[1] 1 2 3\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n$c\n[1] -0.07402724 -1.01629757  1.21794299  0.03391977 -0.51174829\n\nmylist[[2]][1] #1st element of the 2nd element of the list\n\n[1] \"a\"\n\nmylist[[1]][2] #2nd element of the 1st element of the list\n\n[1] 2\n\nM&lt;-mylist[[3]]\nM[1] #Subsetting just as any vector\n\n[1] -0.07402724",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "df_functions.html",
+    "href": "df_functions.html",
+    "title": "7  Working with data frames and functions",
+    "section": "",
+    "text": "7.1 What is in a function? BMI example\npaste.heightweight&lt;-function(h,w){\n  print(paste(h,w))\n  }\npaste.heightweight(1.8,80) #you provide the 2 arguments and get the output\n\n[1] \"1.8 80\"\nNow let’s do the computation with the BMI calculation with a new function\nbmi.calc&lt;-function(h,w){w/h^2}\nwhich we apply\nbmi.calc(1.8,80)\n\n[1] 24.69136\nA function can take a sequence of processes (e.g compute, rounds, concatenate a sentence,…) and then returns the result of the last process.\nExample\nbmi.calc.text&lt;-function(h,w){\n  b&lt;-w/h^2\n  brounded&lt;-round(b)\n  paste(\"My BMI is\", brounded, \"kg/m2\")\n}\nbmi.calc.text(1.8,80)\n\n[1] \"My BMI is 25 kg/m2\"\nFor clarity the outcome of the function can be put in a return()\nbmi.calc&lt;-function(h,w){\n  return(round(w/h^2))\n}\nbmi.calc(1.8,80)\n\n[1] 25",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+    ]
+  },
+  {
+    "objectID": "df_functions.html#what-is-in-a-function-bmi-example",
+    "href": "df_functions.html#what-is-in-a-function-bmi-example",
+    "title": "7  Working with data frames and functions",
+    "section": "",
+    "text": "Let’s create a BMI function\nFirst a simple function that simply prints a given height and weight",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+    ]
+  },
+  {
+    "objectID": "df_functions.html#applying-a-function-to-a-data-frame-column",
+    "href": "df_functions.html#applying-a-function-to-a-data-frame-column",
+    "title": "7  Working with data frames and functions",
+    "section": "7.2 Applying a function to a data frame column",
+    "text": "7.2 Applying a function to a data frame column\nLet’s create a 2nd function to transfors degrees from Celsius to Fahrenheit\nSimpler with a single argument (x):\n\ncelsius2fahrenheit&lt;-function(x){round(32+(x*9/5))}\n\ncelsius2fahrenheit(25) #25 celsius degree is thus \n\n[1] 77\n\n\nWhich we now apply to a series of values stored in a column within a data frame\n\nmytable&lt;-data.frame(A=c(21,22,23,24,25,26,27))\nmytable$F&lt;-celsius2fahrenheit(mytable[,\"A\"])\nmytable\n\n   A  F\n1 21 70\n2 22 72\n3 23 73\n4 24 75\n5 25 77\n6 26 79\n7 27 81\n\n\n##Data frames and NA’s\nComputation of a new column from columns of a dataframe\n\nmytable$G&lt;-mytable$A+mytable$F #note: adding C and F temperature is nonsensical though\nmytable$Gsquare&lt;-mytable$G^2 #note how you write an exponent \"^\" in R\nmytable$A*mytable$F # or a multiplication \"*\"\n\n[1] 1470 1584 1679 1800 1925 2054 2187\n\n\nSimilarly we can apply our BMI computation to a data frame with heights and weights\n\nbmidf&lt;-data.frame(\n  h=c(1.8,1.7,2,1.9),\n  w=c(70,70,95,100))\n\nWe add the result of computing BMI directly as a new column “BMI” in our data.frame\n\nbmidf$BMI&lt;-bmi.calc(h=bmidf$h,\n                    w=bmidf$w)\n\nNA is for unknowns !\nSuppose the 2nd person of our sample didn’t share his/her weight with us\n\nbmidf$w[2]&lt;-NA #NA is for unknowns\nbmidf$BMI&lt;-bmi.calc(h=bmidf$h,\n                    w=bmidf$w)\n#You see the BMI could therefore not be computed\nbmidf\n\n    h   w BMI\n1 1.8  70  22\n2 1.7  NA  NA\n3 2.0  95  24\n4 1.9 100  28\n\n\nFor some functions you would still want to compute a value while ignoring the NA’s\nThe mean is a classical example\n\nmean(bmidf$h) #works\n\n[1] 1.85\n\nmean(bmidf$w) #but returns NA because of one value not reported\n\n[1] NA\n\n\nYou can explicitly ask to compute without the NA’s:\n\nmean(bmidf$w, na.rm=TRUE) #now works!\n\n[1] 88.33333\n\n\nUsing complete cases\nFor some data frame made of surveyed values where different variables are filled in sparsely, it is important you get access only to entirely completed individuals\n\ncomplete.cases(bmidf) #returns a logical indicating whether the row \n\n[1]  TRUE FALSE  TRUE  TRUE\n\n# has not a singleNA\nclass(complete.cases(bmidf))\n\n[1] \"logical\"\n\n#Note that with logicals, TRUE is 1 and FALSE is zero. Thus\n\nsum(complete.cases(bmidf))\n\n[1] 3\n\n#You can use this logical to subset the rows\n# and have a \"clean\" df\nbmidf2&lt;-bmidf[complete.cases(bmidf),] #read this as \"select complete cases rows with all columns\nbmidf2\n\n    h   w BMI\n1 1.8  70  22\n3 2.0  95  24\n4 1.9 100  28",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+    ]
+  },
+  {
+    "objectID": "df_functions.html#environment-listing-and-management",
+    "href": "df_functions.html#environment-listing-and-management",
+    "title": "7  Working with data frames and functions",
+    "section": "7.3 Environment listing and management",
+    "text": "7.3 Environment listing and management\nWe have now created a bunch of objects which we can see in the Environment window of RStudio.\nIn the console we can also see them with\n\nls()\n\n[1] \"bmi.calc\"           \"bmi.calc.text\"      \"bmidf\"             \n[4] \"bmidf2\"             \"celsius2fahrenheit\" \"mytable\"           \n[7] \"paste.heightweight\"\n\n\nAnd any of these objects can be removed with\n\nrm()\n#for example\nrm(mytable)\n\nIn the environment window of RStudio you also see the structure of objects (when displayed as a list not a grid)\nFrom the console you use the structure function str() to get the same info\n\nstr(bmidf)\n\n'data.frame':   4 obs. of  3 variables:\n $ h  : num  1.8 1.7 2 1.9\n $ w  : num  70 NA 95 100\n $ BMI: num  22 NA 24 28",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+    ]
+  },
+  {
+    "objectID": "df_functions.html#viewing-data-frame",
+    "href": "df_functions.html#viewing-data-frame",
+    "title": "7  Working with data frames and functions",
+    "section": "7.4 Viewing data frame",
+    "text": "7.4 Viewing data frame\n\nView(bmidf)\n\nis the most pleasant interactive way to view a data frame\nBut be careful if many rows or columns !\nThe classical console way is simply\n\nbmidf\n\n    h   w BMI\n1 1.8  70  22\n2 1.7  NA  NA\n3 2.0  95  24\n4 1.9 100  28\n\n\nIn case of a large vector or df there will be a limited display of 1000 values (default) in console\nSuppose you have a vector of 1002 values\n\nmydf&lt;-data.frame(z=1:502, zrev=502:1)\nmydf\n\n      z zrev\n1     1  502\n2     2  501\n3     3  500\n4     4  499\n5     5  498\n6     6  497\n7     7  496\n8     8  495\n9     9  494\n10   10  493\n11   11  492\n12   12  491\n13   13  490\n14   14  489\n15   15  488\n16   16  487\n17   17  486\n18   18  485\n19   19  484\n20   20  483\n21   21  482\n22   22  481\n23   23  480\n24   24  479\n25   25  478\n26   26  477\n27   27  476\n28   28  475\n29   29  474\n30   30  473\n31   31  472\n32   32  471\n33   33  470\n34   34  469\n35   35  468\n36   36  467\n37   37  466\n38   38  465\n39   39  464\n40   40  463\n41   41  462\n42   42  461\n43   43  460\n44   44  459\n45   45  458\n46   46  457\n47   47  456\n48   48  455\n49   49  454\n50   50  453\n51   51  452\n52   52  451\n53   53  450\n54   54  449\n55   55  448\n56   56  447\n57   57  446\n58   58  445\n59   59  444\n60   60  443\n61   61  442\n62   62  441\n63   63  440\n64   64  439\n65   65  438\n66   66  437\n67   67  436\n68   68  435\n69   69  434\n70   70  433\n71   71  432\n72   72  431\n73   73  430\n74   74  429\n75   75  428\n76   76  427\n77   77  426\n78   78  425\n79   79  424\n80   80  423\n81   81  422\n82   82  421\n83   83  420\n84   84  419\n85   85  418\n86   86  417\n87   87  416\n88   88  415\n89   89  414\n90   90  413\n91   91  412\n92   92  411\n93   93  410\n94   94  409\n95   95  408\n96   96  407\n97   97  406\n98   98  405\n99   99  404\n100 100  403\n101 101  402\n102 102  401\n103 103  400\n104 104  399\n105 105  398\n106 106  397\n107 107  396\n108 108  395\n109 109  394\n110 110  393\n111 111  392\n112 112  391\n113 113  390\n114 114  389\n115 115  388\n116 116  387\n117 117  386\n118 118  385\n119 119  384\n120 120  383\n121 121  382\n122 122  381\n123 123  380\n124 124  379\n125 125  378\n126 126  377\n127 127  376\n128 128  375\n129 129  374\n130 130  373\n131 131  372\n132 132  371\n133 133  370\n134 134  369\n135 135  368\n136 136  367\n137 137  366\n138 138  365\n139 139  364\n140 140  363\n141 141  362\n142 142  361\n143 143  360\n144 144  359\n145 145  358\n146 146  357\n147 147  356\n148 148  355\n149 149  354\n150 150  353\n151 151  352\n152 152  351\n153 153  350\n154 154  349\n155 155  348\n156 156  347\n157 157  346\n158 158  345\n159 159  344\n160 160  343\n161 161  342\n162 162  341\n163 163  340\n164 164  339\n165 165  338\n166 166  337\n167 167  336\n168 168  335\n169 169  334\n170 170  333\n171 171  332\n172 172  331\n173 173  330\n174 174  329\n175 175  328\n176 176  327\n177 177  326\n178 178  325\n179 179  324\n180 180  323\n181 181  322\n182 182  321\n183 183  320\n184 184  319\n185 185  318\n186 186  317\n187 187  316\n188 188  315\n189 189  314\n190 190  313\n191 191  312\n192 192  311\n193 193  310\n194 194  309\n195 195  308\n196 196  307\n197 197  306\n198 198  305\n199 199  304\n200 200  303\n201 201  302\n202 202  301\n203 203  300\n204 204  299\n205 205  298\n206 206  297\n207 207  296\n208 208  295\n209 209  294\n210 210  293\n211 211  292\n212 212  291\n213 213  290\n214 214  289\n215 215  288\n216 216  287\n217 217  286\n218 218  285\n219 219  284\n220 220  283\n221 221  282\n222 222  281\n223 223  280\n224 224  279\n225 225  278\n226 226  277\n227 227  276\n228 228  275\n229 229  274\n230 230  273\n231 231  272\n232 232  271\n233 233  270\n234 234  269\n235 235  268\n236 236  267\n237 237  266\n238 238  265\n239 239  264\n240 240  263\n241 241  262\n242 242  261\n243 243  260\n244 244  259\n245 245  258\n246 246  257\n247 247  256\n248 248  255\n249 249  254\n250 250  253\n251 251  252\n252 252  251\n253 253  250\n254 254  249\n255 255  248\n256 256  247\n257 257  246\n258 258  245\n259 259  244\n260 260  243\n261 261  242\n262 262  241\n263 263  240\n264 264  239\n265 265  238\n266 266  237\n267 267  236\n268 268  235\n269 269  234\n270 270  233\n271 271  232\n272 272  231\n273 273  230\n274 274  229\n275 275  228\n276 276  227\n277 277  226\n278 278  225\n279 279  224\n280 280  223\n281 281  222\n282 282  221\n283 283  220\n284 284  219\n285 285  218\n286 286  217\n287 287  216\n288 288  215\n289 289  214\n290 290  213\n291 291  212\n292 292  211\n293 293  210\n294 294  209\n295 295  208\n296 296  207\n297 297  206\n298 298  205\n299 299  204\n300 300  203\n301 301  202\n302 302  201\n303 303  200\n304 304  199\n305 305  198\n306 306  197\n307 307  196\n308 308  195\n309 309  194\n310 310  193\n311 311  192\n312 312  191\n313 313  190\n314 314  189\n315 315  188\n316 316  187\n317 317  186\n318 318  185\n319 319  184\n320 320  183\n321 321  182\n322 322  181\n323 323  180\n324 324  179\n325 325  178\n326 326  177\n327 327  176\n328 328  175\n329 329  174\n330 330  173\n331 331  172\n332 332  171\n333 333  170\n334 334  169\n335 335  168\n336 336  167\n337 337  166\n338 338  165\n339 339  164\n340 340  163\n341 341  162\n342 342  161\n343 343  160\n344 344  159\n345 345  158\n346 346  157\n347 347  156\n348 348  155\n349 349  154\n350 350  153\n351 351  152\n352 352  151\n353 353  150\n354 354  149\n355 355  148\n356 356  147\n357 357  146\n358 358  145\n359 359  144\n360 360  143\n361 361  142\n362 362  141\n363 363  140\n364 364  139\n365 365  138\n366 366  137\n367 367  136\n368 368  135\n369 369  134\n370 370  133\n371 371  132\n372 372  131\n373 373  130\n374 374  129\n375 375  128\n376 376  127\n377 377  126\n378 378  125\n379 379  124\n380 380  123\n381 381  122\n382 382  121\n383 383  120\n384 384  119\n385 385  118\n386 386  117\n387 387  116\n388 388  115\n389 389  114\n390 390  113\n391 391  112\n392 392  111\n393 393  110\n394 394  109\n395 395  108\n396 396  107\n397 397  106\n398 398  105\n399 399  104\n400 400  103\n401 401  102\n402 402  101\n403 403  100\n404 404   99\n405 405   98\n406 406   97\n407 407   96\n408 408   95\n409 409   94\n410 410   93\n411 411   92\n412 412   91\n413 413   90\n414 414   89\n415 415   88\n416 416   87\n417 417   86\n418 418   85\n419 419   84\n420 420   83\n421 421   82\n422 422   81\n423 423   80\n424 424   79\n425 425   78\n426 426   77\n427 427   76\n428 428   75\n429 429   74\n430 430   73\n431 431   72\n432 432   71\n433 433   70\n434 434   69\n435 435   68\n436 436   67\n437 437   66\n438 438   65\n439 439   64\n440 440   63\n441 441   62\n442 442   61\n443 443   60\n444 444   59\n445 445   58\n446 446   57\n447 447   56\n448 448   55\n449 449   54\n450 450   53\n451 451   52\n452 452   51\n453 453   50\n454 454   49\n455 455   48\n456 456   47\n457 457   46\n458 458   45\n459 459   44\n460 460   43\n461 461   42\n462 462   41\n463 463   40\n464 464   39\n465 465   38\n466 466   37\n467 467   36\n468 468   35\n469 469   34\n470 470   33\n471 471   32\n472 472   31\n473 473   30\n474 474   29\n475 475   28\n476 476   27\n477 477   26\n478 478   25\n479 479   24\n480 480   23\n481 481   22\n482 482   21\n483 483   20\n484 484   19\n485 485   18\n486 486   17\n487 487   16\n488 488   15\n489 489   14\n490 490   13\n491 491   12\n492 492   11\n493 493   10\n494 494    9\n495 495    8\n496 496    7\n497 497    6\n498 498    5\n499 499    4\n500 500    3\n501 501    2\n502 502    1\n\n\n\n#[ reached getOption(\"max.print\") -- omitted 2 entries ]\n\nYou can change the default using\n\n options(max.print=1500)\n\nbut one rarely does this\nMost of the times you want a sneak preview in your data from the top\n\n# head() returns the first rows (5 default) rows:\nhead(mydf)\n\n  z zrev\n1 1  502\n2 2  501\n3 3  500\n4 4  499\n5 5  498\n6 6  497\n\nhead(mydf,8)\n\n  z zrev\n1 1  502\n2 2  501\n3 3  500\n4 4  499\n5 5  498\n6 6  497\n7 7  496\n8 8  495\n\n\nor the bottom:\n\n# tail() the last ones :\ntail(mydf)\n\n      z zrev\n497 497    6\n498 498    5\n499 499    4\n500 500    3\n501 501    2\n502 502    1\n\ntail(mydf, 7)\n\n      z zrev\n496 496    7\n497 497    6\n498 498    5\n499 499    4\n500 500    3\n501 501    2\n502 502    1",
+    "crumbs": [
+      "Getting started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
     ]
   },
   {
     "objectID": "ggplot.html",
     "href": "ggplot.html",
-    "title": "4  Graphics ggplot way",
+    "title": "8  Graphics ggplot way",
     "section": "",
     "text": "Content",
     "crumbs": [
-      "R basics and visualisation",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Graphics ggplot way</span>"
+      "Graphics",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Graphics ggplot way</span>"
     ]
   },
   {
     "objectID": "univariate.html",
     "href": "univariate.html",
-    "title": "5  Univariate statistics",
+    "title": "9  Univariate statistics",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Univariate analysis and distributions",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Univariate statistics</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Univariate statistics</span>"
     ]
   },
   {
     "objectID": "distributions.html",
     "href": "distributions.html",
-    "title": "6  Statistical distributions",
+    "title": "10  Statistical distributions",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Univariate analysis and distributions",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Statistical distributions</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Statistical distributions</span>"
     ]
   },
   {
     "objectID": "correlation.html",
     "href": "correlation.html",
-    "title": "7  Covariance and correlation",
+    "title": "11  Covariance and correlation",
     "section": "",
     "text": "Content",
     "crumbs": [
       "Bivariate analysis and regression",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Covariance and correlation</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Covariance and correlation</span>"
     ]
   },
   {
@@ -205,34 +414,45 @@
   {
     "objectID": "CIregression.html",
     "href": "CIregression.html",
-    "title": "8  Confidence interval of a regression”",
+    "title": "12  Confidence interval of a regression”",
     "section": "",
-    "text": "8.1 Load Data and Packages\nWe use the Scotland rain data and load the ggplot package plus an additional related ggplot package (ggpmisc) to ease some formatting\nRainScotland &lt;- read.csv(\"data/Ferguson/RainScotland.csv\")\nlibrary(ggplot2)\nlibrary(ggpmisc)\n\nLoading required package: ggpp\n\n\nRegistered S3 methods overwritten by 'ggpp':\n  method                  from   \n  heightDetails.titleGrob ggplot2\n  widthDetails.titleGrob  ggplot2\n\n\n\nAttaching package: 'ggpp'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    annotate",
+    "text": "12.1 Load Data and Packages\nWe use the Scotland rain data and load the ggplot package plus an additional related ggplot package (ggpmisc) to ease some formatting\nRainScotland &lt;- read.csv(\"data/Ferguson/RainScotland.csv\")\nlibrary(ggplot2)\nlibrary(ggpmisc)\n\nLoading required package: ggpp\n\n\nRegistered S3 methods overwritten by 'ggpp':\n  method                  from   \n  heightDetails.titleGrob ggplot2\n  widthDetails.titleGrob  ggplot2\n\n\n\nAttaching package: 'ggpp'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    annotate",
     "crumbs": [
       "Bivariate analysis and regression",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
     ]
   },
   {
     "objectID": "CIregression.html#scatter-plot",
     "href": "CIregression.html#scatter-plot",
-    "title": "8  Confidence interval of a regression”",
-    "section": "8.2 Scatter plot",
-    "text": "8.2 Scatter plot\nWe plot the data and add the OLS line, its equation, vertical residual lines and the confidence interval (pink area).\nWe emphasize two points (the 7th and 18th) for which we later calculate the confidence interval. We see 18 is located outside of the confidence interval and 7 is located right on the estimated line, but is also one of the largest points in terms of elevation.\n\np&lt;-ggplot(RainScotland, aes(x = Elevation, y = Rainfall))  +\n  stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = \"~~~\")),formula = y ~ x, parse = TRUE) +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"black\",fill=\"lightpink\", alpha = 0.3)+\n  geom_segment(aes(xend = Elevation, yend = predict(lm(Rainfall ~ Elevation, data = RainScotland))), linetype = \"dashed\", color = \"gray\", size = 0.5) +\n  labs(title = \"Rainfall as a function of Elevation\", x = \"Elevation (m)\", y = \"Rainfall (mm/yr)\")+\n  geom_point(data=RainScotland[18,], size=5, color=\"red\")+\n  geom_point(data=RainScotland[7,], size=5, color=\"lightblue\")+\n  geom_point()+\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\np\n\nWarning: The dot-dot notation (`..eq.label..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(eq.label)` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "title": "12  Confidence interval of a regression”",
+    "section": "12.2 Scatter plot",
+    "text": "12.2 Scatter plot\nWe plot the data and add the OLS line, its equation, vertical residual lines and the confidence interval (pink area).\nWe emphasize two points (the 7th and 18th) for which we later calculate the confidence interval. We see 18 is located outside of the confidence interval and 7 is located right on the estimated line, but is also one of the largest points in terms of elevation.\n\np&lt;-ggplot(RainScotland, aes(x = Elevation, y = Rainfall))  +\n  stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = \"~~~\")),formula = y ~ x, parse = TRUE) +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"black\",fill=\"lightpink\", alpha = 0.3)+\n  geom_segment(aes(xend = Elevation, yend = predict(lm(Rainfall ~ Elevation, data = RainScotland))), linetype = \"dashed\", color = \"gray\", size = 0.5) +\n  labs(title = \"Rainfall as a function of Elevation\", x = \"Elevation (m)\", y = \"Rainfall (mm/yr)\")+\n  geom_point(data=RainScotland[18,], size=5, color=\"red\")+\n  geom_point(data=RainScotland[7,], size=5, color=\"lightblue\")+\n  geom_point()+\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\np\n\nWarning: The dot-dot notation (`..eq.label..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(eq.label)` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'",
     "crumbs": [
       "Bivariate analysis and regression",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
     ]
   },
   {
     "objectID": "CIregression.html#confidence-interval-calculation",
     "href": "CIregression.html#confidence-interval-calculation",
-    "title": "8  Confidence interval of a regression”",
-    "section": "8.3 Confidence Interval calculation",
-    "text": "8.3 Confidence Interval calculation\nWe now show how the pink area representing the 95% confidence interval is calculated.\nThe lower and upper bound for each predicted value can be obtained using the predict function. We can ask prediction and confidence bounds for any point (using newdata with the same variables as the original variables), but here we do it for all the observed ones and show the values for point 7 and 18.\n\nmodel &lt;- lm(Rainfall ~ Elevation, data = RainScotland)\n\npred &lt;- predict(model, newdata = data.frame(Elevation = RainScotland$Elevation), interval = \"confidence\")\n\npred[c(7,18),]\n\n        fit      lwr      upr\n7  2131.546 1908.562 2354.530\n18 1537.208 1415.837 1658.579\n\npredicted_value18 &lt;- pred[18,\"fit\"]\npredicted_value7 &lt;- pred[7,\"fit\"]\n\nWe now compute the total residual standard error (RSE) of the model (also called the mean square error):\n\\[RSE=\\sqrt{\\frac{\\sum (\\text{residuals(model)})^2}{\\text{model degrees of freedom}}}\\],\nwhich measures the average distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical thin lines on the above figure).\nThe sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have 20 individuals and 2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).\nWe take the square root to get the RSE back to rainfall units, in this case it is equal to 243mm\n\nRSE&lt;-sqrt(sum(residuals(model)^2) / model$df.residual)\nRSE\n\n[1] 242.7918\n\n\nNote that the RSE often denoted by sigma is also found in the summary of the regression model:\n\nsummary(model)$sigma\n\n[1] 242.7918\n\n\nFor a specific observation, say the 18th or the 7th observation, we adjust the RSE for the known characteristics of the observation, i.e. its value along elevation, the predictor variable. More specifically if the observed elevation is very much away from the mean, it is going to have a large deviation to the mean, hence a large share of the total deviations (always squared to avoid mixing pluses and minuses) to the mean elevation in the sample and thus potentially more impact on the regression line.\nThese relative deviations are\n\nelevation_relative_dev18&lt;-(RainScotland$Elevation[18] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)\n\nelevation_relative_dev7&lt;-(RainScotland$Elevation[7] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)\n\nelevation_relative_dev18\n\n[1] 0.006616382\n\nelevation_relative_dev7\n\n[1] 0.1410991\n\n\nMathematically, the standard error of the fit at a given point ( ) is given by: \\[\n   \\text{SE}(\\hat{y}) = RSE\\sqrt{\\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}}\n   \\]\nwhere we see it increases with the global variance (variance of residuals) of the model, i.e. RSE, decreases with the sample size n, and increases with the distance to the mean along the x variable, which is the relative deviation quantity we just computed (compare 7 and 18).\nLeaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root and define the leverage of an observation (and simplify the standard error writing)\n\\[L=\\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}\\\\\n\\text{SE}(\\hat{y}) = RSE\\sqrt{L}\\]\nLeverage values range between \\(\\frac{1}{n}\\) and 1, with higher values indicating greater influence on the regression model. 1 is for an observation that would stand extremely far from the mean and taking most of the variation in x.\nPoints farther from the mean of x have higher leverage, have a greater influence on the regression line and thus can increase the uncertainty of the predicted line. In Greene (p.99) ’s terms:\n\n“the farther the forecasted point is from the center of our experience, the greater is the degree of uncertainty”\n\nThis is why the confidence intervals (pink ribbon) usually get wider away from the mean of x. This process is also reinforced by the density of data points, which is typically higher around the mean of x. The higher density providing more information and reducing uncertainty near the mean.\nThe equation above also shows that the leverage will decrease for every point as soon as n increases. When n increases the uncertainty decreases and the ribbon is narrower.\nTo compute the leverage for 7 and 18 we thus simply add \\(1/n\\) to our relative deviations:\n\nlever7&lt;-1/nrow(RainScotland)+elevation_relative_dev7\nlever18&lt;-1/ nrow(RainScotland)+elevation_relative_dev18\nlever7\n\n[1] 0.1910991\n\nlever18\n\n[1] 0.05661638\n\n\nWith p predictors (here p=1) and n observations (here n=20), a rule of thumb is to consider a leverage is too high when \\(\\frac{p+1}{n}\\) is significantly different from the average leverage. In our case, we have \\(\\frac{p+1}{n}=0.1\\) and observation 7 may be considered having too much influence. In practice however, the significance of a leverage is examined after removing high leverage points and evaluating the effect of this removal on the regression coefficients and the overall model fit.\nPursuing, we compute the standard errors of the fit at the level of our observations 7 and 18:\n\nse7&lt;-RSE*(lever7)^(1/2)\nse18&lt;-RSE*(lever18)^(1/2)\nse7\n\n[1] 106.1362\n\nse18\n\n[1] 57.77037\n\n\nIn order to draw the pink ribbon, we need to additionally set a level of confidence to our estimate. By default most researchers use a 95% confidence interval. We then multiply our point standard error by the corresponding t-statistics, and add/remove it from the prediction to obtain the upper and lower bounds of the confidence interval area:\nWe first get the critical value from the t-distribution, using half of the 5% (thus 0.975) on both side:\n\nt_value &lt;- qt(0.975, df = model$df.residual)\n\nthen multiply by the standard error and add/remove it to/from prediction:\n\nlower18&lt;-predicted_value18-t_value*se18\nlower7&lt;-predicted_value7-t_value*se7\nupper18&lt;-predicted_value18+t_value*se18\nupper7&lt;-predicted_value7+t_value*se7\n\nmanualCI&lt;-data.frame(\n  Elevation=RainScotland[c(7,18),\"Elevation\"],\n  UpperCI=c(upper7,upper18),\n  LowerCI=c(lower7,lower18)\n  )\nmanualCI\n\n  Elevation  UpperCI  LowerCI\n1       520 2354.530 1908.562\n2       270 1658.579 1415.837\n\n\nWe can verify that these values are the same as the interval made up by the predict function with the confidence option (see above)\n\npred[c(7,18),]\n\n        fit      lwr      upr\n7  2131.546 1908.562 2354.530\n18 1537.208 1415.837 1658.579\n\n\nas well as the one computed by ggplot with se=TRUE option in geom_smooth\n\np+geom_segment(data=manualCI, aes(x=Elevation,xend=Elevation,y=LowerCI, yend =UpperCI), color = \"blue\", size = 1)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n##Prediction versus confidence interval\nFinally, note that there is another interval to be used for prediction when we get new data, i.e. the prediction interval. You can get this interval from the predict function with the prediction option instead of confidence.\nThe standard error one uses here has the same ingredients but a slightly different definition:\n\\[\\text{SE}(\\hat{y}) = RSE\\sqrt{1+ \\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}}\\\\\n   \\text{SE}(\\hat{y}) = RSE\\sqrt{1+L}\\]\nWhile the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model. Confidence intervals focus on the precision of the sample mean, while prediction intervals account for the variability of individual data points around that mean.\nSuppose you have a new observation at 400m elevation where a rainfall of 1500 is measured. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.\n\npred_p &lt;- predict(model, newdata = data.frame(Elevation = 400), interval = \"prediction\")\n\nIn this case 1500 mm falls within the range of the model.\nBy construction, confidence intervals are narrower than prediction intervals. Prediction intervals have an extra RSE in the calculation. The intuition is that we don’t know the mean nor the variance of the population from which new observations are taken and the only thing we can do is to estimate the mean from the mean of our estimates, which itself will vary based on the variance considered. We can only use the RSE again to estimate this variance for the mean and the variance itself. Hence the RSE enters twice the equation.\nAn important implication of the presence of that extra 1 added to L under the square root is that while L decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):\n\n“No matter how much data we have, we can never predict perfectly”",
+    "title": "12  Confidence interval of a regression”",
+    "section": "12.3 Confidence Interval calculation",
+    "text": "12.3 Confidence Interval calculation\nWe now show how the pink area representing the 95% confidence interval is calculated.\nThe lower and upper bound for each predicted value can be obtained using the predict function. We can ask prediction and confidence bounds for any point (using newdata with the same variables as the original variables), but here we do it for all the observed ones and show the values for point 7 and 18.\n\nmodel &lt;- lm(Rainfall ~ Elevation, data = RainScotland)\n\npred &lt;- predict(model, newdata = data.frame(Elevation = RainScotland$Elevation), interval = \"confidence\")\n\npred[c(7,18),]\n\n        fit      lwr      upr\n7  2131.546 1908.562 2354.530\n18 1537.208 1415.837 1658.579\n\npredicted_value18 &lt;- pred[18,\"fit\"]\npredicted_value7 &lt;- pred[7,\"fit\"]\n\nWe now compute the total residual standard error (RSE) of the model (also called the root mean square error):\n\\[RSE=\\sqrt{\\frac{\\sum (\\text{residuals(model)})^2}{\\text{model degrees of freedom}}}\\] which measures the typical distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical dashed lines on the above figure).\nThe sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have n=20 individuals and p=2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).\n(NB: I understand the denominator n-p is where RSE differs from the Root Mean Square Error RMSE, which is often used to describe a fit, which is the mean, i.e. divided by n)\nWe take the square root to get the RSE back to rainfall units, in this case it is equal to 243mm\n\nRSE&lt;-sqrt(sum(residuals(model)^2) / model$df.residual)\nRSE\n\n[1] 242.7918\n\n\nNote that the RSE often denoted by sigma is also found in the summary of the regression model:\n\nsummary(model)$sigma\n\n[1] 242.7918\n\n\nFor a specific observation, say the 18th or the 7th observation, we adjust the RSE for the known characteristics of the observation, i.e. its value along elevation, the predictor variable. More specifically if the observed elevation is very much away from the mean, it is going to have a large deviation to the mean, hence a large share of the total deviations (always squared to avoid mixing pluses and minuses) to the mean elevation in the sample and thus potentially more impact on the regression line.\nThese relative deviations are\n\nelevation_relative_dev18&lt;-(RainScotland$Elevation[18] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)\n\nelevation_relative_dev7&lt;-(RainScotland$Elevation[7] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)\n\nelevation_relative_dev18\n\n[1] 0.006616382\n\nelevation_relative_dev7\n\n[1] 0.1410991\n\n\nMathematically, the standard error of the fit at a given point ( ) is given by: \\[\n   \\text{SE}(\\hat{y}) = RSE\\sqrt{\\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}}\n   \\]\nwhere we see it increases with the global variance (variance of residuals) of the model, i.e. RSE, decreases with the sample size n, and increases with the distance to the mean along the x variable, which is the relative deviation quantity we just computed (compare 7 and 18).\nLeaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root and define the leverage of an observation (and simplify the standard error writing)\n\\[L=\\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}\\\\\n\\text{SE}(\\hat{y}) = RSE\\sqrt{L}\\]\nLeverage values range between \\(\\frac{1}{n}\\) and 1, with higher values indicating greater influence on the regression model. 1 is for an observation that would stand extremely far from the mean and taking most of the variation in x.\nPoints farther from the mean of x have higher leverage, have a greater influence on the regression line and thus can increase the uncertainty of the predicted line. In Greene (p.99) ’s terms:\n\n“the farther the forecasted point is from the center of our experience, the greater is the degree of uncertainty”\n\nThis is why the confidence intervals (pink ribbon) usually get wider away from the mean of x. This process is also reinforced by the density of data points, which is typically higher around the mean of x. The higher density providing more information and reducing uncertainty near the mean.\nThe equation above also shows that the leverage will decrease for every point as soon as n increases. When n increases the uncertainty decreases and the ribbon is narrower.\nTo compute the leverage for 7 and 18 we thus simply add \\(1/n\\) to our relative deviations:\n\nlever7&lt;-1/nrow(RainScotland)+elevation_relative_dev7\nlever18&lt;-1/ nrow(RainScotland)+elevation_relative_dev18\nlever7\n\n[1] 0.1910991\n\nlever18\n\n[1] 0.05661638\n\n\nWith p predictors (here p=1) and n observations (here n=20), a rule of thumb is to consider a leverage is too high when \\(\\frac{p+1}{n}\\) is significantly different from the average leverage. In our case, we have \\(\\frac{p+1}{n}=0.1\\) and observation 7 may be considered having too much influence. In practice however, the significance of a leverage is examined after removing high leverage points and evaluating the effect of this removal on the regression coefficients and the overall model fit.\nPursuing, we compute the standard errors of the fit at the level of our observations 7 and 18:\n\nse7&lt;-RSE*(lever7)^(1/2)\nse18&lt;-RSE*(lever18)^(1/2)\nse7\n\n[1] 106.1362\n\nse18\n\n[1] 57.77037\n\n\nIn order to draw the pink ribbon, we need to additionally set a level of confidence to our estimate. By default most researchers use a 95% confidence interval. We then multiply our point standard error by the corresponding t-statistics, and add/remove it from the prediction to obtain the upper and lower bounds of the confidence interval area:\nWe first get the critical value from the t-distribution, using half of the 5% (thus 0.975) on both side:\n\nt_value &lt;- qt(0.975, df = model$df.residual)\n\nthen multiply by the standard error and add/remove it to/from prediction:\n\nlower18&lt;-predicted_value18-t_value*se18\nlower7&lt;-predicted_value7-t_value*se7\nupper18&lt;-predicted_value18+t_value*se18\nupper7&lt;-predicted_value7+t_value*se7\n\nmanualCI&lt;-data.frame(\n  Elevation=RainScotland[c(7,18),\"Elevation\"],\n  UpperCI=c(upper7,upper18),\n  LowerCI=c(lower7,lower18)\n  )\nmanualCI\n\n  Elevation  UpperCI  LowerCI\n1       520 2354.530 1908.562\n2       270 1658.579 1415.837\n\n\nWe can verify that these values are the same as the interval made up by the predict function with the confidence option (see above)\n\npred[c(7,18),]\n\n        fit      lwr      upr\n7  2131.546 1908.562 2354.530\n18 1537.208 1415.837 1658.579\n\n\nas well as the one computed by ggplot with se=TRUE option in geom_smooth\n\np+geom_segment(data=manualCI, aes(x=Elevation,xend=Elevation,y=LowerCI, yend =UpperCI), color = \"blue\", size = 1)\n\n`geom_smooth()` using formula = 'y ~ x'",
     "crumbs": [
       "Bivariate analysis and regression",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
+    ]
+  },
+  {
+    "objectID": "CIregression.html#prediction-versus-confidence-interval",
+    "href": "CIregression.html#prediction-versus-confidence-interval",
+    "title": "12  Confidence interval of a regression”",
+    "section": "12.4 Prediction versus confidence interval",
+    "text": "12.4 Prediction versus confidence interval\nFinally, note that there is another interval to be used for prediction when we get new data, i.e. the prediction interval. You can get this interval from the predict function with the prediction option instead of confidence.\nThe standard error one uses here has the same ingredients but a slightly different definition:\n\\[\\text{SE}(\\hat{y}) = RSE\\sqrt{1+ \\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}}\\\\\n   \\text{SE}(\\hat{y}) = RSE\\sqrt{1+L}\\]\nWhile the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model.\nSuppose you need to infer the rainfall for a 400m elevation. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.\n\npred_p &lt;- predict(model, newdata = data.frame(Elevation = 400), interval = \"prediction\")\npred_p\n\n       fit      lwr      upr\n1 1846.264 1317.536 2374.991\n\n\nIn this case you can then say that there is 95% chances that the precipitation will be between 1318 and 2375 mm.\nYou can be tempted to have a more precise prediction, but you then loose in terms of certainty.\n\npred_p90 &lt;- predict(model, newdata = data.frame(Elevation = 400), interval = \"prediction\", level=0.90)\npred_p90\n\n       fit      lwr      upr\n1 1846.264 1409.861 2282.666\n\n\nFrom 1410 to 2283 is indeed a narrower guess but it is also less certain.\nWe can display the prediction area on the previous plot after taking the values from the predict function (not directly from geom_smooth which logically is about the data used for estimating the curve).\n\nnewobs&lt;-data.frame(Elevation = seq(100,600, by=50))\npredictions&lt;-predict(model, newdata = newobs , interval = \"prediction\")\np+geom_ribbon(data=cbind(newobs,predictions),aes(x=Elevation, y=NULL, ymin = lwr, ymax = upr), fill = \"lightblue\", alpha = 0.2)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nBy construction, confidence intervals are narrower than prediction intervals. Prediction intervals have an extra RSE in the calculation. The intuition is that we don’t know the mean nor the variance of the population from which new observations are taken and the only thing we can do is to estimate the mean from the mean of our estimates, which itself will vary based on the variance considered. We can only use the RSE again to estimate this variance for the mean and the variance itself. Hence the RSE enters twice the equation.\nAn important implication of the presence of that extra \\(1\\) added to \\(L\\) under the square root is that while \\(L\\) decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):\n\n“No matter how much data we have, we can never predict perfectly”",
+    "crumbs": [
+      "Bivariate analysis and regression",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
     ]
   },
   {
@@ -240,7 +460,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Beguin, Hubert, and Jacques-François Thisse. 1979. “An\nAxiomatic Approach to\nGeographical Space.” Geographical\nAnalysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
+    "text": "Anselin, Luc, and Bera,I. 1998. “Spatial Dependence in Linear\nRegression Models with an Introduction to Spatial Econometrics:\nRegression Models with an Anselin Bera i. INTRODUCTION.” In. CRC\nPress.\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An\nAxiomatic Approach to\nGeographical Space.” Geographical\nAnalysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.\n\n\nHaining, Robert P. 2010. “The Nature of Georeferenced\nData.” In, edited by Manfred M. Fischer and Arthur Getis,\n197–217. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-03647-7_12.\n\n\nOpenshaw, Stan. 1984. The Modifiable Areal Unit Problem.\nConcepts and Techniques in Modern Geography 38. Norwich: Geo.\n\n\nTobler, W. R. 1970. “A Computer Model Simulation of Urban Growth\nin the Detroit Region in Economic Geography 46: 2,\n234240.” Clark University, Worcester, MA.",
     "crumbs": [
       "Bibliography",
       "References"
@@ -251,7 +471,7 @@
     "href": "intro.html",
     "title": "Introduction",
     "section": "",
-    "text": "1  Statistical data analysis for geographers\n3  Geographical space",
+    "text": "1  Statistical data analysis for geographers\n2  Spatial data analysis: a definition\n3  Geographical space\n4  Spatial data issues",
     "crumbs": [
       "Introduction"
     ]

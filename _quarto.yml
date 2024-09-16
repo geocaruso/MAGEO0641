@@ -17,11 +17,16 @@ book:
     - part: intro.qmd
       chapters:
       - scope.qmd
-      - space_issues.qmd
+      - spatial_analysis.qmd
       - space_axiom.qmd
-    - part: "R basics and visualisation"
+      - space_issues.qmd
+    - part: "Getting started with R"
       chapters:
+      - getting_started.qmd
       - R_basics.qmd
+      - df_functions.qmd
+    - part: "Graphics"
+      chapters:
       - ggplot.qmd
     - part: "Univariate analysis and distributions"
       chapters:

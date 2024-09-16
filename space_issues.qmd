@@ -1,35 +1,8 @@
-## Spatial data analysis: definition and challenges {#sec-spatial-data-analysis-definition-and-challenges}
-
-## Interdisciplinarity and perspective
-
-Data analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about **spatial analysis**. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.
-
-Within geography, we understand the term **spatial analysis** to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to **applied statistical approaches**, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, **this course is a spatial analysis course**.
-
-However, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms **spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process**, not just the consideration of geographic elements. See for example the @10.1007/978-3-642-03647-7 handbook for discussion and examples.
-
-## Links with theory
-
-Science progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or subfields.
-
-From a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on **uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks**.
-
-The ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.
-
-From a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:
-
--   Describe the location of activities and how they change over time
--   Estimate **reduced form models**
-
-Unlike **structural form models**, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.
-
-There is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.
-
-We very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients much more than to prediction using as many data as possible. If a variable is used it is because we have some idea of its importance and influence on others, not just to obtain a fit. Hence we won't use automatic models constructions (no automated regression variable selection), and leave aside all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if they can be considered to belong to spatial analysis and use data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.
-
-<!-- a -->
+# Spatial data issues {#sec-spatial-data-issues}
 
 ## Equivalence and Independence
+
+(Based on discussions in Jayet, p. 2-13)
 
 Statistical analysis is based on two key principles, or invariants:
 
@@ -37,10 +10,110 @@ Statistical analysis is based on two key principles, or invariants:
 
 2.  **All observations must be independent from each other**: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.
 
-However, both of these principles are challenged when applied in a **spatial context**. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations.
+However, both of these principles are challenged when applied in a **spatial context**. Spatial data often exhibit **dependencies due to geographic proximity, which violates the assumption of independence**. Similarly, the notion of **statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations and because the spatial definition of objects may vary and their sampling irregular.**
 
-These challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.
+These challenges highlight the **need for specialized approaches in spatial analysis**, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.
 
-(*Based on discussions in Jayet, p. 2-13*)
+## Equivalence
 
-## 
+### Irregularity of observations and the nature of data
+
+While there are time cycles, making repetitive data logging along the time dimension doable, there is no such think as a spatial cycle for geographical data recording.
+
+Most spatial data has a irregular covering in space, which already challenges the **equivalence of observations**
+
+![](images/clipboard-1678275506.png)
+
+(source to be added, apologies if you are the author, I am happy to adapt)
+
+![](images/clipboard-917615591.png){width="691"}
+
+Observations (countries) are of different size, i.e. the surface attribute $m$ matters here.
+
+Suppose $Z_{pop}$ is the country population. One can expect $Z_{pop}$ to relate to $m$ if processes are homogeneous across space. However a $Z/m$ density variables would still show these objects are very different.
+
+Yet, other $Z_i$ variables could still be compared using that $Z_{pop}$ attributes. For example the active population of the place (country) as a percentage of its total population, or using other transformations (linear or not).
+
+Note that variations in volume/mass/size such as $Z_{pop}$ are very common, with very few objects having a very large size compared to most others. Such a size effect
+
+-   impacts on the total and central (mean, median) value of variables
+-   the distribution of values when made in different observations' regions
+-   typically leads to outliers problems or heteroskedasticity (non constant variance)
+
+However, there are raster maps and some information is "regular", such a precipitation, or can be "regularized", such as population grids.
+
+![](images/clipboard-2477574131.png)
+
+(<https://human-settlement.emergency.copernicus.eu/>)
+
+The discretization of geographic space should however be internally homogeneous, meaning the attributes within each grid cell (or other nwe objects) supposed to apply to every part of that cell.
+
+A difference is often made between continuous field data and discrete space objects.
+
+See below the tabulation of these against the types of measurements by @haining2010
+
+![](images/clipboard-136726372.png)
+
+### Modifiable Areal unit Problem - MAUP
+
+@openshaw1984
+
+-   Areal units = spatial objects such as zones or places or towns or regions
+
+> Geography has consistently and dismally failed to tackle its entitation problems, and in that more than anything else lies the root of so many of its problems (Chapman 77)
+
+> **Insufficient thought is given to precisely what it is that is being studied.** \[...\] Little concern has been expressed about the nature and definition of the spatial objects under study
+
+> For many purposes the zones in a zoning system constitute the objects, or geographical individuals, that are the basic units for the observation and measurement of spatial phenomena.
+
+> With areal data, the **spatial objects only exist after data collected for one set of entities (e.g. people) are subjected to an arbitrary aggregation** (see also regularity discussion above) to produce a set of spatial units.
+
+> However, there are no rules for areal aggregation, no standards, and no international conventions to guide the spatial aggregation process.
+
+> **The areal units (zonal objects) used in many geographical studies are arbitrary, modifiable.** Census areas have rarely an intrinsic geographical meaning
+
+> A unmanageable combinatorial problem: There are approximately 10\^12 different aggregations of 1,000 objects into 20 groups. If the aggregation process is constrained so that the groups consist of **internally contiguous objects** (i.e. all the objects assigned to the same group are geographical neighbours) then this huge number is reduced, but only by a few orders of magnitude.
+
+Stan Openshaw distingues 2 interrelated issues, within the MAUP:
+
+-   The **scale problem**: the variation in results that can often be obtained when data for one set of areal units are progressively aggregated into fewer and larger units for analysis.
+-   The **aggregation problem**: the problem of alternative combinations of areal units at equal or similar scales. Any variation in results due to the use of alternative units of analysis when the number of units is held constant
+
+![](images/clipboard-19072353.png)
+
+Example of effects on correlation coefficients:
+
+-   Correlation between percentage vote for Republican candidates in the congressional election of 1968 and the percentage of the population over 60 years
+-   Correlation at the 99 county level is 0.34
+-   After aggregation into six zones: 0.26 for the 6 congressional districts and 0.86 for a simple typology of Iowa into 6 rural-urban types (Openshaw and Taylor 77)
+-   Compare mean and dispersion of correlation coefficient after random zoning (using contiguity) and random sampling (grouping)
+
+![](images/clipboard-105223237.png){width="643"}
+
+-   No systematic scale effect on correlation mean
+-   Considerable variability about the mean values but reduces with increasing numbers of units
+-   The standard deviations of the zoning distributions are considerably smaller than the corresponding sampling distributions but exhibit a greater degree of bias \> **spatial autocorrelation effect**
+
+## Spatial (in-)dependence
+
+### Interactions between observations
+
+-   **Not only the dimensions and structures of observations is of importance but also their relative position in space**
+
+-   **The distance (between objects),** $d(L)$, is at the very heart of geographical analysis AND the source of statistical difficulties
+
+-   The level of interactions increases with proximity (distance functions or contiguities) (see gravity-based theories)
+
+### Tobler's first law of geography
+
+@tobler1970
+
+![](images/clipboard-41472454.png)
+
+### Spatial autocorrelation
+
+@anselinluc1998
+
+![](images/clipboard-2740429524.png)
+
+![](images/clipboard-429479889.png)

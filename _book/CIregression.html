@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Confidence interval of a regression” – Introduction to data analysis and R for geographers</title>
+<title>12&nbsp; Confidence interval of a regression” – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./correlation.html">Bivariate analysis and regression</a></li><li class="breadcrumb-item"><a href="./CIregression.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./correlation.html">Bivariate analysis and regression</a></li><li class="breadcrumb-item"><a href="./CIregression.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -208,8 +208,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./space_issues.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: definition and challenges</span></span></a>
+  <a href="./spatial_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: a definition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,12 +218,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Geographical space</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./space_issues.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Spatial data issues</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">R basics and visualisation</span></a>
+ <span class="menu-text">Getting started with R</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -231,14 +237,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R basics</span></a>
+  <a href="./getting_started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Graphics ggplot way</span></span></a>
+  <a href="./R_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R basics: classes, data frames and lists</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./df_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Working with data frames and functions</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,7 +258,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Univariate analysis and distributions</span></a>
+ <span class="menu-text">Graphics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -254,14 +266,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./univariate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
+  <a href="./ggplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Graphics ggplot way</span></span></a>
   </div>
 </li>
       </ul>
@@ -269,7 +275,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Bivariate analysis and regression</span></a>
+ <span class="menu-text">Univariate analysis and distributions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -277,8 +283,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./univariate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Bivariate analysis and regression</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./correlation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Covariance and correlation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Covariance and correlation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -290,20 +319,20 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CIregression.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Bibliography</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -322,18 +351,19 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#load-data-and-packages" id="toc-load-data-and-packages" class="nav-link active" data-scroll-target="#load-data-and-packages"><span class="header-section-number">8.1</span> Load Data and Packages</a></li>
-  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">8.2</span> Scatter plot</a></li>
-  <li><a href="#confidence-interval-calculation" id="toc-confidence-interval-calculation" class="nav-link" data-scroll-target="#confidence-interval-calculation"><span class="header-section-number">8.3</span> Confidence Interval calculation</a></li>
+  <li><a href="#load-data-and-packages" id="toc-load-data-and-packages" class="nav-link active" data-scroll-target="#load-data-and-packages"><span class="header-section-number">12.1</span> Load Data and Packages</a></li>
+  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">12.2</span> Scatter plot</a></li>
+  <li><a href="#confidence-interval-calculation" id="toc-confidence-interval-calculation" class="nav-link" data-scroll-target="#confidence-interval-calculation"><span class="header-section-number">12.3</span> Confidence Interval calculation</a></li>
+  <li><a href="#prediction-versus-confidence-interval" id="toc-prediction-versus-confidence-interval" class="nav-link" data-scroll-target="#prediction-versus-confidence-interval"><span class="header-section-number">12.4</span> Prediction versus confidence interval</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./correlation.html">Bivariate analysis and regression</a></li><li class="breadcrumb-item"><a href="./CIregression.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./correlation.html">Bivariate analysis and regression</a></li><li class="breadcrumb-item"><a href="./CIregression.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Confidence interval of a regression”</span></h1>
 </div>
 
 
@@ -350,8 +380,8 @@ window.Quarto = {
 </header>
 
 
-<section id="load-data-and-packages" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="load-data-and-packages"><span class="header-section-number">8.1</span> Load Data and Packages</h2>
+<section id="load-data-and-packages" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="load-data-and-packages"><span class="header-section-number">12.1</span> Load Data and Packages</h2>
 <p>We use the Scotland rain data and load the ggplot package plus an additional related ggplot package (ggpmisc) to ease some formatting</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>RainScotland <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/Ferguson/RainScotland.csv"</span>)</span>
@@ -377,8 +407,8 @@ Attaching package: 'ggpp'</code></pre>
 </div>
 </div>
 </section>
-<section id="scatter-plot" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="scatter-plot"><span class="header-section-number">8.2</span> Scatter plot</h2>
+<section id="scatter-plot" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="scatter-plot"><span class="header-section-number">12.2</span> Scatter plot</h2>
 <p>We plot the data and add the OLS line, its equation, vertical residual lines and the confidence interval (pink area).</p>
 <p>We emphasize two points (the 7th and 18th) for which we later calculate the confidence interval. We see 18 is located outside of the confidence interval and 7 is located right on the estimated line, but is also one of the largest points in terms of elevation.</p>
 <div class="cell">
@@ -412,8 +442,8 @@ Attaching package: 'ggpp'</code></pre>
 </div>
 </div>
 </section>
-<section id="confidence-interval-calculation" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="confidence-interval-calculation"><span class="header-section-number">8.3</span> Confidence Interval calculation</h2>
+<section id="confidence-interval-calculation" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="confidence-interval-calculation"><span class="header-section-number">12.3</span> Confidence Interval calculation</h2>
 <p>We now show how the pink area representing the 95% confidence interval is calculated.</p>
 <p>The lower and upper bound for each predicted value can be obtained using the predict function. We can ask prediction and confidence bounds for any point (using newdata with the same variables as the original variables), but here we do it for all the observed ones and show the values for point 7 and 18.</p>
 <div class="cell">
@@ -430,10 +460,10 @@ Attaching package: 'ggpp'</code></pre>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>predicted_value18 <span class="ot">&lt;-</span> pred[<span class="dv">18</span>,<span class="st">"fit"</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>predicted_value7 <span class="ot">&lt;-</span> pred[<span class="dv">7</span>,<span class="st">"fit"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We now compute the total <strong>residual standard error</strong> (RSE) of the model (also called the mean square error):</p>
-<p><span class="math display">\[RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}\]</span>,</p>
-<p>which measures the average distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical thin lines on the above figure).</p>
-<p>The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have 20 individuals and 2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).</p>
+<p>We now compute the total <strong>residual standard error</strong> (RSE) of the model (also called the root mean square error):</p>
+<p><span class="math display">\[RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}\]</span> which measures the typical distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical dashed lines on the above figure).</p>
+<p>The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have n=20 individuals and p=2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).</p>
+<p>(NB: I understand the denominator n-p is where RSE differs from the Root Mean Square Error RMSE, which is often used to describe a fit, which is the mean, i.e.&nbsp;divided by n)</p>
 <p>We take the square root to get the RSE back to rainfall units, in this case it is equal to 243mm</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>RSE<span class="ot">&lt;-</span><span class="fu">sqrt</span>(<span class="fu">sum</span>(<span class="fu">residuals</span>(model)<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> model<span class="sc">$</span>df.residual)</span>
@@ -553,19 +583,52 @@ Attaching package: 'ggpp'</code></pre>
 </div>
 </div>
 </div>
-<p>##Prediction versus confidence interval</p>
+</section>
+<section id="prediction-versus-confidence-interval" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="prediction-versus-confidence-interval"><span class="header-section-number">12.4</span> Prediction versus confidence interval</h2>
 <p>Finally, note that there is another interval to be used for prediction when we get new data, i.e.&nbsp;the prediction interval. You can get this interval from the predict function with the prediction option instead of confidence.</p>
 <p>The standard error one uses here has the same ingredients but a slightly different definition:</p>
 <p><span class="math display">\[\text{SE}(\hat{y}) = RSE\sqrt{1+ \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}}\\
    \text{SE}(\hat{y}) = RSE\sqrt{1+L}\]</span></p>
-<p>While the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model. Confidence intervals focus on the precision of the sample mean, while prediction intervals account for the variability of individual data points around that mean.</p>
-<p>Suppose you have a new observation at 400m elevation where a rainfall of 1500 is measured. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.</p>
+<p>While the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model.</p>
+<p>Suppose you need to infer the rainfall for a 400m elevation. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>pred_p <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Elevation =</span> <span class="dv">400</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>pred_p <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Elevation =</span> <span class="dv">400</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>pred_p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       fit      lwr      upr
+1 1846.264 1317.536 2374.991</code></pre>
 </div>
-<p>In this case 1500 mm falls within the range of the model.</p>
+</div>
+<p>In this case you can then say that there is 95% chances that the precipitation will be between 1318 and 2375 mm.</p>
+<p>You can be tempted to have a more precise prediction, but you then loose in terms of certainty.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>pred_p90 <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">Elevation =</span> <span class="dv">400</span>), <span class="at">interval =</span> <span class="st">"prediction"</span>, <span class="at">level=</span><span class="fl">0.90</span>)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>pred_p90</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       fit      lwr      upr
+1 1846.264 1409.861 2282.666</code></pre>
+</div>
+</div>
+<p>From 1410 to 2283 is indeed a narrower guess but it is also less certain.</p>
+<p>We can display the prediction area on the previous plot after taking the values from the predict function (not directly from geom_smooth which logically is about the data used for estimating the curve).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>newobs<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Elevation =</span> <span class="fu">seq</span>(<span class="dv">100</span>,<span class="dv">600</span>, <span class="at">by=</span><span class="dv">50</span>))</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>predictions<span class="ot">&lt;-</span><span class="fu">predict</span>(model, <span class="at">newdata =</span> newobs , <span class="at">interval =</span> <span class="st">"prediction"</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>p<span class="sc">+</span><span class="fu">geom_ribbon</span>(<span class="at">data=</span><span class="fu">cbind</span>(newobs,predictions),<span class="fu">aes</span>(<span class="at">x=</span>Elevation, <span class="at">y=</span><span class="cn">NULL</span>, <span class="at">ymin =</span> lwr, <span class="at">ymax =</span> upr), <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="CIregression_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>By construction, confidence intervals are narrower than prediction intervals. Prediction intervals have an extra RSE in the calculation. The intuition is that we don’t know the mean nor the variance of the population from which new observations are taken and the only thing we can do is to estimate the mean from the mean of our estimates, which itself will vary based on the variance considered. We can only use the RSE again to estimate this variance for the mean and the variance itself. Hence the RSE enters twice the equation.</p>
-<p>An important implication of the presence of that extra 1 added to L under the square root is that while L decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):</p>
+<p>An important implication of the presence of that extra <span class="math inline">\(1\)</span> added to <span class="math inline">\(L\)</span> under the square root is that while <span class="math inline">\(L\)</span> decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):</p>
 <blockquote class="blockquote">
 <p>“No matter how much data we have, we can never predict perfectly”</p>
 </blockquote>

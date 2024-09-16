@@ -46,13 +46,14 @@ predicted_value18 <- pred[18,"fit"]
 predicted_value7 <- pred[7,"fit"]
 ```
 
-We now compute the total **residual standard error** (RSE) of the model (also called the mean square error):
+We now compute the total **residual standard error** (RSE) of the model (also called the root mean square error):
 
-$$RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}$$,
+$$RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}$$
+which measures the typical distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical dashed lines on the above figure).
 
-which measures the average distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical thin lines on the above figure).
+The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have n=20 individuals and p=2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).
 
-The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have 20 individuals and 2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).
+(NB: I understand the denominator n-p is where RSE differs from the Root Mean Square Error RMSE, which is often used to describe a fit, which is the mean, i.e. divided by n)
 
 We take the square root to get the RSE back to rainfall units, in this case it is equal to 243mm
 
@@ -157,7 +158,7 @@ as well as the one computed by ggplot with se=TRUE option in geom_smooth
 p+geom_segment(data=manualCI, aes(x=Elevation,xend=Elevation,y=LowerCI, yend =UpperCI), color = "blue", size = 1)
 ```
 
-##Prediction versus confidence interval
+## Prediction versus confidence interval
 
 Finally, note that there is another interval to be used for prediction when we get new data, i.e. the prediction interval. You can get this interval from the predict function with the prediction option instead of confidence.
 
@@ -166,19 +167,37 @@ The standard error one uses here has the same ingredients but a slightly differe
 $$\text{SE}(\hat{y}) = RSE\sqrt{1+ \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}}\\
    \text{SE}(\hat{y}) = RSE\sqrt{1+L}$$
 
-While the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model. Confidence intervals focus on the precision of the sample mean, while prediction intervals account for the variability of individual data points around that mean.
+While the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model.
 
-Suppose you have a new observation at 400m elevation where a rainfall of 1500 is measured. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.
+Suppose you need to infer the rainfall for a 400m elevation. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.
 
 ```{r}
 pred_p <- predict(model, newdata = data.frame(Elevation = 400), interval = "prediction")
+pred_p
 ```
 
-In this case 1500 mm falls within the range of the model.
+In this case you can then say that there is 95% chances that the precipitation will be between 1318 and 2375 mm.
+
+You can be tempted to have a more precise prediction, but you then loose in terms of certainty.
+
+```{r}
+pred_p90 <- predict(model, newdata = data.frame(Elevation = 400), interval = "prediction", level=0.90)
+pred_p90
+```
+
+From 1410 to 2283 is indeed a narrower guess but it is also less certain.
+
+We can display the prediction area on the previous plot after taking the values from the predict function (not directly from geom_smooth which logically is  about the data used for estimating the curve).
+
+```{r}
+newobs<-data.frame(Elevation = seq(100,600, by=50))
+predictions<-predict(model, newdata = newobs , interval = "prediction")
+p+geom_ribbon(data=cbind(newobs,predictions),aes(x=Elevation, y=NULL, ymin = lwr, ymax = upr), fill = "lightblue", alpha = 0.2)
+```
 
 By construction, confidence intervals are narrower than prediction intervals. Prediction intervals have an extra RSE in the calculation. The intuition is that we don't know the mean nor the variance of the population from which new observations are taken and the only thing we can do is to estimate the mean from the mean of our estimates, which itself will vary based on the variance considered. We can only use the RSE again to estimate this variance for the mean and the variance itself. Hence the RSE enters twice the equation.
 
-An important implication of the presence of that extra 1 added to L under the square root is that while L decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):
+An important implication of the presence of that extra $1$ added to $L$ under the square root is that while $L$ decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):
 
 > "No matter how much data we have, we can never predict perfectly"
 

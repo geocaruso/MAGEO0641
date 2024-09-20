@@ -1,40 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/index.html</loc>
-    <lastmod>2024-09-11T13:46:50.557Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/001_timetable.html</loc>
-    <lastmod>2024-09-11T13:48:50.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/002_learning.html</loc>
-    <lastmod>2024-09-13T11:46:54.277Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/011_scope.html</loc>
-    <lastmod>2024-09-16T17:44:24.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/012_spatial_analysis.html</loc>
-    <lastmod>2024-09-13T12:59:02.543Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/013_space_axiom.html</loc>
-    <lastmod>2024-09-16T09:24:22.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/014_space_issues.html</loc>
-    <lastmod>2024-09-16T11:09:02.218Z</lastmod>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/022_vectors.html</loc>
+    <lastmod>2024-09-20T14:10:17.288Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/021_Rstudio.html</loc>
     <lastmod>2024-09-17T16:09:59.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/022_vectors.html</loc>
-    <lastmod>2024-09-20T12:44:13.867Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/023_df_lst.html</loc>

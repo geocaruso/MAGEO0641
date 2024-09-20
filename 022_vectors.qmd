@@ -413,7 +413,31 @@ A number of functions are evaluated over an entire vector (vectorisation is ther
 
 Let's explore some of those for x being a numeric, a logical and character. *In class exploration.*
 
-To those, we should add all univariate statistics such as mean(), median(), var(), quantile(), but leave them aside for now.
+To those, we should add all univariate statistics such as mean(), median(), var(), quantile(), but we leave them aside for now.
+
+Specific to logical vectors, the any() and all() functions are particularly useful in the case you check a very long vector with only very few having a TRUE or FALSE.
+
+See basic examples:
+```{r}
+any(c(TRUE,TRUE,TRUE,FALSE))
+any(c(TRUE,TRUE,TRUE,TRUE))
+all(c(TRUE,TRUE,TRUE,FALSE))
+
+```
+
+And an example where we suppose a random set of values from a normal distribution and we want to check manually whether there is an upper outlier. Typically (as in boxplots) this outlier is calculated as being any value above the 3rd quartile plus 1.5 times the interquartile range.
+```{r}
+set.seed(102)
+x<-rnorm(100)
+q75<-quantile(x, p=0.75)
+iqr<-IQR(x)
+any(x>(q75+1.5*iqr))
+boxplot(x) #
+x[x>(q75+1.5*iqr)] #to identify them
+
+set.seed(101) #Check with this seed!
+```
+
 
 ### Summary
 

@@ -1,0 +1,506 @@
+# Vectors {#sec-vectors}
+
+## Introducing vectors
+
+**Vectors are the basic units of information in R**, and many functions apply to vectors. If you are coming from the "spreadsheet" world (MS Excel or Open Office), where the basic unit is a cell, the change in perspective is quite important: while a cell has a single value (information), a vector contains multiple values.
+
+Vectors, being a combination of values, are created by the **combine** (or concatenate) function `c()` or obtained from external sources.
+
+There are two kinds of vectors:
+
+-   **Atomic vectors** (which we tend to refer to simply as vectors), which are homogeneous in the sense that they contain only one "type" of data, such as characters or numbers.
+
+-   **Lists**, which can have heterogeneous contents.
+
+This chapter is about atomic vectors, we will introduce lists later.
+
+As a first example, see below a character (atomic) vector and a numeric (atomic) vector:
+
+```{r}
+Countries<-c("Romania","Russia","Morocco","Iran","France")
+mode(Countries)
+Ages<-c(20,25,22,22,49)
+mode(Ages)
+```
+
+Note that in case you would have a long list to input manually, the `scan()` function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources...(if you fancy less transparent clicking approaches, be curious and find out ;-), most of the times anyway we rather read values from readable text files).
+
+## Attributes of vectors
+
+A vector is always characterized by its type and length.
+
+### Types
+
+A vector is a **combination of values from the same type** (or mode). So if you combine data from different types they will be **coerced** to the less demanding one, i.e. *"character"* in the following cases:
+
+```{r}
+A<-c(1,"two",3)
+A
+mode(A)
+
+c(Countries, Ages)
+mode(c(Countries, Ages))
+```
+
+You can also see from these examples that `mode()`\` gets a vector's "type". **R vectors have one and only one "mode", either "numeric", "character" or "logical"** (plus "raw" and "complex", which we don't consider here).
+
+You can also use `typeof()` in case you are interested to know how the data is actually encrypted, which essentially differentiates the "numeric" mode into "integer" and "double". **R vectors have one and only one "typof", either "integer", "double", "character" or "logical"**
+
+Coercion to the same type applies to the "typeof" as you can see below
+
+```{r}
+BNum<-c(2,10,99)
+typeof(BNum)
+mode(BNum)
+BInt<-c(2L,10L,99L)
+typeof(BInt)
+mode(BInt)
+B<-c(BNum,BInt)
+typeof(B)
+mode(B)
+
+```
+
+In practice, you will rarely use `mode()` or `typeof()`, which distinguish well between vectors, but not between most other objects. Instead, you will use the `class()` function in order to know what kind of data you have and what you can do with it. For most atomic vectors, `class()` is basically `typeof()`. The difference is that **"class" is not a mutually exclusive property**. A vector, or any object, can belong to several classes and thus be used with different functions
+
+```{r}
+class(c(20L,50L,70L))
+class(c(20,50,70))
+class(Countries)
+class(Ages)
+class(c(Countries,Ages)) #coercion
+```
+
+Sometimes, depending on some calculations, you may need to transform the type of data, especially from numeric to character and vice versa. Coercion may apply automatically but not always, so you will need to explicitly transform the data type using "as.*a type"* or "as.*a mode"*: `as.numeric()`, `as.character()`, which you will use quite often, or `as.integer()`,`as.double()`, or `as.logical().`
+
+```{r}
+A<-c(1,2,3)
+B<-c(1L,2L,3L)
+C<-c("1","2","3")
+A+B
+A+C
+A+as.numeric(C)
+as.character(A)
+```
+
+### Length
+
+While a numeric vector of length one is mathematically a **scalar**, the way you input **a scalar in R is as a vector of length 1**. A vector can also be empty, i.e. of length 0, in which case its type is unknown, unless you apply one of the above transformations.
+
+```{r}
+X<-3 #equivalent to X<-c(3)
+class(X)
+
+Y<-c()
+class(Y)
+
+Y<-as.numeric(c())
+class(Y)
+
+Y<-as.integer(c())
+class(Y)
+```
+
+You get the **length of a vector using the function `length()`**, which you will also use quite a lot.\`
+
+```{r}
+length(Countries)
+length(X)
+length(Y)
+```
+
+Note that if you manually change the length of an existing vector, this will trim the vector end or extend the vector with empty values.
+
+```{r}
+Z<-c(2, 4, 6, 7 , 10)
+length(Z)<-3
+Z
+length(Z)<-12
+Z
+```
+
+Besides their `class()` and `length()` attributes, vectors (and other objects) can be endowed with a number of other attributes, which you will obtain from `attributes()`. None of the vectors we used as example so far has additional attributes, but you can define any attribute yourself. See below how we add a "source" attribute to the vector of "Countries" we created earlier and assign a "character string" to it to describe the source. Retrieving a specific attribute is done with the `attr(,"Whatever attribute")` function.
+
+```{r}
+attributes(Countries)
+attr(Countries, "source")<-"MAGEO students input"
+attributes(Countries)
+```
+
+## Factors
+
+Remember from the introduction, that we (in geography and elsewhere) usually consider **discrete and continuous data**, each type being split into 2 measurement levels:
+
+-   Discrete: **nominal** (*blue, green*) or **ordinal** (*high, low*)
+
+-   Continuous: **interval** (*10°C, 20°C*) or **ratio** (*10 apples, 20 apples*) (difference being that 20 apples is twice as much as much as 10 apples, but 20°C is not twice as hot as 10°C because zero is not the absolute zero, hence a ratio in this case makes little sense, only differences are sensical).
+
+This vocabulary is not used directly in R:
+
+-   **Continuous (ratio/interval) data is coded as numeric or integer**
+
+-   **Discrete (categorical) data (nominal/ordinal) is preferably coded as a factor.**
+
+Nominal data can still be in the "character" type, but the idea of a "factor" is that there is only a limited set of characters' strings that you will find in a vector (e.g. set of countries, set of land uses) and you are able (willing) to enumerate them. For ordinal data, the order is important, hence it gets closer to an integer set than to a character (e.g. education levels: *primary, secondary tertiary education*), yet you can sum integer data but should not sum ordinal data.
+
+![](images/clipboard-2609321528.png)
+
+Factors are designed to properly solve the use of discrete/categorical data. It is based on the integer type (in the sense of typeof) on top of which a "level" attribute is added, and potentially whether it is ordered or not. They are fabricated with the `as.factor()` or `factor()` functions.
+
+```{r}
+Countries
+typeof(Countries)
+
+Countries_f<-as.factor(Countries)
+Countries_f
+typeof(Countries_f)
+class(Countries_f)
+```
+
+While the categories are displayed with the factor, the `levels()` function returns those categories as a character vector.
+
+```{r}
+levels(Countries_f)
+```
+
+By default the levels in a factor uses the alphabetical order. In many cases however, you will want to at least define the first one, in order to use it as a reference (typically in regression analysis with a categorical explanatory variable) or choose you own order for plotting or other purposes.
+
+### Re-defining the reference level
+
+Suppose you want to use "Morocco" as the first, reference level instead of "France".
+
+The `relevel()` function re-orders the levels so that the one indicated as "ref" is used first and the others are moved down the series.
+
+```{r}
+Countries_f2<-relevel(Countries_f, ref="Morocco")
+```
+
+You could also set the order directly at the time of creating the factor using the "level" argument, using the `factor()` function, not `as.factor()`. We used `as.factor()` before because it is generally quicker, and there is not always a need to adapt the order of levels.
+
+```{r}
+Countries_f3<-factor(Countries, level=c("Morocco","France","Romania", "Iran","Belgium"))
+```
+
+Be careful, however, because if you don't use the complete list of possibilities, the values that are not specified in the levels vector, will simply be ignored and turned into NA's. In the above example we forgot "Russia" and therefore have now a NA within our vector. Conversely, we have been able to indicate a "Belgium" level, although it was not present. There is no automatic correspondence between the levels of a factor and its set of values. If you want a match, you can drop unused levels using `droplevels()` but for those characters (e.g. Russia) that were not taken at the moment of creating the factor, it is too late, they remain a NA.
+
+```{r}
+Countries_f4<-droplevels(Countries_f3)
+Countries_f4
+```
+
+### Ordering a factor based on occurrence:
+
+To make a more realistic case, we have scraped the Wikipedia table indicating the Tour de France winners since 1903. See "*TourDeFrance*" in the data folder for the data and scraping script (from R). The data is in the form of a data.frame and saved as a RDS (an effective way to save R objects onto your disc). See the relevant chapters for data.frame and saving to file later.
+
+There was no Tour de France during World War I and II and no winner from 1999 to 2005 because Lance Armstrong cheated. Hence we have a series of " - " in our levels, which are not interesting, and thus not considered when we factor our vector. This doesn't remove the vector elements but creates several NA's.
+
+```{r}
+LeTour_df<-readRDS("data/TourDeFrance/LeTour_df.rds")
+Winners<-factor(LeTour_df$Country, exclude = "—")
+Winners
+
+length(Winners) #this includes NA's!
+levels(Winners)
+```
+
+Suppose you want to to know and plot how many times each of the 15 countries (who won Le Tour at least once) won.
+
+Frequencies can be observed directly from a basic plot:
+
+```{r}
+plot(Winners,las=2)
+```
+
+Get the victories counts in a vector can be made with `table()`, which applies to anything (numeric or character) that can be coerced to a factor
+
+```{r}
+table(Winners)
+```
+
+Both the plot and counts however follow the order of the levels, which is alphabetical
+
+One possibility to improve the graph is to change the order of the levels based on the count table and redoing the graph
+
+```{r}
+#Vector of levels in a new order
+LevelsFrq<-levels(Winners)[order(table(Winners), decreasing = TRUE)]
+  #note the order function and the square brackets
+LevelsFrq
+
+#Use that order when creating the factor from the character vector
+WinnersFrq<-factor(na.omit(Winners), levels = LevelsFrq) 
+ #note the na.omit function
+
+#plot
+plot(WinnersFrq,las=2)
+
+```
+
+### Ordered factors
+
+Sometimes you will want to make a categorical data explicitly ordinal for graphical or statistical purpose . For example if you have used a Likert scale within a survey, it can be interesting it is stored as an ordered factor. You can order an already existing factor, using the function `ordered()`, which adds a logical flag to the factor to indicate it is order (see first example), or at the moment you create the factor using `factor()` (second example). Once the factor is ordered, the levels are displayed in order and separated by a " \< ". Also a new class, "ordered", is added to the object.
+
+```{r}
+LikertScale<-c("Strongly disagree", "Disagree","Neither agree nor disagree",
+"Agree","Strongly agree") #in the expected order
+Responses<-c("Neither agree nor disagree", "Disagree", "Disagree", "Agree", "Agree", "Neither agree nor disagree", "Strongly agree", "Strongly Agree", "Disagree")
+Responses_f<-factor(Responses, levels=LikertScale)
+Responses_f
+
+Responses_f2<-ordered(Responses_f)
+Responses_f2 #Notice that if we don't provide again the levels, it is made from the existing ones, so there is only 4 levels now ("Strongly Disagree" not being answered)
+
+Responses_f3<-factor(Responses, levels=LikertScale, ordered = TRUE)
+Responses_f3
+
+class(Responses_f3) #see the additional class
+
+```
+
+In the above example you will have noticed a NA, due to some misspelling. This is a good case to remind that categorical data should not necessarily rely on character strings. In geography we often need to treat countries, regions, municipalities whose names can be very complicated, especially in multilingual context It is good advise to rather use codes for geographical units (e.g. BE351, BE352, BE353, for the NUTS 3 classification of Belgium), land use (e.g. https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html/) and related them to a corresponding table with proper labels.
+
+It is also true for other types of categories, including Likert scale. An option is to use integer values (or characters for geographical codes) together with a series of labels. You add the labels at the moment of creating the factor:
+
+```{r}
+LikertScale<-c("Strongly disagree", "Disagree","Neither agree nor disagree",
+"Agree","Strongly agree") 
+LikertLevels<-c(1L,2L,3L,4L,5L) #would work as well with numeric c(1,2,3,4,5)
+Responses<-c(3L, 2L, 2L, 4L, 4L, 3L, 5L, 5L, 2L)
+
+Responses_f<-factor(Responses, ordered=TRUE, levels=LikertLevels, labels=LikertScale)
+Responses_f
+```
+
+The result is the same as previously, but you avoid typos when inputting the responses and can also adapt the labels at will, without changing the data itself.
+
+## Operations on vectors
+
+### Arithmetic operations and recycling
+
+R is a calculator and perform the arithmetic operations `+` `-` `*` `/` `^`
+
+Two numeric vectors of the same length can be added, multiplied, etc. When vectors of different length are provided, the shorter one is *recycled* until the end of the longer vector. Usually a vector of length 1 is recycled, thus allowing R to add, divide,etc. a scalar to a vector in the same way as between two vectors (in a "parallel way"). But any shorter vector is also recycled (you get a warning though). See:
+
+```{r}
+X<-c(0,1,2,3,4,5)
+X^2
+Y<-c(10,9,8,7,6,5)
+
+X+Y
+Y/X
+X*c(0,1)
+```
+
+### Euclidean division and rounding
+
+The modulo operation for integers is obtained with `%/%` to get the integral part of the Euclidean division and `%%` to get the remainder. This the way you will know an integer is odd or even. The function can also be applied to numeric vectors with decimals.
+
+```{r}
+c(1,3,5,44,444,4444)%/%2
+c(1,3,5,44,444,4444)%%2 #remainder of dividing by 2, thus indicating odd/even
+99.99%/%2
+99.99%%2
+```
+
+For ratio and interval numbers with decimals you sometimes need to get rid of the decimals or display only a part of them Examine the following:
+
+```{r}
+x<-c(33.33, 666.166, 50.5, 49.5)
+trunc(x) #compares with as.integer() but does not change the class to integer
+round(x) #note the rounding of a 5 to the even digit (international standard) 
+round(x, digits=2)
+ceiling(x)
+floor(x)
+
+signif(x, digits = 5)
+```
+
+With geographical data, `ceiling()` can for example be applied to latitudes and longitudes in order to make grids. A simple example is how to obtain (theoretical) time zones from a set of longitudes.
+
+Let's take the opportunity to learn about `set.seed()` and about uniform random number generation `runif()`:
+
+```{r}
+set.seed(101)
+Longitudes<-runif(n=10,min=-180, max=180)
+Longitudes
+
+ceiling(Longitudes*24/360)
+```
+
+![[Wikipedia, Time Zones](https://en.wikipedia.org/wiki/Time_zone#/media/File:World_Time_Zone_Chart_1942.jpg)](images/clipboard-2750177594.png)
+
+### Logical and Boolean operations
+
+A series of operations return a **logical vector**, i.e. a vector of Boolean values **TRUE and FALSE**.
+
+Those operations are `>`, `>=`, `<`, `<=`, `==`, `!=`
+
+Some examples with numeric and character vectors:
+
+**IMPORTANT: Use `==` for comparison, not `=`, which is an assignment!**
+
+```{r}
+c(1,2,3) < c(2,3,3)
+c(1,2,3) >= 3 #see right hand side is recycled and applied "one to one"
+"Bernadette, elle est très chouette" == "Bernadette, elle est très chouette"
+"Bernadette, elle est très chouette" != "Mais sa cousine, elle est divine"
+"Julian" >= "Julien" #alphabetical order
+```
+
+By the way we see here vectors of the **logical class**:
+
+```{r}
+class("Julian" >= "Julien")
+```
+
+In addition to those comparisons, many functions, especially structured as "is.xxx" return a TRUE or FALSE and are very useful within you data management process. You may make quite some use also of the %in% function, when you have a long vector, to check whether a particular value (or several) is present within a vector.
+
+```{r}
+is.numeric("a")
+is.numeric("2")
+is.numeric(3L)
+is.numeric(FALSE)
+!is.numeric(FALSE) #Note the negation here!
+
+"urban" %in% c("urban","agriculture","water","forest")
+c("urban","industry") %in% c("urban","agriculture","water","forest")
+```
+
+Boolean values are usually (always?) coerced to a **1 and 0**, in case an arithmetic operation is then demanded.
+
+```{r}
+mean(c(TRUE,FALSE,TRUE,TRUE))
+sum(c(TRUE,FALSE,TRUE,TRUE))
+3*(c(TRUE,FALSE)+TRUE)
+```
+
+A set of functions then apply specifically to the Boolean values TRUE or FALSE, i.e. to logical vectors.
+
+These logical operators are: `!`, `&`, `|`, `xor` and typically used to **select elements that match 2 or more conditions**.
+
+The graphic below, reproduced from [R for Data Science](https://r4ds.hadley.nz/) (highly recommended!), demonstrate their outcome for 2 sets and an example is provided after creating 2 logical vectors, x and y from the LETTERS character vector.
+
+![source: Fig.12.1 from https://r4ds.hadley.nz/logicals](images/clipboard-4033778274.png)
+
+```{r}
+LETTERS[1:6]
+x<-LETTERS[1:6]<"E"
+y<-LETTERS[1:6]>"B"
+x
+y
+x & y
+x & !y
+!x & y
+x & y
+x | y
+xor(x,y)
+```
+
+## Vectors' functions
+
+A number of functions are evaluated over an entire vector (vectorisation is there to avoid loops) and used to describe and understand the distribution of values. They apply mostly to numeric vectors but also to logicals (being 0 or 1 anyway) as well as characters, where possible (based on alphabetical order).
+
+### Range, cumulative values, positions and sorting
+
+|            |             |                |            |
+|------------|-------------|----------------|------------|
+| `min(x)`   | `cummin(x)` | `which.min(x)` | `sort(x)`  |
+| `max(x)`   | `cummax(x)` | `which.max(x)` | `order(x)` |
+| `range(x)` |             |                | `rank(x)`  |
+| `sum(x)`   | `cumsum(x)` |                |            |
+
+: Examples of functions evaluated over an entire vector
+
+Let's explore some of those for x being a numeric, a logical and character. *In class exploration.*
+
+To those, we should add all univariate statistics such as mean(), median(), var(), quantile(), but leave them aside for now.
+
+### Summary
+
+One of the most used function for analysis (if not THE most used) is `summary()`. We will see its result may change substantially based on the object class it is applied to. Its basic functioning for a simple numeric vector and character vector is:
+
+```{r}
+summary(c(1,2,3,4,NA,6))
+summary(c("A","B","C",NA,NA,"F"))
+```
+
+### Element-wise functions
+
+Other functions apply to two or more vectors. They need an x and a y vector as input, e.g. `cor(x,y)`. Most of those you will encounter use two vectors of the same length and type, i.e. no recycling, which leads us to the notion of a data.frame (see next chapter).
+
+At this time, we show only two simple "parallel" or "element-wise" computations: `pmin()` and `pmax()`, which can be useful for example when there is a repeated measure for a given set of individuals. Cases are not rare when you make a new vector (or column in a data.frame) based on such element-wise calculations. (Yet you would probably assemble the data into a data.frame first and then make a row-wise calculation).
+
+```{r}
+t1<-c(25,35,45,55)
+t2<-c(26,36,44,54)
+t3<-c(27,34,43,56)
+
+pmin(t1,t2,t3)
+pmax(t1,t2,t3)
+```
+
+## Indexing and subsetting
+
+Now you have seen that vectors are the key elements in R, you will still want to access its elements individually or parts of it based on positions or conditions
+
+Square brackets I used to get into vector elements by their position (or by their name if named).
+
+You can supply one position but also several positions and ranges. Examine the following:
+
+```{r}
+x<-c(3,1,9,7,8,2,3,6,3,4)
+x #all
+x[4] #4th element
+x[6:8] #a sequence
+x[c(4,6:8)] #both
+x[-4] #all but the 4th element
+x[-length(x)] #all but the last one
+x[-((length(x)-1):length(x))]  #all but the last two
+```
+
+This is very flexible because you can use any vector representing an index (position) to make a new vector.
+
+```{r}
+x<-c(3,1,9,7,8,2,3,6,3,4)
+chicken<-c(10,10,10,4,2,3)
+x[chicken]
+```
+
+Such a vector can be a logical, then the elements where the logical is TRUE are returned.
+
+```{r}
+x<-c(3,1,9,7,8,2,3,6,3,4)
+x>3
+x[x>3]
+
+x %% 2 == 0
+x[x %% 2 == 0] #even numbers only
+
+x[x>mean(x)]
+
+x[as.logical(c(0,1))] #?? recyling is in effect here
+```
+
+Possibilities are endless, especially if you think the indexing vector can come from another vector than x.
+
+Vectors are sometimes named, and names the used to retrieve the data:
+
+```{r}
+y<-c(1000,1500,900,1200)
+names(y)<-c("UK","BE","LU","FR")
+
+y["LU"]
+```
+
+Last but not least, once selected an element can then be assigned a new value:
+
+```{r}
+z<-c(0,0,0,4,2,3,0)
+z
+
+z[2]<-5
+z
+
+z[z==0]<-NA  #a very much used use case
+z
+```

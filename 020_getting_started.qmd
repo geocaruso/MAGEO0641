@@ -1,0 +1,17 @@
+# Getting Started with R {#sec-introduction}
+
+@sec-getting-started-with-rstudio
+
+@sec-vectors
+
+@sec-data-frames-and-lists
+
+@sec-working-with-data-frames-and-functions
+
+For better introductory material, we recommend
+
+@venablesbill
+
+@long
+
+@wickham (including RStudio introduction) (Note it uses a tidyverse approach while we rather stick to base R where possible, except for graphics (ggplot))

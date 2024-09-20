@@ -10,8 +10,8 @@
     ]
   },
   {
-    "objectID": "timetable.html",
-    "href": "timetable.html",
+    "objectID": "001_timetable.html",
+    "href": "001_timetable.html",
     "title": "Timetable",
     "section": "",
     "text": "The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.\nWe have attempted to balance theoretical explanations and R practice in each session.\nThe 2024-2025 schedule is set as follows. However, please refer to your student guichet and the Moodle platform for potential changes during the semester.\n\nScheduled: 16 Sep 2024 at 14:00 to 18:00, CEST\nScheduled: 23 Sep 2024 at 14:00 to 18:00, CEST\nNo session on 30 Sep 2024\nScheduled: 7 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 14 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 21 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 28 Oct 2024 at 14:00 to 18:00, CET\nScheduled: 4 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 11 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 18 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 25 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 2 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 9 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 16 Dec 2024 at 14:00 to 18:00, CET",
@@ -20,8 +20,8 @@
     ]
   },
   {
-    "objectID": "learning.html",
-    "href": "learning.html",
+    "objectID": "002_learning.html",
+    "href": "002_learning.html",
     "title": "Learning outcomes and evaluation",
     "section": "",
     "text": "Objectives:",
@@ -30,8 +30,8 @@
     ]
   },
   {
-    "objectID": "learning.html#objectives",
-    "href": "learning.html#objectives",
+    "objectID": "002_learning.html#objectives",
+    "href": "002_learning.html#objectives",
     "title": "Learning outcomes and evaluation",
     "section": "",
     "text": "Overview of key concepts and formalisation in data analysis in geographical contexts\nUnderstanding and describing the statistical and spatial distribution of data with univariate statistical analysis\nUnderstanding how a geographical pattern relate or can be understood from others with bivariate and regression analysis\nRaising awareness as to the characteristics and difficulties of statistical and econometric (regression) analysis with geographical data.\nMastering essential R software skills for tabular data management, uni and bi-variate analysis and regression, and producing graphics",
@@ -40,8 +40,8 @@
     ]
   },
   {
-    "objectID": "learning.html#expected-outcomes",
-    "href": "learning.html#expected-outcomes",
+    "objectID": "002_learning.html#expected-outcomes",
+    "href": "002_learning.html#expected-outcomes",
     "title": "Learning outcomes and evaluation",
     "section": "Expected outcomes",
     "text": "Expected outcomes\nOn completion, each student should be able to\n\nDescribe the key concepts in spatial statistical analysis and the specificities of geographical space and spatial data\nDemonstrate a good command of R to handle statistical datasets and perform univariate, bivariate and multiple regressions analyses with good diagnostics\nExplain and use common univariate and bivariate statistics\nExplain and use exploratory methods\nExplain and apply standard regression methods and diagnostics, and discuss limits and problems when applied to geographical data\nExplain the principles and methods used to identify local effects and spatial autocorrelation\nRead and discuss detailed results of an empirical research article that deal with data analysis including a multivariate regression in a spatial or non-spatial context\nExplain and use mixed methods (Q-Methodology: hybrid approach between quantitative and qualitative methods)",
@@ -50,8 +50,8 @@
     ]
   },
   {
-    "objectID": "learning.html#evaluation",
-    "href": "learning.html#evaluation",
+    "objectID": "002_learning.html#evaluation",
+    "href": "002_learning.html#evaluation",
     "title": "Learning outcomes and evaluation",
     "section": "Evaluation",
     "text": "Evaluation\n\nIndividual\n20% Continuous assessment: small tests in class and weekly exercises:\n40% R exam (3h) in GIS room, perform R analysis, answer a questionnaire and provide script\n40% Oral exam (30min): presenting a paper and answering questions about its details and the course",
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "objectID": "scope.html",
-    "href": "scope.html",
+    "objectID": "011_scope.html",
+    "href": "011_scope.html",
     "title": "1  Statistical data analysis for geographers",
     "section": "",
     "text": "1.1 Scope\nThis course is an introduction to standard statistical techniques that geographers often encounter. Being at the crossroads of different fields, it is necessary for geographers to have a basic set of tools with which to interact with other experts and modelers who, although they may use different wording and have their own technical habits, use a common set of concepts and tools to analyze data and test their hypotheses.\nIn their own work and in their interactions with others, it is also important for geographers to keep in mind that the data they use are quite specific because they are about located objects or subjects, about places and their interactions. Most of the time, the data they use is georeferenced in some way (accurately or not). This inherently geographic aspect brings with it a number of challenges. In this course, we will highlight these challenges when performing standard data analysis. However, we won’t solve any of these geographic problems, and we won’t even explicitly use geographic features, i.e., no mapping, no use of georeferencing as such. Our goal is to equip students with standard statistical methods also used in related fields, with some critical thinking about their geographical nature or underlying spatial processes. In a nutshell, this is a journey from elementary statistics to spatial autocorrelation with a standard regression detour.",
@@ -71,8 +71,8 @@
     ]
   },
   {
-    "objectID": "scope.html#sec-transparent-geographical-analysis-empowered-with-r",
-    "href": "scope.html#sec-transparent-geographical-analysis-empowered-with-r",
+    "objectID": "011_scope.html#sec-transparent-geographical-analysis-empowered-with-r",
+    "href": "011_scope.html#sec-transparent-geographical-analysis-empowered-with-r",
     "title": "1  Statistical data analysis for geographers",
     "section": "1.2 Transparent geographical analysis empowered with R",
     "text": "1.2 Transparent geographical analysis empowered with R\nThe course is a blend of theory and practice, which we believe enhances intuition and understanding. Direct practice also helps, especially for human geographers with little training in quantitative methods, to demystify statistical concepts and provide confidence after repeated applications and interpretations.\nSoftware for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.\n\n\n\n\n\nMost of our students have had some sort of theoretical statistics course so far in their studies, and have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing.\nWe chose R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the use of scripts and command lines, is absolutely necessary to bring robustness and trust.",
@@ -82,8 +82,8 @@
     ]
   },
   {
-    "objectID": "spatial_analysis.html",
-    "href": "spatial_analysis.html",
+    "objectID": "012_spatial_analysis.html",
+    "href": "012_spatial_analysis.html",
     "title": "2  Spatial data analysis: a definition",
     "section": "",
     "text": "2.1 Interdisciplinarity and perspective\nData analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about spatial analysis. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.\nWithin geography, we understand the term spatial analysis to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to applied statistical approaches, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, this course is a spatial analysis course.\nHowever, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process, not just the consideration of geographic elements. See for example the handbook of Fischer and Getis for discussion and examples.\nSimilarly, Goodchild and Longley (https://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch40.pdf) suggest more broadly that spatial analysis could simply be a set of methods useful when the data are spatial (i.e. referenced in 2D frame). This definition however as they suggest would be too broad, if it does not address the question of whether the 2D frame actually matters. Rather spatial analysis is",
@@ -93,8 +93,8 @@
     ]
   },
   {
-    "objectID": "spatial_analysis.html#interdisciplinarity-and-perspective",
-    "href": "spatial_analysis.html#interdisciplinarity-and-perspective",
+    "objectID": "012_spatial_analysis.html#interdisciplinarity-and-perspective",
+    "href": "012_spatial_analysis.html#interdisciplinarity-and-perspective",
     "title": "2  Spatial data analysis: a definition",
     "section": "",
     "text": "the subset of analytic techniques whose results will change if the frame changes, or if objects are repositioned within it.",
@@ -104,8 +104,8 @@
     ]
   },
   {
-    "objectID": "spatial_analysis.html#links-with-theory",
-    "href": "spatial_analysis.html#links-with-theory",
+    "objectID": "012_spatial_analysis.html#links-with-theory",
+    "href": "012_spatial_analysis.html#links-with-theory",
     "title": "2  Spatial data analysis: a definition",
     "section": "2.2 Links with theory",
     "text": "2.2 Links with theory\nScience progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or sub-fields.\nFrom a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.\nFrom a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:\n\nDescribe the location of activities and how they change over time\nEstimate reduced form models\n\nUnlike structural form models, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.\nThere is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.\nWe very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients than to prediction using as many data as possible.\nIf a variable is used it is because we have some idea of its importance and influence on others or its relevance, not just to obtain a fit. Hence we won’t use automatic models constructions (no stepwise regression for example) and leave out all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if these methods can be considered to belong to spatial analysis and use geographic data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.",
@@ -115,8 +115,8 @@
     ]
   },
   {
-    "objectID": "space_axiom.html",
-    "href": "space_axiom.html",
+    "objectID": "013_space_axiom.html",
+    "href": "013_space_axiom.html",
     "title": "3  Geographical space",
     "section": "",
     "text": "3.1 Absolute or pre-geographical space:",
@@ -126,8 +126,8 @@
     ]
   },
   {
-    "objectID": "space_axiom.html#absolute-or-pre-geographical-space",
-    "href": "space_axiom.html#absolute-or-pre-geographical-space",
+    "objectID": "013_space_axiom.html#absolute-or-pre-geographical-space",
+    "href": "013_space_axiom.html#absolute-or-pre-geographical-space",
     "title": "3  Geographical space",
     "section": "",
     "text": "A set of places or locations \\(S\\)\nIdentified by their coordinates \\(x,y\\)\nSeparated by a distance \\(d(L)\\)\nDistance being measured along a given metric \\(L\\)",
@@ -137,8 +137,8 @@
     ]
   },
   {
-    "objectID": "space_axiom.html#geographical-space",
-    "href": "space_axiom.html#geographical-space",
+    "objectID": "013_space_axiom.html#geographical-space",
+    "href": "013_space_axiom.html#geographical-space",
     "title": "3  Geographical space",
     "section": "3.2 Geographical space:",
     "text": "3.2 Geographical space:\nS can be endowed with various attributes to form a geographical space:\n\nThe surface attribute \\(m\\), measured along a given metric related to coordinates\nVarious attributes \\(Z\\)\nDensity measures, i.e. any \\(Z/m\\)\n\n\n\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An Axiomatic Approach to Geographical Space.” Geographical Analysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
@@ -148,8 +148,8 @@
     ]
   },
   {
-    "objectID": "space_issues.html",
-    "href": "space_issues.html",
+    "objectID": "014_space_issues.html",
+    "href": "014_space_issues.html",
     "title": "4  Spatial data issues",
     "section": "",
     "text": "4.1 Equivalence and Independence\n(Based on discussions in Jayet, p. 2-13)\nStatistical analysis is based on two key principles, or invariants:\nHowever, both of these principles are challenged when applied in a spatial context. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations and because the spatial definition of objects may vary and their sampling irregular.\nThese challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.",
@@ -159,8 +159,8 @@
     ]
   },
   {
-    "objectID": "space_issues.html#equivalence-and-independence",
-    "href": "space_issues.html#equivalence-and-independence",
+    "objectID": "014_space_issues.html#equivalence-and-independence",
+    "href": "014_space_issues.html#equivalence-and-independence",
     "title": "4  Spatial data issues",
     "section": "",
     "text": "All observations must be statistically equivalent: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.\nAll observations must be independent from each other: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.",
@@ -170,8 +170,8 @@
     ]
   },
   {
-    "objectID": "space_issues.html#equivalence",
-    "href": "space_issues.html#equivalence",
+    "objectID": "014_space_issues.html#equivalence",
+    "href": "014_space_issues.html#equivalence",
     "title": "4  Spatial data issues",
     "section": "4.2 Equivalence",
     "text": "4.2 Equivalence\n\n4.2.1 Irregularity of observations and the nature of data\nWhile there are time cycles, making repetitive data logging along the time dimension doable, there is no such think as a spatial cycle for geographical data recording.\nMost spatial data has a irregular covering in space, which already challenges the equivalence of observations\n\n(source to be added, apologies if you are the author, I am happy to adapt)\n\nObservations (countries) are of different size, i.e. the surface attribute \\(m\\) matters here.\nSuppose \\(Z_{pop}\\) is the country population. One can expect \\(Z_{pop}\\) to relate to \\(m\\) if processes are homogeneous across space. However a \\(Z/m\\) density variables would still show these objects are very different.\nYet, other \\(Z_i\\) variables could still be compared using that \\(Z_{pop}\\) attributes. For example the active population of the place (country) as a percentage of its total population, or using other transformations (linear or not).\nNote that variations in volume/mass/size such as \\(Z_{pop}\\) are very common, with very few objects having a very large size compared to most others. Such a size effect\n\nimpacts on the total and central (mean, median) value of variables\nthe distribution of values when made in different observations’ regions\ntypically leads to outliers problems or heteroskedasticity (non constant variance)\n\nHowever, there are raster maps and some information is “regular”, such a precipitation, or can be “regularized”, such as population grids.\n\n(https://human-settlement.emergency.copernicus.eu/)\nThe discretization of geographic space should however be internally homogeneous, meaning the attributes within each grid cell (or other nwe objects) supposed to apply to every part of that cell.\nA difference is often made between continuous field data and discrete space objects.\nSee below the tabulation of these against the types of measurements by Haining (2010)\n\n\n\n4.2.2 Modifiable Areal unit Problem - MAUP\nOpenshaw (1984)\n\nAreal units = spatial objects such as zones or places or towns or regions\n\n\nGeography has consistently and dismally failed to tackle its entitation problems, and in that more than anything else lies the root of so many of its problems (Chapman 77)\n\n\nInsufficient thought is given to precisely what it is that is being studied. […] Little concern has been expressed about the nature and definition of the spatial objects under study\n\n\nFor many purposes the zones in a zoning system constitute the objects, or geographical individuals, that are the basic units for the observation and measurement of spatial phenomena.\n\n\nWith areal data, the spatial objects only exist after data collected for one set of entities (e.g. people) are subjected to an arbitrary aggregation (see also regularity discussion above) to produce a set of spatial units.\n\n\nHowever, there are no rules for areal aggregation, no standards, and no international conventions to guide the spatial aggregation process.\n\n\nThe areal units (zonal objects) used in many geographical studies are arbitrary, modifiable. Census areas have rarely an intrinsic geographical meaning\n\n\nA unmanageable combinatorial problem: There are approximately 10^12 different aggregations of 1,000 objects into 20 groups. If the aggregation process is constrained so that the groups consist of internally contiguous objects (i.e. all the objects assigned to the same group are geographical neighbours) then this huge number is reduced, but only by a few orders of magnitude.\n\nStan Openshaw distingues 2 interrelated issues, within the MAUP:\n\nThe scale problem: the variation in results that can often be obtained when data for one set of areal units are progressively aggregated into fewer and larger units for analysis.\nThe aggregation problem: the problem of alternative combinations of areal units at equal or similar scales. Any variation in results due to the use of alternative units of analysis when the number of units is held constant\n\n\nExample of effects on correlation coefficients:\n\nCorrelation between percentage vote for Republican candidates in the congressional election of 1968 and the percentage of the population over 60 years\nCorrelation at the 99 county level is 0.34\nAfter aggregation into six zones: 0.26 for the 6 congressional districts and 0.86 for a simple typology of Iowa into 6 rural-urban types (Openshaw and Taylor 77)\nCompare mean and dispersion of correlation coefficient after random zoning (using contiguity) and random sampling (grouping)\n\n\n\nNo systematic scale effect on correlation mean\nConsiderable variability about the mean values but reduces with increasing numbers of units\nThe standard deviations of the zoning distributions are considerably smaller than the corresponding sampling distributions but exhibit a greater degree of bias &gt; spatial autocorrelation effect",
@@ -181,8 +181,8 @@
     ]
   },
   {
-    "objectID": "space_issues.html#spatial-in-dependence",
-    "href": "space_issues.html#spatial-in-dependence",
+    "objectID": "014_space_issues.html#spatial-in-dependence",
+    "href": "014_space_issues.html#spatial-in-dependence",
     "title": "4  Spatial data issues",
     "section": "4.3 Spatial (in-)dependence",
     "text": "4.3 Spatial (in-)dependence\n\n4.3.1 Interactions between observations\n\nNot only the dimensions and structures of observations is of importance but also their relative position in space\nThe distance (between objects), \\(d(L)\\), is at the very heart of geographical analysis AND the source of statistical difficulties\nThe level of interactions increases with proximity (distance functions or contiguities) (see gravity-based theories)\n\n\n\n4.3.2 Tobler’s first law of geography\nTobler (1970)\n\n\n\n4.3.3 Spatial autocorrelation\nAnselin, Luc and Bera,I (1998)\n\n\n\n\n\n\nAnselin, Luc, and Bera,I. 1998. “Spatial Dependence in Linear Regression Models with an Introduction to Spatial Econometrics: Regression Models with an Anselin Bera i. INTRODUCTION.” In. CRC Press.\n\n\nHaining, Robert P. 2010. “The Nature of Georeferenced Data.” In, edited by Manfred M. Fischer and Arthur Getis, 197–217. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-03647-7_12.\n\n\nOpenshaw, Stan. 1984. The Modifiable Areal Unit Problem. Concepts and Techniques in Modern Geography 38. Norwich: Geo.\n\n\nTobler, W. R. 1970. “A Computer Model Simulation of Urban Growth in the Detroit Region in Economic Geography 46: 2, 234240.” Clark University, Worcester, MA.",
@@ -192,288 +192,287 @@
     ]
   },
   {
-    "objectID": "getting_started.html",
-    "href": "getting_started.html",
-    "title": "5  Getting started",
+    "objectID": "021_Rstudio.html",
+    "href": "021_Rstudio.html",
+    "title": "5  Getting started with RStudio",
     "section": "",
     "text": "5.1 R, RStudio and its interface\nIn class demonstration of how to",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
     ]
   },
   {
-    "objectID": "getting_started.html#r-rstudio-and-its-interface",
-    "href": "getting_started.html#r-rstudio-and-its-interface",
-    "title": "5  Getting started",
+    "objectID": "021_Rstudio.html#r-rstudio-and-its-interface",
+    "href": "021_Rstudio.html#r-rstudio-and-its-interface",
+    "title": "5  Getting started with RStudio",
     "section": "",
-    "text": "Get R and RStudio installed\nNavigating the R studio interface\nScripting area, console, files,…\nUsing colors and TOC outline in RStudio",
+    "text": "Get R and RStudio installed\nNavigating the R studio interface\nScripting area, console, files,…\nUsing colors and TOC outline in RStudio\nAuto-completion using tabs\nNavigating history with the up/down arrows\nUnderstanding help (necessary arguments and defaulted options)",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
     ]
   },
   {
-    "objectID": "getting_started.html#projects-and-workflows",
-    "href": "getting_started.html#projects-and-workflows",
-    "title": "5  Getting started",
+    "objectID": "021_Rstudio.html#projects-and-workflows",
+    "href": "021_Rstudio.html#projects-and-workflows",
+    "title": "5  Getting started with RStudio",
     "section": "5.2 Projects and workflows",
-    "text": "5.2 Projects and workflows\nLet’s compute a value in the console and store it to an object first\n\n#This is a comment\n1+2 #This is also a comment\n\n[1] 3\n\na&lt;-3+4\na\n\n[1] 7\n\n\nSee that we now have an object in the environment!",
+    "text": "5.2 Projects and workflows\nLet’s compute a value in the console and store it to an object first\n\n#This is a comment\n1+2 #This is also a comment\n#&gt; [1] 3\na&lt;-3+4\na\n#&gt; [1] 7\n\nSee that we now have an object in the environment!",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
     ]
   },
   {
-    "objectID": "getting_started.html#working-directory",
-    "href": "getting_started.html#working-directory",
-    "title": "5  Getting started",
-    "section": "5.3 Working directory!!!",
-    "text": "5.3 Working directory!!!\nSuppose we want to produce a text from the above and save it to a file:\n\na_sentence&lt;-paste(\"I have computed a sum, which equals\", a)\na_sentence #Let's see this in the console\n\n[1] \"I have computed a sum, which equals 7\"\n\ncat(a_sentence,file=\"brol/a_sentence.txt\")\n\nWhere is the file? the directory? Have you been able to run this?\nAlways indicate where you work!\nThe classical way is\n\ngetwd() #get (default) working directory\nsetwd(\"/Users/geoffrey.caruso/Dropbox/GitHub/MAGEO0641/brol\") #set working directory to YOUR OWN NETWORK SPACE HERE!\n\nThere is a more practical way in RStudio: Make an .Rproj from/to a directory\nYou can create a directory in your finder/file explorer, or create a directory or subdirectory from within the R console. This will be very useful at a more advanced level when you create many outputs and directory names result from some data processing. Think of processing something across many countries/cities.\n\ndir.create(\"brol\")\ndir.create(\"Today\")",
+    "objectID": "021_Rstudio.html#objects",
+    "href": "021_Rstudio.html#objects",
+    "title": "5  Getting started with RStudio",
+    "section": "5.3 Objects",
+    "text": "5.3 Objects\nAn object is not defined ex-ante and is automatically overwritten\n\nX&lt;-3 #This X will soon be replaced\nX&lt;-1:10 \nY&lt;-X^2\n\nR is case sensitive. The following returns an Error\n\nx # x is lower case and does not exist\n\nIMPORTANT:\n\nAlways worry about Errors. They stop your process.\nAlways read and try to understand Warnings. They do not stop your process but usually indicate the result may not be as expected!",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
     ]
   },
   {
-    "objectID": "getting_started.html#commented-scripts-vs-markdown-documents",
-    "href": "getting_started.html#commented-scripts-vs-markdown-documents",
-    "title": "5  Getting started",
-    "section": "5.4 Commented scripts vs markdown documents",
-    "text": "5.4 Commented scripts vs markdown documents\nThe above is a commented script, using #, which you can save as an .R file and re-run later.\nThe problem with this approach is that you won’t see results of the codes until you run it. So you can’t really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.\nA more advanced approach is to make a document where you integrate text, code chunks and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.\nLet’s have a look at the structure of this syllabus, written using Quarto markdown.",
+    "objectID": "021_Rstudio.html#working-directory",
+    "href": "021_Rstudio.html#working-directory",
+    "title": "5  Getting started with RStudio",
+    "section": "5.4 Working directory!!!",
+    "text": "5.4 Working directory!!!\nSuppose we want to produce a text from the above and save it to a file:\n\na_sentence&lt;-paste(\"I have computed a sum, which equals\", a)\na_sentence #Let's see this in the console\n#&gt; [1] \"I have computed a sum, which equals 7\"\ncat(a_sentence,file=\"brol/a_sentence.txt\")\n\nWhere is the file? the directory? Have you been able to run this?\nAlways indicate where you work!\nThe classical way is\n\ngetwd() #get (default) working directory\nsetwd(\"/Users/geoffrey.caruso/Dropbox/GitHub/MAGEO0641/brol\") #set working directory to YOUR OWN NETWORK SPACE HERE!\n\nThere is a more practical way in RStudio: Make an .Rproj from/to a directory\nYou can create a directory in your finder/file explorer, or create a directory or subdirectory from within the R console. This will be very useful at a more advanced level when you create many outputs and directory names result from some data processing. Think of processing something across many countries/cities.\n\ndir.create(\"brol\")\ndir.create(\"Today\")",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
     ]
   },
   {
-    "objectID": "R_basics.html",
-    "href": "R_basics.html",
-    "title": "6  R basics: classes, data frames and lists",
+    "objectID": "021_Rstudio.html#commented-scripts-vs-markdown-documents",
+    "href": "021_Rstudio.html#commented-scripts-vs-markdown-documents",
+    "title": "5  Getting started with RStudio",
+    "section": "5.5 Commented scripts vs markdown documents",
+    "text": "5.5 Commented scripts vs markdown documents\nThe above is a commented script, using #, which you can save as an .R file and re-run later.\nThe problem with this approach is that you won’t see results of the codes until you run it. So you can’t really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.\nA more advanced approach is to make a document where you integrate text, code chunks and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.\nLet’s have a look at the structure of this syllabus, written using Quarto markdown.",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#good-practice-with-files-handling-and-objects-naming",
+    "href": "021_Rstudio.html#good-practice-with-files-handling-and-objects-naming",
+    "title": "5  Getting started with RStudio",
+    "section": "5.6 Good practice with files handling and objects naming",
+    "text": "5.6 Good practice with files handling and objects naming\nRproj in an excellent way to keep things at the same place.\nWhen using an Rproj, use relative path only, i.e. from the root folder of the project, not from your machine. This is the way you can easily transfer your project to friends. Only external data (e.g. from the web) should be referenced in full.\nIt is also good practice to have a specific “data” folder or subfolders for all data so you clearly differentiate your outputs with the inputs. Similarly a R folder with your scripts when you have many.\nAlthough there is no naming convention agreed by everyone, it is important to apply a consistent style for yourself and colleagues. Also you would avoid spaces and rarer characters, especially in a multilingual environment.\nA folder of file named “source data” or “data_für_rémi” are not great ideas. (This is also true for variable names in data frame, see later)\nIn general, I personnally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as\n\nestimate_model.R\nget_statec_data.R\n\nFiles numbering can be of good help for heavier projects where there is a logical sequence (time)\n\n01_estimate_model.R\n02_get_statec_data.R\n\nFor variable names and objects I tend to use the “UpperCamelCase” form especially for vectors\n\nLuxCities\nGrowthRates\n\nand tend to add an “df” or “_lst” to disambiguate where needs be between some classes\n\nLuxCities_df\nLuxCities_lst\n\nI also like to use lowercase single letters for input parameters, such as a pvalue or number of neighbours, e.g.\n\np&lt;-0.05\nk&lt;-2\n\nor Greec symbols written in full, especially when there is a theoretical link\n\nbeta &lt;-model$coefficient[1]\nrho &lt;- 0.5\n\nFor functions (see later) I also like to use action verbs and include dots, such as:\n\nplot.bmi()\nextract.boundary()\n\nIn all case, be concise but specific and consistent within a project or even across.\n\nNeighboursCompute_Europe.Paris_project3 would be very long and inconsistent\ndf_new2bis not to use both as an object or a file\n\n…but to to be honest I have quite a number of tests.r and plot.test2.jpg files peppered in my machine.",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "022_vectors.html",
+    "href": "022_vectors.html",
+    "title": "6  Vectors",
     "section": "",
-    "text": "6.1 Objects\nAn object is not defined ex-ante and is automatically overwritten\nX&lt;-3 #This X will soon be replaced\nX&lt;-seq(from=1,to=10, by=1) #In class we played with the 3 arguments of this function\nR is case sensitive. The following returns an Error\nx # x is lower case and does not exist\nIMPORTANT:",
+    "text": "6.1 Introducing vectors\nVectors are the basic units of information in R, and many functions apply to vectors. If you are coming from the “spreadsheet” world (MS Excel or Open Office), where the basic unit is a cell, the change in perspective is quite important: while a cell has a single value (information), a vector contains multiple values.\nVectors, being a combination of values, are created by the combine (or concatenate) function c() or obtained from external sources.\nThere are two kinds of vectors:\nThis chapter is about atomic vectors, we will introduce lists later.\nAs a first example, see below a character (atomic) vector and a numeric (atomic) vector:\nCountries&lt;-c(\"Romania\",\"Russia\",\"Morocco\",\"Iran\",\"France\")\nmode(Countries)\n#&gt; [1] \"character\"\nAges&lt;-c(20,25,22,22,49)\nmode(Ages)\n#&gt; [1] \"numeric\"\nNote that in case you would have a long list to input manually, the scan() function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources…(if you fancy less transparent clicking approaches, be curious and find out ;-), most of the times anyway we rather read values from readable text files).",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
-    "objectID": "R_basics.html#objects",
-    "href": "R_basics.html#objects",
-    "title": "6  R basics: classes, data frames and lists",
+    "objectID": "022_vectors.html#introducing-vectors",
+    "href": "022_vectors.html#introducing-vectors",
+    "title": "6  Vectors",
     "section": "",
-    "text": "Always worry about Errors. They stop your process.\nAlways read and understand Warnings. They do not stop your process.\n\n\n6.1.1 Example 1\n\nY&lt;-X\nY-X #This should thus return a zero vector\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\nsum(Y-X) # and a zero sum\n\n[1] 0\n\n#Exercising with conditions\nY==X # is the same as? A single \"=\" is an assignment!\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE\n\nY!=X #is not the same as?\n\n [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n\nsum(Y!=X)\n\n[1] 0\n\n\n\n\n6.1.2 Different classes\n\nclass(sum)\n\n[1] \"function\"\n\nclass(seq)\n\n[1] \"function\"\n\nclass(class)\n\n[1] \"function\"\n\n#\nclass(X)\n\n[1] \"numeric\"\n\nclass(Y)\n\n[1] \"numeric\"\n\n#\nclass(2)\n\n[1] \"numeric\"\n\nclass(2L)\n\n[1] \"integer\"\n\n#\nclass(Y==X)\n\n[1] \"logical\"\n\n\n\n\n6.1.3 Summary\n\nsummary(X)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.00    3.25    5.50    5.50    7.75   10.00",
+    "text": "Atomic vectors (which we tend to refer to simply as vectors), which are homogeneous in the sense that they contain only one “type” of data, such as characters or numbers.\nLists, which can have heterogeneous contents.",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
-    "objectID": "R_basics.html#data-frames",
-    "href": "R_basics.html#data-frames",
-    "title": "6  R basics: classes, data frames and lists",
-    "section": "6.2 Data frames",
-    "text": "6.2 Data frames\n\n6.2.1 Example 2 - A Data frame … your beloved spreadsheet\n\ndf&lt;-data.frame() #an empty one\n\ndf&lt;-data.frame(a = 1:5,\n           b = letters[1:5],\n           c = rnorm(n = 5))\ndf\n\n  a b          c\n1 1 a  0.0875306\n2 2 b -0.5794876\n3 3 c  1.5653412\n4 4 d -1.7737205\n5 5 e  0.6603778\n\n\nSee how it is summarized\n\nsummary(df)\n\n       a          b                   c            \n Min.   :1   Length:5           Min.   :-1.773721  \n 1st Qu.:2   Class :character   1st Qu.:-0.579488  \n Median :3   Mode  :character   Median : 0.087531  \n Mean   :3                      Mean   :-0.007992  \n 3rd Qu.:4                      3rd Qu.: 0.660378  \n Max.   :5                      Max.   : 1.565341  \n\n\n\n\n6.2.2 Accessing and subsetting\n!!! THIS IS EXTREMELY IMPORTANT !!!\nIdentifying\n\ndf[,\"c\"] #all rows but only named column \"c\"\n\n[1]  0.0875306 -0.5794876  1.5653412 -1.7737205  0.6603778\n\ndf$c #same !\n\n[1]  0.0875306 -0.5794876  1.5653412 -1.7737205  0.6603778\n\ndf$b\n\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n\nSubsetting based on position\n\ndf$c[1:2] #subsetting a vector: only first 2 values\n\n[1]  0.0875306 -0.5794876\n\ndf[1:2,\"c\"]\n\n[1]  0.0875306 -0.5794876\n\n\nSubsetting specific rows (not range as above):\n\ndf[1:3,\"c\"]\n\n[1]  0.0875306 -0.5794876  1.5653412\n\ndf[c(1,3),\"c\"] #c stands for combine!\n\n[1] 0.0875306 1.5653412",
+    "objectID": "022_vectors.html#attributes-of-vectors",
+    "href": "022_vectors.html#attributes-of-vectors",
+    "title": "6  Vectors",
+    "section": "6.2 Attributes of vectors",
+    "text": "6.2 Attributes of vectors\nA vector is always characterized by its type and length.\n\n6.2.1 Types\nA vector is a combination of values from the same type (or mode). So if you combine data from different types they will be coerced to the less demanding one, i.e. “character” in the following cases:\n\nA&lt;-c(1,\"two\",3)\nA\n#&gt; [1] \"1\"   \"two\" \"3\"\nmode(A)\n#&gt; [1] \"character\"\n\nc(Countries, Ages)\n#&gt;  [1] \"Romania\" \"Russia\"  \"Morocco\" \"Iran\"    \"France\"  \"20\"      \"25\"     \n#&gt;  [8] \"22\"      \"22\"      \"49\"\nmode(c(Countries, Ages))\n#&gt; [1] \"character\"\n\nYou can also see from these examples that mode()` gets a vector’s “type”. R vectors have one and only one “mode”, either “numeric”, “character” or “logical” (plus “raw” and “complex”, which we don’t consider here).\nYou can also use typeof() in case you are interested to know how the data is actually encrypted, which essentially differentiates the “numeric” mode into “integer” and “double”. R vectors have one and only one “typof”, either “integer”, “double”, “character” or “logical”\nCoercion to the same type applies to the “typeof” as you can see below\n\nBNum&lt;-c(2,10,99)\ntypeof(BNum)\n#&gt; [1] \"double\"\nmode(BNum)\n#&gt; [1] \"numeric\"\nBInt&lt;-c(2L,10L,99L)\ntypeof(BInt)\n#&gt; [1] \"integer\"\nmode(BInt)\n#&gt; [1] \"numeric\"\nB&lt;-c(BNum,BInt)\ntypeof(B)\n#&gt; [1] \"double\"\nmode(B)\n#&gt; [1] \"numeric\"\n\nIn practice, you will rarely use mode() or typeof(), which distinguish well between vectors, but not between most other objects. Instead, you will use the class() function in order to know what kind of data you have and what you can do with it. For most atomic vectors, class() is basically typeof(). The difference is that “class” is not a mutually exclusive property. A vector, or any object, can belong to several classes and thus be used with different functions\n\nclass(c(20L,50L,70L))\n#&gt; [1] \"integer\"\nclass(c(20,50,70))\n#&gt; [1] \"numeric\"\nclass(Countries)\n#&gt; [1] \"character\"\nclass(Ages)\n#&gt; [1] \"numeric\"\nclass(c(Countries,Ages)) #coercion\n#&gt; [1] \"character\"\n\nSometimes, depending on some calculations, you may need to transform the type of data, especially from numeric to character and vice versa. Coercion may apply automatically but not always, so you will need to explicitly transform the data type using “as.a type” or”as.a mode”: as.numeric(), as.character(), which you will use quite often, or as.integer(),as.double(), or as.logical().\n\nA&lt;-c(1,2,3)\nB&lt;-c(1L,2L,3L)\nC&lt;-c(\"1\",\"2\",\"3\")\nA+B\n#&gt; [1] 2 4 6\nA+C\n#&gt; Error in A + C: non-numeric argument to binary operator\nA+as.numeric(C)\n#&gt; [1] 2 4 6\nas.character(A)\n#&gt; [1] \"1\" \"2\" \"3\"\n\n\n\n6.2.2 Length\nWhile a numeric vector of length one is mathematically a scalar, the way you input a scalar in R is as a vector of length 1. A vector can also be empty, i.e. of length 0, in which case its type is unknown, unless you apply one of the above transformations.\n\nX&lt;-3 #equivalent to X&lt;-c(3)\nclass(X)\n#&gt; [1] \"numeric\"\n\nY&lt;-c()\nclass(Y)\n#&gt; [1] \"NULL\"\n\nY&lt;-as.numeric(c())\nclass(Y)\n#&gt; [1] \"numeric\"\n\nY&lt;-as.integer(c())\nclass(Y)\n#&gt; [1] \"integer\"\n\nYou get the length of a vector using the function length(), which you will also use quite a lot.`\n\nlength(Countries)\n#&gt; [1] 5\nlength(X)\n#&gt; [1] 1\nlength(Y)\n#&gt; [1] 0\n\nNote that if you manually change the length of an existing vector, this will trim the vector end or extend the vector with empty values.\n\nZ&lt;-c(2, 4, 6, 7 , 10)\nlength(Z)&lt;-3\nZ\n#&gt; [1] 2 4 6\nlength(Z)&lt;-12\nZ\n#&gt;  [1]  2  4  6 NA NA NA NA NA NA NA NA NA\n\nBesides their class() and length() attributes, vectors (and other objects) can be endowed with a number of other attributes, which you will obtain from attributes(). None of the vectors we used as example so far has additional attributes, but you can define any attribute yourself. See below how we add a “source” attribute to the vector of “Countries” we created earlier and assign a “character string” to it to describe the source. Retrieving a specific attribute is done with the attr(,\"Whatever attribute\") function.\n\nattributes(Countries)\n#&gt; NULL\nattr(Countries, \"source\")&lt;-\"MAGEO students input\"\nattributes(Countries)\n#&gt; $source\n#&gt; [1] \"MAGEO students input\"",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
-    "objectID": "R_basics.html#combine-c",
-    "href": "R_basics.html#combine-c",
-    "title": "6  R basics: classes, data frames and lists",
-    "section": "6.3 Combine c()",
-    "text": "6.3 Combine c()\n\nc(1,3) #Combining elements to form a vector of elements\n\n[1] 1 3\n\nc(\"Mom\",\"Dad\")\n\n[1] \"Mom\" \"Dad\"\n\nc(\"Mom\",\"Dad\",3) #of any type?\n\n[1] \"Mom\" \"Dad\" \"3\"  \n\nz&lt;-c(\"Mom\",\"Dad\",3)\n\nA vector and thus a data frame column must be of a single class! Hence 3 became “3”\nEach dataframe column must have the same number of elements.\n(Enjoy this condition after thinking of how many times you had misaligned and columns of different lengths in Ms Exc..)\n\ndf$z&lt;-z #Should not work!\n\nError in `$&lt;-.data.frame`(`*tmp*`, z, value = c(\"Mom\", \"Dad\", \"3\")): replacement has 3 rows, data has 5\n\n\n\nlength(df$a)\n\n[1] 5\n\nlength(z)\n\n[1] 3\n\n#Beware. Length applied to the whole df means the number of columns!\nlength(df) #i.e. a b and c\n\n[1] 3\n\n\nWhile length is general, for a data frame you can rather compute number of rows and columns this way\n\nnrow(df)\n\n[1] 5\n\nncol(df)\n\n[1] 3\n\ndim(df)\n\n[1] 5 3\n\nnrow(df)==dim(df)[2] #What do you think?\n\n[1] FALSE\n\n#But these won't work for a vector:\ndim(df$a)\n\nNULL\n\nnrow(df$a)\n\nNULL\n\n\nOften times data frames have more complicated column names. It is useful to access those directly.\nThis is also the way you change the name of a column:\n\nnames(df)[2]&lt;-\"blabla\"\ndf\n\n  a blabla          c\n1 1      a  0.0875306\n2 2      b -0.5794876\n3 3      c  1.5653412\n4 4      d -1.7737205\n5 5      e  0.6603778",
+    "objectID": "022_vectors.html#factors",
+    "href": "022_vectors.html#factors",
+    "title": "6  Vectors",
+    "section": "6.3 Factors",
+    "text": "6.3 Factors\nRemember from the introduction, that we (in geography and elsewhere) usually consider discrete and continuous data, each type being split into 2 measurement levels:\n\nDiscrete: nominal (blue, green) or ordinal (high, low)\nContinuous: interval (10°C, 20°C) or ratio (10 apples, 20 apples) (difference being that 20 apples is twice as much as much as 10 apples, but 20°C is not twice as hot as 10°C because zero is not the absolute zero, hence a ratio in this case makes little sense, only differences are sensical).\n\nThis vocabulary is not used directly in R:\n\nContinuous (ratio/interval) data is coded as numeric or integer\nDiscrete (categorical) data (nominal/ordinal) is preferably coded as a factor.\n\nNominal data can still be in the “character” type, but the idea of a “factor” is that there is only a limited set of characters’ strings that you will find in a vector (e.g. set of countries, set of land uses) and you are able (willing) to enumerate them. For ordinal data, the order is important, hence it gets closer to an integer set than to a character (e.g. education levels: primary, secondary tertiary education), yet you can sum integer data but should not sum ordinal data.\n\nFactors are designed to properly solve the use of discrete/categorical data. It is based on the integer type (in the sense of typeof) on top of which a “level” attribute is added, and potentially whether it is ordered or not. They are fabricated with the as.factor() or factor() functions.\n\nCountries\n#&gt; [1] \"Romania\" \"Russia\"  \"Morocco\" \"Iran\"    \"France\" \n#&gt; attr(,\"source\")\n#&gt; [1] \"MAGEO students input\"\ntypeof(Countries)\n#&gt; [1] \"character\"\n\nCountries_f&lt;-as.factor(Countries)\nCountries_f\n#&gt; [1] Romania Russia  Morocco Iran    France \n#&gt; Levels: France Iran Morocco Romania Russia\ntypeof(Countries_f)\n#&gt; [1] \"integer\"\nclass(Countries_f)\n#&gt; [1] \"factor\"\n\nWhile the categories are displayed with the factor, the levels() function returns those categories as a character vector.\n\nlevels(Countries_f)\n#&gt; [1] \"France\"  \"Iran\"    \"Morocco\" \"Romania\" \"Russia\"\n\nBy default the levels in a factor uses the alphabetical order. In many cases however, you will want to at least define the first one, in order to use it as a reference (typically in regression analysis with a categorical explanatory variable) or choose you own order for plotting or other purposes.\n\n6.3.1 Re-defining the reference level\nSuppose you want to use “Morocco” as the first, reference level instead of “France”.\nThe relevel() function re-orders the levels so that the one indicated as “ref” is used first and the others are moved down the series.\n\nCountries_f2&lt;-relevel(Countries_f, ref=\"Morocco\")\n\nYou could also set the order directly at the time of creating the factor using the “level” argument, using the factor() function, not as.factor(). We used as.factor() before because it is generally quicker, and there is not always a need to adapt the order of levels.\n\nCountries_f3&lt;-factor(Countries, level=c(\"Morocco\",\"France\",\"Romania\", \"Iran\",\"Belgium\"))\n\nBe careful, however, because if you don’t use the complete list of possibilities, the values that are not specified in the levels vector, will simply be ignored and turned into NA’s. In the above example we forgot “Russia” and therefore have now a NA within our vector. Conversely, we have been able to indicate a “Belgium” level, although it was not present. There is no automatic correspondence between the levels of a factor and its set of values. If you want a match, you can drop unused levels using droplevels() but for those characters (e.g. Russia) that were not taken at the moment of creating the factor, it is too late, they remain a NA.\n\nCountries_f4&lt;-droplevels(Countries_f3)\nCountries_f4\n#&gt; [1] Romania &lt;NA&gt;    Morocco Iran    France \n#&gt; Levels: Morocco France Romania Iran\n\n\n\n6.3.2 Ordering a factor based on occurrence:\nTo make a more realistic case, we have scraped the Wikipedia table indicating the Tour de France winners since 1903. See “TourDeFrance” in the data folder for the data and scraping script (from R). The data is in the form of a data.frame and saved as a RDS (an effective way to save R objects onto your disc). See the relevant chapters for data.frame and saving to file later.\nThere was no Tour de France during World War I and II and no winner from 1999 to 2005 because Lance Armstrong cheated. Hence we have a series of ” - ” in our levels, which are not interesting, and thus not considered when we factor our vector. This doesn’t remove the vector elements but creates several NA’s.\n\nLeTour_df&lt;-readRDS(\"data/TourDeFrance/LeTour_df.rds\")\nWinners&lt;-factor(LeTour_df$Country, exclude = \"—\")\nWinners\n#&gt;   [1] France        France        France        France        France       \n#&gt;   [6] France        Luxembourg    France        France        Belgium      \n#&gt;  [11] Belgium       Belgium       &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt;  [16] &lt;NA&gt;          Belgium       Belgium       Belgium       Belgium      \n#&gt;  [21] France        Italy         Italy         Belgium       Luxembourg   \n#&gt;  [26] Luxembourg    Belgium       France        France        France       \n#&gt;  [31] France        France        Belgium       Belgium       France       \n#&gt;  [36] Italy         Belgium       &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt;  [41] &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          France       \n#&gt;  [46] Italy         Italy         Switzerland   Switzerland   Italy        \n#&gt;  [51] France        France        France        France        France       \n#&gt;  [56] Luxembourg    Spain         Italy         France        France       \n#&gt;  [61] France        France        Italy         France        France       \n#&gt;  [66] Netherlands   Belgium       Belgium       Belgium       Belgium      \n#&gt;  [71] Spain         Belgium       France        Belgium       France       \n#&gt;  [76] France        France        Netherlands   France        France       \n#&gt;  [81] France        France        France        United States Ireland      \n#&gt;  [86] Spain         United States United States Spain         Spain        \n#&gt;  [91] Spain         Spain         Spain         Denmark       Germany      \n#&gt;  [96] Italy         &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt; [101] &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          Spain         Spain        \n#&gt; [106] Spain         Spain         Luxembourg    Australia     Great Britain\n#&gt; [111] Great Britain Italy         Great Britain Great Britain Great Britain\n#&gt; [116] Great Britain Colombia      Slovenia      Slovenia      Denmark      \n#&gt; [121] Denmark       Slovenia     \n#&gt; 15 Levels: Australia Belgium Colombia Denmark France Germany ... United States\n\nlength(Winners) #this includes NA's!\n#&gt; [1] 122\nlevels(Winners)\n#&gt;  [1] \"Australia\"     \"Belgium\"       \"Colombia\"      \"Denmark\"      \n#&gt;  [5] \"France\"        \"Germany\"       \"Great Britain\" \"Ireland\"      \n#&gt;  [9] \"Italy\"         \"Luxembourg\"    \"Netherlands\"   \"Slovenia\"     \n#&gt; [13] \"Spain\"         \"Switzerland\"   \"United States\"\n\nSuppose you want to to know and plot how many times each of the 15 countries (who won Le Tour at least once) won.\nFrequencies can be observed directly from a basic plot:\n\nplot(Winners,las=2)\n\n\n\n\n\n\n\n\nGet the victories counts in a vector can be made with table(), which applies to anything (numeric or character) that can be coerced to a factor\n\ntable(Winners)\n#&gt; Winners\n#&gt;     Australia       Belgium      Colombia       Denmark        France \n#&gt;             1            18             1             3            36 \n#&gt;       Germany Great Britain       Ireland         Italy    Luxembourg \n#&gt;             1             6             1            10             5 \n#&gt;   Netherlands      Slovenia         Spain   Switzerland United States \n#&gt;             2             3            12             2             3\n\nBoth the plot and counts however follow the order of the levels, which is alphabetical\nOne possibility to improve the graph is to change the order of the levels based on the count table and redoing the graph\n\n#Vector of levels in a new order\nLevelsFrq&lt;-levels(Winners)[order(table(Winners), decreasing = TRUE)]\n  #note the order function and the square brackets\nLevelsFrq\n#&gt;  [1] \"France\"        \"Belgium\"       \"Spain\"         \"Italy\"        \n#&gt;  [5] \"Great Britain\" \"Luxembourg\"    \"Denmark\"       \"Slovenia\"     \n#&gt;  [9] \"United States\" \"Netherlands\"   \"Switzerland\"   \"Australia\"    \n#&gt; [13] \"Colombia\"      \"Germany\"       \"Ireland\"\n\n#Use that order when creating the factor from the character vector\nWinnersFrq&lt;-factor(na.omit(Winners), levels = LevelsFrq) \n #note the na.omit function\n\n#plot\nplot(WinnersFrq,las=2)\n\n\n\n\n\n\n\n\n\n\n6.3.3 Ordered factors\nSometimes you will want to make a categorical data explicitly ordinal for graphical or statistical purpose . For example if you have used a Likert scale within a survey, it can be interesting it is stored as an ordered factor. You can order an already existing factor, using the function ordered(), which adds a logical flag to the factor to indicate it is order (see first example), or at the moment you create the factor using factor() (second example). Once the factor is ordered, the levels are displayed in order and separated by a ” &lt; “. Also a new class,”ordered”, is added to the object.\n\nLikertScale&lt;-c(\"Strongly disagree\", \"Disagree\",\"Neither agree nor disagree\",\n\"Agree\",\"Strongly agree\") #in the expected order\nResponses&lt;-c(\"Neither agree nor disagree\", \"Disagree\", \"Disagree\", \"Agree\", \"Agree\", \"Neither agree nor disagree\", \"Strongly agree\", \"Strongly Agree\", \"Disagree\")\nResponses_f&lt;-factor(Responses, levels=LikertScale)\nResponses_f\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree Disagree Neither agree nor disagree ... Strongly agree\n\nResponses_f2&lt;-ordered(Responses_f)\nResponses_f2 #Notice that if we don't provide again the levels, it is made from the existing ones, so there is only 4 levels now (\"Strongly Disagree\" not being answered)\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; Levels: Disagree &lt; Neither agree nor disagree &lt; Agree &lt; Strongly agree\n\nResponses_f3&lt;-factor(Responses, levels=LikertScale, ordered = TRUE)\nResponses_f3\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree &lt; Disagree &lt; ... &lt; Strongly agree\n\nclass(Responses_f3) #see the additional class\n#&gt; [1] \"ordered\" \"factor\"\n\nIn the above example you will have noticed a NA, due to some misspelling. This is a good case to remind that categorical data should not necessarily rely on character strings. In geography we often need to treat countries, regions, municipalities whose names can be very complicated, especially in multilingual context It is good advise to rather use codes for geographical units (e.g. BE351, BE352, BE353, for the NUTS 3 classification of Belgium), land use (e.g. https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html/) and related them to a corresponding table with proper labels.\nIt is also true for other types of categories, including Likert scale. An option is to use integer values (or characters for geographical codes) together with a series of labels. You add the labels at the moment of creating the factor:\n\nLikertScale&lt;-c(\"Strongly disagree\", \"Disagree\",\"Neither agree nor disagree\",\n\"Agree\",\"Strongly agree\") \nLikertLevels&lt;-c(1L,2L,3L,4L,5L) #would work as well with numeric c(1,2,3,4,5)\nResponses&lt;-c(3L, 2L, 2L, 4L, 4L, 3L, 5L, 5L, 2L)\n\nResponses_f&lt;-factor(Responses, ordered=TRUE, levels=LikertLevels, labels=LikertScale)\nResponses_f\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             Strongly agree            \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree &lt; Disagree &lt; ... &lt; Strongly agree\n\nThe result is the same as previously, but you avoid typos when inputting the responses and can also adapt the labels at will, without changing the data itself.",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
-    "objectID": "R_basics.html#lists",
-    "href": "R_basics.html#lists",
-    "title": "6  R basics: classes, data frames and lists",
-    "section": "6.4 Lists",
-    "text": "6.4 Lists\n\n6.4.1 Example 3 - A list\nA List is a more general object than a dataframe.\nAll “columns” are not necessarily\n\nof the same length\nnor of the same class\n\n\nmylist&lt;-list(a = 1:5,\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n\n$a\n[1] 1 2 3 4 5\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n$c\n[1]  0.8424831 -0.5963192  1.6525650 -0.0431795  1.8361957\n\nsummary(mylist)\n\n  Length Class  Mode     \na 5      -none- numeric  \nb 5      -none- character\nc 5      -none- numeric  \n\n\n\nmylist&lt;-list(a = 1:3,#we removed 2 elements here\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n\n$a\n[1] 1 2 3\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n$c\n[1] -0.07402724 -1.01629757  1.21794299  0.03391977 -0.51174829\n\nsummary(mylist)\n\n  Length Class  Mode     \na 3      -none- numeric  \nb 5      -none- character\nc 5      -none- numeric  \n\n\n\nlength(mylist) #number of elements in list\n\n[1] 3\n\nlength(mylist$b) #number of objects within that element of the list\n\n[1] 5\n\n\n\n\n6.4.2 Into the lists: [[ ]] vs [ ]\n\nmylist[2] # getting the list element displayed\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nclass(mylist[2])  # you see it is a list element\n\n[1] \"list\"\n\nmylist[[2]] # getting the corresponding vector\n\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nclass(mylist[[2]]) # you now see it is a character vector\n\n[1] \"character\"\n\n\nAnd now subsetting:\n\nmylist\n\n$a\n[1] 1 2 3\n\n$b\n[1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\n$c\n[1] -0.07402724 -1.01629757  1.21794299  0.03391977 -0.51174829\n\nmylist[[2]][1] #1st element of the 2nd element of the list\n\n[1] \"a\"\n\nmylist[[1]][2] #2nd element of the 1st element of the list\n\n[1] 2\n\nM&lt;-mylist[[3]]\nM[1] #Subsetting just as any vector\n\n[1] -0.07402724",
+    "objectID": "022_vectors.html#operations-on-vectors",
+    "href": "022_vectors.html#operations-on-vectors",
+    "title": "6  Vectors",
+    "section": "6.4 Operations on vectors",
+    "text": "6.4 Operations on vectors\n\n6.4.1 Arithmetic operations and recycling\nR is a calculator and perform the arithmetic operations + - * / ^\nTwo numeric vectors of the same length can be added, multiplied, etc. When vectors of different length are provided, the shorter one is recycled until the end of the longer vector. Usually a vector of length 1 is recycled, thus allowing R to add, divide,etc. a scalar to a vector in the same way as between two vectors (in a “parallel way”). But any shorter vector is also recycled (you get a warning though). See:\n\nX&lt;-c(0,1,2,3,4,5)\nX^2\n#&gt; [1]  0  1  4  9 16 25\nY&lt;-c(10,9,8,7,6,5)\n\nX+Y\n#&gt; [1] 10 10 10 10 10 10\nY/X\n#&gt; [1]      Inf 9.000000 4.000000 2.333333 1.500000 1.000000\nX*c(0,1)\n#&gt; [1] 0 1 0 3 0 5\n\n\n\n6.4.2 Euclidean division and rounding\nThe modulo operation for integers is obtained with %/% to get the integral part of the Euclidean division and %% to get the remainder. This the way you will know an integer is odd or even. The function can also be applied to numeric vectors with decimals.\n\nc(1,3,5,44,444,4444)%/%2\n#&gt; [1]    0    1    2   22  222 2222\nc(1,3,5,44,444,4444)%%2 #remainder of dividing by 2, thus indicating odd/even\n#&gt; [1] 1 1 1 0 0 0\n99.99%/%2\n#&gt; [1] 49\n99.99%%2\n#&gt; [1] 1.99\n\nFor ratio and interval numbers with decimals you sometimes need to get rid of the decimals or display only a part of them Examine the following:\n\nx&lt;-c(33.33, 666.166, 50.5, 49.5)\ntrunc(x) #compares with as.integer() but does not change the class to integer\n#&gt; [1]  33 666  50  49\nround(x) #note the rounding of a 5 to the even digit (international standard) \n#&gt; [1]  33 666  50  50\nround(x, digits=2)\n#&gt; [1]  33.33 666.17  50.50  49.50\nceiling(x)\n#&gt; [1]  34 667  51  50\nfloor(x)\n#&gt; [1]  33 666  50  49\n\nsignif(x, digits = 5)\n#&gt; [1]  33.33 666.17  50.50  49.50\n\nWith geographical data, ceiling() can for example be applied to latitudes and longitudes in order to make grids. A simple example is how to obtain (theoretical) time zones from a set of longitudes.\nLet’s take the opportunity to learn about set.seed() and about uniform random number generation runif():\n\nset.seed(101)\nLongitudes&lt;-runif(n=10,min=-180, max=180)\nLongitudes\n#&gt;  [1]  -46.00858 -164.22307   75.48625   56.76854  -90.05194  -71.98026\n#&gt;  [7]   30.55199  -59.95183   43.92431   16.49828\n\nceiling(Longitudes*24/360)\n#&gt;  [1]  -3 -10   6   4  -6  -4   3  -3   3   2\n\n\n\n\nWikipedia, Time Zones\n\n\n\n\n6.4.3 Logical and Boolean operations\nA series of operations return a logical vector, i.e. a vector of Boolean values TRUE and FALSE.\nThose operations are &gt;, &gt;=, &lt;, &lt;=, ==, !=\nSome examples with numeric and character vectors:\nIMPORTANT: Use == for comparison, not =, which is an assignment!\n\nc(1,2,3) &lt; c(2,3,3)\n#&gt; [1]  TRUE  TRUE FALSE\nc(1,2,3) &gt;= 3 #see right hand side is recycled and applied \"one to one\"\n#&gt; [1] FALSE FALSE  TRUE\n\"Bernadette, elle est très chouette\" == \"Bernadette, elle est très chouette\"\n#&gt; [1] TRUE\n\"Bernadette, elle est très chouette\" != \"Mais sa cousine, elle est divine\"\n#&gt; [1] TRUE\n\"Julian\" &gt;= \"Julien\" #alphabetical order\n#&gt; [1] FALSE\n\nBy the way we see here vectors of the logical class:\n\nclass(\"Julian\" &gt;= \"Julien\")\n#&gt; [1] \"logical\"\n\nIn addition to those comparisons, many functions, especially structured as “is.xxx” return a TRUE or FALSE and are very useful within you data management process. You may make quite some use also of the %in% function, when you have a long vector, to check whether a particular value (or several) is present within a vector.\n\nis.numeric(\"a\")\n#&gt; [1] FALSE\nis.numeric(\"2\")\n#&gt; [1] FALSE\nis.numeric(3L)\n#&gt; [1] TRUE\nis.numeric(FALSE)\n#&gt; [1] FALSE\n!is.numeric(FALSE) #Note the negation here!\n#&gt; [1] TRUE\n\n\"urban\" %in% c(\"urban\",\"agriculture\",\"water\",\"forest\")\n#&gt; [1] TRUE\nc(\"urban\",\"industry\") %in% c(\"urban\",\"agriculture\",\"water\",\"forest\")\n#&gt; [1]  TRUE FALSE\n\nBoolean values are usually (always?) coerced to a 1 and 0, in case an arithmetic operation is then demanded.\n\nmean(c(TRUE,FALSE,TRUE,TRUE))\n#&gt; [1] 0.75\nsum(c(TRUE,FALSE,TRUE,TRUE))\n#&gt; [1] 3\n3*(c(TRUE,FALSE)+TRUE)\n#&gt; [1] 6 3\n\nA set of functions then apply specifically to the Boolean values TRUE or FALSE, i.e. to logical vectors.\nThese logical operators are: !, &, |, xor and typically used to select elements that match 2 or more conditions.\nThe graphic below, reproduced from R for Data Science (highly recommended!), demonstrate their outcome for 2 sets and an example is provided after creating 2 logical vectors, x and y from the LETTERS character vector.\n\n\n\nsource: Fig.12.1 from https://r4ds.hadley.nz/logicals\n\n\n\nLETTERS[1:6]\n#&gt; [1] \"A\" \"B\" \"C\" \"D\" \"E\" \"F\"\nx&lt;-LETTERS[1:6]&lt;\"E\"\ny&lt;-LETTERS[1:6]&gt;\"B\"\nx\n#&gt; [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE\ny\n#&gt; [1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE\nx & y\n#&gt; [1] FALSE FALSE  TRUE  TRUE FALSE FALSE\nx & !y\n#&gt; [1]  TRUE  TRUE FALSE FALSE FALSE FALSE\n!x & y\n#&gt; [1] FALSE FALSE FALSE FALSE  TRUE  TRUE\nx & y\n#&gt; [1] FALSE FALSE  TRUE  TRUE FALSE FALSE\nx | y\n#&gt; [1] TRUE TRUE TRUE TRUE TRUE TRUE\nxor(x,y)\n#&gt; [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>R basics: classes, data frames and lists</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
     ]
   },
   {
-    "objectID": "df_functions.html",
-    "href": "df_functions.html",
-    "title": "7  Working with data frames and functions",
+    "objectID": "022_vectors.html#vectors-functions",
+    "href": "022_vectors.html#vectors-functions",
+    "title": "6  Vectors",
+    "section": "6.5 Vectors’ functions",
+    "text": "6.5 Vectors’ functions\nA number of functions are evaluated over an entire vector (vectorisation is there to avoid loops) and used to describe and understand the distribution of values. They apply mostly to numeric vectors but also to logicals (being 0 or 1 anyway) as well as characters, where possible (based on alphabetical order).\n\n6.5.1 Range, cumulative values, positions and sorting\n\nExamples of functions evaluated over an entire vector\n\n\nmin(x)\ncummin(x)\nwhich.min(x)\nsort(x)\n\n\nmax(x)\ncummax(x)\nwhich.max(x)\norder(x)\n\n\nrange(x)\n\n\nrank(x)\n\n\nsum(x)\ncumsum(x)\n\n\n\n\n\nLet’s explore some of those for x being a numeric, a logical and character. In class exploration.\nTo those, we should add all univariate statistics such as mean(), median(), var(), quantile(), but leave them aside for now.\n\n\n6.5.2 Summary\nOne of the most used function for analysis (if not THE most used) is summary(). We will see its result may change substantially based on the object class it is applied to. Its basic functioning for a simple numeric vector and character vector is:\n\nsummary(c(1,2,3,4,NA,6))\n#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n#&gt;     1.0     2.0     3.0     3.2     4.0     6.0       1\nsummary(c(\"A\",\"B\",\"C\",NA,NA,\"F\"))\n#&gt;    Length     Class      Mode \n#&gt;         6 character character\n\n\n\n6.5.3 Element-wise functions\nOther functions apply to two or more vectors. They need an x and a y vector as input, e.g. cor(x,y). Most of those you will encounter use two vectors of the same length and type, i.e. no recycling, which leads us to the notion of a data.frame (see next chapter).\nAt this time, we show only two simple “parallel” or “element-wise” computations: pmin() and pmax(), which can be useful for example when there is a repeated measure for a given set of individuals. Cases are not rare when you make a new vector (or column in a data.frame) based on such element-wise calculations. (Yet you would probably assemble the data into a data.frame first and then make a row-wise calculation).\n\nt1&lt;-c(25,35,45,55)\nt2&lt;-c(26,36,44,54)\nt3&lt;-c(27,34,43,56)\n\npmin(t1,t2,t3)\n#&gt; [1] 25 34 43 54\npmax(t1,t2,t3)\n#&gt; [1] 27 36 45 56",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
+    ]
+  },
+  {
+    "objectID": "022_vectors.html#indexing-and-subsetting",
+    "href": "022_vectors.html#indexing-and-subsetting",
+    "title": "6  Vectors",
+    "section": "6.6 Indexing and subsetting",
+    "text": "6.6 Indexing and subsetting\nNow you have seen that vectors are the key elements in R, you will still want to access its elements individually or parts of it based on positions or conditions\nSquare brackets I used to get into vector elements by their position (or by their name if named).\nYou can supply one position but also several positions and ranges. Examine the following:\n\nx&lt;-c(3,1,9,7,8,2,3,6,3,4)\nx #all\n#&gt;  [1] 3 1 9 7 8 2 3 6 3 4\nx[4] #4th element\n#&gt; [1] 7\nx[6:8] #a sequence\n#&gt; [1] 2 3 6\nx[c(4,6:8)] #both\n#&gt; [1] 7 2 3 6\nx[-4] #all but the 4th element\n#&gt; [1] 3 1 9 8 2 3 6 3 4\nx[-length(x)] #all but the last one\n#&gt; [1] 3 1 9 7 8 2 3 6 3\nx[-((length(x)-1):length(x))]  #all but the last two\n#&gt; [1] 3 1 9 7 8 2 3 6\n\nThis is very flexible because you can use any vector representing an index (position) to make a new vector.\n\nx&lt;-c(3,1,9,7,8,2,3,6,3,4)\nchicken&lt;-c(10,10,10,4,2,3)\nx[chicken]\n#&gt; [1] 4 4 4 7 1 9\n\nSuch a vector can be a logical, then the elements where the logical is TRUE are returned.\n\nx&lt;-c(3,1,9,7,8,2,3,6,3,4)\nx&gt;3\n#&gt;  [1] FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE\nx[x&gt;3]\n#&gt; [1] 9 7 8 6 4\n\nx %% 2 == 0\n#&gt;  [1] FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE\nx[x %% 2 == 0] #even numbers only\n#&gt; [1] 8 2 6 4\n\nx[x&gt;mean(x)]\n#&gt; [1] 9 7 8 6\n\nx[as.logical(c(0,1))] #?? recyling is in effect here\n#&gt; [1] 1 7 2 6 4\n\nPossibilities are endless, especially if you think the indexing vector can come from another vector than x.\nVectors are sometimes named, and names the used to retrieve the data:\n\ny&lt;-c(1000,1500,900,1200)\nnames(y)&lt;-c(\"UK\",\"BE\",\"LU\",\"FR\")\n\ny[\"LU\"]\n#&gt;  LU \n#&gt; 900\n\nLast but not least, once selected an element can then be assigned a new value:\n\nz&lt;-c(0,0,0,4,2,3,0)\nz\n#&gt; [1] 0 0 0 4 2 3 0\n\nz[2]&lt;-5\nz\n#&gt; [1] 0 5 0 4 2 3 0\n\nz[z==0]&lt;-NA  #a very much used use case\nz\n#&gt; [1] NA  5 NA  4  2  3 NA",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
+    ]
+  },
+  {
+    "objectID": "023_df_lst.html",
+    "href": "023_df_lst.html",
+    "title": "7  Data frames and lists",
     "section": "",
-    "text": "7.1 What is in a function? BMI example\npaste.heightweight&lt;-function(h,w){\n  print(paste(h,w))\n  }\npaste.heightweight(1.8,80) #you provide the 2 arguments and get the output\n\n[1] \"1.8 80\"\nNow let’s do the computation with the BMI calculation with a new function\nbmi.calc&lt;-function(h,w){w/h^2}\nwhich we apply\nbmi.calc(1.8,80)\n\n[1] 24.69136\nA function can take a sequence of processes (e.g compute, rounds, concatenate a sentence,…) and then returns the result of the last process.\nExample\nbmi.calc.text&lt;-function(h,w){\n  b&lt;-w/h^2\n  brounded&lt;-round(b)\n  paste(\"My BMI is\", brounded, \"kg/m2\")\n}\nbmi.calc.text(1.8,80)\n\n[1] \"My BMI is 25 kg/m2\"\nFor clarity the outcome of the function can be put in a return()\nbmi.calc&lt;-function(h,w){\n  return(round(w/h^2))\n}\nbmi.calc(1.8,80)\n\n[1] 25",
+    "text": "7.1 Data frames",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data frames and lists</span>"
     ]
   },
   {
-    "objectID": "df_functions.html#what-is-in-a-function-bmi-example",
-    "href": "df_functions.html#what-is-in-a-function-bmi-example",
-    "title": "7  Working with data frames and functions",
+    "objectID": "023_df_lst.html#data-frames",
+    "href": "023_df_lst.html#data-frames",
+    "title": "7  Data frames and lists",
+    "section": "",
+    "text": "7.1.1 A Data frame … your beloved spreadsheet\n\ndf&lt;-data.frame() #an empty one\n\ndf&lt;-data.frame(a = 1:5,\n           b = letters[1:5],\n           c = rnorm(n = 5))\ndf\n#&gt;   a b          c\n#&gt; 1 1 a  0.9613247\n#&gt; 2 2 b  0.3358525\n#&gt; 3 3 c -0.2769550\n#&gt; 4 4 d  1.3323848\n#&gt; 5 5 e  1.9006967\n\nSee how it is summarized. Basically summarizing each vector in columns.\n\nsummary(df)\n#&gt;        a          b                   c          \n#&gt;  Min.   :1   Length:5           Min.   :-0.2770  \n#&gt;  1st Qu.:2   Class :character   1st Qu.: 0.3359  \n#&gt;  Median :3   Mode  :character   Median : 0.9613  \n#&gt;  Mean   :3                      Mean   : 0.8507  \n#&gt;  3rd Qu.:4                      3rd Qu.: 1.3324  \n#&gt;  Max.   :5                      Max.   : 1.9007\n\n\n\n7.1.2 Accessing and subsetting\n!!! THIS IS EXTREMELY IMPORTANT !!! !!! Don’t forget the comma\nIdentifying\n\ndf[,\"b\"] #all rows but only the column named \"b\"\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\ndf$b #same !\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nSubsetting based on position\n\ndf$c[1:2] #subsetting a vector: only first 2 values\n#&gt; [1] 0.9613247 0.3358525\ndf[1:2,\"b\"]\n#&gt; [1] \"a\" \"b\"\ndf[1:2,] #first 2 records, all variables. Don't forget the comma !\n#&gt;   a b         c\n#&gt; 1 1 a 0.9613247\n#&gt; 2 2 b 0.3358525\n\nSubsetting specific rows (not range as above):\n\ndf[1:3,\"b\"]\n#&gt; [1] \"a\" \"b\" \"c\"\ndf[c(1,3),\"b\"]\n#&gt; [1] \"a\" \"c\"\n\nEach dataframe column must have the same number of elements.\n(Enjoy this condition after thinking of how many times you had misaligned and columns of different lengths in Ms Exc..)\n\nz&lt;-c(\"Mom\",\"Dad\",3) #remember each vector as only one type of data, so this is coerced to character\n\ndf$z&lt;-z #Should not work becouse of different length\n#&gt; Error in `$&lt;-.data.frame`(`*tmp*`, z, value = c(\"Mom\", \"Dad\", \"3\")): replacement has 3 rows, data has 5\n\n\nlength(df$a)\n#&gt; [1] 5\nlength(z)\n#&gt; [1] 3\n\n#Beware. Length applied to the whole df means the number of columns!\nlength(df) #i.e. a b and c\n#&gt; [1] 3\n\nWhile length is general, for a data frame you can rather compute number of rows and columns this way\n\nnrow(df)\n#&gt; [1] 5\nncol(df)\n#&gt; [1] 3\ndim(df)\n#&gt; [1] 5 3\nnrow(df)==dim(df)[2] #What do you think?\n#&gt; [1] FALSE\n\n#But these won't work for a vector:\ndim(df$a)\n#&gt; NULL\nnrow(df$a)\n#&gt; NULL\n\nOften times data frames have more complicated column names. It is useful to access those directly.\nThis is also the way you change the name of a column:\n\nnames(df)[2]&lt;-\"blabla\"\ndf\n#&gt;   a blabla          c\n#&gt; 1 1      a  0.9613247\n#&gt; 2 2      b  0.3358525\n#&gt; 3 3      c -0.2769550\n#&gt; 4 4      d  1.3323848\n#&gt; 5 5      e  1.9006967",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "023_df_lst.html#lists",
+    "href": "023_df_lst.html#lists",
+    "title": "7  Data frames and lists",
+    "section": "7.2 Lists",
+    "text": "7.2 Lists\nA List is a more general object than a dataframe.\nAll “columns” are not necessarily\n\nof the same length\nnor of the same class\n\n\nmylist&lt;-list(a = 1:5,\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3 4 5\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1]  0.1253451  0.7551144 -0.6222853 -0.2287924 -1.1559035\nsummary(mylist)\n#&gt;   Length Class  Mode     \n#&gt; a 5      -none- numeric  \n#&gt; b 5      -none- character\n#&gt; c 5      -none- numeric\n\n\nmylist&lt;-list(a = 1:3,#we removed 2 elements here\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -1.9205248  1.3129642  1.4932003  0.6226043  0.8579712\nsummary(mylist)\n#&gt;   Length Class  Mode     \n#&gt; a 3      -none- numeric  \n#&gt; b 5      -none- character\n#&gt; c 5      -none- numeric\n\n\nlength(mylist) #number of elements in list\n#&gt; [1] 3\nlength(mylist$b) #number of objects within that element of the list\n#&gt; [1] 5\n\n\n7.2.1 Into the lists: [[ ]] vs [ ]\n\nmylist[2] # getting the list element displayed\n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\nclass(mylist[2])  # you see it is a list element\n#&gt; [1] \"list\"\nmylist[[2]] # getting the corresponding vector\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\nclass(mylist[[2]]) # you now see it is a character vector\n#&gt; [1] \"character\"\n\nAnd now subsetting:\n\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -1.9205248  1.3129642  1.4932003  0.6226043  0.8579712\nmylist[[2]][1] #1st element of the 2nd element of the list\n#&gt; [1] \"a\"\nmylist[[1]][2] #2nd element of the 1st element of the list\n#&gt; [1] 2\nM&lt;-mylist[[3]]\nM[1] #Subsetting just as any vector\n#&gt; [1] -1.920525",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data frames and lists</span>"
+    ]
+  },
+  {
+    "objectID": "024_df_functions.html",
+    "href": "024_df_functions.html",
+    "title": "8  Working with data frames and functions",
+    "section": "",
+    "text": "8.1 What is in a function? BMI example\npaste.heightweight&lt;-function(h,w){\n  print(paste(h,w))\n  }\npaste.heightweight(1.8,80) #you provide the 2 arguments and get the output\n#&gt; [1] \"1.8 80\"\nNow let’s do the computation with the BMI calculation with a new function\nbmi.calc&lt;-function(h,w){w/h^2}\nwhich we apply\nbmi.calc(1.8,80)\n#&gt; [1] 24.69136\nA function can take a sequence of processes (e.g compute, rounds, concatenate a sentence,…) and then returns the result of the last process.\nExample\nbmi.calc.text&lt;-function(h,w){\n  b&lt;-w/h^2\n  brounded&lt;-round(b)\n  paste(\"My BMI is\", brounded, \"kg/m2\")\n}\nbmi.calc.text(1.8,80)\n#&gt; [1] \"My BMI is 25 kg/m2\"\nFor clarity the outcome of the function can be put in a return()\nbmi.calc&lt;-function(h,w){\n  return(round(w/h^2))\n}\nbmi.calc(1.8,80)\n#&gt; [1] 25",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+    ]
+  },
+  {
+    "objectID": "024_df_functions.html#what-is-in-a-function-bmi-example",
+    "href": "024_df_functions.html#what-is-in-a-function-bmi-example",
+    "title": "8  Working with data frames and functions",
     "section": "",
     "text": "Let’s create a BMI function\nFirst a simple function that simply prints a given height and weight",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
     ]
   },
   {
-    "objectID": "df_functions.html#applying-a-function-to-a-data-frame-column",
-    "href": "df_functions.html#applying-a-function-to-a-data-frame-column",
-    "title": "7  Working with data frames and functions",
-    "section": "7.2 Applying a function to a data frame column",
-    "text": "7.2 Applying a function to a data frame column\nLet’s create a 2nd function to transfors degrees from Celsius to Fahrenheit\nSimpler with a single argument (x):\n\ncelsius2fahrenheit&lt;-function(x){round(32+(x*9/5))}\n\ncelsius2fahrenheit(25) #25 celsius degree is thus \n\n[1] 77\n\n\nWhich we now apply to a series of values stored in a column within a data frame\n\nmytable&lt;-data.frame(A=c(21,22,23,24,25,26,27))\nmytable$F&lt;-celsius2fahrenheit(mytable[,\"A\"])\nmytable\n\n   A  F\n1 21 70\n2 22 72\n3 23 73\n4 24 75\n5 25 77\n6 26 79\n7 27 81\n\n\n##Data frames and NA’s\nComputation of a new column from columns of a dataframe\n\nmytable$G&lt;-mytable$A+mytable$F #note: adding C and F temperature is nonsensical though\nmytable$Gsquare&lt;-mytable$G^2 #note how you write an exponent \"^\" in R\nmytable$A*mytable$F # or a multiplication \"*\"\n\n[1] 1470 1584 1679 1800 1925 2054 2187\n\n\nSimilarly we can apply our BMI computation to a data frame with heights and weights\n\nbmidf&lt;-data.frame(\n  h=c(1.8,1.7,2,1.9),\n  w=c(70,70,95,100))\n\nWe add the result of computing BMI directly as a new column “BMI” in our data.frame\n\nbmidf$BMI&lt;-bmi.calc(h=bmidf$h,\n                    w=bmidf$w)\n\nNA is for unknowns !\nSuppose the 2nd person of our sample didn’t share his/her weight with us\n\nbmidf$w[2]&lt;-NA #NA is for unknowns\nbmidf$BMI&lt;-bmi.calc(h=bmidf$h,\n                    w=bmidf$w)\n#You see the BMI could therefore not be computed\nbmidf\n\n    h   w BMI\n1 1.8  70  22\n2 1.7  NA  NA\n3 2.0  95  24\n4 1.9 100  28\n\n\nFor some functions you would still want to compute a value while ignoring the NA’s\nThe mean is a classical example\n\nmean(bmidf$h) #works\n\n[1] 1.85\n\nmean(bmidf$w) #but returns NA because of one value not reported\n\n[1] NA\n\n\nYou can explicitly ask to compute without the NA’s:\n\nmean(bmidf$w, na.rm=TRUE) #now works!\n\n[1] 88.33333\n\n\nUsing complete cases\nFor some data frame made of surveyed values where different variables are filled in sparsely, it is important you get access only to entirely completed individuals\n\ncomplete.cases(bmidf) #returns a logical indicating whether the row \n\n[1]  TRUE FALSE  TRUE  TRUE\n\n# has not a singleNA\nclass(complete.cases(bmidf))\n\n[1] \"logical\"\n\n#Note that with logicals, TRUE is 1 and FALSE is zero. Thus\n\nsum(complete.cases(bmidf))\n\n[1] 3\n\n#You can use this logical to subset the rows\n# and have a \"clean\" df\nbmidf2&lt;-bmidf[complete.cases(bmidf),] #read this as \"select complete cases rows with all columns\nbmidf2\n\n    h   w BMI\n1 1.8  70  22\n3 2.0  95  24\n4 1.9 100  28",
+    "objectID": "024_df_functions.html#applying-a-function-to-a-data-frame-column",
+    "href": "024_df_functions.html#applying-a-function-to-a-data-frame-column",
+    "title": "8  Working with data frames and functions",
+    "section": "8.2 Applying a function to a data frame column",
+    "text": "8.2 Applying a function to a data frame column\nLet’s create a 2nd function to transfors degrees from Celsius to Fahrenheit\nSimpler with a single argument (x):\n\ncelsius2fahrenheit&lt;-function(x){round(32+(x*9/5))}\n\ncelsius2fahrenheit(25) #25 celsius degree is thus \n#&gt; [1] 77\n\nWhich we now apply to a series of values stored in a column within a data frame\n\nmytable&lt;-data.frame(A=c(21,22,23,24,25,26,27))\nmytable$F&lt;-celsius2fahrenheit(mytable[,\"A\"])\nmytable\n#&gt;    A  F\n#&gt; 1 21 70\n#&gt; 2 22 72\n#&gt; 3 23 73\n#&gt; 4 24 75\n#&gt; 5 25 77\n#&gt; 6 26 79\n#&gt; 7 27 81",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
     ]
   },
   {
-    "objectID": "df_functions.html#environment-listing-and-management",
-    "href": "df_functions.html#environment-listing-and-management",
-    "title": "7  Working with data frames and functions",
-    "section": "7.3 Environment listing and management",
-    "text": "7.3 Environment listing and management\nWe have now created a bunch of objects which we can see in the Environment window of RStudio.\nIn the console we can also see them with\n\nls()\n\n[1] \"bmi.calc\"           \"bmi.calc.text\"      \"bmidf\"             \n[4] \"bmidf2\"             \"celsius2fahrenheit\" \"mytable\"           \n[7] \"paste.heightweight\"\n\n\nAnd any of these objects can be removed with\n\nrm()\n#for example\nrm(mytable)\n\nIn the environment window of RStudio you also see the structure of objects (when displayed as a list not a grid)\nFrom the console you use the structure function str() to get the same info\n\nstr(bmidf)\n\n'data.frame':   4 obs. of  3 variables:\n $ h  : num  1.8 1.7 2 1.9\n $ w  : num  70 NA 95 100\n $ BMI: num  22 NA 24 28",
+    "objectID": "024_df_functions.html#data-frames-and-nas",
+    "href": "024_df_functions.html#data-frames-and-nas",
+    "title": "8  Working with data frames and functions",
+    "section": "8.3 Data frames and NA’s",
+    "text": "8.3 Data frames and NA’s\nComputation of a new column from columns of a dataframe\n\nmytable$G&lt;-mytable$A+mytable$F #note: adding C and F temperature is nonsensical though\nmytable$Gsquare&lt;-mytable$G^2 #note how you write an exponent \"^\" in R\nmytable$A*mytable$F # or a multiplication \"*\"\n#&gt; [1] 1470 1584 1679 1800 1925 2054 2187\n\nSimilarly we can apply our BMI computation to a data frame with heights and weights\n\nbmidf&lt;-data.frame(\n  h=c(1.8,1.7,2,1.9),\n  w=c(70,70,95,100))\n\nWe add the result of computing BMI directly as a new column “BMI” in our data.frame\n\nbmidf$BMI&lt;-bmi.calc(h=bmidf$h,\n                    w=bmidf$w)\n\nNA is for unknowns !\nSuppose the 2nd person of our sample didn’t share his/her weight with us\n\nbmidf$w[2]&lt;-NA #NA is for unknowns\nbmidf$BMI&lt;-bmi.calc(h=bmidf$h,\n                    w=bmidf$w)\n#You see the BMI could therefore not be computed\nbmidf\n#&gt;     h   w BMI\n#&gt; 1 1.8  70  22\n#&gt; 2 1.7  NA  NA\n#&gt; 3 2.0  95  24\n#&gt; 4 1.9 100  28\n\nFor some functions you would still want to compute a value while ignoring the NA’s\nThe mean is a classical example\n\nmean(bmidf$h) #works\n#&gt; [1] 1.85\nmean(bmidf$w) #but returns NA because of one value not reported\n#&gt; [1] NA\n\nYou can explicitly ask to compute without the NA’s:\n\nmean(bmidf$w, na.rm=TRUE) #now works!\n#&gt; [1] 88.33333\n\nUsing complete cases\nFor some data frame made of surveyed values where different variables are filled in sparsely, it is important you get access only to entirely completed individuals\n\ncomplete.cases(bmidf) #returns a logical indicating whether the row \n#&gt; [1]  TRUE FALSE  TRUE  TRUE\n# has not a singleNA\nclass(complete.cases(bmidf))\n#&gt; [1] \"logical\"\n#Note that with logicals, TRUE is 1 and FALSE is zero. Thus\n\nsum(complete.cases(bmidf))\n#&gt; [1] 3\n\n#You can use this logical to subset the rows\n# and have a \"clean\" df\nbmidf2&lt;-bmidf[complete.cases(bmidf),] #read this as \"select complete cases rows with all columns\nbmidf2\n#&gt;     h   w BMI\n#&gt; 1 1.8  70  22\n#&gt; 3 2.0  95  24\n#&gt; 4 1.9 100  28",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
     ]
   },
   {
-    "objectID": "df_functions.html#viewing-data-frame",
-    "href": "df_functions.html#viewing-data-frame",
-    "title": "7  Working with data frames and functions",
-    "section": "7.4 Viewing data frame",
-    "text": "7.4 Viewing data frame\n\nView(bmidf)\n\nis the most pleasant interactive way to view a data frame\nBut be careful if many rows or columns !\nThe classical console way is simply\n\nbmidf\n\n    h   w BMI\n1 1.8  70  22\n2 1.7  NA  NA\n3 2.0  95  24\n4 1.9 100  28\n\n\nIn case of a large vector or df there will be a limited display of 1000 values (default) in console\nSuppose you have a vector of 1002 values\n\nmydf&lt;-data.frame(z=1:502, zrev=502:1)\nmydf\n\n      z zrev\n1     1  502\n2     2  501\n3     3  500\n4     4  499\n5     5  498\n6     6  497\n7     7  496\n8     8  495\n9     9  494\n10   10  493\n11   11  492\n12   12  491\n13   13  490\n14   14  489\n15   15  488\n16   16  487\n17   17  486\n18   18  485\n19   19  484\n20   20  483\n21   21  482\n22   22  481\n23   23  480\n24   24  479\n25   25  478\n26   26  477\n27   27  476\n28   28  475\n29   29  474\n30   30  473\n31   31  472\n32   32  471\n33   33  470\n34   34  469\n35   35  468\n36   36  467\n37   37  466\n38   38  465\n39   39  464\n40   40  463\n41   41  462\n42   42  461\n43   43  460\n44   44  459\n45   45  458\n46   46  457\n47   47  456\n48   48  455\n49   49  454\n50   50  453\n51   51  452\n52   52  451\n53   53  450\n54   54  449\n55   55  448\n56   56  447\n57   57  446\n58   58  445\n59   59  444\n60   60  443\n61   61  442\n62   62  441\n63   63  440\n64   64  439\n65   65  438\n66   66  437\n67   67  436\n68   68  435\n69   69  434\n70   70  433\n71   71  432\n72   72  431\n73   73  430\n74   74  429\n75   75  428\n76   76  427\n77   77  426\n78   78  425\n79   79  424\n80   80  423\n81   81  422\n82   82  421\n83   83  420\n84   84  419\n85   85  418\n86   86  417\n87   87  416\n88   88  415\n89   89  414\n90   90  413\n91   91  412\n92   92  411\n93   93  410\n94   94  409\n95   95  408\n96   96  407\n97   97  406\n98   98  405\n99   99  404\n100 100  403\n101 101  402\n102 102  401\n103 103  400\n104 104  399\n105 105  398\n106 106  397\n107 107  396\n108 108  395\n109 109  394\n110 110  393\n111 111  392\n112 112  391\n113 113  390\n114 114  389\n115 115  388\n116 116  387\n117 117  386\n118 118  385\n119 119  384\n120 120  383\n121 121  382\n122 122  381\n123 123  380\n124 124  379\n125 125  378\n126 126  377\n127 127  376\n128 128  375\n129 129  374\n130 130  373\n131 131  372\n132 132  371\n133 133  370\n134 134  369\n135 135  368\n136 136  367\n137 137  366\n138 138  365\n139 139  364\n140 140  363\n141 141  362\n142 142  361\n143 143  360\n144 144  359\n145 145  358\n146 146  357\n147 147  356\n148 148  355\n149 149  354\n150 150  353\n151 151  352\n152 152  351\n153 153  350\n154 154  349\n155 155  348\n156 156  347\n157 157  346\n158 158  345\n159 159  344\n160 160  343\n161 161  342\n162 162  341\n163 163  340\n164 164  339\n165 165  338\n166 166  337\n167 167  336\n168 168  335\n169 169  334\n170 170  333\n171 171  332\n172 172  331\n173 173  330\n174 174  329\n175 175  328\n176 176  327\n177 177  326\n178 178  325\n179 179  324\n180 180  323\n181 181  322\n182 182  321\n183 183  320\n184 184  319\n185 185  318\n186 186  317\n187 187  316\n188 188  315\n189 189  314\n190 190  313\n191 191  312\n192 192  311\n193 193  310\n194 194  309\n195 195  308\n196 196  307\n197 197  306\n198 198  305\n199 199  304\n200 200  303\n201 201  302\n202 202  301\n203 203  300\n204 204  299\n205 205  298\n206 206  297\n207 207  296\n208 208  295\n209 209  294\n210 210  293\n211 211  292\n212 212  291\n213 213  290\n214 214  289\n215 215  288\n216 216  287\n217 217  286\n218 218  285\n219 219  284\n220 220  283\n221 221  282\n222 222  281\n223 223  280\n224 224  279\n225 225  278\n226 226  277\n227 227  276\n228 228  275\n229 229  274\n230 230  273\n231 231  272\n232 232  271\n233 233  270\n234 234  269\n235 235  268\n236 236  267\n237 237  266\n238 238  265\n239 239  264\n240 240  263\n241 241  262\n242 242  261\n243 243  260\n244 244  259\n245 245  258\n246 246  257\n247 247  256\n248 248  255\n249 249  254\n250 250  253\n251 251  252\n252 252  251\n253 253  250\n254 254  249\n255 255  248\n256 256  247\n257 257  246\n258 258  245\n259 259  244\n260 260  243\n261 261  242\n262 262  241\n263 263  240\n264 264  239\n265 265  238\n266 266  237\n267 267  236\n268 268  235\n269 269  234\n270 270  233\n271 271  232\n272 272  231\n273 273  230\n274 274  229\n275 275  228\n276 276  227\n277 277  226\n278 278  225\n279 279  224\n280 280  223\n281 281  222\n282 282  221\n283 283  220\n284 284  219\n285 285  218\n286 286  217\n287 287  216\n288 288  215\n289 289  214\n290 290  213\n291 291  212\n292 292  211\n293 293  210\n294 294  209\n295 295  208\n296 296  207\n297 297  206\n298 298  205\n299 299  204\n300 300  203\n301 301  202\n302 302  201\n303 303  200\n304 304  199\n305 305  198\n306 306  197\n307 307  196\n308 308  195\n309 309  194\n310 310  193\n311 311  192\n312 312  191\n313 313  190\n314 314  189\n315 315  188\n316 316  187\n317 317  186\n318 318  185\n319 319  184\n320 320  183\n321 321  182\n322 322  181\n323 323  180\n324 324  179\n325 325  178\n326 326  177\n327 327  176\n328 328  175\n329 329  174\n330 330  173\n331 331  172\n332 332  171\n333 333  170\n334 334  169\n335 335  168\n336 336  167\n337 337  166\n338 338  165\n339 339  164\n340 340  163\n341 341  162\n342 342  161\n343 343  160\n344 344  159\n345 345  158\n346 346  157\n347 347  156\n348 348  155\n349 349  154\n350 350  153\n351 351  152\n352 352  151\n353 353  150\n354 354  149\n355 355  148\n356 356  147\n357 357  146\n358 358  145\n359 359  144\n360 360  143\n361 361  142\n362 362  141\n363 363  140\n364 364  139\n365 365  138\n366 366  137\n367 367  136\n368 368  135\n369 369  134\n370 370  133\n371 371  132\n372 372  131\n373 373  130\n374 374  129\n375 375  128\n376 376  127\n377 377  126\n378 378  125\n379 379  124\n380 380  123\n381 381  122\n382 382  121\n383 383  120\n384 384  119\n385 385  118\n386 386  117\n387 387  116\n388 388  115\n389 389  114\n390 390  113\n391 391  112\n392 392  111\n393 393  110\n394 394  109\n395 395  108\n396 396  107\n397 397  106\n398 398  105\n399 399  104\n400 400  103\n401 401  102\n402 402  101\n403 403  100\n404 404   99\n405 405   98\n406 406   97\n407 407   96\n408 408   95\n409 409   94\n410 410   93\n411 411   92\n412 412   91\n413 413   90\n414 414   89\n415 415   88\n416 416   87\n417 417   86\n418 418   85\n419 419   84\n420 420   83\n421 421   82\n422 422   81\n423 423   80\n424 424   79\n425 425   78\n426 426   77\n427 427   76\n428 428   75\n429 429   74\n430 430   73\n431 431   72\n432 432   71\n433 433   70\n434 434   69\n435 435   68\n436 436   67\n437 437   66\n438 438   65\n439 439   64\n440 440   63\n441 441   62\n442 442   61\n443 443   60\n444 444   59\n445 445   58\n446 446   57\n447 447   56\n448 448   55\n449 449   54\n450 450   53\n451 451   52\n452 452   51\n453 453   50\n454 454   49\n455 455   48\n456 456   47\n457 457   46\n458 458   45\n459 459   44\n460 460   43\n461 461   42\n462 462   41\n463 463   40\n464 464   39\n465 465   38\n466 466   37\n467 467   36\n468 468   35\n469 469   34\n470 470   33\n471 471   32\n472 472   31\n473 473   30\n474 474   29\n475 475   28\n476 476   27\n477 477   26\n478 478   25\n479 479   24\n480 480   23\n481 481   22\n482 482   21\n483 483   20\n484 484   19\n485 485   18\n486 486   17\n487 487   16\n488 488   15\n489 489   14\n490 490   13\n491 491   12\n492 492   11\n493 493   10\n494 494    9\n495 495    8\n496 496    7\n497 497    6\n498 498    5\n499 499    4\n500 500    3\n501 501    2\n502 502    1\n\n\n\n#[ reached getOption(\"max.print\") -- omitted 2 entries ]\n\nYou can change the default using\n\n options(max.print=1500)\n\nbut one rarely does this\nMost of the times you want a sneak preview in your data from the top\n\n# head() returns the first rows (5 default) rows:\nhead(mydf)\n\n  z zrev\n1 1  502\n2 2  501\n3 3  500\n4 4  499\n5 5  498\n6 6  497\n\nhead(mydf,8)\n\n  z zrev\n1 1  502\n2 2  501\n3 3  500\n4 4  499\n5 5  498\n6 6  497\n7 7  496\n8 8  495\n\n\nor the bottom:\n\n# tail() the last ones :\ntail(mydf)\n\n      z zrev\n497 497    6\n498 498    5\n499 499    4\n500 500    3\n501 501    2\n502 502    1\n\ntail(mydf, 7)\n\n      z zrev\n496 496    7\n497 497    6\n498 498    5\n499 499    4\n500 500    3\n501 501    2\n502 502    1",
+    "objectID": "024_df_functions.html#environment-listing-and-management",
+    "href": "024_df_functions.html#environment-listing-and-management",
+    "title": "8  Working with data frames and functions",
+    "section": "8.4 Environment listing and management",
+    "text": "8.4 Environment listing and management\nWe have now created a bunch of objects which we can see in the Environment window of RStudio.\nIn the console we can also see them with\n\nls()\n#&gt; [1] \"bmi.calc\"           \"bmi.calc.text\"      \"bmidf\"             \n#&gt; [4] \"bmidf2\"             \"celsius2fahrenheit\" \"mytable\"           \n#&gt; [7] \"paste.heightweight\"\n\nAnd any of these objects can be removed with\n\nrm()\n#for example\nrm(mytable)\n\nIn the environment window of RStudio you also see the structure of objects (when displayed as a list not a grid)\nFrom the console you use the structure function str() to get the same info\n\nstr(bmidf)\n#&gt; 'data.frame':    4 obs. of  3 variables:\n#&gt;  $ h  : num  1.8 1.7 2 1.9\n#&gt;  $ w  : num  70 NA 95 100\n#&gt;  $ BMI: num  22 NA 24 28",
     "crumbs": [
-      "Getting started with R",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
     ]
   },
   {
-    "objectID": "ggplot.html",
-    "href": "ggplot.html",
-    "title": "8  Graphics ggplot way",
-    "section": "",
-    "text": "Content",
+    "objectID": "024_df_functions.html#viewing-data-frame",
+    "href": "024_df_functions.html#viewing-data-frame",
+    "title": "8  Working with data frames and functions",
+    "section": "8.5 Viewing data frame",
+    "text": "8.5 Viewing data frame\n\nView(bmidf)\n\nis the most pleasant interactive way to view a data frame\nBut be careful if many rows or columns !\nThe classical console way is simply\n\nbmidf\n#&gt;     h   w BMI\n#&gt; 1 1.8  70  22\n#&gt; 2 1.7  NA  NA\n#&gt; 3 2.0  95  24\n#&gt; 4 1.9 100  28\n\nIn case of a large vector or df there will be a limited display of 1000 values (default) in console\nSuppose you have a vector of 1002 values\n\nmydf&lt;-data.frame(z=1:502, zrev=502:1)\nmydf\n#&gt;       z zrev\n#&gt; 1     1  502\n#&gt; 2     2  501\n#&gt; 3     3  500\n#&gt; 4     4  499\n#&gt; 5     5  498\n#&gt; 6     6  497\n#&gt; 7     7  496\n#&gt; 8     8  495\n#&gt; 9     9  494\n#&gt; 10   10  493\n#&gt; 11   11  492\n#&gt; 12   12  491\n#&gt; 13   13  490\n#&gt; 14   14  489\n#&gt; 15   15  488\n#&gt; 16   16  487\n#&gt; 17   17  486\n#&gt; 18   18  485\n#&gt; 19   19  484\n#&gt; 20   20  483\n#&gt; 21   21  482\n#&gt; 22   22  481\n#&gt; 23   23  480\n#&gt; 24   24  479\n#&gt; 25   25  478\n#&gt; 26   26  477\n#&gt; 27   27  476\n#&gt; 28   28  475\n#&gt; 29   29  474\n#&gt; 30   30  473\n#&gt; 31   31  472\n#&gt; 32   32  471\n#&gt; 33   33  470\n#&gt; 34   34  469\n#&gt; 35   35  468\n#&gt; 36   36  467\n#&gt; 37   37  466\n#&gt; 38   38  465\n#&gt; 39   39  464\n#&gt; 40   40  463\n#&gt; 41   41  462\n#&gt; 42   42  461\n#&gt; 43   43  460\n#&gt; 44   44  459\n#&gt; 45   45  458\n#&gt; 46   46  457\n#&gt; 47   47  456\n#&gt; 48   48  455\n#&gt; 49   49  454\n#&gt; 50   50  453\n#&gt; 51   51  452\n#&gt; 52   52  451\n#&gt; 53   53  450\n#&gt; 54   54  449\n#&gt; 55   55  448\n#&gt; 56   56  447\n#&gt; 57   57  446\n#&gt; 58   58  445\n#&gt; 59   59  444\n#&gt; 60   60  443\n#&gt; 61   61  442\n#&gt; 62   62  441\n#&gt; 63   63  440\n#&gt; 64   64  439\n#&gt; 65   65  438\n#&gt; 66   66  437\n#&gt; 67   67  436\n#&gt; 68   68  435\n#&gt; 69   69  434\n#&gt; 70   70  433\n#&gt; 71   71  432\n#&gt; 72   72  431\n#&gt; 73   73  430\n#&gt; 74   74  429\n#&gt; 75   75  428\n#&gt; 76   76  427\n#&gt; 77   77  426\n#&gt; 78   78  425\n#&gt; 79   79  424\n#&gt; 80   80  423\n#&gt; 81   81  422\n#&gt; 82   82  421\n#&gt; 83   83  420\n#&gt; 84   84  419\n#&gt; 85   85  418\n#&gt; 86   86  417\n#&gt; 87   87  416\n#&gt; 88   88  415\n#&gt; 89   89  414\n#&gt; 90   90  413\n#&gt; 91   91  412\n#&gt; 92   92  411\n#&gt; 93   93  410\n#&gt; 94   94  409\n#&gt; 95   95  408\n#&gt; 96   96  407\n#&gt; 97   97  406\n#&gt; 98   98  405\n#&gt; 99   99  404\n#&gt; 100 100  403\n#&gt; 101 101  402\n#&gt; 102 102  401\n#&gt; 103 103  400\n#&gt; 104 104  399\n#&gt; 105 105  398\n#&gt; 106 106  397\n#&gt; 107 107  396\n#&gt; 108 108  395\n#&gt; 109 109  394\n#&gt; 110 110  393\n#&gt; 111 111  392\n#&gt; 112 112  391\n#&gt; 113 113  390\n#&gt; 114 114  389\n#&gt; 115 115  388\n#&gt; 116 116  387\n#&gt; 117 117  386\n#&gt; 118 118  385\n#&gt; 119 119  384\n#&gt; 120 120  383\n#&gt; 121 121  382\n#&gt; 122 122  381\n#&gt; 123 123  380\n#&gt; 124 124  379\n#&gt; 125 125  378\n#&gt; 126 126  377\n#&gt; 127 127  376\n#&gt; 128 128  375\n#&gt; 129 129  374\n#&gt; 130 130  373\n#&gt; 131 131  372\n#&gt; 132 132  371\n#&gt; 133 133  370\n#&gt; 134 134  369\n#&gt; 135 135  368\n#&gt; 136 136  367\n#&gt; 137 137  366\n#&gt; 138 138  365\n#&gt; 139 139  364\n#&gt; 140 140  363\n#&gt; 141 141  362\n#&gt; 142 142  361\n#&gt; 143 143  360\n#&gt; 144 144  359\n#&gt; 145 145  358\n#&gt; 146 146  357\n#&gt; 147 147  356\n#&gt; 148 148  355\n#&gt; 149 149  354\n#&gt; 150 150  353\n#&gt; 151 151  352\n#&gt; 152 152  351\n#&gt; 153 153  350\n#&gt; 154 154  349\n#&gt; 155 155  348\n#&gt; 156 156  347\n#&gt; 157 157  346\n#&gt; 158 158  345\n#&gt; 159 159  344\n#&gt; 160 160  343\n#&gt; 161 161  342\n#&gt; 162 162  341\n#&gt; 163 163  340\n#&gt; 164 164  339\n#&gt; 165 165  338\n#&gt; 166 166  337\n#&gt; 167 167  336\n#&gt; 168 168  335\n#&gt; 169 169  334\n#&gt; 170 170  333\n#&gt; 171 171  332\n#&gt; 172 172  331\n#&gt; 173 173  330\n#&gt; 174 174  329\n#&gt; 175 175  328\n#&gt; 176 176  327\n#&gt; 177 177  326\n#&gt; 178 178  325\n#&gt; 179 179  324\n#&gt; 180 180  323\n#&gt; 181 181  322\n#&gt; 182 182  321\n#&gt; 183 183  320\n#&gt; 184 184  319\n#&gt; 185 185  318\n#&gt; 186 186  317\n#&gt; 187 187  316\n#&gt; 188 188  315\n#&gt; 189 189  314\n#&gt; 190 190  313\n#&gt; 191 191  312\n#&gt; 192 192  311\n#&gt; 193 193  310\n#&gt; 194 194  309\n#&gt; 195 195  308\n#&gt; 196 196  307\n#&gt; 197 197  306\n#&gt; 198 198  305\n#&gt; 199 199  304\n#&gt; 200 200  303\n#&gt; 201 201  302\n#&gt; 202 202  301\n#&gt; 203 203  300\n#&gt; 204 204  299\n#&gt; 205 205  298\n#&gt; 206 206  297\n#&gt; 207 207  296\n#&gt; 208 208  295\n#&gt; 209 209  294\n#&gt; 210 210  293\n#&gt; 211 211  292\n#&gt; 212 212  291\n#&gt; 213 213  290\n#&gt; 214 214  289\n#&gt; 215 215  288\n#&gt; 216 216  287\n#&gt; 217 217  286\n#&gt; 218 218  285\n#&gt; 219 219  284\n#&gt; 220 220  283\n#&gt; 221 221  282\n#&gt; 222 222  281\n#&gt; 223 223  280\n#&gt; 224 224  279\n#&gt; 225 225  278\n#&gt; 226 226  277\n#&gt; 227 227  276\n#&gt; 228 228  275\n#&gt; 229 229  274\n#&gt; 230 230  273\n#&gt; 231 231  272\n#&gt; 232 232  271\n#&gt; 233 233  270\n#&gt; 234 234  269\n#&gt; 235 235  268\n#&gt; 236 236  267\n#&gt; 237 237  266\n#&gt; 238 238  265\n#&gt; 239 239  264\n#&gt; 240 240  263\n#&gt; 241 241  262\n#&gt; 242 242  261\n#&gt; 243 243  260\n#&gt; 244 244  259\n#&gt; 245 245  258\n#&gt; 246 246  257\n#&gt; 247 247  256\n#&gt; 248 248  255\n#&gt; 249 249  254\n#&gt; 250 250  253\n#&gt; 251 251  252\n#&gt; 252 252  251\n#&gt; 253 253  250\n#&gt; 254 254  249\n#&gt; 255 255  248\n#&gt; 256 256  247\n#&gt; 257 257  246\n#&gt; 258 258  245\n#&gt; 259 259  244\n#&gt; 260 260  243\n#&gt; 261 261  242\n#&gt; 262 262  241\n#&gt; 263 263  240\n#&gt; 264 264  239\n#&gt; 265 265  238\n#&gt; 266 266  237\n#&gt; 267 267  236\n#&gt; 268 268  235\n#&gt; 269 269  234\n#&gt; 270 270  233\n#&gt; 271 271  232\n#&gt; 272 272  231\n#&gt; 273 273  230\n#&gt; 274 274  229\n#&gt; 275 275  228\n#&gt; 276 276  227\n#&gt; 277 277  226\n#&gt; 278 278  225\n#&gt; 279 279  224\n#&gt; 280 280  223\n#&gt; 281 281  222\n#&gt; 282 282  221\n#&gt; 283 283  220\n#&gt; 284 284  219\n#&gt; 285 285  218\n#&gt; 286 286  217\n#&gt; 287 287  216\n#&gt; 288 288  215\n#&gt; 289 289  214\n#&gt; 290 290  213\n#&gt; 291 291  212\n#&gt; 292 292  211\n#&gt; 293 293  210\n#&gt; 294 294  209\n#&gt; 295 295  208\n#&gt; 296 296  207\n#&gt; 297 297  206\n#&gt; 298 298  205\n#&gt; 299 299  204\n#&gt; 300 300  203\n#&gt; 301 301  202\n#&gt; 302 302  201\n#&gt; 303 303  200\n#&gt; 304 304  199\n#&gt; 305 305  198\n#&gt; 306 306  197\n#&gt; 307 307  196\n#&gt; 308 308  195\n#&gt; 309 309  194\n#&gt; 310 310  193\n#&gt; 311 311  192\n#&gt; 312 312  191\n#&gt; 313 313  190\n#&gt; 314 314  189\n#&gt; 315 315  188\n#&gt; 316 316  187\n#&gt; 317 317  186\n#&gt; 318 318  185\n#&gt; 319 319  184\n#&gt; 320 320  183\n#&gt; 321 321  182\n#&gt; 322 322  181\n#&gt; 323 323  180\n#&gt; 324 324  179\n#&gt; 325 325  178\n#&gt; 326 326  177\n#&gt; 327 327  176\n#&gt; 328 328  175\n#&gt; 329 329  174\n#&gt; 330 330  173\n#&gt; 331 331  172\n#&gt; 332 332  171\n#&gt; 333 333  170\n#&gt; 334 334  169\n#&gt; 335 335  168\n#&gt; 336 336  167\n#&gt; 337 337  166\n#&gt; 338 338  165\n#&gt; 339 339  164\n#&gt; 340 340  163\n#&gt; 341 341  162\n#&gt; 342 342  161\n#&gt; 343 343  160\n#&gt; 344 344  159\n#&gt; 345 345  158\n#&gt; 346 346  157\n#&gt; 347 347  156\n#&gt; 348 348  155\n#&gt; 349 349  154\n#&gt; 350 350  153\n#&gt; 351 351  152\n#&gt; 352 352  151\n#&gt; 353 353  150\n#&gt; 354 354  149\n#&gt; 355 355  148\n#&gt; 356 356  147\n#&gt; 357 357  146\n#&gt; 358 358  145\n#&gt; 359 359  144\n#&gt; 360 360  143\n#&gt; 361 361  142\n#&gt; 362 362  141\n#&gt; 363 363  140\n#&gt; 364 364  139\n#&gt; 365 365  138\n#&gt; 366 366  137\n#&gt; 367 367  136\n#&gt; 368 368  135\n#&gt; 369 369  134\n#&gt; 370 370  133\n#&gt; 371 371  132\n#&gt; 372 372  131\n#&gt; 373 373  130\n#&gt; 374 374  129\n#&gt; 375 375  128\n#&gt; 376 376  127\n#&gt; 377 377  126\n#&gt; 378 378  125\n#&gt; 379 379  124\n#&gt; 380 380  123\n#&gt; 381 381  122\n#&gt; 382 382  121\n#&gt; 383 383  120\n#&gt; 384 384  119\n#&gt; 385 385  118\n#&gt; 386 386  117\n#&gt; 387 387  116\n#&gt; 388 388  115\n#&gt; 389 389  114\n#&gt; 390 390  113\n#&gt; 391 391  112\n#&gt; 392 392  111\n#&gt; 393 393  110\n#&gt; 394 394  109\n#&gt; 395 395  108\n#&gt; 396 396  107\n#&gt; 397 397  106\n#&gt; 398 398  105\n#&gt; 399 399  104\n#&gt; 400 400  103\n#&gt; 401 401  102\n#&gt; 402 402  101\n#&gt; 403 403  100\n#&gt; 404 404   99\n#&gt; 405 405   98\n#&gt; 406 406   97\n#&gt; 407 407   96\n#&gt; 408 408   95\n#&gt; 409 409   94\n#&gt; 410 410   93\n#&gt; 411 411   92\n#&gt; 412 412   91\n#&gt; 413 413   90\n#&gt; 414 414   89\n#&gt; 415 415   88\n#&gt; 416 416   87\n#&gt; 417 417   86\n#&gt; 418 418   85\n#&gt; 419 419   84\n#&gt; 420 420   83\n#&gt; 421 421   82\n#&gt; 422 422   81\n#&gt; 423 423   80\n#&gt; 424 424   79\n#&gt; 425 425   78\n#&gt; 426 426   77\n#&gt; 427 427   76\n#&gt; 428 428   75\n#&gt; 429 429   74\n#&gt; 430 430   73\n#&gt; 431 431   72\n#&gt; 432 432   71\n#&gt; 433 433   70\n#&gt; 434 434   69\n#&gt; 435 435   68\n#&gt; 436 436   67\n#&gt; 437 437   66\n#&gt; 438 438   65\n#&gt; 439 439   64\n#&gt; 440 440   63\n#&gt; 441 441   62\n#&gt; 442 442   61\n#&gt; 443 443   60\n#&gt; 444 444   59\n#&gt; 445 445   58\n#&gt; 446 446   57\n#&gt; 447 447   56\n#&gt; 448 448   55\n#&gt; 449 449   54\n#&gt; 450 450   53\n#&gt; 451 451   52\n#&gt; 452 452   51\n#&gt; 453 453   50\n#&gt; 454 454   49\n#&gt; 455 455   48\n#&gt; 456 456   47\n#&gt; 457 457   46\n#&gt; 458 458   45\n#&gt; 459 459   44\n#&gt; 460 460   43\n#&gt; 461 461   42\n#&gt; 462 462   41\n#&gt; 463 463   40\n#&gt; 464 464   39\n#&gt; 465 465   38\n#&gt; 466 466   37\n#&gt; 467 467   36\n#&gt; 468 468   35\n#&gt; 469 469   34\n#&gt; 470 470   33\n#&gt; 471 471   32\n#&gt; 472 472   31\n#&gt; 473 473   30\n#&gt; 474 474   29\n#&gt; 475 475   28\n#&gt; 476 476   27\n#&gt; 477 477   26\n#&gt; 478 478   25\n#&gt; 479 479   24\n#&gt; 480 480   23\n#&gt; 481 481   22\n#&gt; 482 482   21\n#&gt; 483 483   20\n#&gt; 484 484   19\n#&gt; 485 485   18\n#&gt; 486 486   17\n#&gt; 487 487   16\n#&gt; 488 488   15\n#&gt; 489 489   14\n#&gt; 490 490   13\n#&gt; 491 491   12\n#&gt; 492 492   11\n#&gt; 493 493   10\n#&gt; 494 494    9\n#&gt; 495 495    8\n#&gt; 496 496    7\n#&gt; 497 497    6\n#&gt; 498 498    5\n#&gt; 499 499    4\n#&gt; 500 500    3\n#&gt; 501 501    2\n#&gt; 502 502    1\n\n\n#[ reached getOption(\"max.print\") -- omitted 2 entries ]\n\nYou can change the default using\n\n options(max.print=1500)\n\nbut one rarely does this\nMost of the times you want a sneak preview in your data from the top\n\n# head() returns the first rows (5 default) rows:\nhead(mydf)\n#&gt;   z zrev\n#&gt; 1 1  502\n#&gt; 2 2  501\n#&gt; 3 3  500\n#&gt; 4 4  499\n#&gt; 5 5  498\n#&gt; 6 6  497\nhead(mydf,8)\n#&gt;   z zrev\n#&gt; 1 1  502\n#&gt; 2 2  501\n#&gt; 3 3  500\n#&gt; 4 4  499\n#&gt; 5 5  498\n#&gt; 6 6  497\n#&gt; 7 7  496\n#&gt; 8 8  495\n\nor the bottom:\n\n# tail() the last ones :\ntail(mydf)\n#&gt;       z zrev\n#&gt; 497 497    6\n#&gt; 498 498    5\n#&gt; 499 499    4\n#&gt; 500 500    3\n#&gt; 501 501    2\n#&gt; 502 502    1\ntail(mydf, 7)\n#&gt;       z zrev\n#&gt; 496 496    7\n#&gt; 497 497    6\n#&gt; 498 498    5\n#&gt; 499 499    4\n#&gt; 500 500    3\n#&gt; 501 501    2\n#&gt; 502 502    1",
     "crumbs": [
-      "Graphics",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Graphics ggplot way</span>"
+      "Getting Started with R",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
     ]
   },
   {
-    "objectID": "univariate.html",
-    "href": "univariate.html",
-    "title": "9  Univariate statistics",
-    "section": "",
-    "text": "Content",
-    "crumbs": [
-      "Univariate analysis and distributions",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Univariate statistics</span>"
-    ]
-  },
-  {
-    "objectID": "distributions.html",
-    "href": "distributions.html",
-    "title": "10  Statistical distributions",
-    "section": "",
-    "text": "Content",
-    "crumbs": [
-      "Univariate analysis and distributions",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Statistical distributions</span>"
-    ]
-  },
-  {
-    "objectID": "correlation.html",
-    "href": "correlation.html",
-    "title": "11  Covariance and correlation",
-    "section": "",
-    "text": "Content",
-    "crumbs": [
-      "Bivariate analysis and regression",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Covariance and correlation</span>"
-    ]
-  },
-  {
-    "objectID": "regression.html",
-    "href": "regression.html",
-    "title": "Regression",
-    "section": "",
-    "text": "Content",
-    "crumbs": [
-      "Bivariate analysis and regression",
-      "Regression"
-    ]
-  },
-  {
-    "objectID": "CIregression.html",
-    "href": "CIregression.html",
-    "title": "12  Confidence interval of a regression”",
-    "section": "",
-    "text": "12.1 Load Data and Packages\nWe use the Scotland rain data and load the ggplot package plus an additional related ggplot package (ggpmisc) to ease some formatting\nRainScotland &lt;- read.csv(\"data/Ferguson/RainScotland.csv\")\nlibrary(ggplot2)\nlibrary(ggpmisc)\n\nLoading required package: ggpp\n\n\nRegistered S3 methods overwritten by 'ggpp':\n  method                  from   \n  heightDetails.titleGrob ggplot2\n  widthDetails.titleGrob  ggplot2\n\n\n\nAttaching package: 'ggpp'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    annotate",
-    "crumbs": [
-      "Bivariate analysis and regression",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
-    ]
-  },
-  {
-    "objectID": "CIregression.html#scatter-plot",
-    "href": "CIregression.html#scatter-plot",
-    "title": "12  Confidence interval of a regression”",
-    "section": "12.2 Scatter plot",
-    "text": "12.2 Scatter plot\nWe plot the data and add the OLS line, its equation, vertical residual lines and the confidence interval (pink area).\nWe emphasize two points (the 7th and 18th) for which we later calculate the confidence interval. We see 18 is located outside of the confidence interval and 7 is located right on the estimated line, but is also one of the largest points in terms of elevation.\n\np&lt;-ggplot(RainScotland, aes(x = Elevation, y = Rainfall))  +\n  stat_poly_eq(aes(label = paste(..eq.label.., ..rr.label.., sep = \"~~~\")),formula = y ~ x, parse = TRUE) +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"black\",fill=\"lightpink\", alpha = 0.3)+\n  geom_segment(aes(xend = Elevation, yend = predict(lm(Rainfall ~ Elevation, data = RainScotland))), linetype = \"dashed\", color = \"gray\", size = 0.5) +\n  labs(title = \"Rainfall as a function of Elevation\", x = \"Elevation (m)\", y = \"Rainfall (mm/yr)\")+\n  geom_point(data=RainScotland[18,], size=5, color=\"red\")+\n  geom_point(data=RainScotland[7,], size=5, color=\"lightblue\")+\n  geom_point()+\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\np\n\nWarning: The dot-dot notation (`..eq.label..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(eq.label)` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'",
-    "crumbs": [
-      "Bivariate analysis and regression",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
-    ]
-  },
-  {
-    "objectID": "CIregression.html#confidence-interval-calculation",
-    "href": "CIregression.html#confidence-interval-calculation",
-    "title": "12  Confidence interval of a regression”",
-    "section": "12.3 Confidence Interval calculation",
-    "text": "12.3 Confidence Interval calculation\nWe now show how the pink area representing the 95% confidence interval is calculated.\nThe lower and upper bound for each predicted value can be obtained using the predict function. We can ask prediction and confidence bounds for any point (using newdata with the same variables as the original variables), but here we do it for all the observed ones and show the values for point 7 and 18.\n\nmodel &lt;- lm(Rainfall ~ Elevation, data = RainScotland)\n\npred &lt;- predict(model, newdata = data.frame(Elevation = RainScotland$Elevation), interval = \"confidence\")\n\npred[c(7,18),]\n\n        fit      lwr      upr\n7  2131.546 1908.562 2354.530\n18 1537.208 1415.837 1658.579\n\npredicted_value18 &lt;- pred[18,\"fit\"]\npredicted_value7 &lt;- pred[7,\"fit\"]\n\nWe now compute the total residual standard error (RSE) of the model (also called the root mean square error):\n\\[RSE=\\sqrt{\\frac{\\sum (\\text{residuals(model)})^2}{\\text{model degrees of freedom}}}\\] which measures the typical distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical dashed lines on the above figure).\nThe sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have n=20 individuals and p=2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).\n(NB: I understand the denominator n-p is where RSE differs from the Root Mean Square Error RMSE, which is often used to describe a fit, which is the mean, i.e. divided by n)\nWe take the square root to get the RSE back to rainfall units, in this case it is equal to 243mm\n\nRSE&lt;-sqrt(sum(residuals(model)^2) / model$df.residual)\nRSE\n\n[1] 242.7918\n\n\nNote that the RSE often denoted by sigma is also found in the summary of the regression model:\n\nsummary(model)$sigma\n\n[1] 242.7918\n\n\nFor a specific observation, say the 18th or the 7th observation, we adjust the RSE for the known characteristics of the observation, i.e. its value along elevation, the predictor variable. More specifically if the observed elevation is very much away from the mean, it is going to have a large deviation to the mean, hence a large share of the total deviations (always squared to avoid mixing pluses and minuses) to the mean elevation in the sample and thus potentially more impact on the regression line.\nThese relative deviations are\n\nelevation_relative_dev18&lt;-(RainScotland$Elevation[18] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)\n\nelevation_relative_dev7&lt;-(RainScotland$Elevation[7] - mean(RainScotland$Elevation))^2 / sum((RainScotland$Elevation - mean(RainScotland$Elevation))^2)\n\nelevation_relative_dev18\n\n[1] 0.006616382\n\nelevation_relative_dev7\n\n[1] 0.1410991\n\n\nMathematically, the standard error of the fit at a given point ( ) is given by: \\[\n   \\text{SE}(\\hat{y}) = RSE\\sqrt{\\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}}\n   \\]\nwhere we see it increases with the global variance (variance of residuals) of the model, i.e. RSE, decreases with the sample size n, and increases with the distance to the mean along the x variable, which is the relative deviation quantity we just computed (compare 7 and 18).\nLeaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root and define the leverage of an observation (and simplify the standard error writing)\n\\[L=\\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}\\\\\n\\text{SE}(\\hat{y}) = RSE\\sqrt{L}\\]\nLeverage values range between \\(\\frac{1}{n}\\) and 1, with higher values indicating greater influence on the regression model. 1 is for an observation that would stand extremely far from the mean and taking most of the variation in x.\nPoints farther from the mean of x have higher leverage, have a greater influence on the regression line and thus can increase the uncertainty of the predicted line. In Greene (p.99) ’s terms:\n\n“the farther the forecasted point is from the center of our experience, the greater is the degree of uncertainty”\n\nThis is why the confidence intervals (pink ribbon) usually get wider away from the mean of x. This process is also reinforced by the density of data points, which is typically higher around the mean of x. The higher density providing more information and reducing uncertainty near the mean.\nThe equation above also shows that the leverage will decrease for every point as soon as n increases. When n increases the uncertainty decreases and the ribbon is narrower.\nTo compute the leverage for 7 and 18 we thus simply add \\(1/n\\) to our relative deviations:\n\nlever7&lt;-1/nrow(RainScotland)+elevation_relative_dev7\nlever18&lt;-1/ nrow(RainScotland)+elevation_relative_dev18\nlever7\n\n[1] 0.1910991\n\nlever18\n\n[1] 0.05661638\n\n\nWith p predictors (here p=1) and n observations (here n=20), a rule of thumb is to consider a leverage is too high when \\(\\frac{p+1}{n}\\) is significantly different from the average leverage. In our case, we have \\(\\frac{p+1}{n}=0.1\\) and observation 7 may be considered having too much influence. In practice however, the significance of a leverage is examined after removing high leverage points and evaluating the effect of this removal on the regression coefficients and the overall model fit.\nPursuing, we compute the standard errors of the fit at the level of our observations 7 and 18:\n\nse7&lt;-RSE*(lever7)^(1/2)\nse18&lt;-RSE*(lever18)^(1/2)\nse7\n\n[1] 106.1362\n\nse18\n\n[1] 57.77037\n\n\nIn order to draw the pink ribbon, we need to additionally set a level of confidence to our estimate. By default most researchers use a 95% confidence interval. We then multiply our point standard error by the corresponding t-statistics, and add/remove it from the prediction to obtain the upper and lower bounds of the confidence interval area:\nWe first get the critical value from the t-distribution, using half of the 5% (thus 0.975) on both side:\n\nt_value &lt;- qt(0.975, df = model$df.residual)\n\nthen multiply by the standard error and add/remove it to/from prediction:\n\nlower18&lt;-predicted_value18-t_value*se18\nlower7&lt;-predicted_value7-t_value*se7\nupper18&lt;-predicted_value18+t_value*se18\nupper7&lt;-predicted_value7+t_value*se7\n\nmanualCI&lt;-data.frame(\n  Elevation=RainScotland[c(7,18),\"Elevation\"],\n  UpperCI=c(upper7,upper18),\n  LowerCI=c(lower7,lower18)\n  )\nmanualCI\n\n  Elevation  UpperCI  LowerCI\n1       520 2354.530 1908.562\n2       270 1658.579 1415.837\n\n\nWe can verify that these values are the same as the interval made up by the predict function with the confidence option (see above)\n\npred[c(7,18),]\n\n        fit      lwr      upr\n7  2131.546 1908.562 2354.530\n18 1537.208 1415.837 1658.579\n\n\nas well as the one computed by ggplot with se=TRUE option in geom_smooth\n\np+geom_segment(data=manualCI, aes(x=Elevation,xend=Elevation,y=LowerCI, yend =UpperCI), color = \"blue\", size = 1)\n\n`geom_smooth()` using formula = 'y ~ x'",
-    "crumbs": [
-      "Bivariate analysis and regression",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
-    ]
-  },
-  {
-    "objectID": "CIregression.html#prediction-versus-confidence-interval",
-    "href": "CIregression.html#prediction-versus-confidence-interval",
-    "title": "12  Confidence interval of a regression”",
-    "section": "12.4 Prediction versus confidence interval",
-    "text": "12.4 Prediction versus confidence interval\nFinally, note that there is another interval to be used for prediction when we get new data, i.e. the prediction interval. You can get this interval from the predict function with the prediction option instead of confidence.\nThe standard error one uses here has the same ingredients but a slightly different definition:\n\\[\\text{SE}(\\hat{y}) = RSE\\sqrt{1+ \\frac{1}{n} + \\frac{(x - \\bar{x})^2}{\\sum (x_i - \\bar{x})^2}}\\\\\n   \\text{SE}(\\hat{y}) = RSE\\sqrt{1+L}\\]\nWhile the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model.\nSuppose you need to infer the rainfall for a 400m elevation. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.\n\npred_p &lt;- predict(model, newdata = data.frame(Elevation = 400), interval = \"prediction\")\npred_p\n\n       fit      lwr      upr\n1 1846.264 1317.536 2374.991\n\n\nIn this case you can then say that there is 95% chances that the precipitation will be between 1318 and 2375 mm.\nYou can be tempted to have a more precise prediction, but you then loose in terms of certainty.\n\npred_p90 &lt;- predict(model, newdata = data.frame(Elevation = 400), interval = \"prediction\", level=0.90)\npred_p90\n\n       fit      lwr      upr\n1 1846.264 1409.861 2282.666\n\n\nFrom 1410 to 2283 is indeed a narrower guess but it is also less certain.\nWe can display the prediction area on the previous plot after taking the values from the predict function (not directly from geom_smooth which logically is about the data used for estimating the curve).\n\nnewobs&lt;-data.frame(Elevation = seq(100,600, by=50))\npredictions&lt;-predict(model, newdata = newobs , interval = \"prediction\")\np+geom_ribbon(data=cbind(newobs,predictions),aes(x=Elevation, y=NULL, ymin = lwr, ymax = upr), fill = \"lightblue\", alpha = 0.2)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nBy construction, confidence intervals are narrower than prediction intervals. Prediction intervals have an extra RSE in the calculation. The intuition is that we don’t know the mean nor the variance of the population from which new observations are taken and the only thing we can do is to estimate the mean from the mean of our estimates, which itself will vary based on the variance considered. We can only use the RSE again to estimate this variance for the mean and the variance itself. Hence the RSE enters twice the equation.\nAn important implication of the presence of that extra \\(1\\) added to \\(L\\) under the square root is that while \\(L\\) decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):\n\n“No matter how much data we have, we can never predict perfectly”",
-    "crumbs": [
-      "Bivariate analysis and regression",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Confidence interval of a regression\"</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
+    "objectID": "999_references.html",
+    "href": "999_references.html",
     "title": "References",
     "section": "",
-    "text": "Anselin, Luc, and Bera,I. 1998. “Spatial Dependence in Linear\nRegression Models with an Introduction to Spatial Econometrics:\nRegression Models with an Anselin Bera i. INTRODUCTION.” In. CRC\nPress.\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An\nAxiomatic Approach to\nGeographical Space.” Geographical\nAnalysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.\n\n\nHaining, Robert P. 2010. “The Nature of Georeferenced\nData.” In, edited by Manfred M. Fischer and Arthur Getis,\n197–217. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-03647-7_12.\n\n\nOpenshaw, Stan. 1984. The Modifiable Areal Unit Problem.\nConcepts and Techniques in Modern Geography 38. Norwich: Geo.\n\n\nTobler, W. R. 1970. “A Computer Model Simulation of Urban Growth\nin the Detroit Region in Economic Geography 46: 2,\n234240.” Clark University, Worcester, MA.",
+    "text": "Anselin, Luc, and Bera,I. 1998. “Spatial Dependence in Linear\nRegression Models with an Introduction to Spatial Econometrics:\nRegression Models with an Anselin Bera i. INTRODUCTION.” In. CRC\nPress.\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An\nAxiomatic Approach to\nGeographical Space.” Geographical\nAnalysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.\n\n\nHaining, Robert P. 2010. “The Nature of Georeferenced\nData.” In, edited by Manfred M. Fischer and Arthur Getis,\n197–217. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-03647-7_12.\n\n\nLong, James (JD), and Paul Teetor. n.d. R Cookbook, 2nd\nEdition. https://rc2e.com/.\n\n\nOpenshaw, Stan. 1984. The Modifiable Areal Unit Problem.\nConcepts and Techniques in Modern Geography 38. Norwich: Geo.\n\n\nTobler, W. R. 1970. “A Computer Model Simulation of Urban Growth\nin the Detroit Region in Economic Geography 46: 2,\n234240.” Clark University, Worcester, MA.\n\n\nVenables, Bill, and Smith, David, M. n.d. “An Introduction to\nr.” https://cran.r-project.org/doc/manuals/R-intro.html.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. n.d.\n“R for Data Science (2e).” https://r4ds.hadley.nz/.",
     "crumbs": [
       "Bibliography",
       "References"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
+    "objectID": "010_intro.html",
+    "href": "010_intro.html",
     "title": "Introduction",
     "section": "",
     "text": "1  Statistical data analysis for geographers\n2  Spatial data analysis: a definition\n3  Geographical space\n4  Spatial data issues",
     "crumbs": [
       "Introduction"
+    ]
+  },
+  {
+    "objectID": "020_getting_started.html",
+    "href": "020_getting_started.html",
+    "title": "Getting Started with R",
+    "section": "",
+    "text": "5  Getting started with RStudio\n6  Vectors\n7  Data frames and lists\n8  Working with data frames and functions\nFor better introductory material, we recommend\nVenables, Bill and Smith, David, M (n.d.)\nLong and Teetor (n.d.)\nWickham, Çetinkaya-Rundel, and Grolemund (n.d.) (including RStudio introduction) (Note it uses a tidyverse approach while we rather stick to base R where possible, except for graphics (ggplot))\n\n\n\n\nLong, James (JD), and Paul Teetor. n.d. R Cookbook, 2nd Edition. https://rc2e.com/.\n\n\nVenables, Bill, and Smith, David, M. n.d. “An Introduction to r.” https://cran.r-project.org/doc/manuals/R-intro.html.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. n.d. “R for Data Science (2e).” https://r4ds.hadley.nz/.",
+    "crumbs": [
+      "Getting Started with R"
     ]
   }
 ]

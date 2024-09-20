@@ -1,0 +1,150 @@
+# Getting started with RStudio {#sec-getting-started-with-rstudio}
+
+## R, RStudio and its interface
+
+In class demonstration of how to
+
+-   Get R and RStudio installed
+-   Navigating the R studio interface
+-   Scripting area, console, files,...
+-   Using colors and TOC outline in RStudio
+-   Auto-completion using tabs
+-   Navigating history with the up/down arrows 
+-   Understanding help (necessary arguments and defaulted options)
+
+## Projects and workflows
+
+Let's compute a **value** in the console and store it to an **object** first
+
+```{r echo=TRUE}
+#This is a comment
+1+2 #This is also a comment
+a<-3+4
+a
+```
+
+See that we now have an object in the environment!
+
+## Objects
+
+An object is not defined ex-ante and is automatically overwritten
+
+```{r echo=TRUE, eval=TRUE}
+X<-3 #This X will soon be replaced
+X<-1:10 
+Y<-X^2
+```
+
+R is case sensitive. The following returns an Error
+
+```{r echo=TRUE, eval=FALSE}
+x # x is lower case and does not exist
+```
+
+IMPORTANT:
+
+-   Always worry about **Errors**. They stop your process.
+
+-   Always **read** and try to understand **Warnings**. They do not stop your process but usually indicate the result may not be as expected! 
+
+## Working directory!!!
+
+Suppose we want to produce a text from the above and save it to a file:
+
+```{r echo=TRUE}
+a_sentence<-paste("I have computed a sum, which equals", a)
+a_sentence #Let's see this in the console
+cat(a_sentence,file="brol/a_sentence.txt")
+```
+
+Where is the file? the directory? Have you been able to run this?
+
+**Always indicate where you work!**
+
+The classical way is
+
+```{r echo=TRUE, eval=FALSE}
+getwd() #get (default) working directory
+setwd("/Users/geoffrey.caruso/Dropbox/GitHub/MAGEO0641/brol") #set working directory to YOUR OWN NETWORK SPACE HERE!
+```
+
+There is a more practical way in RStudio: Make an .Rproj from/to a directory
+
+You can create a directory in your finder/file explorer, or create a directory or subdirectory from within the R console. This will be very useful at a more advanced level when you create many outputs and directory names result from some data processing. Think of processing something across many countries/cities.
+
+```{r echo=TRUE, eval=FALSE}
+dir.create("brol")
+dir.create("Today")
+```
+
+## Commented \R scripts vs markdown documents
+
+The above is a **commented script, using \#**, which you can save as an **.R** file and re-run later.
+
+The problem with this approach is that you won't see results of the codes until you run it. So you can't really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.
+
+A more advanced approach is to make a document where you integrate text, **code chunks** and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.
+
+Let's have a look at the structure of this syllabus, written using Quarto markdown.
+
+## Good practice with files handling and objects naming
+
+Rproj in an excellent way to keep things at the same place.
+
+When using an Rproj, use **relative path only**, i.e. from the root folder of the project, not from your machine. This is the way you can easily transfer your project to friends. Only external data (e.g. from the web) should be referenced in full.
+
+It is also good practice to have a **specific "data" folder** or subfolders for all data so you clearly differentiate your outputs with the inputs. Similarly a **R folder** with your scripts when you have many.
+
+Although there is no naming convention agreed by everyone, it is important to apply a consistent style for yourself and colleagues. Also you would avoid spaces and rarer characters, especially in a multilingual environment.
+
+A folder of file named **"source data" or "data_für_rémi" are not great ideas.** (This is also true for variable names in data frame, see later)
+
+In general, I personnally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as
+
+-   estimate_model.R
+-   get_statec_data.R
+
+Files numbering can be of good help for heavier projects where there is a logical sequence (time)
+
+-   01_estimate_model.R
+
+-   02_get_statec_data.R
+
+For variable names and objects I tend to use the "UpperCamelCase" form especially for vectors
+
+-   LuxCities
+
+-   GrowthRates
+
+and tend to add an "df" *or "\_*lst" to disambiguate where needs be between some classes
+
+-   LuxCities_df
+
+-   LuxCities_lst
+
+I also like to use lowercase single letters for input parameters, such as a pvalue or number of neighbours, e.g.
+
+-   p\<-0.05
+
+-   k\<-2
+
+or Greec symbols written in full, especially when there is a theoretical link
+
+-   beta \<-model\$coefficient\[1\]
+
+-   rho \<- 0.5
+
+For functions (see later) I also like to use action verbs and include dots, such as:
+
+-   plot.bmi()
+-   extract.boundary()
+
+In all case, be concise but specific and consistent within a project or even across.
+
+-   NeighboursCompute_Europe.Paris_project3 would be very long and inconsistent
+
+-   df_new2bis not to use both as an object or a file
+
+...but to to be honest I have quite a number of tests.r and plot.test2.jpg files peppered in my machine.
+
+![](images/clipboard-1674048195.png)

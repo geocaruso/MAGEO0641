@@ -6,40 +6,41 @@ book:
   subtitle: "MAGEO0641 (2024-2025 vintage)"
   author: "Geoffrey Caruso and Léandre Fabri"
   date: "9/10/2024"
-  cover-image: cover.png
-  favicon: cover.png
+  cover-image: images/cover.png
+  favicon: images/cover.png
   site-url: https://quadtrees.lu/teaching/MAGEO0641
   repo-url: https://github.com/geocaruso/MAGEO0641
   chapters:
     - index.qmd
-    - timetable.qmd
-    - learning.qmd
-    - part: intro.qmd
+    - 001_timetable.qmd
+    - 002_learning.qmd
+    - part: 010_intro.qmd
       chapters:
-      - scope.qmd
-      - spatial_analysis.qmd
-      - space_axiom.qmd
-      - space_issues.qmd
-    - part: "Getting started with R"
+      - 011_scope.qmd
+      - 012_spatial_analysis.qmd
+      - 013_space_axiom.qmd
+      - 014_space_issues.qmd
+    - part: 020_getting_started.qmd
       chapters:
-      - getting_started.qmd
-      - R_basics.qmd
-      - df_functions.qmd
+      - 021_Rstudio.qmd
+      - 022_vectors.qmd
+      - 023_df_lst.qmd
+      - 024_df_functions.qmd
     - part: "Graphics"
-      chapters:
-      - ggplot.qmd
+      #chapters:
+      #- ggplot.qmd
     - part: "Univariate analysis and distributions"
-      chapters:
-      - univariate.qmd
-      - distributions.qmd
+      #chapters:
+      #- univariate.qmd
+      #- distributions.qmd
     - part: "Bivariate analysis and regression"
-      chapters:
-      - correlation.qmd
-      - regression.qmd
-      - CIregression.qmd
+      #chapters:
+      #- correlation.qmd
+      #- regression.qmd
+      #- CIregression.qmd
     - part: "Bibliography"
       chapters:
-      - references.qmd
+      - 999_references.qmd
     
 bibliography: references.bib
 
@@ -52,3 +53,11 @@ format:
 editor: visual
 
 number-depth: 3
+
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>"
+
+execute:
+  error: true

@@ -236,8 +236,7 @@ LevelsFrq<-levels(Winners)[order(table(Winners), decreasing = TRUE)]
 LevelsFrq
 
 #Use that order when creating the factor from the character vector
-WinnersFrq<-factor(na.omit(Winners), levels = LevelsFrq) 
- #note the na.omit function
+WinnersFrq<-factor(Winners, levels = LevelsFrq) 
 
 #plot
 plot(WinnersFrq,las=2)
@@ -265,7 +264,7 @@ class(Responses_f3) #see the additional class
 
 ```
 
-In the above example you will have noticed a NA, due to some misspelling. This is a good case to remind that categorical data should not necessarily rely on character strings. In geography we often need to treat countries, regions, municipalities whose names can be very complicated, especially in multilingual context It is good advise to rather use codes for geographical units (e.g. BE351, BE352, BE353, for the NUTS 3 classification of Belgium), land use (e.g. https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html/) and related them to a corresponding table with proper labels.
+In the above example you will have noticed a NA, due to some misspelling. This is a good case to remind that categorical data should not necessarily rely on character strings. In geography we often need to treat countries, regions, municipalities whose names can be very complicated, especially in multilingual context. It is good advise to rather use codes for geographical units (e.g. BE351, BE352, BE353, for the NUTS 3 classification of Belgium), land use (e.g. <https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html>) and relate them to a corresponding table with proper labels.
 
 It is also true for other types of categories, including Likert scale. An option is to use integer values (or characters for geographical codes) together with a series of labels. You add the labels at the moment of creating the factor:
 
@@ -279,7 +278,7 @@ Responses_f<-factor(Responses, ordered=TRUE, levels=LikertLevels, labels=LikertS
 Responses_f
 ```
 
-The result is the same as previously, but you avoid typos when inputting the responses and can also adapt the labels at will, without changing the data itself.
+The result is the same as previously, but you avoid typos when inputing the responses and can also adapt the labels at will, without changing the data itself.
 
 ## Operations on vectors
 
@@ -536,4 +535,49 @@ z
 
 z[z==0]<-NA  #a very much used use case
 z
+```
+
+## Sequences and repetitions
+
+There are many instances where you will need to create a repeated set of values or sequence of values. The functions `seq()` and `rep()` are used extensively.
+
+Imagine as a first example you have 5 regions named 2,4,6,8,10 and each of them send a flow of cars to each other, thus building a 5 x 5 matrix =25 records of flows.
+
+```{r}
+regions<-seq(from=2, to=10, by=2)
+regions
+origins<-rep(regions, 5)
+origins
+destinations<-rep(regions, each=5)
+destinations
+flows<-paste("from ",origins, " to ", destinations)
+flows
+```
+
+If you like to give a unique number to identify each flow with a number starting at 100 and don't calculate that you have 25 of them, `seq_along`\`is your tool:
+
+```{r}
+seq_along(flows)
+cbind(seq_along(flows),flows)
+```
+
+With seq you can also partition a range of values into a given number of intervals without knowing what the value of each interval is. Suppose you have 14 teams to provide water to Marathonians. At which distance are you going to place those teams along the path, knowing you need one at the end and one at the start?
+
+```{r}
+Stands<-seq(0,42195,length=14)
+```
+
+And suppose that at every third stand you provide some snacks, not just water. So you repeat the pattern "water,water,food" until the end of the vector of Stands
+
+```{r}
+Snacks<-rep(c(FALSE,FALSE,TRUE), length.out = length(Stands))
+Snacks
+```
+
+You also use sequences to display some functions you like to understand better, such as a polynomial or quadratic.
+
+```{r}
+x<-seq(from=1, to=500, length = 100) #m from school
+y<-1000 - 0.001*x^2 + 0.3*x #house rental value
+plot(x=x,y=y)
 ```

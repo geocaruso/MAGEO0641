@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Geoffrey Caruso and Léandre Fabri">
-<meta name="dcterms.date" content="2024-09-10">
 
-<title>Introduction to data analysis and R for geographers</title>
+<title>10&nbsp; Making data – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./001_timetable.html" rel="next">
+<link href="./999_references.html" rel="next">
+<link href="./901_copy_paste.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./901_copy_paste.html">Tips, tricks and miscellaneous</a></li><li class="breadcrumb-item"><a href="./902_making_data.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -214,12 +247,35 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Bibliography</span></a>
+ <span class="menu-text">Tips, tricks and miscellaneous</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./902_making_data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Bibliography</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./999_references.html" class="sidebar-item-text sidebar-link">
@@ -238,36 +294,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-preface" id="toc-sec-preface" class="nav-link active" data-scroll-target="#sec-preface">Preface</a></li>
+  <li><a href="#scraping-a-wikipedia-table" id="toc-scraping-a-wikipedia-table" class="nav-link active" data-scroll-target="#scraping-a-wikipedia-table"><span class="header-section-number">10.1</span> Scraping a wikipedia table</a></li>
+  <li><a href="#scotland-rain-and-elevation-by-ferguson" id="toc-scotland-rain-and-elevation-by-ferguson" class="nav-link" data-scroll-target="#scotland-rain-and-elevation-by-ferguson"><span class="header-section-number">10.2</span> Scotland rain and elevation (by Ferguson)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./901_copy_paste.html">Tips, tricks and miscellaneous</a></li><li class="breadcrumb-item"><a href="./902_making_data.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making data</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction to data analysis and R for geographers</h1>
-<p class="subtitle lead">MAGEO0641 (2024-2025 vintage)</p>
+<h1 class="title"><span id="sec-making-data" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making data</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Geoffrey Caruso and Léandre Fabri </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 10, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -277,12 +321,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-<section id="sec-preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="images/cover.png" title="Introduction to data analysis and R for geographers" class="quarto-cover-image img-fluid"></p>
-<p>This is the syllabus for the course <em>Introduction to Data Analysis for Geographers with R</em> (MAGEO0641) at the Department of Geography and Spatial Planning at the University of Luxembourg. It has been produced as a Quarto book by Geoffrey Caruso and Léandre Fabri with the aim of aggregating and homogenizing different material accumulated over the past few years.</p>
-<p>As of September 2024, the assemblage is still a work in progress. We kindly ask you to refer to your notes during class to prepare for the examination and assignments.</p>
-<p>The general structure and base material shown here have been organized by Geoffrey Caruso, who originally inherited teaching material from Dominique Peeters. We are grateful to the previous teaching assistants, Mirjam Schindler and Marlène Boura, as well as to David Dabin and Jonathan Jones, for their contributions.</p>
+<p>A number of data have been constructed from within R for the purpose of this course.</p>
+<p>Scripts and data can be obtained from the following course repository within its data folder: <a href="https://github.com/geocaruso/MAGEO0641/tree/main/data" class="uri">https://github.com/geocaruso/MAGEO0641/tree/main/data</a></p>
+<p>The scripts are reproduced on this page</p>
+<section id="scraping-a-wikipedia-table" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="scraping-a-wikipedia-table"><span class="header-section-number">10.1</span> Scraping a wikipedia table</h2>
+<p>Example of the Tour de France winners table from wikipedia, used in the Vectors chapter of the course: <a href="022_vectors.html#sec-factors" class="quarto-xref"><span>Section 6.3</span></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#R script to scrape the tour de France winners table from wikipedia page:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#https://en.wikipedia.org/wiki/List_of_Tour_de_France_general_classification_winners</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Geoffrey Caruso  Sept 18th 2024</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Script is adapted from</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># https://help.displayr.com/hc/en-us/articles/360003582875-How-to-Import-a-Wikipedia-Table-using-R</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Since there are different tables in Tour de France page and the one of interest is a sortable one,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># I have adapted following suggestions in</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># https://stackoverflow.com/questions/72380279/how-to-scrape-with-table-class-name-with-r</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># I still had to look into the source of the table to find out what table class this is</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># In this case it was a "wikitable plainrowheaders sortable'</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>LeTour_url<span class="ot">&lt;-</span><span class="st">"https://en.wikipedia.org/wiki/List_of_Tour_de_France_general_classification_winners"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>LeTour_Page<span class="ot">&lt;-</span>rvest<span class="sc">::</span><span class="fu">read_html</span>(LeTour_url)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>LeTour_Table<span class="ot">&lt;-</span>rvest<span class="sc">::</span><span class="fu">html_node</span>(LeTour_Page, <span class="at">xpath=</span><span class="st">"//table[@class='wikitable plainrowheaders sortable']"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>LeTour_Tibble <span class="ot">=</span> rvest<span class="sc">::</span><span class="fu">html_table</span>(LeTour_Table, <span class="at">fill =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>LeTour_df<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(LeTour_Tibble)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(LeTour_df,<span class="st">"data/TourDeFrance/LeTour_df.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="scotland-rain-and-elevation-by-ferguson" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="scotland-rain-and-elevation-by-ferguson"><span class="header-section-number">10.2</span> Scotland rain and elevation (by Ferguson)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Ferguson Rob,</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#linear regression in geography, CATMOG 15. https://github.com/qmrg/CATMOG/blob/Main/15-linear-regression-in-geography.pdf</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Data from Table 1 and 2, p8:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Average precipitation and elevation across southern Scotland</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Source caption: British Rainfall (HMSO),</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#selected raingauges between national grid lines 600 and 601 km N.</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Sites are in West-East order</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Elevation in m above OD</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Rainfall in mm/yr</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#DistanceE in km from W coast</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>RainScotland<span class="ot">&lt;-</span><span class="fu">data.frame</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">SiteNo=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">Elevation=</span><span class="fu">c</span>(<span class="dv">240</span>,<span class="dv">430</span>,<span class="dv">420</span>,<span class="dv">470</span>,<span class="dv">300</span>,<span class="dv">150</span>,<span class="dv">520</span>,<span class="dv">460</span>,<span class="dv">300</span>,<span class="dv">410</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>              <span class="dv">140</span>,<span class="dv">540</span>,<span class="dv">280</span>,<span class="dv">240</span>,<span class="dv">200</span>,<span class="dv">210</span>,<span class="dv">160</span>,<span class="dv">270</span>,<span class="dv">320</span>,<span class="dv">230</span>),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">Rainfall=</span><span class="fu">c</span>(<span class="dv">1720</span>,<span class="dv">2320</span>,<span class="dv">2050</span>,<span class="dv">1870</span>,<span class="dv">1690</span>,<span class="dv">1250</span>,<span class="dv">2130</span>,<span class="dv">2090</span>, <span class="dv">1730</span>,<span class="dv">2040</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>             <span class="dv">1460</span>,<span class="dv">1860</span>,<span class="dv">1670</span>,<span class="dv">1580</span>,<span class="dv">1490</span>,<span class="dv">1420</span>,<span class="dv">900</span>,<span class="dv">1250</span>,<span class="dv">1170</span>,<span class="dv">1170</span>),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">DistanceE=</span><span class="fu">c</span>(<span class="dv">37</span>,<span class="dv">43</span>,<span class="dv">48</span>,<span class="dv">49</span>,<span class="dv">52</span>,<span class="dv">59</span>,<span class="dv">73</span>,<span class="dv">75</span>,<span class="dv">76</span>,<span class="dv">77</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>              <span class="dv">86</span>,<span class="dv">97</span>,<span class="dv">100</span>,<span class="dv">103</span>,<span class="dv">104</span>,<span class="dv">114</span>,<span class="dv">138</span>,<span class="dv">152</span>,<span class="dv">153</span>,<span class="dv">154</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(RainScotland, <span class="st">"data/Ferguson/RainScotland.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
@@ -710,10 +806,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./901_copy_paste.html" class="pagination-link" aria-label="Copy-pasting">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./001_timetable.html" class="pagination-link" aria-label="Timetable">
-        <span class="nav-page-text">Timetable</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./999_references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

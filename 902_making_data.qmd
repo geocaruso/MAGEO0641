@@ -1,0 +1,19 @@
+# Making data {#sec-making-data}
+
+A number of data have been constructed from within R for the purpose of this course.
+
+Scripts and data can be obtained from the following course repository within its data folder: <https://github.com/geocaruso/MAGEO0641/tree/main/data>
+
+The scripts are reproduced on this page
+
+## Scraping a wikipedia table
+
+Example of the Tour de France winners table from wikipedia, used in the Vectors chapter of the course: @sec-factors.
+
+```{r, eval=FALSE, file="data/TourDeFrance/TourDeFrance.R"}
+```
+
+## Scotland rain and elevation (by Ferguson)
+
+```{r, eval=FALSE, file="data/Ferguson/RainScotland_writecsv.R"}
+```

@@ -9,8 +9,8 @@ In class demonstration of how to
 -   Scripting area, console, files,...
 -   Using colors and TOC outline in RStudio
 -   Auto-completion using tabs
--   Navigating history with the up/down arrows 
--   Understanding help (necessary arguments and defaulted options)
+-   Navigating history with the up/down arrows
+-   Understanding help (necessary arguments and default options)
 
 ## Projects and workflows
 
@@ -45,7 +45,7 @@ IMPORTANT:
 
 -   Always worry about **Errors**. They stop your process.
 
--   Always **read** and try to understand **Warnings**. They do not stop your process but usually indicate the result may not be as expected! 
+-   Always **read** and try to understand **Warnings**. They do not stop your process but usually indicate the result may not be as expected!
 
 ## Working directory!!!
 
@@ -75,6 +75,9 @@ You can create a directory in your finder/file explorer, or create a directory o
 ```{r echo=TRUE, eval=FALSE}
 dir.create("brol")
 dir.create("Today")
+
+#and for removing a directory
+unlink("Today", recursive = TRUE) #see help: If recursive = FALSE directories are not deleted, not even empty ones. 
 ```
 
 ## Commented \R scripts vs markdown documents
@@ -99,7 +102,7 @@ Although there is no naming convention agreed by everyone, it is important to ap
 
 A folder of file named **"source data" or "data_für_rémi" are not great ideas.** (This is also true for variable names in data frame, see later)
 
-In general, I personnally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as
+In general, I personally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as
 
 -   estimate_model.R
 -   get_statec_data.R

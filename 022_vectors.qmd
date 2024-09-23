@@ -23,7 +23,7 @@ Ages<-c(20,25,22,22,49)
 mode(Ages)
 ```
 
-Note that in case you would have a long list to input manually, the `scan()` function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources...(if you fancy less transparent clicking approaches, be curious and find out ;-), most of the times anyway we rather read values from readable text files).
+Note that in case you would have a long list to input manually, the `scan()` function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources...(if you fancy less transparent clicking approaches, be curious and find out, for example here: @sec-copy-pasting ;-), most of the times anyway we rather read values from readable text files).
 
 ## Attributes of vectors
 
@@ -73,7 +73,7 @@ class(c(Countries,Ages)) #coercion
 
 Sometimes, depending on some calculations, you may need to transform the type of data, especially from numeric to character and vice versa. Coercion may apply automatically but not always, so you will need to explicitly transform the data type using "as.*a type"* or "as.*a mode"*: `as.numeric()`, `as.character()`, which you will use quite often, or `as.integer()`,`as.double()`, or `as.logical().`
 
-```{r}
+```{r, }
 A<-c(1,2,3)
 B<-c(1L,2L,3L)
 C<-c("1","2","3")
@@ -127,7 +127,7 @@ attr(Countries, "source")<-"MAGEO students input"
 attributes(Countries)
 ```
 
-## Factors
+## Factors {#sec-factors}
 
 Remember from the introduction, that we (in geography and elsewhere) usually consider **discrete and continuous data**, each type being split into 2 measurement levels:
 
@@ -186,6 +186,14 @@ Be careful, however, because if you don't use the complete list of possibilities
 ```{r}
 Countries_f4<-droplevels(Countries_f3)
 Countries_f4
+```
+
+See how the different factors we made so far change the order of the levels and the data when a case is made absent from the list:
+
+To compare one to one, we use to **column-binding function `cbind()`** (compare with `c()`). You also see here that the values of the factors are integers, not characters as for the first vector:
+
+```{r}
+cbind(Countries,Countries_f,Countries_f2,Countries_f3, Countries_f4)
 ```
 
 ### Ordering a factor based on occurrence:
@@ -418,6 +426,7 @@ To those, we should add all univariate statistics such as mean(), median(), var(
 Specific to logical vectors, the any() and all() functions are particularly useful in the case you check a very long vector with only very few having a TRUE or FALSE.
 
 See basic examples:
+
 ```{r}
 any(c(TRUE,TRUE,TRUE,FALSE))
 any(c(TRUE,TRUE,TRUE,TRUE))
@@ -426,6 +435,7 @@ all(c(TRUE,TRUE,TRUE,FALSE))
 ```
 
 And an example where we suppose a random set of values from a normal distribution and we want to check manually whether there is an upper outlier. Typically (as in boxplots) this outlier is calculated as being any value above the 3rd quartile plus 1.5 times the interquartile range.
+
 ```{r}
 set.seed(102)
 x<-rnorm(100)
@@ -437,7 +447,6 @@ x[x>(q75+1.5*iqr)] #to identify them
 
 set.seed(101) #Check with this seed!
 ```
-
 
 ### Summary
 

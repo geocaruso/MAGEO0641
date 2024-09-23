@@ -1,0 +1,55 @@
+# Copy-pasting {#sec-copy-pasting}
+
+# clipr way
+
+A simple way to access to input some small data using the clipboard and that should work across all platforms is to use the `read_clip()` function from the `clipr` package.
+
+Suppose you have a series of numbers copied from a series like this one: 11 12 13 14 15 16 or this one: 11, 12, 13, 14, 15, 16
+
+get to the console and type `clipr::read_clip()`
+
+In this case you will notice the whole set is a single character string entry, which then necessitates a split. See
+
+```{r, eval=FALSE}
+a<-clipr::read_clip()
+a
+#> [1] "11, 12, 13, 14, 15, 16"
+strsplit(a,", ")
+#>[[1]]
+#>[1] "11" "12" "13" "14" "15" "16"
+```
+
+However, when it comes from a spreadsheet (e.g. open office)
+
+![](images/clipboard-3043229473.png)
+
+you'll get separate character entries directly:
+
+```{r, eval=FALSE}
+clipr::read_clip()
+#> [1] "0.7226332924" "0.5949296139" "0.0513909524"
+#> [4] "0.2215940265" "0.8725634748" "0.0032392712"
+#> [7] "0.774327883"  "0.1773198219" "0.1791877889"
+#> [10] "0.004243708"
+```
+
+# read.table way
+
+You can also use the read/write table approach after saying the clipboard in the source or output. The inconvenience is that the MacOSX and MS Window approach have a slightly different code:
+
+Copy from spreadsheet, then paste in R using
+
+```{r, eval=FALSE}
+b <- read.table(pipe("pbpaste"),header = TRUE) #on macOSX 
+b <- read.table("clipboard",header = TRUE) #on MS Windows
+```
+
+and similarly to write to a spreadsheet:
+
+```{r, eval=FALSE}
+b3<-b^3
+write.table(b3, pipe("pbcopy"),row.names = FALSE,sep = "\t") #MACOSX
+write.table(A3, "clipboard",row.names = FALSE,sep = "\t") #MS Windows
+```
+
+Then paste in spreadsheet.

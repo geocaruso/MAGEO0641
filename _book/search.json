@@ -1,10 +1,279 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to data analysis and R for geographers",
+    "section": "",
+    "text": "Preface\nThis is the syllabus for the course Introduction to Data Analysis for Geographers with R (MAGEO0641) at the Department of Geography and Spatial Planning at the University of Luxembourg. It has been produced as a Quarto book by Geoffrey Caruso and Léandre Fabri with the aim of aggregating and homogenizing different material accumulated over the past few years.\nAs of September 2024, the assemblage is still a work in progress. We kindly ask you to refer to your notes during class to prepare for the examination and assignments.\nThe general structure and base material shown here have been organized by Geoffrey Caruso, who originally inherited teaching material from Dominique Peeters. We are grateful to the previous teaching assistants, Mirjam Schindler and Marlène Boura, as well as to David Dabin and Jonathan Jones, for their contributions.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "001_timetable.html",
+    "href": "001_timetable.html",
+    "title": "Timetable",
+    "section": "",
+    "text": "The course is made of 13 sessions. Each session comprises 5 (teaching) units of 45 minutes.\nWe have attempted to balance theoretical explanations and R practice in each session.\nThe 2024-2025 schedule is set as follows. However, please refer to your student guichet and the Moodle platform for potential changes during the semester.\n\nScheduled: 16 Sep 2024 at 14:00 to 18:00, CEST\nScheduled: 23 Sep 2024 at 14:00 to 18:00, CEST\nNo session on 30 Sep 2024\nScheduled: 7 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 14 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 21 Oct 2024 at 14:00 to 18:00, CEST\nScheduled: 28 Oct 2024 at 14:00 to 18:00, CET\nScheduled: 4 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 11 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 18 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 25 Nov 2024 at 14:00 to 18:00, CET\nScheduled: 2 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 9 Dec 2024 at 14:00 to 18:00, CET\nScheduled: 16 Dec 2024 at 14:00 to 18:00, CET",
+    "crumbs": [
+      "Timetable"
+    ]
+  },
+  {
+    "objectID": "002_learning.html",
+    "href": "002_learning.html",
+    "title": "Learning outcomes and evaluation",
+    "section": "",
+    "text": "Objectives:",
+    "crumbs": [
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "002_learning.html#objectives",
+    "href": "002_learning.html#objectives",
+    "title": "Learning outcomes and evaluation",
+    "section": "",
+    "text": "Overview of key concepts and formalisation in data analysis in geographical contexts\nUnderstanding and describing the statistical and spatial distribution of data with univariate statistical analysis\nUnderstanding how a geographical pattern relate or can be understood from others with bivariate and regression analysis\nRaising awareness as to the characteristics and difficulties of statistical and econometric (regression) analysis with geographical data.\nMastering essential R software skills for tabular data management, uni and bi-variate analysis and regression, and producing graphics",
+    "crumbs": [
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "002_learning.html#expected-outcomes",
+    "href": "002_learning.html#expected-outcomes",
+    "title": "Learning outcomes and evaluation",
+    "section": "Expected outcomes",
+    "text": "Expected outcomes\nOn completion, each student should be able to\n\nDescribe the key concepts in spatial statistical analysis and the specificities of geographical space and spatial data\nDemonstrate a good command of R to handle statistical datasets and perform univariate, bivariate and multiple regressions analyses with good diagnostics\nExplain and use common univariate and bivariate statistics\nExplain and use exploratory methods\nExplain and apply standard regression methods and diagnostics, and discuss limits and problems when applied to geographical data\nExplain the principles and methods used to identify local effects and spatial autocorrelation\nRead and discuss detailed results of an empirical research article that deal with data analysis including a multivariate regression in a spatial or non-spatial context\nExplain and use mixed methods (Q-Methodology: hybrid approach between quantitative and qualitative methods)",
+    "crumbs": [
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "002_learning.html#evaluation",
+    "href": "002_learning.html#evaluation",
+    "title": "Learning outcomes and evaluation",
+    "section": "Evaluation",
+    "text": "Evaluation\n\nIndividual\n20% Continuous assessment: small tests in class and weekly exercises:\n40% R exam (3h) in GIS room, perform R analysis, answer a questionnaire and provide script\n40% Oral exam (30min): presenting a paper and answering questions about its details and the course",
+    "crumbs": [
+      "Learning outcomes and evaluation"
+    ]
+  },
+  {
+    "objectID": "011_scope.html",
+    "href": "011_scope.html",
+    "title": "1  Statistical data analysis for geographers",
+    "section": "",
+    "text": "1.1 Scope\nThis course is an introduction to standard statistical techniques that geographers often encounter. Being at the crossroads of different fields, it is necessary for geographers to have a basic set of tools with which to interact with other experts and modelers who, although they may use different wording and have their own technical habits, use a common set of concepts and tools to analyze data and test their hypotheses.\nIn their own work and in their interactions with others, it is also important for geographers to keep in mind that the data they use are quite specific because they are about located objects or subjects, about places and their interactions. Most of the time, the data they use is georeferenced in some way (accurately or not). This inherently geographic aspect brings with it a number of challenges. In this course, we will highlight these challenges when performing standard data analysis. However, we won’t solve any of these geographic problems, and we won’t even explicitly use geographic features, i.e., no mapping, no use of georeferencing as such. Our goal is to equip students with standard statistical methods also used in related fields, with some critical thinking about their geographical nature or underlying spatial processes. In a nutshell, this is a journey from elementary statistics to spatial autocorrelation with a standard regression detour.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistical data analysis for geographers</span>"
+    ]
+  },
+  {
+    "objectID": "011_scope.html#sec-transparent-geographical-analysis-empowered-with-r",
+    "href": "011_scope.html#sec-transparent-geographical-analysis-empowered-with-r",
+    "title": "1  Statistical data analysis for geographers",
+    "section": "1.2 Transparent geographical analysis empowered with R",
+    "text": "1.2 Transparent geographical analysis empowered with R\nThe course is a blend of theory and practice, which we believe enhances intuition and understanding. Direct practice also helps, especially for human geographers with little training in quantitative methods, to demystify statistical concepts and provide confidence after repeated applications and interpretations.\nSoftware for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.\n\n\n\n\n\nMost of our students have had some sort of theoretical statistics course so far in their studies, and have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing.\nWe chose R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the use of scripts and command lines, is absolutely necessary to bring robustness and trust.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Statistical data analysis for geographers</span>"
+    ]
+  },
+  {
+    "objectID": "012_spatial_analysis.html",
+    "href": "012_spatial_analysis.html",
+    "title": "2  Spatial data analysis: a definition",
+    "section": "",
+    "text": "2.1 Interdisciplinarity and perspective\nData analysis and statistics are used in many scientific fields. When the focus is on geographic objects, subjects, their patterns or relationships, we like to talk about spatial analysis. However, because geographic data is relevant to many fields and statistical methods are widely used, spatial analysis can be defined and approached differently.\nWithin geography, we understand the term spatial analysis to refer to all quantitative approaches, as opposed to qualitative approaches (although these can also be spatial and analytical). Within the quantitative part of the discipline, however, spatial analysis would mostly refer to applied statistical approaches, in contrast to GIS modeling, geosimulation, transportation modeling, or mathematical models. In this sense, this course is a spatial analysis course.\nHowever, for those researchers involved in spatial analysis close to regional science and economic geography (and perhaps close to landscape ecology and GIScience), the terms spatial data analysis or spatial statistics would more strictly refer to the explicit use of geographic information in the modeling process, not just the consideration of geographic elements. See for example the handbook of Fischer and Getis for discussion and examples.\nSimilarly, Goodchild and Longley (https://www.geos.ed.ac.uk/~gisteac/gis_book_abridged/files/ch40.pdf) suggest more broadly that spatial analysis could simply be a set of methods useful when the data are spatial (i.e. referenced in 2D frame). This definition however as they suggest would be too broad, if it does not address the question of whether the 2D frame actually matters. Rather spatial analysis is",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: a definition</span>"
+    ]
+  },
+  {
+    "objectID": "012_spatial_analysis.html#interdisciplinarity-and-perspective",
+    "href": "012_spatial_analysis.html#interdisciplinarity-and-perspective",
+    "title": "2  Spatial data analysis: a definition",
+    "section": "",
+    "text": "the subset of analytic techniques whose results will change if the frame changes, or if objects are repositioned within it.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: a definition</span>"
+    ]
+  },
+  {
+    "objectID": "012_spatial_analysis.html#links-with-theory",
+    "href": "012_spatial_analysis.html#links-with-theory",
+    "title": "2  Spatial data analysis: a definition",
+    "section": "2.2 Links with theory",
+    "text": "2.2 Links with theory\nScience progresses with tools and techniques but also by testing hypotheses and updating models and theory. How spatial analysis is linked to theory also depends on fields or sub-fields.\nFrom a quantitative geography viewpoint (adapted from Denise Pumain https://hypergeo.eu/theories-of-spatial-analysis/?lang=en), spatial analysis focuses on uncovering spatial structures and organizations. These structures can often be generalized into models, such as center-periphery relationships, gravity models, and urban hierarchies and networks.\nThe ultimate goal of spatial analysis is then to understand the processes that lead to the formation of these spatial structures.\nFrom a spatial economic or regional science viewpoint (as understood by a European quantitative geographer) spatial analysis consists of a set of techniques designed to:\n\nDescribe the location of activities and how they change over time\nEstimate reduced form models\n\nUnlike structural form models, which are direct representations or formulations of theoretical concepts, reduced form models are designed to better align with and fit the data.\nThere is probably no such a reduced or structural form model in quantitative geography, but in both case anyway, spatial analysis ultimately aims at testing and updating theories.\nWe very much agree with this perspective here, leading to giving more importance to the falsification of ideas and the interpretation of estimated coefficients than to prediction using as many data as possible.\nIf a variable is used it is because we have some idea of its importance and influence on others or its relevance, not just to obtain a fit. Hence we won’t use automatic models constructions (no stepwise regression for example) and leave out all the methods (neural networks, random forests, etc.) from which coefficients (if any) are difficult to interpret, even if these methods can be considered to belong to spatial analysis and use geographic data. This course is not about data mining or data crunching. We use a statistical lens to examine variations across space and how spatial relationships influence socio-economic patterns and behaviors or environmental effects.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Spatial data analysis: a definition</span>"
+    ]
+  },
+  {
+    "objectID": "013_space_axiom.html",
+    "href": "013_space_axiom.html",
+    "title": "3  Geographical space",
+    "section": "",
+    "text": "3.1 Absolute or pre-geographical space:",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
+    ]
+  },
+  {
+    "objectID": "013_space_axiom.html#absolute-or-pre-geographical-space",
+    "href": "013_space_axiom.html#absolute-or-pre-geographical-space",
+    "title": "3  Geographical space",
+    "section": "",
+    "text": "A set of places or locations \\(S\\)\nIdentified by their coordinates \\(x,y\\)\nSeparated by a distance \\(d(L)\\)\nDistance being measured along a given metric \\(L\\)",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
+    ]
+  },
+  {
+    "objectID": "013_space_axiom.html#geographical-space",
+    "href": "013_space_axiom.html#geographical-space",
+    "title": "3  Geographical space",
+    "section": "3.2 Geographical space:",
+    "text": "3.2 Geographical space:\nS can be endowed with various attributes to form a geographical space:\n\nThe surface attribute \\(m\\), measured along a given metric related to coordinates\nVarious attributes \\(Z\\)\nDensity measures, i.e. any \\(Z/m\\)\n\n\n\n\n\nBeguin, Hubert, and Jacques-François Thisse. 1979. “An Axiomatic Approach to Geographical Space.” Geographical Analysis 11 (4): 325–41. https://doi.org/10.1111/j.1538-4632.1979.tb00700.x.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geographical space</span>"
+    ]
+  },
+  {
+    "objectID": "014_space_issues.html",
+    "href": "014_space_issues.html",
+    "title": "4  Spatial data issues",
+    "section": "",
+    "text": "4.1 Equivalence and Independence\n(Based on discussions in Jayet, p. 2-13)\nStatistical analysis is based on two key principles, or invariants:\nHowever, both of these principles are challenged when applied in a spatial context. Spatial data often exhibit dependencies due to geographic proximity, which violates the assumption of independence. Similarly, the notion of statistical equivalence becomes problematic as spatial heterogeneity introduces variability across observations in different locations and because the spatial definition of objects may vary and their sampling irregular.\nThese challenges highlight the need for specialized approaches in spatial analysis, where standard statistical methods must be adapted to account for the structure and dependencies present in the spatial data.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "014_space_issues.html#equivalence-and-independence",
+    "href": "014_space_issues.html#equivalence-and-independence",
+    "title": "4  Spatial data issues",
+    "section": "",
+    "text": "All observations must be statistically equivalent: This means that no individual observation should be systematically different from others in the sample set. Each data point must have the same probability distribution, ensuring uniformity and comparability.\nAll observations must be independent from each other: In any statistical model, the assumption is that the occurrence of one observation does not influence or depend on another. Independence ensures the integrity of statistical results.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "014_space_issues.html#equivalence",
+    "href": "014_space_issues.html#equivalence",
+    "title": "4  Spatial data issues",
+    "section": "4.2 Equivalence",
+    "text": "4.2 Equivalence\n\n4.2.1 Irregularity of observations and the nature of data\nWhile there are time cycles, making repetitive data logging along the time dimension doable, there is no such think as a spatial cycle for geographical data recording.\nMost spatial data has a irregular covering in space, which already challenges the equivalence of observations\n\n(source to be added, apologies if you are the author, I am happy to adapt)\n\nObservations (countries) are of different size, i.e. the surface attribute \\(m\\) matters here.\nSuppose \\(Z_{pop}\\) is the country population. One can expect \\(Z_{pop}\\) to relate to \\(m\\) if processes are homogeneous across space. However a \\(Z/m\\) density variables would still show these objects are very different.\nYet, other \\(Z_i\\) variables could still be compared using that \\(Z_{pop}\\) attributes. For example the active population of the place (country) as a percentage of its total population, or using other transformations (linear or not).\nNote that variations in volume/mass/size such as \\(Z_{pop}\\) are very common, with very few objects having a very large size compared to most others. Such a size effect\n\nimpacts on the total and central (mean, median) value of variables\nthe distribution of values when made in different observations’ regions\ntypically leads to outliers problems or heteroskedasticity (non constant variance)\n\nHowever, there are raster maps and some information is “regular”, such a precipitation, or can be “regularized”, such as population grids.\n\n(https://human-settlement.emergency.copernicus.eu/)\nThe discretization of geographic space should however be internally homogeneous, meaning the attributes within each grid cell (or other nwe objects) supposed to apply to every part of that cell.\nA difference is often made between continuous field data and discrete space objects.\nSee below the tabulation of these against the types of measurements by Haining (2010)\n\n\n\n4.2.2 Modifiable Areal unit Problem - MAUP\nOpenshaw (1984)\n\nAreal units = spatial objects such as zones or places or towns or regions\n\n\nGeography has consistently and dismally failed to tackle its entitation problems, and in that more than anything else lies the root of so many of its problems (Chapman 77)\n\n\nInsufficient thought is given to precisely what it is that is being studied. […] Little concern has been expressed about the nature and definition of the spatial objects under study\n\n\nFor many purposes the zones in a zoning system constitute the objects, or geographical individuals, that are the basic units for the observation and measurement of spatial phenomena.\n\n\nWith areal data, the spatial objects only exist after data collected for one set of entities (e.g. people) are subjected to an arbitrary aggregation (see also regularity discussion above) to produce a set of spatial units.\n\n\nHowever, there are no rules for areal aggregation, no standards, and no international conventions to guide the spatial aggregation process.\n\n\nThe areal units (zonal objects) used in many geographical studies are arbitrary, modifiable. Census areas have rarely an intrinsic geographical meaning\n\n\nA unmanageable combinatorial problem: There are approximately 10^12 different aggregations of 1,000 objects into 20 groups. If the aggregation process is constrained so that the groups consist of internally contiguous objects (i.e. all the objects assigned to the same group are geographical neighbours) then this huge number is reduced, but only by a few orders of magnitude.\n\nStan Openshaw distingues 2 interrelated issues, within the MAUP:\n\nThe scale problem: the variation in results that can often be obtained when data for one set of areal units are progressively aggregated into fewer and larger units for analysis.\nThe aggregation problem: the problem of alternative combinations of areal units at equal or similar scales. Any variation in results due to the use of alternative units of analysis when the number of units is held constant\n\n\nExample of effects on correlation coefficients:\n\nCorrelation between percentage vote for Republican candidates in the congressional election of 1968 and the percentage of the population over 60 years\nCorrelation at the 99 county level is 0.34\nAfter aggregation into six zones: 0.26 for the 6 congressional districts and 0.86 for a simple typology of Iowa into 6 rural-urban types (Openshaw and Taylor 77)\nCompare mean and dispersion of correlation coefficient after random zoning (using contiguity) and random sampling (grouping)\n\n\n\nNo systematic scale effect on correlation mean\nConsiderable variability about the mean values but reduces with increasing numbers of units\nThe standard deviations of the zoning distributions are considerably smaller than the corresponding sampling distributions but exhibit a greater degree of bias &gt; spatial autocorrelation effect",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "014_space_issues.html#spatial-in-dependence",
+    "href": "014_space_issues.html#spatial-in-dependence",
+    "title": "4  Spatial data issues",
+    "section": "4.3 Spatial (in-)dependence",
+    "text": "4.3 Spatial (in-)dependence\n\n4.3.1 Interactions between observations\n\nNot only the dimensions and structures of observations is of importance but also their relative position in space\nThe distance (between objects), \\(d(L)\\), is at the very heart of geographical analysis AND the source of statistical difficulties\nThe level of interactions increases with proximity (distance functions or contiguities) (see gravity-based theories)\n\n\n\n4.3.2 Tobler’s first law of geography\nTobler (1970)\n\n\n\n4.3.3 Spatial autocorrelation\nAnselin, Luc and Bera,I (1998)\n\n\n\n\n\n\nAnselin, Luc, and Bera,I. 1998. “Spatial Dependence in Linear Regression Models with an Introduction to Spatial Econometrics: Regression Models with an Anselin Bera i. INTRODUCTION.” In. CRC Press.\n\n\nHaining, Robert P. 2010. “The Nature of Georeferenced Data.” In, edited by Manfred M. Fischer and Arthur Getis, 197–217. Berlin, Heidelberg: Springer. https://doi.org/10.1007/978-3-642-03647-7_12.\n\n\nOpenshaw, Stan. 1984. The Modifiable Areal Unit Problem. Concepts and Techniques in Modern Geography 38. Norwich: Geo.\n\n\nTobler, W. R. 1970. “A Computer Model Simulation of Urban Growth in the Detroit Region in Economic Geography 46: 2, 234240.” Clark University, Worcester, MA.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Spatial data issues</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html",
+    "href": "021_Rstudio.html",
+    "title": "5  Getting started with RStudio",
+    "section": "",
+    "text": "5.1 R, RStudio and its interface\nIn class demonstration of how to",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#r-rstudio-and-its-interface",
+    "href": "021_Rstudio.html#r-rstudio-and-its-interface",
+    "title": "5  Getting started with RStudio",
+    "section": "",
+    "text": "Get R and RStudio installed\nNavigating the R studio interface\nScripting area, console, files,…\nUsing colors and TOC outline in RStudio\nAuto-completion using tabs\nNavigating history with the up/down arrows\nUnderstanding help (necessary arguments and default options)",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#projects-and-workflows",
+    "href": "021_Rstudio.html#projects-and-workflows",
+    "title": "5  Getting started with RStudio",
+    "section": "5.2 Projects and workflows",
+    "text": "5.2 Projects and workflows\nLet’s compute a value in the console and store it to an object first\n\n#This is a comment\n1+2 #This is also a comment\n#&gt; [1] 3\na&lt;-3+4\na\n#&gt; [1] 7\n\nSee that we now have an object in the environment!",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#objects",
+    "href": "021_Rstudio.html#objects",
+    "title": "5  Getting started with RStudio",
+    "section": "5.3 Objects",
+    "text": "5.3 Objects\nAn object is not defined ex-ante and is automatically overwritten\n\nX&lt;-3 #This X will soon be replaced\nX&lt;-1:10 \nY&lt;-X^2\n\nR is case sensitive. The following returns an Error\n\nx # x is lower case and does not exist\n\nIMPORTANT:\n\nAlways worry about Errors. They stop your process.\nAlways read and try to understand Warnings. They do not stop your process but usually indicate the result may not be as expected!",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#working-directory",
+    "href": "021_Rstudio.html#working-directory",
+    "title": "5  Getting started with RStudio",
+    "section": "5.4 Working directory!!!",
+    "text": "5.4 Working directory!!!\nSuppose we want to produce a text from the above and save it to a file:\n\na_sentence&lt;-paste(\"I have computed a sum, which equals\", a)\na_sentence #Let's see this in the console\n#&gt; [1] \"I have computed a sum, which equals 7\"\ncat(a_sentence,file=\"brol/a_sentence.txt\")\n\nWhere is the file? the directory? Have you been able to run this?\nAlways indicate where you work!\nThe classical way is\n\ngetwd() #get (default) working directory\nsetwd(\"/Users/geoffrey.caruso/Dropbox/GitHub/MAGEO0641/brol\") #set working directory to YOUR OWN NETWORK SPACE HERE!\n\nThere is a more practical way in RStudio: Make an .Rproj from/to a directory\nYou can create a directory in your finder/file explorer, or create a directory or subdirectory from within the R console. This will be very useful at a more advanced level when you create many outputs and directory names result from some data processing. Think of processing something across many countries/cities.\n\ndir.create(\"brol\")\ndir.create(\"Today\")\n\n#and for removing a directory\nunlink(\"Today\", recursive = TRUE) #see help: If recursive = FALSE directories are not deleted, not even empty ones.",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#commented-scripts-vs-markdown-documents",
+    "href": "021_Rstudio.html#commented-scripts-vs-markdown-documents",
+    "title": "5  Getting started with RStudio",
+    "section": "5.5 Commented scripts vs markdown documents",
+    "text": "5.5 Commented scripts vs markdown documents\nThe above is a commented script, using #, which you can save as an .R file and re-run later.\nThe problem with this approach is that you won’t see results of the codes until you run it. So you can’t really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.\nA more advanced approach is to make a document where you integrate text, code chunks and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.\nLet’s have a look at the structure of this syllabus, written using Quarto markdown.",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "021_Rstudio.html#good-practice-with-files-handling-and-objects-naming",
+    "href": "021_Rstudio.html#good-practice-with-files-handling-and-objects-naming",
+    "title": "5  Getting started with RStudio",
+    "section": "5.6 Good practice with files handling and objects naming",
+    "text": "5.6 Good practice with files handling and objects naming\nRproj in an excellent way to keep things at the same place.\nWhen using an Rproj, use relative path only, i.e. from the root folder of the project, not from your machine. This is the way you can easily transfer your project to friends. Only external data (e.g. from the web) should be referenced in full.\nIt is also good practice to have a specific “data” folder or subfolders for all data so you clearly differentiate your outputs with the inputs. Similarly a R folder with your scripts when you have many.\nAlthough there is no naming convention agreed by everyone, it is important to apply a consistent style for yourself and colleagues. Also you would avoid spaces and rarer characters, especially in a multilingual environment.\nA folder of file named “source data” or “data_für_rémi” are not great ideas. (This is also true for variable names in data frame, see later)\nIn general, I personally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as\n\nestimate_model.R\nget_statec_data.R\n\nFiles numbering can be of good help for heavier projects where there is a logical sequence (time)\n\n01_estimate_model.R\n02_get_statec_data.R\n\nFor variable names and objects I tend to use the “UpperCamelCase” form especially for vectors\n\nLuxCities\nGrowthRates\n\nand tend to add an “df” or “_lst” to disambiguate where needs be between some classes\n\nLuxCities_df\nLuxCities_lst\n\nI also like to use lowercase single letters for input parameters, such as a pvalue or number of neighbours, e.g.\n\np&lt;-0.05\nk&lt;-2\n\nor Greec symbols written in full, especially when there is a theoretical link\n\nbeta &lt;-model$coefficient[1]\nrho &lt;- 0.5\n\nFor functions (see later) I also like to use action verbs and include dots, such as:\n\nplot.bmi()\nextract.boundary()\n\nIn all case, be concise but specific and consistent within a project or even across.\n\nNeighboursCompute_Europe.Paris_project3 would be very long and inconsistent\ndf_new2bis not to use both as an object or a file\n\n…but to to be honest I have quite a number of tests.r and plot.test2.jpg files peppered in my machine.",
+    "crumbs": [
+      "Getting Started with R",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
+    ]
+  },
+  {
     "objectID": "022_vectors.html",
     "href": "022_vectors.html",
     "title": "6  Vectors",
     "section": "",
-    "text": "6.1 Introducing vectors\nVectors are the basic units of information in R, and many functions apply to vectors. If you are coming from the “spreadsheet” world (MS Excel or Open Office), where the basic unit is a cell, the change in perspective is quite important: while a cell has a single value (information), a vector contains multiple values.\nVectors, being a combination of values, are created by the combine (or concatenate) function c() or obtained from external sources.\nThere are two kinds of vectors:\nThis chapter is about atomic vectors, we will introduce lists later.\nAs a first example, see below a character (atomic) vector and a numeric (atomic) vector:\nCountries&lt;-c(\"Romania\",\"Russia\",\"Morocco\",\"Iran\",\"France\")\nmode(Countries)\n#&gt; [1] \"character\"\nAges&lt;-c(20,25,22,22,49)\nmode(Ages)\n#&gt; [1] \"numeric\"\nNote that in case you would have a long list to input manually, the scan() function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources…(if you fancy less transparent clicking approaches, be curious and find out ;-), most of the times anyway we rather read values from readable text files).",
+    "text": "6.1 Introducing vectors\nVectors are the basic units of information in R, and many functions apply to vectors. If you are coming from the “spreadsheet” world (MS Excel or Open Office), where the basic unit is a cell, the change in perspective is quite important: while a cell has a single value (information), a vector contains multiple values.\nVectors, being a combination of values, are created by the combine (or concatenate) function c() or obtained from external sources.\nThere are two kinds of vectors:\nThis chapter is about atomic vectors, we will introduce lists later.\nAs a first example, see below a character (atomic) vector and a numeric (atomic) vector:\nCountries&lt;-c(\"Romania\",\"Russia\",\"Morocco\",\"Iran\",\"France\")\nmode(Countries)\n#&gt; [1] \"character\"\nAges&lt;-c(20,25,22,22,49)\nmode(Ages)\n#&gt; [1] \"numeric\"\nNote that in case you would have a long list to input manually, the scan() function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources…(if you fancy less transparent clicking approaches, be curious and find out, for example here: Chapter 9 ;-), most of the times anyway we rather read values from readable text files).",
     "crumbs": [
       "Getting Started with R",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
@@ -33,11 +302,11 @@
     ]
   },
   {
-    "objectID": "022_vectors.html#factors",
-    "href": "022_vectors.html#factors",
+    "objectID": "022_vectors.html#sec-factors",
+    "href": "022_vectors.html#sec-factors",
     "title": "6  Vectors",
     "section": "6.3 Factors",
-    "text": "6.3 Factors\nRemember from the introduction, that we (in geography and elsewhere) usually consider discrete and continuous data, each type being split into 2 measurement levels:\n\nDiscrete: nominal (blue, green) or ordinal (high, low)\nContinuous: interval (10°C, 20°C) or ratio (10 apples, 20 apples) (difference being that 20 apples is twice as much as much as 10 apples, but 20°C is not twice as hot as 10°C because zero is not the absolute zero, hence a ratio in this case makes little sense, only differences are sensical).\n\nThis vocabulary is not used directly in R:\n\nContinuous (ratio/interval) data is coded as numeric or integer\nDiscrete (categorical) data (nominal/ordinal) is preferably coded as a factor.\n\nNominal data can still be in the “character” type, but the idea of a “factor” is that there is only a limited set of characters’ strings that you will find in a vector (e.g. set of countries, set of land uses) and you are able (willing) to enumerate them. For ordinal data, the order is important, hence it gets closer to an integer set than to a character (e.g. education levels: primary, secondary tertiary education), yet you can sum integer data but should not sum ordinal data.\n\nFactors are designed to properly solve the use of discrete/categorical data. It is based on the integer type (in the sense of typeof) on top of which a “level” attribute is added, and potentially whether it is ordered or not. They are fabricated with the as.factor() or factor() functions.\n\nCountries\n#&gt; [1] \"Romania\" \"Russia\"  \"Morocco\" \"Iran\"    \"France\" \n#&gt; attr(,\"source\")\n#&gt; [1] \"MAGEO students input\"\ntypeof(Countries)\n#&gt; [1] \"character\"\n\nCountries_f&lt;-as.factor(Countries)\nCountries_f\n#&gt; [1] Romania Russia  Morocco Iran    France \n#&gt; Levels: France Iran Morocco Romania Russia\ntypeof(Countries_f)\n#&gt; [1] \"integer\"\nclass(Countries_f)\n#&gt; [1] \"factor\"\n\nWhile the categories are displayed with the factor, the levels() function returns those categories as a character vector.\n\nlevels(Countries_f)\n#&gt; [1] \"France\"  \"Iran\"    \"Morocco\" \"Romania\" \"Russia\"\n\nBy default the levels in a factor uses the alphabetical order. In many cases however, you will want to at least define the first one, in order to use it as a reference (typically in regression analysis with a categorical explanatory variable) or choose you own order for plotting or other purposes.\n\n6.3.1 Re-defining the reference level\nSuppose you want to use “Morocco” as the first, reference level instead of “France”.\nThe relevel() function re-orders the levels so that the one indicated as “ref” is used first and the others are moved down the series.\n\nCountries_f2&lt;-relevel(Countries_f, ref=\"Morocco\")\n\nYou could also set the order directly at the time of creating the factor using the “level” argument, using the factor() function, not as.factor(). We used as.factor() before because it is generally quicker, and there is not always a need to adapt the order of levels.\n\nCountries_f3&lt;-factor(Countries, level=c(\"Morocco\",\"France\",\"Romania\", \"Iran\",\"Belgium\"))\n\nBe careful, however, because if you don’t use the complete list of possibilities, the values that are not specified in the levels vector, will simply be ignored and turned into NA’s. In the above example we forgot “Russia” and therefore have now a NA within our vector. Conversely, we have been able to indicate a “Belgium” level, although it was not present. There is no automatic correspondence between the levels of a factor and its set of values. If you want a match, you can drop unused levels using droplevels() but for those characters (e.g. Russia) that were not taken at the moment of creating the factor, it is too late, they remain a NA.\n\nCountries_f4&lt;-droplevels(Countries_f3)\nCountries_f4\n#&gt; [1] Romania &lt;NA&gt;    Morocco Iran    France \n#&gt; Levels: Morocco France Romania Iran\n\n\n\n6.3.2 Ordering a factor based on occurrence:\nTo make a more realistic case, we have scraped the Wikipedia table indicating the Tour de France winners since 1903. See “TourDeFrance” in the data folder for the data and scraping script (from R). The data is in the form of a data.frame and saved as a RDS (an effective way to save R objects onto your disc). See the relevant chapters for data.frame and saving to file later.\nThere was no Tour de France during World War I and II and no winner from 1999 to 2005 because Lance Armstrong cheated. Hence we have a series of ” - ” in our levels, which are not interesting, and thus not considered when we factor our vector. This doesn’t remove the vector elements but creates several NA’s.\n\nLeTour_df&lt;-readRDS(\"data/TourDeFrance/LeTour_df.rds\")\nWinners&lt;-factor(LeTour_df$Country, exclude = \"—\")\nWinners\n#&gt;   [1] France        France        France        France        France       \n#&gt;   [6] France        Luxembourg    France        France        Belgium      \n#&gt;  [11] Belgium       Belgium       &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt;  [16] &lt;NA&gt;          Belgium       Belgium       Belgium       Belgium      \n#&gt;  [21] France        Italy         Italy         Belgium       Luxembourg   \n#&gt;  [26] Luxembourg    Belgium       France        France        France       \n#&gt;  [31] France        France        Belgium       Belgium       France       \n#&gt;  [36] Italy         Belgium       &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt;  [41] &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          France       \n#&gt;  [46] Italy         Italy         Switzerland   Switzerland   Italy        \n#&gt;  [51] France        France        France        France        France       \n#&gt;  [56] Luxembourg    Spain         Italy         France        France       \n#&gt;  [61] France        France        Italy         France        France       \n#&gt;  [66] Netherlands   Belgium       Belgium       Belgium       Belgium      \n#&gt;  [71] Spain         Belgium       France        Belgium       France       \n#&gt;  [76] France        France        Netherlands   France        France       \n#&gt;  [81] France        France        France        United States Ireland      \n#&gt;  [86] Spain         United States United States Spain         Spain        \n#&gt;  [91] Spain         Spain         Spain         Denmark       Germany      \n#&gt;  [96] Italy         &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt; [101] &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          Spain         Spain        \n#&gt; [106] Spain         Spain         Luxembourg    Australia     Great Britain\n#&gt; [111] Great Britain Italy         Great Britain Great Britain Great Britain\n#&gt; [116] Great Britain Colombia      Slovenia      Slovenia      Denmark      \n#&gt; [121] Denmark       Slovenia     \n#&gt; 15 Levels: Australia Belgium Colombia Denmark France Germany ... United States\n\nlength(Winners) #this includes NA's!\n#&gt; [1] 122\nlevels(Winners)\n#&gt;  [1] \"Australia\"     \"Belgium\"       \"Colombia\"      \"Denmark\"      \n#&gt;  [5] \"France\"        \"Germany\"       \"Great Britain\" \"Ireland\"      \n#&gt;  [9] \"Italy\"         \"Luxembourg\"    \"Netherlands\"   \"Slovenia\"     \n#&gt; [13] \"Spain\"         \"Switzerland\"   \"United States\"\n\nSuppose you want to to know and plot how many times each of the 15 countries (who won Le Tour at least once) won.\nFrequencies can be observed directly from a basic plot:\n\nplot(Winners,las=2)\n\n\n\n\n\n\n\n\nGet the victories counts in a vector can be made with table(), which applies to anything (numeric or character) that can be coerced to a factor\n\ntable(Winners)\n#&gt; Winners\n#&gt;     Australia       Belgium      Colombia       Denmark        France \n#&gt;             1            18             1             3            36 \n#&gt;       Germany Great Britain       Ireland         Italy    Luxembourg \n#&gt;             1             6             1            10             5 \n#&gt;   Netherlands      Slovenia         Spain   Switzerland United States \n#&gt;             2             3            12             2             3\n\nBoth the plot and counts however follow the order of the levels, which is alphabetical\nOne possibility to improve the graph is to change the order of the levels based on the count table and redoing the graph\n\n#Vector of levels in a new order\nLevelsFrq&lt;-levels(Winners)[order(table(Winners), decreasing = TRUE)]\n  #note the order function and the square brackets\nLevelsFrq\n#&gt;  [1] \"France\"        \"Belgium\"       \"Spain\"         \"Italy\"        \n#&gt;  [5] \"Great Britain\" \"Luxembourg\"    \"Denmark\"       \"Slovenia\"     \n#&gt;  [9] \"United States\" \"Netherlands\"   \"Switzerland\"   \"Australia\"    \n#&gt; [13] \"Colombia\"      \"Germany\"       \"Ireland\"\n\n#Use that order when creating the factor from the character vector\nWinnersFrq&lt;-factor(na.omit(Winners), levels = LevelsFrq) \n #note the na.omit function\n\n#plot\nplot(WinnersFrq,las=2)\n\n\n\n\n\n\n\n\n\n\n6.3.3 Ordered factors\nSometimes you will want to make a categorical data explicitly ordinal for graphical or statistical purpose . For example if you have used a Likert scale within a survey, it can be interesting it is stored as an ordered factor. You can order an already existing factor, using the function ordered(), which adds a logical flag to the factor to indicate it is order (see first example), or at the moment you create the factor using factor() (second example). Once the factor is ordered, the levels are displayed in order and separated by a ” &lt; “. Also a new class,”ordered”, is added to the object.\n\nLikertScale&lt;-c(\"Strongly disagree\", \"Disagree\",\"Neither agree nor disagree\",\n\"Agree\",\"Strongly agree\") #in the expected order\nResponses&lt;-c(\"Neither agree nor disagree\", \"Disagree\", \"Disagree\", \"Agree\", \"Agree\", \"Neither agree nor disagree\", \"Strongly agree\", \"Strongly Agree\", \"Disagree\")\nResponses_f&lt;-factor(Responses, levels=LikertScale)\nResponses_f\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree Disagree Neither agree nor disagree ... Strongly agree\n\nResponses_f2&lt;-ordered(Responses_f)\nResponses_f2 #Notice that if we don't provide again the levels, it is made from the existing ones, so there is only 4 levels now (\"Strongly Disagree\" not being answered)\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; Levels: Disagree &lt; Neither agree nor disagree &lt; Agree &lt; Strongly agree\n\nResponses_f3&lt;-factor(Responses, levels=LikertScale, ordered = TRUE)\nResponses_f3\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree &lt; Disagree &lt; ... &lt; Strongly agree\n\nclass(Responses_f3) #see the additional class\n#&gt; [1] \"ordered\" \"factor\"\n\nIn the above example you will have noticed a NA, due to some misspelling. This is a good case to remind that categorical data should not necessarily rely on character strings. In geography we often need to treat countries, regions, municipalities whose names can be very complicated, especially in multilingual context It is good advise to rather use codes for geographical units (e.g. BE351, BE352, BE353, for the NUTS 3 classification of Belgium), land use (e.g. https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html/) and related them to a corresponding table with proper labels.\nIt is also true for other types of categories, including Likert scale. An option is to use integer values (or characters for geographical codes) together with a series of labels. You add the labels at the moment of creating the factor:\n\nLikertScale&lt;-c(\"Strongly disagree\", \"Disagree\",\"Neither agree nor disagree\",\n\"Agree\",\"Strongly agree\") \nLikertLevels&lt;-c(1L,2L,3L,4L,5L) #would work as well with numeric c(1,2,3,4,5)\nResponses&lt;-c(3L, 2L, 2L, 4L, 4L, 3L, 5L, 5L, 2L)\n\nResponses_f&lt;-factor(Responses, ordered=TRUE, levels=LikertLevels, labels=LikertScale)\nResponses_f\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             Strongly agree            \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree &lt; Disagree &lt; ... &lt; Strongly agree\n\nThe result is the same as previously, but you avoid typos when inputting the responses and can also adapt the labels at will, without changing the data itself.",
+    "text": "6.3 Factors\nRemember from the introduction, that we (in geography and elsewhere) usually consider discrete and continuous data, each type being split into 2 measurement levels:\n\nDiscrete: nominal (blue, green) or ordinal (high, low)\nContinuous: interval (10°C, 20°C) or ratio (10 apples, 20 apples) (difference being that 20 apples is twice as much as much as 10 apples, but 20°C is not twice as hot as 10°C because zero is not the absolute zero, hence a ratio in this case makes little sense, only differences are sensical).\n\nThis vocabulary is not used directly in R:\n\nContinuous (ratio/interval) data is coded as numeric or integer\nDiscrete (categorical) data (nominal/ordinal) is preferably coded as a factor.\n\nNominal data can still be in the “character” type, but the idea of a “factor” is that there is only a limited set of characters’ strings that you will find in a vector (e.g. set of countries, set of land uses) and you are able (willing) to enumerate them. For ordinal data, the order is important, hence it gets closer to an integer set than to a character (e.g. education levels: primary, secondary tertiary education), yet you can sum integer data but should not sum ordinal data.\n\nFactors are designed to properly solve the use of discrete/categorical data. It is based on the integer type (in the sense of typeof) on top of which a “level” attribute is added, and potentially whether it is ordered or not. They are fabricated with the as.factor() or factor() functions.\n\nCountries\n#&gt; [1] \"Romania\" \"Russia\"  \"Morocco\" \"Iran\"    \"France\" \n#&gt; attr(,\"source\")\n#&gt; [1] \"MAGEO students input\"\ntypeof(Countries)\n#&gt; [1] \"character\"\n\nCountries_f&lt;-as.factor(Countries)\nCountries_f\n#&gt; [1] Romania Russia  Morocco Iran    France \n#&gt; Levels: France Iran Morocco Romania Russia\ntypeof(Countries_f)\n#&gt; [1] \"integer\"\nclass(Countries_f)\n#&gt; [1] \"factor\"\n\nWhile the categories are displayed with the factor, the levels() function returns those categories as a character vector.\n\nlevels(Countries_f)\n#&gt; [1] \"France\"  \"Iran\"    \"Morocco\" \"Romania\" \"Russia\"\n\nBy default the levels in a factor uses the alphabetical order. In many cases however, you will want to at least define the first one, in order to use it as a reference (typically in regression analysis with a categorical explanatory variable) or choose you own order for plotting or other purposes.\n\n6.3.1 Re-defining the reference level\nSuppose you want to use “Morocco” as the first, reference level instead of “France”.\nThe relevel() function re-orders the levels so that the one indicated as “ref” is used first and the others are moved down the series.\n\nCountries_f2&lt;-relevel(Countries_f, ref=\"Morocco\")\n\nYou could also set the order directly at the time of creating the factor using the “level” argument, using the factor() function, not as.factor(). We used as.factor() before because it is generally quicker, and there is not always a need to adapt the order of levels.\n\nCountries_f3&lt;-factor(Countries, level=c(\"Morocco\",\"France\",\"Romania\", \"Iran\",\"Belgium\"))\n\nBe careful, however, because if you don’t use the complete list of possibilities, the values that are not specified in the levels vector, will simply be ignored and turned into NA’s. In the above example we forgot “Russia” and therefore have now a NA within our vector. Conversely, we have been able to indicate a “Belgium” level, although it was not present. There is no automatic correspondence between the levels of a factor and its set of values. If you want a match, you can drop unused levels using droplevels() but for those characters (e.g. Russia) that were not taken at the moment of creating the factor, it is too late, they remain a NA.\n\nCountries_f4&lt;-droplevels(Countries_f3)\nCountries_f4\n#&gt; [1] Romania &lt;NA&gt;    Morocco Iran    France \n#&gt; Levels: Morocco France Romania Iran\n\nSee how the different factors we made so far change the order of the levels and the data when a case is made absent from the list:\nTo compare one to one, we use to column-binding function cbind() (compare with c()). You also see here that the values of the factors are integers, not characters as for the first vector:\n\ncbind(Countries,Countries_f,Countries_f2,Countries_f3, Countries_f4)\n#&gt;      Countries Countries_f Countries_f2 Countries_f3 Countries_f4\n#&gt; [1,] \"Romania\" \"4\"         \"4\"          \"3\"          \"3\"         \n#&gt; [2,] \"Russia\"  \"5\"         \"5\"          NA           NA          \n#&gt; [3,] \"Morocco\" \"3\"         \"1\"          \"1\"          \"1\"         \n#&gt; [4,] \"Iran\"    \"2\"         \"3\"          \"4\"          \"4\"         \n#&gt; [5,] \"France\"  \"1\"         \"2\"          \"2\"          \"2\"\n\n\n\n6.3.2 Ordering a factor based on occurrence:\nTo make a more realistic case, we have scraped the Wikipedia table indicating the Tour de France winners since 1903. See “TourDeFrance” in the data folder for the data and scraping script (from R). The data is in the form of a data.frame and saved as a RDS (an effective way to save R objects onto your disc). See the relevant chapters for data.frame and saving to file later.\nThere was no Tour de France during World War I and II and no winner from 1999 to 2005 because Lance Armstrong cheated. Hence we have a series of ” - ” in our levels, which are not interesting, and thus not considered when we factor our vector. This doesn’t remove the vector elements but creates several NA’s.\n\nLeTour_df&lt;-readRDS(\"data/TourDeFrance/LeTour_df.rds\")\nWinners&lt;-factor(LeTour_df$Country, exclude = \"—\")\nWinners\n#&gt;   [1] France        France        France        France        France       \n#&gt;   [6] France        Luxembourg    France        France        Belgium      \n#&gt;  [11] Belgium       Belgium       &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt;  [16] &lt;NA&gt;          Belgium       Belgium       Belgium       Belgium      \n#&gt;  [21] France        Italy         Italy         Belgium       Luxembourg   \n#&gt;  [26] Luxembourg    Belgium       France        France        France       \n#&gt;  [31] France        France        Belgium       Belgium       France       \n#&gt;  [36] Italy         Belgium       &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt;  [41] &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          France       \n#&gt;  [46] Italy         Italy         Switzerland   Switzerland   Italy        \n#&gt;  [51] France        France        France        France        France       \n#&gt;  [56] Luxembourg    Spain         Italy         France        France       \n#&gt;  [61] France        France        Italy         France        France       \n#&gt;  [66] Netherlands   Belgium       Belgium       Belgium       Belgium      \n#&gt;  [71] Spain         Belgium       France        Belgium       France       \n#&gt;  [76] France        France        Netherlands   France        France       \n#&gt;  [81] France        France        France        United States Ireland      \n#&gt;  [86] Spain         United States United States Spain         Spain        \n#&gt;  [91] Spain         Spain         Spain         Denmark       Germany      \n#&gt;  [96] Italy         &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;         \n#&gt; [101] &lt;NA&gt;          &lt;NA&gt;          &lt;NA&gt;          Spain         Spain        \n#&gt; [106] Spain         Spain         Luxembourg    Australia     Great Britain\n#&gt; [111] Great Britain Italy         Great Britain Great Britain Great Britain\n#&gt; [116] Great Britain Colombia      Slovenia      Slovenia      Denmark      \n#&gt; [121] Denmark       Slovenia     \n#&gt; 15 Levels: Australia Belgium Colombia Denmark France Germany ... United States\n\nlength(Winners) #this includes NA's!\n#&gt; [1] 122\nlevels(Winners)\n#&gt;  [1] \"Australia\"     \"Belgium\"       \"Colombia\"      \"Denmark\"      \n#&gt;  [5] \"France\"        \"Germany\"       \"Great Britain\" \"Ireland\"      \n#&gt;  [9] \"Italy\"         \"Luxembourg\"    \"Netherlands\"   \"Slovenia\"     \n#&gt; [13] \"Spain\"         \"Switzerland\"   \"United States\"\n\nSuppose you want to to know and plot how many times each of the 15 countries (who won Le Tour at least once) won.\nFrequencies can be observed directly from a basic plot:\n\nplot(Winners,las=2)\n\n\n\n\n\n\n\n\nGet the victories counts in a vector can be made with table(), which applies to anything (numeric or character) that can be coerced to a factor\n\ntable(Winners)\n#&gt; Winners\n#&gt;     Australia       Belgium      Colombia       Denmark        France \n#&gt;             1            18             1             3            36 \n#&gt;       Germany Great Britain       Ireland         Italy    Luxembourg \n#&gt;             1             6             1            10             5 \n#&gt;   Netherlands      Slovenia         Spain   Switzerland United States \n#&gt;             2             3            12             2             3\n\nBoth the plot and counts however follow the order of the levels, which is alphabetical\nOne possibility to improve the graph is to change the order of the levels based on the count table and redoing the graph\n\n#Vector of levels in a new order\nLevelsFrq&lt;-levels(Winners)[order(table(Winners), decreasing = TRUE)]\n  #note the order function and the square brackets\nLevelsFrq\n#&gt;  [1] \"France\"        \"Belgium\"       \"Spain\"         \"Italy\"        \n#&gt;  [5] \"Great Britain\" \"Luxembourg\"    \"Denmark\"       \"Slovenia\"     \n#&gt;  [9] \"United States\" \"Netherlands\"   \"Switzerland\"   \"Australia\"    \n#&gt; [13] \"Colombia\"      \"Germany\"       \"Ireland\"\n\n#Use that order when creating the factor from the character vector\nWinnersFrq&lt;-factor(na.omit(Winners), levels = LevelsFrq) \n #note the na.omit function\n\n#plot\nplot(WinnersFrq,las=2)\n\n\n\n\n\n\n\n\n\n\n6.3.3 Ordered factors\nSometimes you will want to make a categorical data explicitly ordinal for graphical or statistical purpose . For example if you have used a Likert scale within a survey, it can be interesting it is stored as an ordered factor. You can order an already existing factor, using the function ordered(), which adds a logical flag to the factor to indicate it is order (see first example), or at the moment you create the factor using factor() (second example). Once the factor is ordered, the levels are displayed in order and separated by a ” &lt; “. Also a new class,”ordered”, is added to the object.\n\nLikertScale&lt;-c(\"Strongly disagree\", \"Disagree\",\"Neither agree nor disagree\",\n\"Agree\",\"Strongly agree\") #in the expected order\nResponses&lt;-c(\"Neither agree nor disagree\", \"Disagree\", \"Disagree\", \"Agree\", \"Agree\", \"Neither agree nor disagree\", \"Strongly agree\", \"Strongly Agree\", \"Disagree\")\nResponses_f&lt;-factor(Responses, levels=LikertScale)\nResponses_f\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree Disagree Neither agree nor disagree ... Strongly agree\n\nResponses_f2&lt;-ordered(Responses_f)\nResponses_f2 #Notice that if we don't provide again the levels, it is made from the existing ones, so there is only 4 levels now (\"Strongly Disagree\" not being answered)\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; Levels: Disagree &lt; Neither agree nor disagree &lt; Agree &lt; Strongly agree\n\nResponses_f3&lt;-factor(Responses, levels=LikertScale, ordered = TRUE)\nResponses_f3\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             &lt;NA&gt;                      \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree &lt; Disagree &lt; ... &lt; Strongly agree\n\nclass(Responses_f3) #see the additional class\n#&gt; [1] \"ordered\" \"factor\"\n\nIn the above example you will have noticed a NA, due to some misspelling. This is a good case to remind that categorical data should not necessarily rely on character strings. In geography we often need to treat countries, regions, municipalities whose names can be very complicated, especially in multilingual context It is good advise to rather use codes for geographical units (e.g. BE351, BE352, BE353, for the NUTS 3 classification of Belgium), land use (e.g. https://land.copernicus.eu/content/corine-land-cover-nomenclature-guidelines/html/) and related them to a corresponding table with proper labels.\nIt is also true for other types of categories, including Likert scale. An option is to use integer values (or characters for geographical codes) together with a series of labels. You add the labels at the moment of creating the factor:\n\nLikertScale&lt;-c(\"Strongly disagree\", \"Disagree\",\"Neither agree nor disagree\",\n\"Agree\",\"Strongly agree\") \nLikertLevels&lt;-c(1L,2L,3L,4L,5L) #would work as well with numeric c(1,2,3,4,5)\nResponses&lt;-c(3L, 2L, 2L, 4L, 4L, 3L, 5L, 5L, 2L)\n\nResponses_f&lt;-factor(Responses, ordered=TRUE, levels=LikertLevels, labels=LikertScale)\nResponses_f\n#&gt; [1] Neither agree nor disagree Disagree                  \n#&gt; [3] Disagree                   Agree                     \n#&gt; [5] Agree                      Neither agree nor disagree\n#&gt; [7] Strongly agree             Strongly agree            \n#&gt; [9] Disagree                  \n#&gt; 5 Levels: Strongly disagree &lt; Disagree &lt; ... &lt; Strongly agree\n\nThe result is the same as previously, but you avoid typos when inputting the responses and can also adapt the labels at will, without changing the data itself.",
     "crumbs": [
       "Getting Started with R",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors</span>"
@@ -77,83 +346,6 @@
     ]
   },
   {
-    "objectID": "021_Rstudio.html",
-    "href": "021_Rstudio.html",
-    "title": "5  Getting started with RStudio",
-    "section": "",
-    "text": "5.1 R, RStudio and its interface\nIn class demonstration of how to",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "021_Rstudio.html#r-rstudio-and-its-interface",
-    "href": "021_Rstudio.html#r-rstudio-and-its-interface",
-    "title": "5  Getting started with RStudio",
-    "section": "",
-    "text": "Get R and RStudio installed\nNavigating the R studio interface\nScripting area, console, files,…\nUsing colors and TOC outline in RStudio\nAuto-completion using tabs\nNavigating history with the up/down arrows\nUnderstanding help (necessary arguments and defaulted options)",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "021_Rstudio.html#projects-and-workflows",
-    "href": "021_Rstudio.html#projects-and-workflows",
-    "title": "5  Getting started with RStudio",
-    "section": "5.2 Projects and workflows",
-    "text": "5.2 Projects and workflows\nLet’s compute a value in the console and store it to an object first\n\n#This is a comment\n1+2 #This is also a comment\n#&gt; [1] 3\na&lt;-3+4\na\n#&gt; [1] 7\n\nSee that we now have an object in the environment!",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "021_Rstudio.html#objects",
-    "href": "021_Rstudio.html#objects",
-    "title": "5  Getting started with RStudio",
-    "section": "5.3 Objects",
-    "text": "5.3 Objects\nAn object is not defined ex-ante and is automatically overwritten\n\nX&lt;-3 #This X will soon be replaced\nX&lt;-1:10 \nY&lt;-X^2\n\nR is case sensitive. The following returns an Error\n\nx # x is lower case and does not exist\n\nIMPORTANT:\n\nAlways worry about Errors. They stop your process.\nAlways read and try to understand Warnings. They do not stop your process but usually indicate the result may not be as expected!",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "021_Rstudio.html#working-directory",
-    "href": "021_Rstudio.html#working-directory",
-    "title": "5  Getting started with RStudio",
-    "section": "5.4 Working directory!!!",
-    "text": "5.4 Working directory!!!\nSuppose we want to produce a text from the above and save it to a file:\n\na_sentence&lt;-paste(\"I have computed a sum, which equals\", a)\na_sentence #Let's see this in the console\n#&gt; [1] \"I have computed a sum, which equals 7\"\ncat(a_sentence,file=\"brol/a_sentence.txt\")\n\nWhere is the file? the directory? Have you been able to run this?\nAlways indicate where you work!\nThe classical way is\n\ngetwd() #get (default) working directory\nsetwd(\"/Users/geoffrey.caruso/Dropbox/GitHub/MAGEO0641/brol\") #set working directory to YOUR OWN NETWORK SPACE HERE!\n\nThere is a more practical way in RStudio: Make an .Rproj from/to a directory\nYou can create a directory in your finder/file explorer, or create a directory or subdirectory from within the R console. This will be very useful at a more advanced level when you create many outputs and directory names result from some data processing. Think of processing something across many countries/cities.\n\ndir.create(\"brol\")\ndir.create(\"Today\")",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "021_Rstudio.html#commented-scripts-vs-markdown-documents",
-    "href": "021_Rstudio.html#commented-scripts-vs-markdown-documents",
-    "title": "5  Getting started with RStudio",
-    "section": "5.5 Commented scripts vs markdown documents",
-    "text": "5.5 Commented scripts vs markdown documents\nThe above is a commented script, using #, which you can save as an .R file and re-run later.\nThe problem with this approach is that you won’t see results of the codes until you run it. So you can’t really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.\nA more advanced approach is to make a document where you integrate text, code chunks and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.\nLet’s have a look at the structure of this syllabus, written using Quarto markdown.",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "021_Rstudio.html#good-practice-with-files-handling-and-objects-naming",
-    "href": "021_Rstudio.html#good-practice-with-files-handling-and-objects-naming",
-    "title": "5  Getting started with RStudio",
-    "section": "5.6 Good practice with files handling and objects naming",
-    "text": "5.6 Good practice with files handling and objects naming\nRproj in an excellent way to keep things at the same place.\nWhen using an Rproj, use relative path only, i.e. from the root folder of the project, not from your machine. This is the way you can easily transfer your project to friends. Only external data (e.g. from the web) should be referenced in full.\nIt is also good practice to have a specific “data” folder or subfolders for all data so you clearly differentiate your outputs with the inputs. Similarly a R folder with your scripts when you have many.\nAlthough there is no naming convention agreed by everyone, it is important to apply a consistent style for yourself and colleagues. Also you would avoid spaces and rarer characters, especially in a multilingual environment.\nA folder of file named “source data” or “data_für_rémi” are not great ideas. (This is also true for variable names in data frame, see later)\nIn general, I personnally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as\n\nestimate_model.R\nget_statec_data.R\n\nFiles numbering can be of good help for heavier projects where there is a logical sequence (time)\n\n01_estimate_model.R\n02_get_statec_data.R\n\nFor variable names and objects I tend to use the “UpperCamelCase” form especially for vectors\n\nLuxCities\nGrowthRates\n\nand tend to add an “df” or “_lst” to disambiguate where needs be between some classes\n\nLuxCities_df\nLuxCities_lst\n\nI also like to use lowercase single letters for input parameters, such as a pvalue or number of neighbours, e.g.\n\np&lt;-0.05\nk&lt;-2\n\nor Greec symbols written in full, especially when there is a theoretical link\n\nbeta &lt;-model$coefficient[1]\nrho &lt;- 0.5\n\nFor functions (see later) I also like to use action verbs and include dots, such as:\n\nplot.bmi()\nextract.boundary()\n\nIn all case, be concise but specific and consistent within a project or even across.\n\nNeighboursCompute_Europe.Paris_project3 would be very long and inconsistent\ndf_new2bis not to use both as an object or a file\n\n…but to to be honest I have quite a number of tests.r and plot.test2.jpg files peppered in my machine.",
-    "crumbs": [
-      "Getting Started with R",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Getting started with RStudio</span>"
-    ]
-  },
-  {
     "objectID": "023_df_lst.html",
     "href": "023_df_lst.html",
     "title": "7  Data frames and lists",
@@ -169,7 +361,7 @@
     "href": "023_df_lst.html#data-frames",
     "title": "7  Data frames and lists",
     "section": "",
-    "text": "7.1.1 A Data frame … your beloved spreadsheet\n\ndf&lt;-data.frame() #an empty one\n\ndf&lt;-data.frame(a = 1:5,\n           b = letters[1:5],\n           c = rnorm(n = 5))\ndf\n#&gt;   a b          c\n#&gt; 1 1 a  0.9613247\n#&gt; 2 2 b  0.3358525\n#&gt; 3 3 c -0.2769550\n#&gt; 4 4 d  1.3323848\n#&gt; 5 5 e  1.9006967\n\nSee how it is summarized. Basically summarizing each vector in columns.\n\nsummary(df)\n#&gt;        a          b                   c          \n#&gt;  Min.   :1   Length:5           Min.   :-0.2770  \n#&gt;  1st Qu.:2   Class :character   1st Qu.: 0.3359  \n#&gt;  Median :3   Mode  :character   Median : 0.9613  \n#&gt;  Mean   :3                      Mean   : 0.8507  \n#&gt;  3rd Qu.:4                      3rd Qu.: 1.3324  \n#&gt;  Max.   :5                      Max.   : 1.9007\n\n\n\n7.1.2 Accessing and subsetting\n!!! THIS IS EXTREMELY IMPORTANT !!! !!! Don’t forget the comma\nIdentifying\n\ndf[,\"b\"] #all rows but only the column named \"b\"\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\ndf$b #same !\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nSubsetting based on position\n\ndf$c[1:2] #subsetting a vector: only first 2 values\n#&gt; [1] 0.9613247 0.3358525\ndf[1:2,\"b\"]\n#&gt; [1] \"a\" \"b\"\ndf[1:2,] #first 2 records, all variables. Don't forget the comma !\n#&gt;   a b         c\n#&gt; 1 1 a 0.9613247\n#&gt; 2 2 b 0.3358525\n\nSubsetting specific rows (not range as above):\n\ndf[1:3,\"b\"]\n#&gt; [1] \"a\" \"b\" \"c\"\ndf[c(1,3),\"b\"]\n#&gt; [1] \"a\" \"c\"\n\nEach dataframe column must have the same number of elements.\n(Enjoy this condition after thinking of how many times you had misaligned and columns of different lengths in Ms Exc..)\n\nz&lt;-c(\"Mom\",\"Dad\",3) #remember each vector as only one type of data, so this is coerced to character\n\ndf$z&lt;-z #Should not work becouse of different length\n#&gt; Error in `$&lt;-.data.frame`(`*tmp*`, z, value = c(\"Mom\", \"Dad\", \"3\")): replacement has 3 rows, data has 5\n\n\nlength(df$a)\n#&gt; [1] 5\nlength(z)\n#&gt; [1] 3\n\n#Beware. Length applied to the whole df means the number of columns!\nlength(df) #i.e. a b and c\n#&gt; [1] 3\n\nWhile length is general, for a data frame you can rather compute number of rows and columns this way\n\nnrow(df)\n#&gt; [1] 5\nncol(df)\n#&gt; [1] 3\ndim(df)\n#&gt; [1] 5 3\nnrow(df)==dim(df)[2] #What do you think?\n#&gt; [1] FALSE\n\n#But these won't work for a vector:\ndim(df$a)\n#&gt; NULL\nnrow(df$a)\n#&gt; NULL\n\nOften times data frames have more complicated column names. It is useful to access those directly.\nThis is also the way you change the name of a column:\n\nnames(df)[2]&lt;-\"blabla\"\ndf\n#&gt;   a blabla          c\n#&gt; 1 1      a  0.9613247\n#&gt; 2 2      b  0.3358525\n#&gt; 3 3      c -0.2769550\n#&gt; 4 4      d  1.3323848\n#&gt; 5 5      e  1.9006967",
+    "text": "7.1.1 A Data frame … your beloved spreadsheet\n\ndf&lt;-data.frame() #an empty one\n\ndf&lt;-data.frame(a = 1:5,\n           b = letters[1:5],\n           c = rnorm(n = 5))\ndf\n#&gt;   a b           c\n#&gt; 1 1 a -0.11744595\n#&gt; 2 2 b -0.99136799\n#&gt; 3 3 c  0.03576831\n#&gt; 4 4 d  0.71554425\n#&gt; 5 5 e -2.15049755\n\nSee how it is summarized. Basically summarizing each vector in columns.\n\nsummary(df)\n#&gt;        a          b                   c           \n#&gt;  Min.   :1   Length:5           Min.   :-2.15050  \n#&gt;  1st Qu.:2   Class :character   1st Qu.:-0.99137  \n#&gt;  Median :3   Mode  :character   Median :-0.11745  \n#&gt;  Mean   :3                      Mean   :-0.50160  \n#&gt;  3rd Qu.:4                      3rd Qu.: 0.03577  \n#&gt;  Max.   :5                      Max.   : 0.71554\n\n\n\n7.1.2 Accessing and subsetting\n!!! THIS IS EXTREMELY IMPORTANT !!! !!! Don’t forget the comma\nIdentifying\n\ndf[,\"b\"] #all rows but only the column named \"b\"\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\ndf$b #same !\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n\nSubsetting based on position\n\ndf$c[1:2] #subsetting a vector: only first 2 values\n#&gt; [1] -0.1174459 -0.9913680\ndf[1:2,\"b\"]\n#&gt; [1] \"a\" \"b\"\ndf[1:2,] #first 2 records, all variables. Don't forget the comma !\n#&gt;   a b          c\n#&gt; 1 1 a -0.1174459\n#&gt; 2 2 b -0.9913680\n\nSubsetting specific rows (not range as above):\n\ndf[1:3,\"b\"]\n#&gt; [1] \"a\" \"b\" \"c\"\ndf[c(1,3),\"b\"]\n#&gt; [1] \"a\" \"c\"\n\nEach dataframe column must have the same number of elements.\n(Enjoy this condition after thinking of how many times you had misaligned and columns of different lengths in Ms Exc..)\n\nz&lt;-c(\"Mom\",\"Dad\",3) #remember each vector as only one type of data, so this is coerced to character\n\ndf$z&lt;-z #Should not work becouse of different length\n#&gt; Error in `$&lt;-.data.frame`(`*tmp*`, z, value = c(\"Mom\", \"Dad\", \"3\")): replacement has 3 rows, data has 5\n\n\nlength(df$a)\n#&gt; [1] 5\nlength(z)\n#&gt; [1] 3\n\n#Beware. Length applied to the whole df means the number of columns!\nlength(df) #i.e. a b and c\n#&gt; [1] 3\n\nWhile length is general, for a data frame you can rather compute number of rows and columns this way\n\nnrow(df)\n#&gt; [1] 5\nncol(df)\n#&gt; [1] 3\ndim(df)\n#&gt; [1] 5 3\nnrow(df)==dim(df)[2] #What do you think?\n#&gt; [1] FALSE\n\n#But these won't work for a vector:\ndim(df$a)\n#&gt; NULL\nnrow(df$a)\n#&gt; NULL\n\nOften times data frames have more complicated column names. It is useful to access those directly.\nThis is also the way you change the name of a column:\n\nnames(df)[2]&lt;-\"blabla\"\ndf\n#&gt;   a blabla           c\n#&gt; 1 1      a -0.11744595\n#&gt; 2 2      b -0.99136799\n#&gt; 3 3      c  0.03576831\n#&gt; 4 4      d  0.71554425\n#&gt; 5 5      e -2.15049755",
     "crumbs": [
       "Getting Started with R",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data frames and lists</span>"
@@ -180,7 +372,7 @@
     "href": "023_df_lst.html#lists",
     "title": "7  Data frames and lists",
     "section": "7.2 Lists",
-    "text": "7.2 Lists\nA List is a more general object than a dataframe.\nAll “columns” are not necessarily\n\nof the same length\nnor of the same class\n\n\nmylist&lt;-list(a = 1:5,\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3 4 5\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1]  0.1253451  0.7551144 -0.6222853 -0.2287924 -1.1559035\nsummary(mylist)\n#&gt;   Length Class  Mode     \n#&gt; a 5      -none- numeric  \n#&gt; b 5      -none- character\n#&gt; c 5      -none- numeric\n\n\nmylist&lt;-list(a = 1:3,#we removed 2 elements here\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -1.9205248  1.3129642  1.4932003  0.6226043  0.8579712\nsummary(mylist)\n#&gt;   Length Class  Mode     \n#&gt; a 3      -none- numeric  \n#&gt; b 5      -none- character\n#&gt; c 5      -none- numeric\n\n\nlength(mylist) #number of elements in list\n#&gt; [1] 3\nlength(mylist$b) #number of objects within that element of the list\n#&gt; [1] 5\n\n\n7.2.1 Into the lists: [[ ]] vs [ ]\n\nmylist[2] # getting the list element displayed\n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\nclass(mylist[2])  # you see it is a list element\n#&gt; [1] \"list\"\nmylist[[2]] # getting the corresponding vector\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\nclass(mylist[[2]]) # you now see it is a character vector\n#&gt; [1] \"character\"\n\nAnd now subsetting:\n\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -1.9205248  1.3129642  1.4932003  0.6226043  0.8579712\nmylist[[2]][1] #1st element of the 2nd element of the list\n#&gt; [1] \"a\"\nmylist[[1]][2] #2nd element of the 1st element of the list\n#&gt; [1] 2\nM&lt;-mylist[[3]]\nM[1] #Subsetting just as any vector\n#&gt; [1] -1.920525",
+    "text": "7.2 Lists\nA List is a more general object than a dataframe.\nAll “columns” are not necessarily\n\nof the same length\nnor of the same class\n\n\nmylist&lt;-list(a = 1:5,\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3 4 5\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -0.8375228  1.2548319 -0.2061915  0.3707841 -0.4407305\nsummary(mylist)\n#&gt;   Length Class  Mode     \n#&gt; a 5      -none- numeric  \n#&gt; b 5      -none- character\n#&gt; c 5      -none- numeric\n\n\nmylist&lt;-list(a = 1:3,#we removed 2 elements here\n             b = letters[1:5],\n             c = rnorm(n = 5))\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -0.9278828 -0.6395316  1.3423984 -0.5709707  0.4383395\nsummary(mylist)\n#&gt;   Length Class  Mode     \n#&gt; a 3      -none- numeric  \n#&gt; b 5      -none- character\n#&gt; c 5      -none- numeric\n\n\nlength(mylist) #number of elements in list\n#&gt; [1] 3\nlength(mylist$b) #number of objects within that element of the list\n#&gt; [1] 5\n\n\n7.2.1 Into the lists: [[ ]] vs [ ]\n\nmylist[2] # getting the list element displayed\n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\nclass(mylist[2])  # you see it is a list element\n#&gt; [1] \"list\"\nmylist[[2]] # getting the corresponding vector\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\nclass(mylist[[2]]) # you now see it is a character vector\n#&gt; [1] \"character\"\n\nAnd now subsetting:\n\nmylist\n#&gt; $a\n#&gt; [1] 1 2 3\n#&gt; \n#&gt; $b\n#&gt; [1] \"a\" \"b\" \"c\" \"d\" \"e\"\n#&gt; \n#&gt; $c\n#&gt; [1] -0.9278828 -0.6395316  1.3423984 -0.5709707  0.4383395\nmylist[[2]][1] #1st element of the 2nd element of the list\n#&gt; [1] \"a\"\nmylist[[1]][2] #2nd element of the 1st element of the list\n#&gt; [1] 2\nM&lt;-mylist[[3]]\nM[1] #Subsetting just as any vector\n#&gt; [1] -0.9278828",
     "crumbs": [
       "Getting Started with R",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Data frames and lists</span>"
@@ -250,6 +442,39 @@
     "crumbs": [
       "Getting Started with R",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Working with data frames and functions</span>"
+    ]
+  },
+  {
+    "objectID": "901_copy_paste.html",
+    "href": "901_copy_paste.html",
+    "title": "9  Copy-pasting",
+    "section": "",
+    "text": "10 clipr way\nA simple way to access to input some small data using the clipboard and that should work across all platforms is to use the read_clip() function from the clipr package.\nSuppose you have a series of numbers copied from a series like this one: 11 12 13 14 15 16 or this one: 11, 12, 13, 14, 15, 16\nget to the console and type clipr::read_clip()\nIn this case you will notice the whole set is a single character string entry, which then necessitates a split. See\n\na&lt;-clipr::read_clip()\na\n#&gt; [1] \"11, 12, 13, 14, 15, 16\"\nstrsplit(a,\", \")\n#&gt;[[1]]\n#&gt;[1] \"11\" \"12\" \"13\" \"14\" \"15\" \"16\"\n\nHowever, when it comes from a spreadsheet (e.g. open office)\n\nyou’ll get separate character entries directly:\n\nclipr::read_clip()\n#&gt; [1] \"0.7226332924\" \"0.5949296139\" \"0.0513909524\"\n#&gt; [4] \"0.2215940265\" \"0.8725634748\" \"0.0032392712\"\n#&gt; [7] \"0.774327883\"  \"0.1773198219\" \"0.1791877889\"\n#&gt; [10] \"0.004243708\"\n\n\n\n11 read.table way\nYou can also use the read/write table approach after saying the clipboard in the source or output. The inconvenience is that the MacOSX and MS Window approach have a slightly different code:\nCopy from spreadsheet, then paste in R using\n\nb &lt;- read.table(pipe(\"pbpaste\"),header = TRUE) #on macOSX \nb &lt;- read.table(\"clipboard\",header = TRUE) #on MS Windows\n\nand similarly to write to a spreadsheet:\n\nb3&lt;-b^3\nwrite.table(b3, pipe(\"pbcopy\"),row.names = FALSE,sep = \"\\t\") #MACOSX\nwrite.table(A3, \"clipboard\",row.names = FALSE,sep = \"\\t\") #MS Windows\n\nThen paste in spreadsheet.",
+    "crumbs": [
+      "Tips, tricks and miscellaneous",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Copy-pasting</span>"
+    ]
+  },
+  {
+    "objectID": "902_making_data.html",
+    "href": "902_making_data.html",
+    "title": "10  Making data",
+    "section": "",
+    "text": "10.1 Scraping a wikipedia table\nExample of the Tour de France winners table from wikipedia, used in the Vectors chapter of the course: Section 6.3.\n#R script to scrape the tour de France winners table from wikipedia page:\n#https://en.wikipedia.org/wiki/List_of_Tour_de_France_general_classification_winners\n#Geoffrey Caruso  Sept 18th 2024\n#\n# Script is adapted from\n# https://help.displayr.com/hc/en-us/articles/360003582875-How-to-Import-a-Wikipedia-Table-using-R\n# \n# Since there are different tables in Tour de France page and the one of interest is a sortable one,\n# I have adapted following suggestions in\n# \n# https://stackoverflow.com/questions/72380279/how-to-scrape-with-table-class-name-with-r\n# \n# I still had to look into the source of the table to find out what table class this is\n# In this case it was a \"wikitable plainrowheaders sortable'\n\nLeTour_url&lt;-\"https://en.wikipedia.org/wiki/List_of_Tour_de_France_general_classification_winners\"\nLeTour_Page&lt;-rvest::read_html(LeTour_url)\nLeTour_Table&lt;-rvest::html_node(LeTour_Page, xpath=\"//table[@class='wikitable plainrowheaders sortable']\")\nLeTour_Tibble = rvest::html_table(LeTour_Table, fill = TRUE)\nLeTour_df&lt;-as.data.frame(LeTour_Tibble)\n\nsaveRDS(LeTour_df,\"data/TourDeFrance/LeTour_df.rds\")",
+    "crumbs": [
+      "Tips, tricks and miscellaneous",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Making data</span>"
+    ]
+  },
+  {
+    "objectID": "902_making_data.html#scotland-rain-and-elevation-by-ferguson",
+    "href": "902_making_data.html#scotland-rain-and-elevation-by-ferguson",
+    "title": "10  Making data",
+    "section": "10.2 Scotland rain and elevation (by Ferguson)",
+    "text": "10.2 Scotland rain and elevation (by Ferguson)\n\n#Ferguson Rob,\n#linear regression in geography, CATMOG 15. https://github.com/qmrg/CATMOG/blob/Main/15-linear-regression-in-geography.pdf\n\n#Data from Table 1 and 2, p8:\n#Average precipitation and elevation across southern Scotland\n#\n#Source caption: British Rainfall (HMSO),\n#selected raingauges between national grid lines 600 and 601 km N.\n#Sites are in West-East order\n#Elevation in m above OD\n#Rainfall in mm/yr\n#DistanceE in km from W coast\n#\nRainScotland&lt;-data.frame(\n  SiteNo=1:20,\n  Elevation=c(240,430,420,470,300,150,520,460,300,410,\n              140,540,280,240,200,210,160,270,320,230),\n  Rainfall=c(1720,2320,2050,1870,1690,1250,2130,2090, 1730,2040,\n             1460,1860,1670,1580,1490,1420,900,1250,1170,1170),\n  DistanceE=c(37,43,48,49,52,59,73,75,76,77,\n              86,97,100,103,104,114,138,152,153,154)\n    )\nwrite.csv(RainScotland, \"data/Ferguson/RainScotland.csv\")",
+    "crumbs": [
+      "Tips, tricks and miscellaneous",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Making data</span>"
     ]
   },
   {

@@ -38,6 +38,10 @@ book:
       #- correlation.qmd
       #- regression.qmd
       #- CIregression.qmd
+    - part: "Tips, tricks and miscellaneous"
+      chapters: 
+      - 901_copy_paste.qmd
+      - 902_making_data.qmd
     - part: "Bibliography"
       chapters:
       - 999_references.qmd

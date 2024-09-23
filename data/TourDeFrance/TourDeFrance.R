@@ -15,8 +15,8 @@
 
 LeTour_url<-"https://en.wikipedia.org/wiki/List_of_Tour_de_France_general_classification_winners"
 LeTour_Page<-rvest::read_html(LeTour_url)
-LeTour_Table<-html_node(page, xpath="//table[@class='wikitable plainrowheaders sortable']")
-LeTour_Tibble = html_table(LeTour_Table, fill = TRUE)
+LeTour_Table<-rvest::html_node(LeTour_Page, xpath="//table[@class='wikitable plainrowheaders sortable']")
+LeTour_Tibble = rvest::html_table(LeTour_Table, fill = TRUE)
 LeTour_df<-as.data.frame(LeTour_Tibble)
 
 saveRDS(LeTour_df,"data/TourDeFrance/LeTour_df.rds")

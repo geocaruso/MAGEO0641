@@ -134,6 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <a href="./">Introduction to data analysis and R for geographers</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/geocaruso/MAGEO0641" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Introduction-to-data-analysis-and-R-for-geographers.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -247,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Tips, tricks and miscellaneous</span></a>
+ <span class="menu-text">Appendices, Tips, tricks and miscellaneous</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -298,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#projects-and-workflows" id="toc-projects-and-workflows" class="nav-link" data-scroll-target="#projects-and-workflows"><span class="header-section-number">5.2</span> Projects and workflows</a></li>
   <li><a href="#objects" id="toc-objects" class="nav-link" data-scroll-target="#objects"><span class="header-section-number">5.3</span> Objects</a></li>
   <li><a href="#working-directory" id="toc-working-directory" class="nav-link" data-scroll-target="#working-directory"><span class="header-section-number">5.4</span> Working directory!!!</a></li>
-  <li><a href="#commented-scripts-vs-markdown-documents" id="toc-commented-scripts-vs-markdown-documents" class="nav-link" data-scroll-target="#commented-scripts-vs-markdown-documents"><span class="header-section-number">5.5</span> Commented scripts vs markdown documents</a></li>
+  <li><a href="#commented-r-scripts-vs-markdown-documents" id="toc-commented-r-scripts-vs-markdown-documents" class="nav-link" data-scroll-target="#commented-r-scripts-vs-markdown-documents"><span class="header-section-number">5.5</span> Commented R scripts vs markdown documents</a></li>
   <li><a href="#good-practice-with-files-handling-and-objects-naming" id="toc-good-practice-with-files-handling-and-objects-naming" class="nav-link" data-scroll-target="#good-practice-with-files-handling-and-objects-naming"><span class="header-section-number">5.6</span> Good practice with files handling and objects naming</a></li>
   </ul>
 </nav>
@@ -395,8 +396,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">unlink</span>(<span class="st">"Today"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>) <span class="co">#see help: If recursive = FALSE directories are not deleted, not even empty ones. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="commented-scripts-vs-markdown-documents" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="commented-scripts-vs-markdown-documents"><span class="header-section-number">5.5</span> Commented scripts vs markdown documents</h2>
+<section id="commented-r-scripts-vs-markdown-documents" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="commented-r-scripts-vs-markdown-documents"><span class="header-section-number">5.5</span> Commented R scripts vs markdown documents</h2>
 <p>The above is a <strong>commented script, using #</strong>, which you can save as an <strong>.R</strong> file and re-run later.</p>
 <p>The problem with this approach is that you won’t see results of the codes until you run it. So you can’t really comment your output (although many, and I, would still do it) thus mixing explanation of what is done and interpretation.</p>
 <p>A more advanced approach is to make a document where you integrate text, <strong>code chunks</strong> and results of the code.The text can thus document what is going to be done and the results, while the code chunks can thus document both the code itself and its result as it is processed by the Console.</p>

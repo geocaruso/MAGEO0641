@@ -48,8 +48,7 @@ predicted_value7 <- pred[7,"fit"]
 
 We now compute the total **residual standard error** (RSE) of the model (also called the root mean square error):
 
-$$RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}$$
-which measures the typical distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical dashed lines on the above figure).
+$$RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freedom}}}$$ which measures the typical distance at which the observed values fall from the regression line. The residuals are the differences between the observed and predicted values (our vertical dashed lines on the above figure).
 
 The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have n=20 individuals and p=2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).
 
@@ -87,7 +86,7 @@ Mathematically, the standard error of the fit at a given point ( \hat{y} ) is gi
 
 where we see it increases with the global variance (variance of residuals) of the model, i.e. RSE, decreases with the sample size n, and increases with the distance to the mean along the x variable, which is the relative deviation quantity we just computed (compare 7 and 18).
 
-Leaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root  and define the leverage of an observation (and simplify the standard error writing)
+Leaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root and define the leverage of an observation (and simplify the standard error writing)
 
 $$L=\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}\\
 \text{SE}(\hat{y}) = RSE\sqrt{L}$$
@@ -187,7 +186,7 @@ pred_p90
 
 From 1410 to 2283 is indeed a narrower guess but it is also less certain.
 
-We can display the prediction area on the previous plot after taking the values from the predict function (not directly from geom_smooth which logically is  about the data used for estimating the curve).
+We can display the prediction area on the previous plot after taking the values from the predict function (not directly from geom_smooth which logically is about the data used for estimating the curve).
 
 ```{r}
 newobs<-data.frame(Elevation = seq(100,600, by=50))
@@ -200,8 +199,3 @@ By construction, confidence intervals are narrower than prediction intervals. Pr
 An important implication of the presence of that extra $1$ added to $L$ under the square root is that while $L$ decreases when sample size increases, one RSE remains and the decrease in uncertainty for the prediction interval is limited. In other words (again Greene, p99):
 
 > "No matter how much data we have, we can never predict perfectly"
-
-
-
-
-

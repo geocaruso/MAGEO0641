@@ -580,4 +580,8 @@ You also use sequences to display some functions you like to understand better, 
 x<-seq(from=1, to=500, length = 100) #m from school
 y<-1000 - 0.001*x^2 + 0.3*x #house rental value
 plot(x=x,y=y)
+
+
+#although you could use curve() here as well:
+curve(1000 - 0.001*x^2 + 0.3*x, from=1, to=500)
 ```

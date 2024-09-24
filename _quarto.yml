@@ -10,6 +10,8 @@ book:
   favicon: images/cover.png
   site-url: https://quadtrees.lu/teaching/MAGEO0641
   repo-url: https://github.com/geocaruso/MAGEO0641
+  search: true
+  downloads: [pdf]
   chapters:
     - index.qmd
     - 001_timetable.qmd
@@ -38,7 +40,7 @@ book:
       #- correlation.qmd
       #- regression.qmd
       #- CIregression.qmd
-    - part: "Tips, tricks and miscellaneous"
+    - part: "Appendices, Tips, tricks and miscellaneous"
       chapters: 
       - 901_copy_paste.qmd
       - 902_making_data.qmd

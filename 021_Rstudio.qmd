@@ -80,7 +80,7 @@ dir.create("Today")
 unlink("Today", recursive = TRUE) #see help: If recursive = FALSE directories are not deleted, not even empty ones. 
 ```
 
-## Commented \R scripts vs markdown documents
+## Commented R scripts vs markdown documents
 
 The above is a **commented script, using \#**, which you can save as an **.R** file and re-run later.
 

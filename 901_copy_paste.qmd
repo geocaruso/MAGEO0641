@@ -1,6 +1,6 @@
 # Copy-pasting {#sec-copy-pasting}
 
-# clipr way
+## clipr way
 
 A simple way to access to input some small data using the clipboard and that should work across all platforms is to use the `read_clip()` function from the `clipr` package.
 
@@ -33,7 +33,7 @@ clipr::read_clip()
 #> [10] "0.004243708"
 ```
 
-# read.table way
+## read.table way
 
 You can also use the read/write table approach after saying the clipboard in the source or output. The inconvenience is that the MacOSX and MS Window approach have a slightly different code:
 

@@ -11,7 +11,6 @@ book:
   site-url: https://quadtrees.lu/teaching/MAGEO0641
   repo-url: https://github.com/geocaruso/MAGEO0641
   search: true
-  downloads: [pdf]
   chapters:
     - index.qmd
     - 001_timetable.qmd
@@ -28,14 +27,16 @@ book:
       - 022_vectors.qmd
       - 023_df_lst.qmd
       - 024_df_functions.qmd
-    - part: "Graphics"
+      - 025_read_write.qmd
+    - part: "Part III - Univariate analysis and distributions"
+      chapters:
+      - 031_sample_population.qmd
+      - 032_univariate.qmd
+      - 033_distributions.qmd
+    - part: "Part IV - Graphics with ggplot"
       #chapters:
       #- ggplot.qmd
-    - part: "Univariate analysis and distributions"
-      #chapters:
-      #- univariate.qmd
-      #- distributions.qmd
-    - part: "Bivariate analysis and regression"
+    - part: "Part V - Bivariate and regression analysis"
       #chapters:
       #- correlation.qmd
       #- regression.qmd

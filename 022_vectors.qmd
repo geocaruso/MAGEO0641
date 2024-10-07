@@ -298,6 +298,36 @@ Y/X
 X*c(0,1)
 ```
 
+You can also apply a series of common mathematical functions to any numeric vector.
+
+```{r}
+a<-c(-2,-1,0,1,2,6,10)
+abs(a) #absolute
+
+a^(-1) #inverse
+
+log(a) #ln or Natural logarithm (or Napierian logarithm)
+log10(a) # base 10 logarithm
+
+exp(a) #base e exponential
+10^a #base 10 exponential
+
+sqrt(a) #square root
+```
+
+See @crawley2012 p.11 for more examples:
+
+![Crawley Table 2.1](images/mathFunctionsR.png)
+
+Be careful that these functions must lead to proper results. As you can see from the warnings. "NaN" stands for "Not a Number" and is considered as NA ("not available"). Which is not the case of infinity, which is a numeric
+
+```{r}
+a<-c(-2,-1,0,1,2,6,10)
+is.na(NaN)
+is.na(-Inf)
+is.finite(log10(a))
+```
+
 ### Euclidean division and rounding
 
 The modulo operation for integers is obtained with `%/%` to get the integral part of the Euclidean division and `%%` to get the remainder. This the way you will know an integer is odd or even. The function can also be applied to numeric vectors with decimals.
@@ -420,9 +450,21 @@ A number of functions are evaluated over an entire vector (vectorisation is ther
 
 Let's explore some of those for x being a numeric, a logical and character. *In class exploration.*
 
-To those, we should add all univariate statistics such as mean(), median(), var(), quantile(), but we leave them aside for now.
+It is sometimes difficult to remember differences between
+`sort(x)`,`order(x)` and `rank(x)`
 
-Specific to logical vectors, the any() and all() functions are particularly useful in the case you check a very long vector with only very few having a TRUE or FALSE.
+```{r}
+M<-month.name[1:6]
+M
+
+cbind(Months=M,Sorted=sort(M),Rank=rank(M),Order=order(M))
+
+```
+
+
+To those operations, we should add all univariate statistics such as `mean()`, `median()`, `var()`, `quantile()`, but we leave them aside for now as they are introduced later with univariate statistics and distributions.
+
+Specific to logical vectors, the `any()` and `all()` functions are particularly useful in the case you check a very long vector with only very few having a TRUE or a FALSE.
 
 See basic examples:
 
@@ -458,9 +500,9 @@ summary(c("A","B","C",NA,NA,"F"))
 
 ### Element-wise functions
 
-Other functions apply to two or more vectors. They need an x and a y vector as input, e.g. `cor(x,y)`. Most of those you will encounter use two vectors of the same length and type, i.e. no recycling, which leads us to the notion of a data.frame (see next chapter).
+Other functions apply to two or more vectors. They need an x and a y vector as input, e.g. `cor(x,y)`. Most of those you will encounter use two vectors of the same length and type, i.e. no recycling, which leads us to the notion of a data frame (see next chapter).
 
-At this time, we show only two simple "parallel" or "element-wise" computations: `pmin()` and `pmax()`, which can be useful for example when there is a repeated measure for a given set of individuals. Cases are not rare when you make a new vector (or column in a data.frame) based on such element-wise calculations. (Yet you would probably assemble the data into a data.frame first and then make a row-wise calculation).
+At this time, we show only two simple "parallel" or "element-wise" computations: `pmin()` and `pmax()`, which can be useful for example when there is a repeated measure for a given set of individuals. Cases are not rare when you make a new vector (or column in a data frame) based on such element-wise calculations. (Yet you would probably assemble the data into a data frame first and then make a row-wise calculation).
 
 ```{r}
 t1<-c(25,35,45,55)

@@ -1,0 +1,87 @@
+# Reading and writing data to and from R {#sec-reading-and-writing-data-to-and-from-r}
+
+## Reading delimited files
+
+Text files and delimited files can easily be imported in R using the function `read.table()`. You can play with the values of the different arguments to adapt to the format of your file. You have the possibility to load a file
+
+-   stored locally: writing the path to reach it
+-   chosen interactively and stored locally
+-   from the web using its url.
+
+```{r, eval=F, include=T}
+?read.table
+
+heartSA <- read.table("data/SAheart/SAheart.txt", header=T, sep=',', row.names=1)
+heartSA <- read.table(file.choose(), header=T, sep=',', row.names=1)
+heartSA <- read.table("https://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.data", 
+                      sep=",", head=T, row.names=1)
+```
+
+There exist also some preset functions to read tables with some specific formats. Here again you can play we the values of the different arguments to load your database in an accurate way.
+
+```{r, eval=F, include=T}
+read.csv(file, header = TRUE, sep = ",", quote = "\"",
+         dec = ".", fill = TRUE, comment.char = "", ...)
+
+read.csv2(file, header = TRUE, sep = ";", quote = "\"",
+          dec = ",", fill = TRUE, comment.char = "", ...)
+
+read.delim(file, header = TRUE, sep = "\t", quote = "\"",
+           dec = ".", fill = TRUE, comment.char = "", ...)
+
+read.delim2(file, header = TRUE, sep = "\t", quote = "\"",
+            dec = ",", fill = TRUE, comment.char = "", ...)
+```
+
+## Files form specific software
+
+Some databases are exported from other software and have atypical formats.
+
+-   You first need to install (once per machine) and load the R package `foreign`.
+
+```{r, eval=F, include=T}
+# install.packages('foreign')
+library(foreign)
+```
+
+-   Then you can load the following different formats
+
+```{r, eval=F, include=T}
+# Read the SPSS data
+read.spss("example.sav")
+
+# Read Stata data into R
+read.dta("c:/mydata.dta") 
+
+library(xlsx)
+
+# first row contains variable names
+read.xlsx("c:/myexcel.xlsx", 1)
+
+# read in the worksheet named mysheet
+read.xlsx("c:/myexcel.xlsx", sheetName = "mysheet") 
+
+# The package `readxl` can also be helpful.
+
+library(sas7bdat)
+
+# Read in the SAS data
+mySASData <- read.sas7bdat("example.sas7bdat")
+```
+
+## Writing a dataframe to a file
+
+You can also export a dataset
+
+```{r, eval=F, include=T}
+write.table(heartSA, file = "data/SAheart/NewSAheart.txt")
+write.csv(heartSA, file = "data/SAheart/NewSAheart.csv")
+write.csv2(heartSA, file = "data/SAheart/NewSAheart.csv")
+```
+
+However, in case it is for further use within R, we recommend you use the RDS format, which works with any type of R object and is often very effective in terms of file size.
+
+```{r, eval=F, include=T}
+saveRDS(heartSA,"data/SAheart/NewSAheart.rds")
+NewSAheart<-readRDS("data/SAheart/NewSAheart.rds")
+```

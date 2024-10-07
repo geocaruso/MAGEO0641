@@ -215,3 +215,7 @@ or the bottom:
 tail(mydf)
 tail(mydf, 7)
 ```
+
+or some random records:
+
+some(mydf)

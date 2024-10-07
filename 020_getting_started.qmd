@@ -1,4 +1,4 @@
-# Getting Started with R {#sec-introduction}
+# Part II - Getting Started with R {#sec-getting-started-with-r}
 
 @sec-getting-started-with-rstudio
 
@@ -8,10 +8,12 @@
 
 @sec-working-with-data-frames-and-functions
 
+@sec-reading-and-writing-data-to-and-from-r
+
 For better introductory material, we recommend
 
-@venablesbill
+-   @venablesbill
 
-@long
+-   @long
 
-@wickham (including RStudio introduction) (Note it uses a tidyverse approach while we rather stick to base R where possible, except for graphics (ggplot))
+-   @wickham (including RStudio introduction) (Note it uses a tidyverse approach while we rather stick to base R where possible, except for graphics (ggplot))

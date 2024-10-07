@@ -1,0 +1,45 @@
+# Sample and Population
+
+When doing an analysis, one may want: to explore a data set, to understand some relationships or to predict some events. Each item of this data set is called an element or a record. The set of elements in a data set can be a sample or a population, after a complete census. A sample is a subset of the entire population studied. A census corresponds to a data set made of the entire population under study. In large majority of cases, sampling is needed because having the data for the entire population is too time consuming, too costly or simply meaningless or impossible.
+
+![Sampling an Population](images/sampling1-01.png)
+
+## Definitions
+
+**Survey**
+
+> Any activity that collects information in an organised and methodical manner about characteristics of interest from some or all units of a population using well-defined concepts, methods and procedures and compiles such information into a useful summary form.
+
+**Element, record, individual**
+
+> An object on which a measurement is taken.
+
+**Population**
+
+> A collection of elements.
+
+**Target population**
+
+> The population for which information is required.
+
+**Sampling units**
+
+> Non-overlapping collection of elements from the population that covers the entire population.
+
+**Frame**
+
+> The device which delimits, identifies, and allows access to the elements of the target population. The frame is also called the survey frame or the sampling frame.
+
+**Sample**
+
+> A collection of sampling units drawn from a frame.
+
+## Usual denotations
+
+**Population observations** are usually denoted with capital letters: $$X = \{X_1, X_2,..., X_N\}$$
+
+**Their parameters** are denoted with Greek letters, capital letters or a mix: $$\mu, \mu_X, \sigma, \sigma_X, \sigma_{X,Y}, E(X), Var(X), Cov(X,Y), \rho_{X,Y}$$
+
+**Sample observations** are expressed with small letters: $$x = (x_1, x_2,..., x_n)$$
+
+**Their estimators** associated are also expressed using small letters, i.e. $$\bar{x}, s, s_x, s_{x,y}, var(x), cov(x,y), r_{x,y}$$ ...

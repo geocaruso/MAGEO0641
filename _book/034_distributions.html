@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Statistical distributions – Introduction to data analysis and R for geographers</title>
+<title>13&nbsp; Statistical distributions – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./901_copy_paste.html" rel="next">
-<link href="./032_univariate.html" rel="prev">
+<link href="./033_discretisation.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./033_distributions.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistical distributions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./034_distributions.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -261,8 +261,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033_distributions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
+  <a href="./033_discretisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./034_distributions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,13 +293,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
   </div>
 </li>
       </ul>
@@ -325,23 +331,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#continuous-distributions" id="toc-continuous-distributions" class="nav-link active" data-scroll-target="#continuous-distributions"><span class="header-section-number">12.1</span> Continuous distributions:</a>
+  <li><a href="#continuous-distributions" id="toc-continuous-distributions" class="nav-link active" data-scroll-target="#continuous-distributions"><span class="header-section-number">13.1</span> Continuous distributions:</a>
   <ul class="collapse">
-  <li><a href="#uniform-distribution" id="toc-uniform-distribution" class="nav-link" data-scroll-target="#uniform-distribution"><span class="header-section-number">12.1.1</span> Uniform distribution</a></li>
-  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="header-section-number">12.1.2</span> Normal distribution</a></li>
-  <li><a href="#t-student-distribution" id="toc-t-student-distribution" class="nav-link" data-scroll-target="#t-student-distribution"><span class="header-section-number">12.1.3</span> t-Student distribution</a></li>
+  <li><a href="#uniform-distribution" id="toc-uniform-distribution" class="nav-link" data-scroll-target="#uniform-distribution"><span class="header-section-number">13.1.1</span> Uniform distribution</a></li>
+  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="header-section-number">13.1.2</span> Normal distribution</a></li>
+  <li><a href="#t-student-distribution" id="toc-t-student-distribution" class="nav-link" data-scroll-target="#t-student-distribution"><span class="header-section-number">13.1.3</span> t-Student distribution</a></li>
   </ul></li>
-  <li><a href="#discrete-distributions" id="toc-discrete-distributions" class="nav-link" data-scroll-target="#discrete-distributions"><span class="header-section-number">12.2</span> Discrete distributions</a>
+  <li><a href="#discrete-distributions" id="toc-discrete-distributions" class="nav-link" data-scroll-target="#discrete-distributions"><span class="header-section-number">13.2</span> Discrete distributions</a>
   <ul class="collapse">
-  <li><a href="#discrete-uniform-distribution" id="toc-discrete-uniform-distribution" class="nav-link" data-scroll-target="#discrete-uniform-distribution"><span class="header-section-number">12.2.1</span> Discrete uniform distribution</a></li>
-  <li><a href="#discrete-binomial-distribution" id="toc-discrete-binomial-distribution" class="nav-link" data-scroll-target="#discrete-binomial-distribution"><span class="header-section-number">12.2.2</span> Discrete binomial distribution</a></li>
-  <li><a href="#discrete-poisson-distribution" id="toc-discrete-poisson-distribution" class="nav-link" data-scroll-target="#discrete-poisson-distribution"><span class="header-section-number">12.2.3</span> Discrete Poisson distribution</a></li>
+  <li><a href="#discrete-uniform-distribution" id="toc-discrete-uniform-distribution" class="nav-link" data-scroll-target="#discrete-uniform-distribution"><span class="header-section-number">13.2.1</span> Discrete uniform distribution</a></li>
+  <li><a href="#discrete-binomial-distribution" id="toc-discrete-binomial-distribution" class="nav-link" data-scroll-target="#discrete-binomial-distribution"><span class="header-section-number">13.2.2</span> Discrete binomial distribution</a></li>
+  <li><a href="#discrete-poisson-distribution" id="toc-discrete-poisson-distribution" class="nav-link" data-scroll-target="#discrete-poisson-distribution"><span class="header-section-number">13.2.3</span> Discrete Poisson distribution</a></li>
   </ul></li>
-  <li><a href="#shape-of-distributions" id="toc-shape-of-distributions" class="nav-link" data-scroll-target="#shape-of-distributions"><span class="header-section-number">12.3</span> Shape of distributions:</a>
+  <li><a href="#shape-of-distributions" id="toc-shape-of-distributions" class="nav-link" data-scroll-target="#shape-of-distributions"><span class="header-section-number">13.3</span> Shape of distributions:</a>
   <ul class="collapse">
-  <li><a href="#skewness" id="toc-skewness" class="nav-link" data-scroll-target="#skewness"><span class="header-section-number">12.3.1</span> Skewness</a></li>
-  <li><a href="#kurtosis" id="toc-kurtosis" class="nav-link" data-scroll-target="#kurtosis"><span class="header-section-number">12.3.2</span> Kurtosis</a></li>
-  <li><a href="#qq-plots" id="toc-qq-plots" class="nav-link" data-scroll-target="#qq-plots"><span class="header-section-number">12.3.3</span> QQ plots</a></li>
+  <li><a href="#skewness" id="toc-skewness" class="nav-link" data-scroll-target="#skewness"><span class="header-section-number">13.3.1</span> Skewness</a></li>
+  <li><a href="#kurtosis" id="toc-kurtosis" class="nav-link" data-scroll-target="#kurtosis"><span class="header-section-number">13.3.2</span> Kurtosis</a></li>
+  <li><a href="#qq-plots" id="toc-qq-plots" class="nav-link" data-scroll-target="#qq-plots"><span class="header-section-number">13.3.3</span> QQ plots</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -349,9 +355,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./033_distributions.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistical distributions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./034_distributions.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistical distributions</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></h1>
 </div>
 
 
@@ -368,10 +374,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="continuous-distributions" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="continuous-distributions"><span class="header-section-number">12.1</span> Continuous distributions:</h2>
-<section id="uniform-distribution" class="level3" data-number="12.1.1">
-<h3 data-number="12.1.1" class="anchored" data-anchor-id="uniform-distribution"><span class="header-section-number">12.1.1</span> Uniform distribution</h3>
+<section id="continuous-distributions" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="continuous-distributions"><span class="header-section-number">13.1</span> Continuous distributions:</h2>
+<section id="uniform-distribution" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="uniform-distribution"><span class="header-section-number">13.1.1</span> Uniform distribution</h3>
 <p>The uniform distribution is one of the simplest distribution of a continuous (ratio or interval) variable. Although it is rare in practice that each value along a continuum has the same chance of occurring than all others, it is a base distribution to know of. Each value has the same probability of occurrence, which is a simple case also to show how we can compute density functions, probabilities and cumulative distributions.</p>
 <p>To generate a uniform a function, we feed the <code>runif()</code> function with a number of observations. All generative distribution are of the form <code>r...()</code>. Like for the other generating functions, the mean is 0 and the standard deviation is 1 by default, which provides us with some control on the range:</p>
 <div class="cell">
@@ -381,7 +387,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="033_distributions_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="034_distributions_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -406,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="033_distributions_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="034_distributions_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -421,7 +427,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="033_distributions_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="034_distributions_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -439,38 +445,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1 1 1 1 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="normal-distribution" class="level3" data-number="12.1.2">
-<h3 data-number="12.1.2" class="anchored" data-anchor-id="normal-distribution"><span class="header-section-number">12.1.2</span> Normal distribution</h3>
+<section id="normal-distribution" class="level3" data-number="13.1.2">
+<h3 data-number="13.1.2" class="anchored" data-anchor-id="normal-distribution"><span class="header-section-number">13.1.2</span> Normal distribution</h3>
 <p>Central limit theorem</p>
 <p>normal (explain +-1 sd +-2 sd)</p>
 </section>
-<section id="t-student-distribution" class="level3" data-number="12.1.3">
-<h3 data-number="12.1.3" class="anchored" data-anchor-id="t-student-distribution"><span class="header-section-number">12.1.3</span> t-Student distribution</h3>
+<section id="t-student-distribution" class="level3" data-number="13.1.3">
+<h3 data-number="13.1.3" class="anchored" data-anchor-id="t-student-distribution"><span class="header-section-number">13.1.3</span> t-Student distribution</h3>
 </section>
 </section>
-<section id="discrete-distributions" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="discrete-distributions"><span class="header-section-number">12.2</span> Discrete distributions</h2>
-<section id="discrete-uniform-distribution" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="discrete-uniform-distribution"><span class="header-section-number">12.2.1</span> Discrete uniform distribution</h3>
+<section id="discrete-distributions" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="discrete-distributions"><span class="header-section-number">13.2</span> Discrete distributions</h2>
+<section id="discrete-uniform-distribution" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="discrete-uniform-distribution"><span class="header-section-number">13.2.1</span> Discrete uniform distribution</h3>
 </section>
-<section id="discrete-binomial-distribution" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="discrete-binomial-distribution"><span class="header-section-number">12.2.2</span> Discrete binomial distribution</h3>
+<section id="discrete-binomial-distribution" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="discrete-binomial-distribution"><span class="header-section-number">13.2.2</span> Discrete binomial distribution</h3>
 <p>Throwing a coin holds two possible values: Bernoulli Bernoulli to Binomial https://math.stackexchange.com/questions/838107/what-is-the-difference-and-relationship-between-the-binomial-and-bernoulli-distr</p>
 </section>
-<section id="discrete-poisson-distribution" class="level3" data-number="12.2.3">
-<h3 data-number="12.2.3" class="anchored" data-anchor-id="discrete-poisson-distribution"><span class="header-section-number">12.2.3</span> Discrete Poisson distribution</h3>
+<section id="discrete-poisson-distribution" class="level3" data-number="13.2.3">
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="discrete-poisson-distribution"><span class="header-section-number">13.2.3</span> Discrete Poisson distribution</h3>
 </section>
 </section>
-<section id="shape-of-distributions" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="shape-of-distributions"><span class="header-section-number">12.3</span> Shape of distributions:</h2>
-<section id="skewness" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="skewness"><span class="header-section-number">12.3.1</span> Skewness</h3>
+<section id="shape-of-distributions" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="shape-of-distributions"><span class="header-section-number">13.3</span> Shape of distributions:</h2>
+<section id="skewness" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="skewness"><span class="header-section-number">13.3.1</span> Skewness</h3>
 </section>
-<section id="kurtosis" class="level3" data-number="12.3.2">
-<h3 data-number="12.3.2" class="anchored" data-anchor-id="kurtosis"><span class="header-section-number">12.3.2</span> Kurtosis</h3>
+<section id="kurtosis" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="kurtosis"><span class="header-section-number">13.3.2</span> Kurtosis</h3>
 </section>
-<section id="qq-plots" class="level3" data-number="12.3.3">
-<h3 data-number="12.3.3" class="anchored" data-anchor-id="qq-plots"><span class="header-section-number">12.3.3</span> QQ plots</h3>
+<section id="qq-plots" class="level3" data-number="13.3.3">
+<h3 data-number="13.3.3" class="anchored" data-anchor-id="qq-plots"><span class="header-section-number">13.3.3</span> QQ plots</h3>
 <p>Comparing to a theoretical distribution</p>
 <!-- # Define the range of lambda values (from 0.2 to 2 in steps of 0.2) -->
 <!-- lambda_values <- seq(0.2, 2, by = 0.2) -->
@@ -920,13 +926,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./032_univariate.html" class="pagination-link" aria-label="Univariate statistics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span>
+      <a href="./033_discretisation.html" class="pagination-link" aria-label="Discretisation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./901_copy_paste.html" class="pagination-link" aria-label="Copy-pasting">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

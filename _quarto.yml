@@ -32,7 +32,8 @@ book:
       chapters:
       - 031_sample_population.qmd
       - 032_univariate.qmd
-      - 033_distributions.qmd
+      - 033_discretisation.qmd
+      - 034_distributions.qmd
     - part: "Part IV - Graphics with ggplot"
       #chapters:
       #- ggplot.qmd

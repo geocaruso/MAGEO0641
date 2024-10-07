@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Copy-pasting – Introduction to data analysis and R for geographers</title>
+<title>14&nbsp; Copy-pasting – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./902_making_data.html" rel="next">
-<link href="./033_distributions.html" rel="prev">
+<link href="./034_distributions.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./901_copy_paste.html">Appendices, Tips, tricks and miscellaneous</a></li><li class="breadcrumb-item"><a href="./901_copy_paste.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Copy-pasting</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./901_copy_paste.html">Appendices, Tips, tricks and miscellaneous</a></li><li class="breadcrumb-item"><a href="./901_copy_paste.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -261,8 +261,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033_distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
+  <a href="./033_discretisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./034_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
   </div>
 </li>
       </ul>
@@ -287,13 +293,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
   </div>
 </li>
       </ul>
@@ -325,17 +331,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#clipr-way" id="toc-clipr-way" class="nav-link active" data-scroll-target="#clipr-way"><span class="header-section-number">13.1</span> clipr way</a></li>
-  <li><a href="#read.table-way" id="toc-read.table-way" class="nav-link" data-scroll-target="#read.table-way"><span class="header-section-number">13.2</span> read.table way</a></li>
+  <li><a href="#clipr-way" id="toc-clipr-way" class="nav-link active" data-scroll-target="#clipr-way"><span class="header-section-number">14.1</span> clipr way</a></li>
+  <li><a href="#read.table-way" id="toc-read.table-way" class="nav-link" data-scroll-target="#read.table-way"><span class="header-section-number">14.2</span> read.table way</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./901_copy_paste.html">Appendices, Tips, tricks and miscellaneous</a></li><li class="breadcrumb-item"><a href="./901_copy_paste.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Copy-pasting</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./901_copy_paste.html">Appendices, Tips, tricks and miscellaneous</a></li><li class="breadcrumb-item"><a href="./901_copy_paste.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-copy-pasting" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></h1>
+<h1 class="title"><span id="sec-copy-pasting" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></h1>
 </div>
 
 
@@ -352,8 +358,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="clipr-way" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="clipr-way"><span class="header-section-number">13.1</span> clipr way</h2>
+<section id="clipr-way" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="clipr-way"><span class="header-section-number">14.1</span> clipr way</h2>
 <p>A simple way to access to input some small data using the clipboard and that should work across all platforms is to use the <code>read_clip()</code> function from the <code>clipr</code> package.</p>
 <p>Suppose you have a series of numbers copied from a series like this one: 11 12 13 14 15 16 or this one: 11, 12, 13, 14, 15, 16</p>
 <p>get to the console and type <code>clipr::read_clip()</code></p>
@@ -377,8 +383,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [10] "0.004243708"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="read.table-way" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="read.table-way"><span class="header-section-number">13.2</span> read.table way</h2>
+<section id="read.table-way" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="read.table-way"><span class="header-section-number">14.2</span> read.table way</h2>
 <p>You can also use the read/write table approach after saying the clipboard in the source or output. The inconvenience is that the MacOSX and MS Window approach have a slightly different code:</p>
 <p>Copy from spreadsheet, then paste in R using</p>
 <div class="cell">
@@ -819,13 +825,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./033_distributions.html" class="pagination-link" aria-label="Statistical distributions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span>
+      <a href="./034_distributions.html" class="pagination-link" aria-label="Statistical distributions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./902_making_data.html" class="pagination-link" aria-label="Making data">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Making data</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Making data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

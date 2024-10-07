@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Statistical data analysis for geographers – Introduction to data analysis and R for geographers</title>
+<title>12&nbsp; Discretisation – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./012_spatial_analysis.html" rel="next">
-<link href="./010_intro.html" rel="prev">
+<link href="./034_distributions.html" rel="next">
+<link href="./032_univariate.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010_intro.html">Part I - Introduction</a></li><li class="breadcrumb-item"><a href="./011_scope.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./033_discretisation.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./011_scope.html" class="sidebar-item-text sidebar-link active">
+  <a href="./011_scope.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></span></a>
   </div>
 </li>
@@ -227,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./033_discretisation.html" class="sidebar-item-text sidebar-link">
+  <a href="./033_discretisation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></a>
   </div>
 </li>
@@ -292,22 +326,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#sec-scope" id="toc-sec-scope" class="nav-link active" data-scroll-target="#sec-scope"><span class="header-section-number">1.1</span> Scope</a></li>
-  <li><a href="#sec-transparent-geographical-analysis-empowered-with-r" id="toc-sec-transparent-geographical-analysis-empowered-with-r" class="nav-link" data-scroll-target="#sec-transparent-geographical-analysis-empowered-with-r"><span class="header-section-number">1.2</span> Transparent geographical analysis empowered with R</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010_intro.html">Part I - Introduction</a></li><li class="breadcrumb-item"><a href="./011_scope.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./033_discretisation.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-statistical-data-analysis-for-geographers" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Statistical data analysis for geographers</span></span></h1>
+<h1 class="title"><span id="sec-discretisation" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></h1>
 </div>
 
 
@@ -324,25 +351,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-scope" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="sec-scope"><span class="header-section-number">1.1</span> Scope</h2>
-<p>This course is an introduction to <strong>standard statistical techniques</strong> that geographers often encounter. Being at the crossroads of different fields, it is necessary for geographers to have a <strong>basic set of tools with which to interact with other experts and modelers</strong> who, although they may use different wording and have their own technical habits, use a common set of concepts and tools to analyze data and test their hypotheses.</p>
-<p>In their own work and in their interactions with others, it is also important for geographers to keep in mind that the data they use are quite <strong>specific because they are about located objects or subjects, about places and their interactions.</strong> Most of the time, the data they use is <strong>georeferenced</strong> in some way (accurately or not). This inherently geographic aspect brings with it a number of challenges. In this course, we will highlight these challenges when performing standard data analysis. However, we won’t solve any of these geographic problems, and we won’t even explicitly use geographic features, i.e., no mapping, no use of georeferencing as such. <strong>Our goal is to equip students with standard statistical methods also used in related fields, with some critical thinking about their geographical nature</strong> or underlying spatial processes. In a nutshell, this is <strong>a journey from elementary statistics to spatial autocorrelation with a standard regression detour</strong>.</p>
-</section>
-<section id="sec-transparent-geographical-analysis-empowered-with-r" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="sec-transparent-geographical-analysis-empowered-with-r"><span class="header-section-number">1.2</span> Transparent geographical analysis empowered with R</h2>
-<p>The course is a <strong>blend of theory and practice</strong>, which we believe enhances intuition and understanding. Direct practice also helps, especially for human geographers with little training in quantitative methods, to <strong>demystify statistical concepts and provide confidence</strong> after repeated applications and interpretations.</p>
-<p>Software for statistical analysis has evolved rapidly and R is prominent in many disciplines. It is open and free. It is simply fantastic for spatial data analysis and may well be the only tool geographers really need in their data undertaking, even replacing GIS (Geographic Information Systems) software. You just need to get started with R.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/empowering.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<p>Geographers, maybe more than others because they like to produce maps, are often tempted to cut a numerical vector into a set classes.</p>
+<p>A typical use is the cartography of a continuous variable in a set of 5, 6 or 7 groups, knowing the human eye has difficulties to disentangle more colours. GIS and mapping software all have a menu where “discretisation” is made using a number of manually defined limits of preset algorithms, such as “Natural breaks”, “quantiles”, etc.</p>
+<p>In R, the function <code>cut()</code>` is the base function to divide a range of numeric values x into intervals by a number of break values. It outputs a new factor where each value x is given a level according to which interval they fall. The breaks are either</p>
+<ul>
+<li><p>a scalar greater or equal to 2 for the range to be into equal length pieces.</p></li>
+<li><p>a set of breaks to be used as the upper and lower limits of each discrete category</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd=</span><span class="dv">5</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>xf4<span class="ot">&lt;-</span><span class="fu">cut</span>(x, <span class="at">breaks=</span><span class="dv">4</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(xf4)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] (94.6,97.7] (91.5,94.6] (101,104]   (94.6,97.7] (94.6,97.7] (94.6,97.7]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Levels: (91.5,94.6] (94.6,97.7] (97.7,101] (101,104]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(xf4)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; xf4</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (91.5,94.6] (94.6,97.7]  (97.7,101]   (101,104] </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;           3           5           5           7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Most of our students have had some sort of theoretical statistics course so far in their studies, and have probably seen most of the content. Sometimes our students have had some practice with SPSS (or similar) software, but most have not used any real statistical software at all, and have a spreadsheet (e.g., Excel) as their only reference for data management, analysis, and graphing.</p>
-<p>We chose <strong>R for its openness, leadership, large community, and later for its spatial features, but also because it forces students to be transparent and think about every step they take</strong>. Data analysis and visualization can be misleading and dangerous, it is necessary to think and facilitate replication for oneself and for others. R, and more generally the <strong>use of scripts and command lines, is absolutely necessary to bring robustness and trust</strong>.</p>
+<p>Notice how the label clearly indicates the (default) closing on the right of each interval</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">mean =</span> <span class="dv">100</span>, <span class="at">sd=</span><span class="dv">5</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>xf6<span class="ot">&lt;-</span><span class="fu">cut</span>(x, <span class="at">breaks=</span><span class="fu">c</span>(<span class="fu">min</span>(x),<span class="sc">-</span><span class="dv">90</span>,<span class="dv">95</span>,<span class="dv">100</span>,<span class="dv">105</span>,<span class="dv">110</span>, <span class="fu">max</span>(x)))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(xf6)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] (-90,92.9] (95,100]   (95,100]   (100,105]  (95,100]   (95,100]  </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Levels: (-90,92.9] (92.9,95] (95,100] (100,105] (105,110] (110,114]</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(xf6)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; xf6</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; (-90,92.9]  (92.9,95]   (95,100]  (100,105]  (105,110]  (110,114] </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;          1          2          8          7          1          1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Since we can choose any breaks, it is pretty easy to adapt and use any discretisation method one would find elsewhere, e.g.&nbsp;in mapping packages.</p>
+<p>There is a wonderful package, <code>classint</code>, that does so and where you can simply choose the discretisation methodology.</p>
+<p>Let’s explore!<br>
+<a href="https://cran.r-project.org/web/packages/classInt/classInt.pdf" class="uri">https://cran.r-project.org/web/packages/classInt/classInt.pdf</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -767,13 +811,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./010_intro.html" class="pagination-link" aria-label="Part I - Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Part I - Introduction</span>
+      <a href="./032_univariate.html" class="pagination-link" aria-label="Univariate statistics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Univariate statistics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./012_spatial_analysis.html" class="pagination-link" aria-label="Spatial data analysis: a definition">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Spatial data analysis: a definition</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./034_distributions.html" class="pagination-link" aria-label="Statistical distributions">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

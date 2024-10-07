@@ -216,6 +216,14 @@ tail(mydf)
 tail(mydf, 7)
 ```
 
-or some random records:
+or some random records if you load the `car` package (Package related to book "Companion to Applied Regression" by @foxj2024 )
 
-some(mydf)
+```{r}
+car::some(mydf)
+```
+
+or a brief:
+
+```{r}
+car::brief(mydf)
+```

@@ -4,13 +4,14 @@ Geographers, maybe more than others because they like to produce maps, are often
 
 A typical use is the cartography of a continuous variable in a set of 5, 6 or 7 groups, knowing the human eye has difficulties to disentangle more colours. GIS and mapping software all have a menu where "discretisation" is made using a number of manually defined limits of preset algorithms, such as "Natural breaks", "quantiles", etc.
 
-In R, the function `cut()`\` is the base function to divide a range of numeric values x into intervals by a number of break values. It outputs a new factor where each value x is given a level according to which interval they fall. The breaks are either
+In R, the function `cut()`\` is the base function to divide a range of numeric values x into intervals by a number of break values. It outputs a new factor where each value x is given a level according to which interval they fall in. The breaks are either
 
--   a scalar greater or equal to 2 for the range to be into equal length pieces.
+-   a scalar greater or equal to 2 for the range to be cut into equal length pieces.
 
 -   a set of breaks to be used as the upper and lower limits of each discrete category
 
 ```{r}
+set.seed(101)
 x<-rnorm(20, mean = 100, sd=5)
 xf4<-cut(x, breaks=4)
 head(xf4)
@@ -28,7 +29,68 @@ table(xf6)
 
 Since we can choose any breaks, it is pretty easy to adapt and use any discretisation method one would find elsewhere, e.g. in mapping packages.
 
-There is a wonderful package, `classint`, that does so and where you can simply choose the discretisation methodology.
+There is a wonderful package, `classInt`, that does so and where you can simply choose the discretisation methodology.
 
-Let's explore! \
+Let's explore!\
 <https://cran.r-project.org/web/packages/classInt/classInt.pdf>
+
+We refer to the help of the package and specifically the function `classIntervals()`to find out about the available methods
+
+```{r}
+x_quantile_5<-classInt::classIntervals(x, n=5, style="quantile") #Default style
+x_quantile_5
+```
+
+The `classIntervals()` output has its own class and specific plotting method that works with a given colour palette
+
+```{r}
+class(x_quantile_5)
+mycolors<-c("darkgreen","lightgreen","lightyellow", "orange", "orangered")
+plot(x_quantile_5, pal=mycolors)
+```
+
+Given the normality of the distribution, and the use of quantiles, the central class logically needs a smaller range to host the same number of values.
+
+Below another split based on standard deviations:
+
+```{r}
+mean(x)
+sd(x)
+x_sd_5<-classInt::classIntervals(x, n=5, style="sd")
+x_sd_5
+plot(x_sd_5, pal=mycolors)
+```
+
+And with 7 classes using the "Jenks" method, similar to the one we find within Esri ArcGIS:
+```{r}
+x_jenks_7<-classInt::classIntervals(x, n=7, style="jenks")
+x_jenks_7
+plot(x_jenks_7, pal=mycolors)
+```
+Notice that ahead of plotting classInt expanded the number of colours, which we provided. In fact, 2 would be enough:
+```{r}
+plot(x_jenks_7, pal=c("yellow","red"))
+```
+
+
+Interestingly, rather that specifying a number of classes, one could also use the same breaks as a standard boxplot:
+
+```{r}
+x_box<-classInt::classIntervals(x,  style="box")
+x_box
+quantile(x,probs=c(0.25,0.5,0.75))
+c(quantile(x,probs=0.25)-1.5*IQR(x),
+  quantile(x,probs=0.75)+1.5*IQR(x))
+plot(x_box, pal=mycolors)
+```
+
+
+One then retrieves a vector of the categories in which each values fall using `findCols()`, which we can easily add to a dataframe as a new column, or even a vector of colours for use anywhere else using `findColours()`.
+
+This is shown with our Jenks example:
+
+```{r}
+classInt::findCols(x_jenks_7)
+classInt::findColours(x_jenks_7, pal=c("yellow","red"))
+```
+

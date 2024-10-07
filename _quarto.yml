@@ -46,6 +46,7 @@ book:
       chapters: 
       - 901_copy_paste.qmd
       - 902_making_data.qmd
+      - 903_summarizing.qmd
     - part: "Bibliography"
       chapters:
       - 999_references.qmd

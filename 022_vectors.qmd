@@ -450,17 +450,24 @@ A number of functions are evaluated over an entire vector (vectorisation is ther
 
 Let's explore some of those for x being a numeric, a logical and character. *In class exploration.*
 
-It is sometimes difficult to remember differences between
-`sort(x)`,`order(x)` and `rank(x)`
+It is sometimes difficult to remember differences between `sort(x)`,`order(x)` and `rank(x)`
+
+See two examples below 
+```{r}
+set.seed(101)
+x<-round(runif(10,100,200))
+x
+
+cbind(Original=x,Sorted=sort(x),Rank=rank(x),Order=order(x))
+
+```
 
 ```{r}
 M<-month.name[1:6]
 M
 
 cbind(Months=M,Sorted=sort(M),Rank=rank(M),Order=order(M))
-
 ```
-
 
 To those operations, we should add all univariate statistics such as `mean()`, `median()`, `var()`, `quantile()`, but we leave them aside for now as they are introduced later with univariate statistics and distributions.
 

@@ -1,0 +1,13 @@
+﻿DATAFLOW,GEO: Géographie,SPECIFICATION: Spécification,FREQ: Fréquence,TIME_PERIOD: Période,OBS_VALUE,NOTE_GEO_2: Note Géographie 2,NOTE_GEO_1: Note Géographie 1,NOTE_YEAR_2: Note année 2,NOTE_YEAR_1: Note année 1,NOTE_SPECIFICATION_2: Note spécification 2,NOTE_SPECIFICATION_1: Note spécification 1,OBS_STATUS: Statut d'observation,DECIMALS: Décimales
+LU1:DF_X038(1.0),CT09: Canton Capellen,C2: Taux de boisement (en %),A: Annuelle,2010,30.3,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT04: Canton Vianden,C2: Taux de boisement (en %),A: Annuelle,2010,37.6,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT03: Canton Redange/Attert,C2: Taux de boisement (en %),A: Annuelle,2010,31,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT08: Canton Remich,C2: Taux de boisement (en %),A: Annuelle,2010,27.5,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT12: Canton Mersch,C2: Taux de boisement (en %),A: Annuelle,2010,38.8,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT06: Canton Echternach,C2: Taux de boisement (en %),A: Annuelle,2010,34,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT07: Canton Grevenmacher,C2: Taux de boisement (en %),A: Annuelle,2010,28.6,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT11: Canton Luxembourg,C2: Taux de boisement (en %),A: Annuelle,2010,37,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT02: Canton Diekirch,C2: Taux de boisement (en %),A: Annuelle,2010,39.2,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT05: Canton Wiltz,C2: Taux de boisement (en %),A: Annuelle,2010,50.9,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT10: Canton Esch,C2: Taux de boisement (en %),A: Annuelle,2010,29.3,,,,,,,,0: Zéro
+LU1:DF_X038(1.0),CT01: Canton Clervaux,C2: Taux de boisement (en %),A: Annuelle,2010,38.1,,,,,,,,0: Zéro

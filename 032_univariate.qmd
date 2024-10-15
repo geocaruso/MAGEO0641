@@ -165,7 +165,7 @@ First, think about the simplest way you can measure how a given observation is f
 
 The Deviation to the mean for an individual i is $$v_i=x_i-\bar{x}$$
 
-It is then very tempting to say that the general spread of a variable is simply the sum of all those values. In order for the number not to grow with the number of obseravtions, we then compute an average deviation by dividing by $n$
+It is then very tempting to say that the general dispersion of a variable is simply the sum of all those values. In order for the number not to grow with the number of observations, we then compute an average deviation by dividing by $n$
 
 $$\Sigma_i(x_i-\bar{x})/n$$
 
@@ -211,7 +211,7 @@ The variance is thus a single number that gives insight on how the variable is s
 
 The variance cannot be negative.
 
-In R, we use the `var()` function which we here first reconstruct:
+In R, we use the `var()` functio, which we here first reconstruct:
 
 ```{r}
 (Age-mean(Age))^2 #squared deviations to the mean
@@ -224,9 +224,9 @@ var(Age2)
 
 We see that the default in R for `var()` is to divide by $n-1$, i.e. the sample variance.
 
-Finally, we like the "spread" to be expressed in the same units as the original variable, i.e. years in this case. It is already the case for the Mean Absolute Deviation. We need to take the square root of the variance to obtain a "standard deviation":
+Finally, we like the "dispersion" to be expressed in the same units as the original variable, i.e. years in this case. It is already the case for the Mean Absolute Deviation. We need to take the square root of the variance to obtain a "standard deviation":
 
-The standard deviations correponding to the sample and population varianxe are then given by:
+The standard deviations corresponding to the sample and population variance are then given by:
 
 $$s_x = \sqrt{\dfrac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2}$$
 
@@ -274,9 +274,9 @@ points(mean(Age2), col = 2, pch = 18)
 
 ### Stem and leaf
 
-Probably less in use for visual purpose and reporting, a stem and leaf graph is a very effective way to look into the distribution of a variable while you are exploring, analyzing your data.
+Probably less in use nowadayd for visual purpose and reporting, a stem and leaf graph is a very effective way to look into the distribution of a variable while you are exploring, analyzing your data in the console.
 
-It is not actually a plot but a presentation of the values into a "stem", that is made of the values that are present across all case and then a "leaf" where the remaing parts of each numbers is shown and accumulated, thus showing a kind of frequency together with the values:
+It is not actually a plot but a presentation of the values into a "stem", which is made of the values that are present across all cases and then a "leaf" where the remaining parts of each numbers is shown and concatenated, thus showing a kind of frequency together with the values:
 
 Examine the case for Age and Age2:
 
@@ -320,3 +320,109 @@ For a numeric variable, a call to plot, shows values along the vertical axis and
 ```{r}
 plot(x)
 ```
+
+## The shape of distributions: Skewness and Kurtosis
+
+### First and second moments:
+
+We have seen earlier that the very first way to characterise a distribution is to use its mean and that the second way is to use the variance (or the square root of the variance, i.e. the standard deviation).
+
+The mean and the variance are also named, respectively, the first and second moment of a distribution
+
+Indeed, for discrete data, the **mean** (or expectation) is calculated as:
+
+$$\mu = E[X] = \sum_{i} x_i p(x_i)$$ where $x_i$ are the values and $p(x_i)$ are their probabilities.
+
+Note 1: for continuous variables, we should in fact use an integral rather that the sum symbol. Note 2, the "zeroth" moment of the distribution is in fact the sum of probabilities (x_i), i.e. the total mass (the concept is borrowed from physics), i.e. 1.
+
+The **variance** is the second order moment, measuring the spread of the distribution around the mean. We have seen it is defined in difference to the mean with a square exponent:
+
+$$\sigma^2 = E[(X - \mu)^2] = \sum_{i} (x_i - \mu)^2 p(x_i)$$ We can actually go on with higher exponents and use higher level moments to describe the shape of a distribution.
+
+### Third moment: Skewness
+
+The skewness is the third order moment of a distribution. The **skewness measures the asymmetry of the distribution around the mean**. It is is calculated as:
+
+$$\gamma_1 = E\left[\left(\frac{X - \mu}{\sigma}\right)^3\right] = \sum_{i} \left(\frac{x_i - \mu}{\sigma}\right)^3 p(x_i)$$
+
+In addition to the cubic exponent applied to the deviation to the mean, you notice we also divide by the standard deviation $\sigma$ to make the measure dimensionless, i.e. comparable across cases with different units. The skewness is not influenced by the scale of the data.
+
+In practice, the skewness is computed as follows:
+
+$$\dfrac {\sum_{i=1}^{n} (x_i - \bar{x})^3} {n s^3}$$
+
+```{r}
+set.seed(101)
+x<-rnorm(1000, mean=50,sd=5)
+mean(x)
+median(x)
+e1071::skewness(x)
+e1071::skewness((x-100)/1000) #with this you see it is not influenced by any rescaling
+sum((x-mean(x))^3)/(sd(x)^3*length(x)) #manual computation
+```
+
+When the skewness is $>0$, the tail of the distribution is heavier on the right side. This means there are more extreme values on the higher end. The mean is greater than the median.
+
+When the skewness is $<0$, the tail of the distribution is heavier on the left side. This means there are more extreme values on the lower end. The mean is lower than the median.
+
+A value around zero indicates a symmetric distribution.
+
+```{r}
+set.seed(101)
+right_skewed <- x + rexp(1000, rate = 0.1) #we add an exp to the previous x for generating a right skewed distribution
+left_skewed <- rnorm(1000, mean = 50, sd = 5) - rexp(100, rate = 0.1) #left skewed
+
+hist(x, main = "Symmetric", col = "blue", breaks = 20)
+hist(right_skewed, main = "Right-skewed",col = "green", breaks = 20)
+hist(left_skewed, main = "Left-skewed", col = "red", breaks = 20)
+
+e1071::skewness(x)
+e1071::skewness(right_skewed)
+e1071::skewness(left_skewed)
+
+```
+
+### Fourth moment: Kurtosis
+
+The Kurtosis is the fourth order moment of a distribution. The **Kurtosis measures the peakness of the distribution** and is calculated as:
+
+$$\gamma_2 = E\left[\left(\frac{X - \mu}{\sigma}\right)^4\right] - 3 = \sum_{i} \left(\frac{x_i - \mu}{\sigma}\right)^4 p(x_i) - 3$$
+
+You notice the exponent to the level 4 applied to the deviations to the mean and that similarly to the skewness, we also divide by the standard deviation $\sigma$ to make the measure dimensionless, i.e. comparable across cases with different units. The Kurtosis is not influenced by the scale of the data.
+
+In practice in R, the Kurtosis is similar to the skewness described above:
+
+$$\dfrac {\sum_{i=1}^{n} (x_i - \bar{x})^4} {n s^4}$$
+However it is adjusted with some correction for small sample sizes and for comparison to a normal distribution for which the result would be 3. See the help for how it is computed by default
+
+
+```{r}
+set.seed(101)
+x<-rnorm(1000, mean=50,sd=5)
+e1071::kurtosis(x)
+e1071::kurtosis((x-100)/1000) #with this you see it is not dependent on scale 
+```
+
+Using this implementation, a Kurtosis close to 0 then indicates a distribution similar in shape to a normal (bell-shaped) distribution. 
+A **positive kurtosis indicates a more peaked** distribution, also named **leptokurtic**.
+
+A **negative kurtosis** indicates a **less peaked** shape, named **platykurtic**.
+
+as an example, we can add some extreme values to the normal values we created earlier in order to higher peak look or trim the extremes of a normal distribution to have a flatter one:
+
+```{r}
+set.seed(1010)
+x<-rnorm(1000, mean=50,sd=5)
+x_peaker<-c(x, rnorm(300, mean = 50, sd = 20))
+x_flatter<-x[abs(x) < 60]
+
+hist(x, main = "Normal", col = "blue", breaks = 20)
+hist(x_peaker, main = "Higher peak",col = "green", breaks = 20)
+hist(x_flatter, main = "Flatter", col = "red", breaks = 20)
+
+e1071::kurtosis(x)
+e1071::kurtosis(x_peaker)
+e1071::kurtosis(x_flatter)
+```
+
+

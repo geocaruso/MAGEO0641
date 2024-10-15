@@ -1,0 +1,87 @@
+# Central Limit Theorem and standardisation {#sec-central-limit-theorem-and-standardisation}
+
+## Central Limit Theorem
+
+The reason for the success of the normal distribution is not only due to its key features (symmetry and the linkage between quantiles and standard deviations) but is also explained by the **Central Limit Theorem**:
+
+> ***If you take repeated samples from a population with finite variance and calculate their averages, then the averages will be normally distributed*** (@crawley2012, p213)
+
+Let's draw 5 times a 100 numbers from a uniform distribution within the interval 0 to 10. For each of the five cases, the average should be close to 5.
+
+```{r}
+mean(runif(100)*10)
+mean(runif(100)*10)
+mean(runif(100)*10)
+mean(runif(100)*10)
+mean(runif(100)*10)
+```
+
+We can write this in a loop and produce a histogram of the means:
+
+```{r}
+n<-5
+means<-numeric(n)
+for (i in 1:n){
+  means[i]<-mean(runif(100)*10)
+}
+means
+hist(means)
+```
+
+It is not quite impressive at this stage, but if we repeat, say 10000 times the experiment rather than 5, the histogram tends towards the shape of a normal distribution!
+
+```{r}
+n<-10000
+means<-numeric(n)
+for (i in 1:n){
+  means[i]<-mean(runif(100)*10)
+}
+head(means)
+hist(means, breaks=100)
+```
+
+And the median, mean and standard deviation of the "means" are
+
+```{r}
+median(means)
+mean(means)
+sd(means)
+```
+
+## Standardization
+
+In order to visually appreciate how well the obtained distribution compares to a corresponding normal distribution, we can generate a normal distribution with the same parameters (mean and variance). Alternatively, we can also **standardize** the outcome in order to fit a "Unit" normal distribution, i.e. one where the mean is 0 and the standard deviation is 1.
+
+This process is called **Standardization**. It involves **centering** an empirical variable, i.e. computing deviations to the mean, so that the mean is set to 0, and **reducing** by dividing the centered by the standard deviation. Hence making the new standard deviation equal to 1. One often name a standradized variable Z. The built in function for standardization is `scale()`. It centers and reduces by default, but you can toggle one or the other on or off.
+
+Important: Since standardization involves a division by a number (standard deviation) with the same units as the original variable, **a standardized variable has no unit !** This is a property you may like for comparing with other variables that have different original units.
+
+```{r}
+Centered<-means-mean(means) #centering
+Z<-Centered/sd(means) #reducing /scaling
+#or simply 
+Z<-scale(means, center = TRUE, scale = TRUE)
+
+#Compare
+cbind(mean(means), mean(Z))
+cbind(sd(means), sd(Z))
+```
+
+### Standardized density from many repetitions
+
+We can now compare our empirical distribution density (blue) to the theoretical density of a unit normal distribution (black). The overlay effectively proves the Central Limit Theorem, showing that even from a very simple distribution like the uniform distribution, the mean over repeated samples is distributed normally.
+
+```{r}
+curve(dnorm,-4,4) #Density of theoretical normal distribution
+lines(density(Z), col="blue") #Density of our empirical distribution after n repetitions
+```
+
+### QQplot
+
+Another classical way to know whether an empirical distribution corresponds well to a given theoretical one is to use a **quantile-quantile plot**, aka **qqplot**, where empirical quantiles are plotted along the y-axis and theoretical ones (e.g. normal) along the x-axis.
+
+We expect a straight line at least in a good range of values around the mean. Towards the extreme there are less points and the variability is thus greater. Given we look at the shape of the curve, not the values, we don't need to standardize the data ahead this time (but of course then the values on the two axes will differ). We verify visually that the qqplot of our mean of means is close to a straight line.
+
+```{r}
+qqnorm(y=means)
+```

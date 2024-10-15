@@ -1,0 +1,62 @@
+# , t-student) and discrete functions (binomial, Poisson).
+# 
+# <!-- ### t-Student distribution -->
+#   
+#   <!-- ## Discrete distributions -->
+#   
+#   <!-- ### Discrete uniform distribution -->
+#   
+#   <!-- ### Discrete binomial distribution -->
+#   
+#   <!-- Throwing a coin holds two possible values: Bernoulli Bernoulli to Binomial https://math.stackexchange.com/questions/838107/what-is-the-difference-and-relationship-between-the-binomial-and-bernoulli-distr -->
+#   
+#   <!-- ### Discrete Poisson distribution -->
+#   
+#   <!-- curve(ppois(x,lambda=1),0,10) curve(dpois(x,lambda=1),0,10) -->
+#   
+#   <!-- ### QQ plots -->
+#   
+#   <!-- Comparing to a theoretical distribution -->
+#   
+#   <!-- # Define the range of lambda values (from 0.2 to 2 in steps of 0.2) -->
+#   
+#   <!-- lambda_values <- seq(0.2, 2, by = 0.2) -->
+#     
+#     <!-- # Define the range of n values (from 0 to 4) -->
+#     
+#     <!-- n_values <- 0:4 -->
+#       
+#       <!-- # Function to calculate Poisson probabilities for a given lambda -->
+#       
+#       <!-- calc_probs <- function(lambda) { -->
+#           
+#           <!--   sapply(n_values, function(n) dpois(n, lambda)) -->
+#           
+#           <!-- } -->
+#         
+#         <!-- # Apply the function to each lambda value and transpose the result -->
+#         
+#         <!-- prob_matrix <- t(sapply(lambda_values, calc_probs)) -->
+#           
+#           <!-- # Convert the matrix to a data frame for better readability -->
+#           
+#           <!-- prob_df <- as.data.frame(prob_matrix) -->
+#             
+#             <!-- # Set the row names to the corresponding lambda values -->
+#             
+#             <!-- rownames(prob_df) <- paste("λ =", lambda_values) -->
+#               
+#               <!-- # Set the column names to the corresponding n values -->
+#               
+#               <!-- colnames(prob_df) <- paste("n =", n_values) -->
+#                 
+#                 <!-- # Print the data frame -->
+#                 
+#                 <!-- options(scipen = 999) -->
+#                 
+#                 <!-- print(prob_df) -->
+#                 
+#                 <!-- options(scipen = 0) -->
+#                 
+#                 
+                

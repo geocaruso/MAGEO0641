@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Statistical distributions – Introduction to data analysis and R for geographers</title>
+<title>14&nbsp; Central Limit Theorem and standardisation – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./901_copy_paste.html" rel="next">
-<link href="./033_discretisation.html" rel="prev">
+<link href="./043_distributions_other_continuous.html" rel="next">
+<link href="./041_distributions_unif_normal.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./034_distributions.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./041_distributions_unif_normal.html">Part IV - Distributions and testing</a></li><li class="breadcrumb-item"><a href="./042_CLT_Standardisation.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -241,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Part III - Univariate analysis and distributions</span></a>
+ <span class="menu-text">Part III - Univariate analysis</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -265,54 +285,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./034_distributions.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></span></a>
-  </div>
-</li>
       </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part IV - Graphics with ggplot</span></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part V - Bivariate and regression analysis</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices, Tips, tricks and miscellaneous</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV - Distributions and testing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+  <a href="./041_distributions_unif_normal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+  <a href="./042_CLT_Standardisation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./043_distributions_other_continuous.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span></a>
   </div>
 </li>
       </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part V - Graphics with ggplot</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./050_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Part VI - Bivariate and regression analysis</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Bibliography</span></a>
+ <span class="menu-text">Appendices, Tips, tricks and miscellaneous</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./903_summarizing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary tables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Bibliography</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./999_references.html" class="sidebar-item-text sidebar-link">
@@ -331,23 +393,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#continuous-distributions" id="toc-continuous-distributions" class="nav-link active" data-scroll-target="#continuous-distributions"><span class="header-section-number">13.1</span> Continuous distributions:</a>
+  <li><a href="#central-limit-theorem" id="toc-central-limit-theorem" class="nav-link active" data-scroll-target="#central-limit-theorem"><span class="header-section-number">14.1</span> Central Limit Theorem</a></li>
+  <li><a href="#standardization" id="toc-standardization" class="nav-link" data-scroll-target="#standardization"><span class="header-section-number">14.2</span> Standardization</a>
   <ul class="collapse">
-  <li><a href="#uniform-distribution" id="toc-uniform-distribution" class="nav-link" data-scroll-target="#uniform-distribution"><span class="header-section-number">13.1.1</span> Uniform distribution</a></li>
-  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="header-section-number">13.1.2</span> Normal distribution</a></li>
-  <li><a href="#t-student-distribution" id="toc-t-student-distribution" class="nav-link" data-scroll-target="#t-student-distribution"><span class="header-section-number">13.1.3</span> t-Student distribution</a></li>
-  </ul></li>
-  <li><a href="#discrete-distributions" id="toc-discrete-distributions" class="nav-link" data-scroll-target="#discrete-distributions"><span class="header-section-number">13.2</span> Discrete distributions</a>
-  <ul class="collapse">
-  <li><a href="#discrete-uniform-distribution" id="toc-discrete-uniform-distribution" class="nav-link" data-scroll-target="#discrete-uniform-distribution"><span class="header-section-number">13.2.1</span> Discrete uniform distribution</a></li>
-  <li><a href="#discrete-binomial-distribution" id="toc-discrete-binomial-distribution" class="nav-link" data-scroll-target="#discrete-binomial-distribution"><span class="header-section-number">13.2.2</span> Discrete binomial distribution</a></li>
-  <li><a href="#discrete-poisson-distribution" id="toc-discrete-poisson-distribution" class="nav-link" data-scroll-target="#discrete-poisson-distribution"><span class="header-section-number">13.2.3</span> Discrete Poisson distribution</a></li>
-  </ul></li>
-  <li><a href="#shape-of-distributions" id="toc-shape-of-distributions" class="nav-link" data-scroll-target="#shape-of-distributions"><span class="header-section-number">13.3</span> Shape of distributions:</a>
-  <ul class="collapse">
-  <li><a href="#skewness" id="toc-skewness" class="nav-link" data-scroll-target="#skewness"><span class="header-section-number">13.3.1</span> Skewness</a></li>
-  <li><a href="#kurtosis" id="toc-kurtosis" class="nav-link" data-scroll-target="#kurtosis"><span class="header-section-number">13.3.2</span> Kurtosis</a></li>
-  <li><a href="#qq-plots" id="toc-qq-plots" class="nav-link" data-scroll-target="#qq-plots"><span class="header-section-number">13.3.3</span> QQ plots</a></li>
+  <li><a href="#standardized-density-from-many-repetitions" id="toc-standardized-density-from-many-repetitions" class="nav-link" data-scroll-target="#standardized-density-from-many-repetitions"><span class="header-section-number">14.2.1</span> Standardized density from many repetitions</a></li>
+  <li><a href="#qqplot" id="toc-qqplot" class="nav-link" data-scroll-target="#qqplot"><span class="header-section-number">14.2.2</span> QQplot</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -355,9 +405,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./031_sample_population.html">Part III - Univariate analysis and distributions</a></li><li class="breadcrumb-item"><a href="./034_distributions.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./041_distributions_unif_normal.html">Part IV - Distributions and testing</a></li><li class="breadcrumb-item"><a href="./042_CLT_Standardisation.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Statistical distributions</span></h1>
+<h1 class="title"><span id="sec-central-limit-theorem-and-standardisation" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></h1>
 </div>
 
 
@@ -374,132 +424,126 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="continuous-distributions" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="continuous-distributions"><span class="header-section-number">13.1</span> Continuous distributions:</h2>
-<section id="uniform-distribution" class="level3" data-number="13.1.1">
-<h3 data-number="13.1.1" class="anchored" data-anchor-id="uniform-distribution"><span class="header-section-number">13.1.1</span> Uniform distribution</h3>
-<p>The uniform distribution is one of the simplest distribution of a continuous (ratio or interval) variable. Although it is rare in practice that each value along a continuum has the same chance of occurring than all others, it is a base distribution to know of. Each value has the same probability of occurrence, which is a simple case also to show how we can compute density functions, probabilities and cumulative distributions.</p>
-<p>To generate a uniform a function, we feed the <code>runif()</code> function with a number of observations. All generative distribution are of the form <code>r...()</code>. Like for the other generating functions, the mean is 0 and the standard deviation is 1 by default, which provides us with some control on the range:</p>
+<section id="central-limit-theorem" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="central-limit-theorem"><span class="header-section-number">14.1</span> Central Limit Theorem</h2>
+<p>The reason for the success of the normal distribution is not only due to its key features (symmetry and the linkage between quantiles and standard deviations) but is also explained by the <strong>Central Limit Theorem</strong>:</p>
+<blockquote class="blockquote">
+<p><strong><em>If you take repeated samples from a population with finite variance and calculate their averages, then the averages will be normally distributed</em></strong> (<span class="citation" data-cites="crawley2012">Crawley (<a href="999_references.html#ref-crawley2012" role="doc-biblioref">2012</a>)</span>, p213)</p>
+</blockquote>
+<p>Let’s draw 5 times a 100 numbers from a uniform distribution within the interval 0 to 10. For each of the five cases, the average should be close to 5.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>u<span class="ot">&lt;-</span><span class="fu">runif</span>(<span class="dv">1000</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(u)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.484212</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.790643</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.059112</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.836485</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.115313</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can write this in a loop and produce a histogram of the means:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">5</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>means<span class="ot">&lt;-</span><span class="fu">numeric</span>(n)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n){</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  means[i]<span class="ot">&lt;-</span><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>means</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.785141 5.002569 4.708249 4.356939 4.936564</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="034_distributions_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="042_CLT_Standardisation_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The histogram show that each value (intervals) is similarly frequent. Rather than/or on top of a histogram, we often plot densities, which is a smoother representation using a local density (kernel density i.e.&nbsp;using a bandwidth instead of the strict silos of the histogram). In R we use the <code>density()</code> function and use its returned values for plotting:</p>
+<p>It is not quite impressive at this stage, but if we repeat, say 10000 times the experiment rather than 5, the histogram tends towards the shape of a normal distribution!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">density</span>(u)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Call:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  density.default(x = u)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Data: u (1000 obs.); Bandwidth 'bw' = 0.06579</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        x                 y           </span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   :-0.1970   Min.   :0.001447  </span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.: 0.1514   1st Qu.:0.375214  </span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median : 0.4998   Median :0.946124  </span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   : 0.4998   Mean   :0.716115  </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.: 0.8482   3rd Qu.:1.001957  </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   : 1.1966   Max.   :1.055677</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(u))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">10000</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>means<span class="ot">&lt;-</span><span class="fu">numeric</span>(n)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n){</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  means[i]<span class="ot">&lt;-</span><span class="fu">mean</span>(<span class="fu">runif</span>(<span class="dv">100</span>)<span class="sc">*</span><span class="dv">10</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(means)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.008037 4.638205 4.843070 5.196271 5.093568 4.687438</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(means, <span class="at">breaks=</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="034_distributions_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="042_CLT_Standardisation_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>With the uniform distribution, the probability of drawing a number below a given value will be given by the quantile of that particular value. We can see the <strong>empirical cumulative distribution function (ecdf)</strong> is a straight line where quantiles equal probabilities:</p>
+<p>And the median, mean and standard deviation of the “means” are</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ecdf</span>(u)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Empirical CDF </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Call: ecdf(u)</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  x[1:1000] = 0.00037212, 0.0007435, 0.0023788,  ..., 0.99886, 0.99929</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">ecdf</span>(u))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(means)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.997695</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(means)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.999212</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(means)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.2905114</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="standardization" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="standardization"><span class="header-section-number">14.2</span> Standardization</h2>
+<p>In order to visually appreciate how well the obtained distribution compares to a corresponding normal distribution, we can generate a normal distribution with the same parameters (mean and variance). Alternatively, we can also <strong>standardize</strong> the outcome in order to fit a “Unit” normal distribution, i.e.&nbsp;one where the mean is 0 and the standard deviation is 1.</p>
+<p>This process is called <strong>Standardization</strong>. It involves <strong>centering</strong> an empirical variable, i.e.&nbsp;computing deviations to the mean, so that the mean is set to 0, and <strong>reducing</strong> by dividing the centered by the standard deviation. Hence making the new standard deviation equal to 1. One often name a standradized variable Z. The built in function for standardization is <code>scale()</code>. It centers and reduces by default, but you can toggle one or the other on or off.</p>
+<p>Important: Since standardization involves a division by a number (standard deviation) with the same units as the original variable, <strong>a standardized variable has no unit !</strong> This is a property you may like for comparing with other variables that have different original units.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Centered<span class="ot">&lt;-</span>means<span class="sc">-</span><span class="fu">mean</span>(means) <span class="co">#centering</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Z<span class="ot">&lt;-</span>Centered<span class="sc">/</span><span class="fu">sd</span>(means) <span class="co">#reducing /scaling</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#or simply </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Z<span class="ot">&lt;-</span><span class="fu">scale</span>(means, <span class="at">center =</span> <span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Compare</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(<span class="fu">mean</span>(means), <span class="fu">mean</span>(Z))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;          [,1]          [,2]</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,] 4.999212 -5.524523e-16</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(<span class="fu">sd</span>(means), <span class="fu">sd</span>(Z))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;           [,1] [,2]</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,] 0.2905114    1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="standardized-density-from-many-repetitions" class="level3" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="standardized-density-from-many-repetitions"><span class="header-section-number">14.2.1</span> Standardized density from many repetitions</h3>
+<p>We can now compare our empirical distribution density (blue) to the theoretical density of a unit normal distribution (black). The overlay effectively proves the Central Limit Theorem, showing that even from a very simple distribution like the uniform distribution, the mean over repeated samples is distributed normally.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(dnorm,<span class="sc">-</span><span class="dv">4</span>,<span class="dv">4</span>) <span class="co">#Density of theoretical normal distribution</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(Z), <span class="at">col=</span><span class="st">"blue"</span>) <span class="co">#Density of our empirical distribution after n repetitions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="034_distributions_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="042_CLT_Standardisation_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Instead of simulating, R knows the theoretical functions as well. We can return the probabilities corresponding to some quantile values, using <code>punif()</code> without creating numbers before. We can use such <code>p...()</code> functions to compare the occurrence of an empirical outcome to its probability within a theorized distribution</p>
+</section>
+<section id="qqplot" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="qqplot"><span class="header-section-number">14.2.2</span> QQplot</h3>
+<p>Another classical way to know whether an empirical distribution corresponds well to a given theoretical one is to use a <strong>quantile-quantile plot</strong>, aka <strong>qqplot</strong>, where empirical quantiles are plotted along the y-axis and theoretical ones (e.g.&nbsp;normal) along the x-axis.</p>
+<p>We expect a straight line at least in a good range of values around the mean. Towards the extreme there are less points and the variability is thus greater. Given we look at the shape of the curve, not the values, we don’t need to standardize the data ahead this time (but of course then the values on the two axes will differ). We verify visually that the qqplot of our mean of means is close to a straight line.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">punif</span>(<span class="at">q=</span><span class="fu">c</span>(<span class="fl">0.01</span>,<span class="fl">0.25</span>,<span class="fl">0.5</span>,<span class="fl">0.75</span>,<span class="fl">0.99</span>))</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.01 0.25 0.50 0.75 0.99</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">punif</span>(<span class="at">min=</span><span class="dv">50</span>, <span class="at">max=</span><span class="dv">200</span>, <span class="at">q=</span><span class="fu">c</span>(<span class="dv">100</span>)) <span class="co">#the probability of drawing a number below 100 knowing the min and max are 50 and 200 and the distribution uniform is 1/3 (the range being 150 and 100 being 50 beyond the max)</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.3333333</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="at">y=</span>means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="042_CLT_Standardisation_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-<p>Similarly to our density plot, the density of a known distribution is obtained from <code>d...()</code>,i.e.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dunif</span>(<span class="fu">c</span>(<span class="fl">0.01</span>,<span class="fl">0.25</span>,<span class="fl">0.5</span>,<span class="fl">0.75</span>,<span class="fl">0.99</span>),<span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">1</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1 1 1 1 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="normal-distribution" class="level3" data-number="13.1.2">
-<h3 data-number="13.1.2" class="anchored" data-anchor-id="normal-distribution"><span class="header-section-number">13.1.2</span> Normal distribution</h3>
-<p>Central limit theorem</p>
-<p>normal (explain +-1 sd +-2 sd)</p>
-</section>
-<section id="t-student-distribution" class="level3" data-number="13.1.3">
-<h3 data-number="13.1.3" class="anchored" data-anchor-id="t-student-distribution"><span class="header-section-number">13.1.3</span> t-Student distribution</h3>
-</section>
-</section>
-<section id="discrete-distributions" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="discrete-distributions"><span class="header-section-number">13.2</span> Discrete distributions</h2>
-<section id="discrete-uniform-distribution" class="level3" data-number="13.2.1">
-<h3 data-number="13.2.1" class="anchored" data-anchor-id="discrete-uniform-distribution"><span class="header-section-number">13.2.1</span> Discrete uniform distribution</h3>
-</section>
-<section id="discrete-binomial-distribution" class="level3" data-number="13.2.2">
-<h3 data-number="13.2.2" class="anchored" data-anchor-id="discrete-binomial-distribution"><span class="header-section-number">13.2.2</span> Discrete binomial distribution</h3>
-<p>Throwing a coin holds two possible values: Bernoulli Bernoulli to Binomial https://math.stackexchange.com/questions/838107/what-is-the-difference-and-relationship-between-the-binomial-and-bernoulli-distr</p>
-</section>
-<section id="discrete-poisson-distribution" class="level3" data-number="13.2.3">
-<h3 data-number="13.2.3" class="anchored" data-anchor-id="discrete-poisson-distribution"><span class="header-section-number">13.2.3</span> Discrete Poisson distribution</h3>
-</section>
-</section>
-<section id="shape-of-distributions" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="shape-of-distributions"><span class="header-section-number">13.3</span> Shape of distributions:</h2>
-<section id="skewness" class="level3" data-number="13.3.1">
-<h3 data-number="13.3.1" class="anchored" data-anchor-id="skewness"><span class="header-section-number">13.3.1</span> Skewness</h3>
-</section>
-<section id="kurtosis" class="level3" data-number="13.3.2">
-<h3 data-number="13.3.2" class="anchored" data-anchor-id="kurtosis"><span class="header-section-number">13.3.2</span> Kurtosis</h3>
-</section>
-<section id="qq-plots" class="level3" data-number="13.3.3">
-<h3 data-number="13.3.3" class="anchored" data-anchor-id="qq-plots"><span class="header-section-number">13.3.3</span> QQ plots</h3>
-<p>Comparing to a theoretical distribution</p>
-<!-- # Define the range of lambda values (from 0.2 to 2 in steps of 0.2) -->
-<!-- lambda_values <- seq(0.2, 2, by = 0.2) -->
-<!-- # Define the range of n values (from 0 to 4) -->
-<!-- n_values <- 0:4 -->
-<!-- # Function to calculate Poisson probabilities for a given lambda -->
-<!-- calc_probs <- function(lambda) { -->
-<!--   sapply(n_values, function(n) dpois(n, lambda)) -->
-<!-- } -->
-<!-- # Apply the function to each lambda value and transpose the result -->
-<!-- prob_matrix <- t(sapply(lambda_values, calc_probs)) -->
-<!-- # Convert the matrix to a data frame for better readability -->
-<!-- prob_df <- as.data.frame(prob_matrix) -->
-<!-- # Set the row names to the corresponding lambda values -->
-<!-- rownames(prob_df) <- paste("λ =", lambda_values) -->
-<!-- # Set the column names to the corresponding n values -->
-<!-- colnames(prob_df) <- paste("n =", n_values) -->
-<!-- # Print the data frame -->
-<!-- options(scipen = 999) -->
-<!-- print(prob_df) -->
-<!-- options(scipen = 0) -->
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-crawley2012" class="csl-entry" role="listitem">
+Crawley, Michael J. 2012. <em>The R Book</em>. 1st ed. Wiley. <a href="https://doi.org/10.1002/9781118448908">https://doi.org/10.1002/9781118448908</a>.
+</div>
+</div>
 </section>
 </section>
 
@@ -926,13 +970,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./033_discretisation.html" class="pagination-link" aria-label="Discretisation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span>
+      <a href="./041_distributions_unif_normal.html" class="pagination-link" aria-label="Uniform and normal distributions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./901_copy_paste.html" class="pagination-link" aria-label="Copy-pasting">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./043_distributions_other_continuous.html" class="pagination-link" aria-label="Usual Continuous Distributions">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -2,4 +2,6 @@
 
 Introduction to geographical data analysis with R
 
-Quarto book
+Making of Quarto book.
+
+The book is available online: <https://quadtrees.lu/teaching/MAGEO0641>

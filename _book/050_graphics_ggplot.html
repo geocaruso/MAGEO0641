@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>16&nbsp; Introduction – Introduction to data analysis and R for geographers</title>
+<title>18&nbsp; ggplot graphics – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./901_copy_paste.html" rel="next">
-<link href="./043_distributions_other_continuous.html" rel="prev">
+<link href="./061_inference.html" rel="next">
+<link href="./044_distributions_discrete.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html">Part V - Graphics with ggplot</a></li><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html">Part V - Graphics with ggplot</a></li><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -265,12 +265,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./034_cross_tabulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Cross-tabulation</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Part IV - Distributions and testing</span></a>
+ <span class="menu-text">Part IV - Distributions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -279,19 +285,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./041_distributions_unif_normal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./042_CLT_Standardisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./043_distributions_other_continuous.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./044_distributions_discrete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Discrete functions</span></span></a>
   </div>
 </li>
       </ul>
@@ -308,53 +320,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./050_graphics_ggplot.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part VI - Statistical inference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./061_inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Statistical Inference</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part VI - Bivariate and regression analysis</span></span>
+ <span class="menu-text">Part VII - Bivariate and regression analysis</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices, Tips, tricks and miscellaneous</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./903_summarizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summary tables</span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Summary tables</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Bibliography</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./999_references.html" class="sidebar-item-text sidebar-link">
@@ -373,30 +402,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#library" id="toc-library" class="nav-link active" data-scroll-target="#library"><span class="header-section-number">16.1</span> Library</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">16.2</span> Data</a></li>
-  <li><a href="#basic-plot---ggplot" id="toc-basic-plot---ggplot" class="nav-link" data-scroll-target="#basic-plot---ggplot"><span class="header-section-number">16.3</span> Basic plot - ggplot</a></li>
-  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">16.4</span> Histogram</a></li>
-  <li><a href="#density" id="toc-density" class="nav-link" data-scroll-target="#density"><span class="header-section-number">16.5</span> Density</a></li>
-  <li><a href="#qqplot" id="toc-qqplot" class="nav-link" data-scroll-target="#qqplot"><span class="header-section-number">16.6</span> QQplot</a></li>
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"><span class="header-section-number">16.7</span> Boxplot</a></li>
-  <li><a href="#boxplot-with-point" id="toc-boxplot-with-point" class="nav-link" data-scroll-target="#boxplot-with-point"><span class="header-section-number">16.8</span> Boxplot with point</a></li>
-  <li><a href="#multi-boxplot" id="toc-multi-boxplot" class="nav-link" data-scroll-target="#multi-boxplot"><span class="header-section-number">16.9</span> Multi-boxplot</a></li>
-  <li><a href="#violinplot" id="toc-violinplot" class="nav-link" data-scroll-target="#violinplot"><span class="header-section-number">16.10</span> Violinplot</a></li>
-  <li><a href="#scatterplot" id="toc-scatterplot" class="nav-link" data-scroll-target="#scatterplot"><span class="header-section-number">16.11</span> Scatterplot</a></li>
-  <li><a href="#scatterplot-and-regression-line" id="toc-scatterplot-and-regression-line" class="nav-link" data-scroll-target="#scatterplot-and-regression-line"><span class="header-section-number">16.12</span> Scatterplot and regression line</a></li>
-  <li><a href="#barplot" id="toc-barplot" class="nav-link" data-scroll-target="#barplot"><span class="header-section-number">16.13</span> Barplot</a></li>
-  <li><a href="#to-help-you" id="toc-to-help-you" class="nav-link" data-scroll-target="#to-help-you"><span class="header-section-number">16.14</span> To help you</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">16.15</span> Your turn!</a></li>
+  <li><a href="#library" id="toc-library" class="nav-link active" data-scroll-target="#library"><span class="header-section-number">18.1</span> Library</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">18.2</span> Data</a></li>
+  <li><a href="#basic-plot---ggplot" id="toc-basic-plot---ggplot" class="nav-link" data-scroll-target="#basic-plot---ggplot"><span class="header-section-number">18.3</span> Basic plot - ggplot</a></li>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">18.4</span> Histogram</a></li>
+  <li><a href="#density" id="toc-density" class="nav-link" data-scroll-target="#density"><span class="header-section-number">18.5</span> Density</a></li>
+  <li><a href="#qqplot" id="toc-qqplot" class="nav-link" data-scroll-target="#qqplot"><span class="header-section-number">18.6</span> QQplot</a></li>
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"><span class="header-section-number">18.7</span> Boxplot</a></li>
+  <li><a href="#boxplot-with-point" id="toc-boxplot-with-point" class="nav-link" data-scroll-target="#boxplot-with-point"><span class="header-section-number">18.8</span> Boxplot with point</a></li>
+  <li><a href="#multi-boxplot" id="toc-multi-boxplot" class="nav-link" data-scroll-target="#multi-boxplot"><span class="header-section-number">18.9</span> Multi-boxplot</a></li>
+  <li><a href="#violinplot" id="toc-violinplot" class="nav-link" data-scroll-target="#violinplot"><span class="header-section-number">18.10</span> Violinplot</a></li>
+  <li><a href="#scatterplot" id="toc-scatterplot" class="nav-link" data-scroll-target="#scatterplot"><span class="header-section-number">18.11</span> Scatterplot</a></li>
+  <li><a href="#scatterplot-and-regression-line" id="toc-scatterplot-and-regression-line" class="nav-link" data-scroll-target="#scatterplot-and-regression-line"><span class="header-section-number">18.12</span> Scatterplot and regression line</a></li>
+  <li><a href="#barplot" id="toc-barplot" class="nav-link" data-scroll-target="#barplot"><span class="header-section-number">18.13</span> Barplot</a></li>
+  <li><a href="#to-help-you" id="toc-to-help-you" class="nav-link" data-scroll-target="#to-help-you"><span class="header-section-number">18.14</span> To help you</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn"><span class="header-section-number">18.15</span> Your turn!</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html">Part V - Graphics with ggplot</a></li><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html">Part V - Graphics with ggplot</a></li><li class="breadcrumb-item"><a href="./050_graphics_ggplot.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-introduction" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></span></h1>
+<h1 class="title"><span id="sec-introduction" class="quarto-section-identifier"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></h1>
 </div>
 
 
@@ -414,8 +443,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>ggplot2 is an <strong>extension of the tidyverse</strong> that enables the generation of charts with a consistent and powerful syntax. It requires learning an additional <strong>‘mini-language’</strong> but allows for the efficient construction of complex graphs.</p>
-<section id="library" class="level2" data-number="16.1">
-<h2 data-number="16.1" class="anchored" data-anchor-id="library"><span class="header-section-number">16.1</span> Library</h2>
+<section id="library" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="library"><span class="header-section-number">18.1</span> Library</h2>
 <p>Here, we simply load the various packages that will allow us to <strong>manipulate data tables</strong> and <strong>create figures</strong>:</p>
 <ul>
 <li><p><code>tidyverse</code> is a package that contains several packages designed for data manipulation in R (stringr, dplyr, ggplot2)</p></li>
@@ -463,8 +492,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="data" class="level2" data-number="16.2">
-<h2 data-number="16.2" class="anchored" data-anchor-id="data"><span class="header-section-number">16.2</span> Data</h2>
+<section id="data" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="data"><span class="header-section-number">18.2</span> Data</h2>
 <p>We will present different code examples with 2 datasets to show that the methods are applicable to all datasets. Therefore, it is important to save our codes properly so that we can copy them for other data. Here are the two datasets :</p>
 <p>The table below comes from the library <strong>‘agridat’</strong> shows the grain yield with 3 types of species. The <strong>‘yield’</strong> column represents the yield in quarter-pounds (lbs), and the <strong>‘grain’</strong> column represents the yield in pounds (lbs), (1lbs = 453 g). You can display the first lines of the table using the <code>head()</code> function.</p>
 <ul>
@@ -512,8 +541,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; #   pop_dipl_sup34 &lt;dbl&gt;, pop_dipl_sup &lt;dbl&gt;, log_rp &lt;dbl&gt;, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="basic-plot---ggplot" class="level2" data-number="16.3">
-<h2 data-number="16.3" class="anchored" data-anchor-id="basic-plot---ggplot"><span class="header-section-number">16.3</span> Basic plot - ggplot</h2>
+<section id="basic-plot---ggplot" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="basic-plot---ggplot"><span class="header-section-number">18.3</span> Basic plot - ggplot</h2>
 <p>Here, we indicate to R that we want to plot a scatterplot, so we need to specify a “x” and “y” for our graph. Here the example of the basic R plot, and the ggplot plot.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -537,8 +566,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="histogram" class="level2" data-number="16.4">
-<h2 data-number="16.4" class="anchored" data-anchor-id="histogram"><span class="header-section-number">16.4</span> Histogram</h2>
+<section id="histogram" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="histogram"><span class="header-section-number">18.4</span> Histogram</h2>
 <p>Usually, when you’re interested in a variable, you look at its distribution. First, a classic basic histogram: you specify the data table in the <code>ggplot()</code> function, and the components of the table that will be used to create the plot in the <code>aes()</code> function. For example, we need to specify which column of the table will be represented on the <code>x-axis</code>, on the <code>y-axis</code>, or which column will allow us to color certain elements or modify the shape of the points, for instance. We then add successive layers to the graph using the <code>+</code> sign to achieve the desired rendering.</p>
 <p>Here, we indicate to R that we want to plot a histogram, so we don’t need to specify a “y” for our graph:</p>
 <div class="cell">
@@ -600,8 +629,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="density" class="level2" data-number="16.5">
-<h2 data-number="16.5" class="anchored" data-anchor-id="density"><span class="header-section-number">16.5</span> Density</h2>
+<section id="density" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="density"><span class="header-section-number">18.5</span> Density</h2>
 <p><code>geom_density()</code> is used to plot the density curve.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -639,8 +668,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="qqplot" class="level2" data-number="16.6">
-<h2 data-number="16.6" class="anchored" data-anchor-id="qqplot"><span class="header-section-number">16.6</span> QQplot</h2>
+<section id="qqplot" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="qqplot"><span class="header-section-number">18.6</span> QQplot</h2>
 <p>A <code>QQ plot</code> indicates a normal distribution when the points closely follow a straight line, suggesting that the quantiles of the data match the quantiles of a <strong>normal distribution</strong>. Here is a good QQ-plot reference : <a href="https://www.tjmahr.com/quantile-quantile-plots-from-scratch/" class="uri">https://www.tjmahr.com/quantile-quantile-plots-from-scratch/</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -669,8 +698,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="boxplot" class="level2" data-number="16.7">
-<h2 data-number="16.7" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">16.7</span> Boxplot</h2>
+<section id="boxplot" class="level2" data-number="18.7">
+<h2 data-number="18.7" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">18.7</span> Boxplot</h2>
 <p>Let’s look at the yields in the form of <strong>boxplots</strong> for each variety. To do this, we use the <code>geom_boxplot()</code> function. Please note that the color of boxplots and barplots is managed not with <code>color</code> but with <code>fill</code> (points and lines are managed with ‘color’). Other palettes are available at the following address: <a href="https://bookdown.org/rdpeng/exdata/plotting-and-color-in-r.html" class="uri">https://bookdown.org/rdpeng/exdata/plotting-and-color-in-r.html</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -746,8 +775,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="boxplot-with-point" class="level2" data-number="16.8">
-<h2 data-number="16.8" class="anchored" data-anchor-id="boxplot-with-point"><span class="header-section-number">16.8</span> Boxplot with point</h2>
+<section id="boxplot-with-point" class="level2" data-number="18.8">
+<h2 data-number="18.8" class="anchored" data-anchor-id="boxplot-with-point"><span class="header-section-number">18.8</span> Boxplot with point</h2>
 <p>To display points on a boxplot, you can use the <code>geom_jitter()</code> function, which displays the points by offsetting them from each other to avoid overlap. When displaying the points, you should add the <code>'outlier.shape = NA'</code> option in the <code>geom_boxplot()</code>function to prevent displaying the same points twice.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(yates.oats, <span class="fu">aes</span>(<span class="at">x =</span> gen, <span class="at">y =</span> grain, <span class="at">fill =</span> gen)) <span class="sc">+</span></span>
@@ -765,8 +794,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="multi-boxplot" class="level2" data-number="16.9">
-<h2 data-number="16.9" class="anchored" data-anchor-id="multi-boxplot"><span class="header-section-number">16.9</span> Multi-boxplot</h2>
+<section id="multi-boxplot" class="level2" data-number="18.9">
+<h2 data-number="18.9" class="anchored" data-anchor-id="multi-boxplot"><span class="header-section-number">18.9</span> Multi-boxplot</h2>
 <p>We could also put the blocks in x, and color according to the varieties. Or conversely, the varieties on the <code>x-axis</code> and the <code>blocks</code> in color.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -863,8 +892,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="violinplot" class="level2" data-number="16.10">
-<h2 data-number="16.10" class="anchored" data-anchor-id="violinplot"><span class="header-section-number">16.10</span> Violinplot</h2>
+<section id="violinplot" class="level2" data-number="18.10">
+<h2 data-number="18.10" class="anchored" data-anchor-id="violinplot"><span class="header-section-number">18.10</span> Violinplot</h2>
 <p>One last one, the violin plot, which shows us the distribution curve. We use the <code>geom_violin()</code> function for this. On it, we could display the mean and the standard deviation, for example. For this, we use the <code>stat_summary()</code> function, in which we specify the function used (<code>fun.data</code>), the number of standard deviations represented by the error bars (<code>fun.args</code>), the geometry of the representation (<code>geom</code>), and the color, of course.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -887,8 +916,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="scatterplot" class="level2" data-number="16.11">
-<h2 data-number="16.11" class="anchored" data-anchor-id="scatterplot"><span class="header-section-number">16.11</span> Scatterplot</h2>
+<section id="scatterplot" class="level2" data-number="18.11">
+<h2 data-number="18.11" class="anchored" data-anchor-id="scatterplot"><span class="header-section-number">18.11</span> Scatterplot</h2>
 <p>We can also create a scatterplot (a graph with points) between <strong>straw</strong> yield and <strong>grain</strong> yield, or <strong>etud</strong> and <strong>cadres</strong> for example. The <code>geom_point()</code> option allows us to display points (with continuous data, for instance).</p>
 <p>The <code>scale_color_gradient()</code> here allows us to directly detect the numerical values of the variables and produce a continuous color palette for data visualization. This allows us to integrate another variable on the points of the graph, and we can also apply it to the size to compare the x-axis and y-axis of the data to find the effect of other variables. For example, we can see that the higher the proportion of students, the more apartment rentals we observe. The <code>scale_color_gradientn()</code>here allows to</p>
 <div class="cell">
@@ -931,8 +960,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="scatterplot-and-regression-line" class="level2" data-number="16.12">
-<h2 data-number="16.12" class="anchored" data-anchor-id="scatterplot-and-regression-line"><span class="header-section-number">16.12</span> Scatterplot and regression line</h2>
+<section id="scatterplot-and-regression-line" class="level2" data-number="18.12">
+<h2 data-number="18.12" class="anchored" data-anchor-id="scatterplot-and-regression-line"><span class="header-section-number">18.12</span> Scatterplot and regression line</h2>
 <p>We can also try to put the color of the points according to the variable (to color points, use <code>color</code>), and we add regression lines with the <code>geom_smooth()</code> for each <strong>genotype</strong>, also for the <strong>students</strong> and the <strong>cadres</strong>. The <code>scale_color_brewer()</code> function defines the color palette to color the points.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(yates.oats, <span class="fu">aes</span>(<span class="at">x =</span> straw, <span class="at">y =</span> grain, <span class="at">color =</span> gen)) <span class="sc">+</span></span>
@@ -972,8 +1001,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="barplot" class="level2" data-number="16.13">
-<h2 data-number="16.13" class="anchored" data-anchor-id="barplot"><span class="header-section-number">16.13</span> Barplot</h2>
+<section id="barplot" class="level2" data-number="18.13">
+<h2 data-number="18.13" class="anchored" data-anchor-id="barplot"><span class="header-section-number">18.13</span> Barplot</h2>
 <p>Here’s a quick example to understand the proportion of forest area in each canton of Luxembourg:</p>
 <p>For instance, you can create a bar chart where the x-axis represents the cantons and the y-axis represents the proportion of forest area. Using a function like <code>geom_bar()</code> to create a barplot.</p>
 <p>To specify that we want the height of the barplot to represent the value indicated in our data frame, we need to add <code>stat = "identity</code> in the <code>geom_bar()</code> function. Normally, <code>geom_bar()</code> counts the number of cases at each x position (<strong>as an histogram</strong>), but with <code>stat = "identity"</code>, it uses the values in the data directly. The <strong>‘width’</strong> option allows you to adjust the width of the barplot.</p>
@@ -1013,8 +1042,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="to-help-you" class="level2" data-number="16.14">
-<h2 data-number="16.14" class="anchored" data-anchor-id="to-help-you"><span class="header-section-number">16.14</span> To help you</h2>
+<section id="to-help-you" class="level2" data-number="18.14">
+<h2 data-number="18.14" class="anchored" data-anchor-id="to-help-you"><span class="header-section-number">18.14</span> To help you</h2>
 <p><a href="https://www.data-to-viz.com/">data-to-viz</a></p>
 <p><a href="https://r-graph-gallery.com/">r-graph-gallery</a></p>
 <p><a href="http://www.cookbook-r.com/Graphs/" title="cookbook-r">cookbook-r</a></p>
@@ -1026,8 +1055,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Forest area by canton and commune -&gt; <a href="https://lustat.statec.lu/vis?fs%5B0%5D=Th%C3%A8mes%2C1%7CTerritoire%20environnement%20et%20%C3%A9nergie%23A%23%7CEnvironnement%23A3%23&amp;pg=20&amp;fc=Th%C3%A8mes&amp;df%5Bds%5D=ds-release&amp;df%5Bid%5D=DF_X038&amp;df%5Bag%5D=LU1&amp;df%5Bvs%5D=1.0&amp;pd=2010%2C2010&amp;dq=..A">lustat.statec.lu</a></p>
 </section>
 </section>
-<section id="your-turn" class="level2" data-number="16.15">
-<h2 data-number="16.15" class="anchored" data-anchor-id="your-turn"><span class="header-section-number">16.15</span> Your turn!</h2>
+<section id="your-turn" class="level2" data-number="18.15">
+<h2 data-number="18.15" class="anchored" data-anchor-id="your-turn"><span class="header-section-number">18.15</span> Your turn!</h2>
 <ul>
 <li><p>Go take the data on land use proportions for some cities in the ouest of Europe : <code>land_use_EU_ouest.rds</code></p></li>
 <li><p>Create a few plots with a ‘<strong>ggplot2</strong>’ style.</p></li>
@@ -1466,13 +1495,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./043_distributions_other_continuous.html" class="pagination-link" aria-label="Usual Continuous Distributions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span>
+      <a href="./044_distributions_discrete.html" class="pagination-link" aria-label="Discrete functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Discrete functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./901_copy_paste.html" class="pagination-link" aria-label="Copy-pasting">
-        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./061_inference.html" class="pagination-link" aria-label="Statistical Inference">
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Statistical Inference</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

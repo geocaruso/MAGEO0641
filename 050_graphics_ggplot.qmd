@@ -1,4 +1,4 @@
-# Introduction {#sec-introduction}
+# ggplot graphics {#sec-introduction}
 
 ggplot2 is an **extension of the tidyverse** that enables the generation of charts with a consistent and powerful syntax. It requires learning an additional **'mini-language'** but allows for the efficient construction of complex graphs.
 

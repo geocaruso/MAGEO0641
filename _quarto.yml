@@ -33,17 +33,25 @@ book:
       - 031_sample_population.qmd
       - 032_univariate.qmd
       - 033_discretisation.qmd
-      #-Tabulation anc cross-tabulation (apply) 
-    - part: "Part IV - Distributions and testing"
+      - 034_cross_tabulation.qmd
+    - part: "Part IV - Distributions"
       chapters:
       - 041_distributions_unif_normal.qmd
       - 042_CLT_Standardisation.qmd
       - 043_distributions_other_continuous.qmd
+      - 044_distributions_discrete.qmd
     - part: "Part V - Graphics with ggplot"
       chapters:
       - 050_graphics_ggplot.qmd
-    - part: "Part VI - Bivariate and regression analysis"
+    - part: "Part VI - Statistical inference"
+      chapters:
+      - 061_inference.qmd
+      #062_hypothesis_test.qmd
+      #Mean and xhi2 tests
+      
+    - part: "Part VII - Bivariate and regression analysis"
       #chapters:
+      #- Cross-tabulation and xhi2
       #- correlation.qmd
       #- regression.qmd
       #- CIregression.qmd

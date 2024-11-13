@@ -1,4 +1,4 @@
-# Summary tables {#sec-s .unnumbered}
+# Summary tables {#sec-s}
 
 You often find yourself willing to output a summary table in a way others can easily look at it with some visual comfort or for publication.
 

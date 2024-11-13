@@ -82,20 +82,27 @@ The mode (not to be mistaken with R mode for vectors) corresponds to the **value
 
 ```{r}
 table(Age)
-sort(table(Age), descending=TRUE)
+sort(table(Age), decreasing = TRUE)
 ```
 
-The mode is an immediate output in R. But we can write what we have just done and extract the value after sorting, i.e.
+The mode is an immediate output in R. But we can write what we have just done and extract the first value after sorting, i.e.
 
 ```{r}
 sort(table(Age),decreasing = TRUE)[1]
 ```
 
-While this requires sorting (which can be long), an alternative would be to use the `which.max()` function:
+The output however is the frequency (3), not the number we look for (27). So we should get the name and turn it into a numeric for obtaining the mode as a numeric:
+
+```{r}
+as.numeric(names(sort(table(Age),decreasing = TRUE)[1]))
+```
+
+While this requires sorting (which can be long), an alternative would be to use the `which.max()` function, but still requires to get the value from name as a numeric:
 
 ```{r}
 which.max(table(Age)) #returning the position of the max, i.e. 4th position here
-Age[which.max(table(Age))] #then using that position into the original vector
+table(Age)[which.max(table(Age))] #then using that position into the original vector
+as.numeric(names(table(Age)[which.max(table(Age))]))
 ```
 
 We can also look at the mode for qualitative / categorical variables. If we take the example of the variable *score*, the mode is the value "C".
@@ -103,6 +110,25 @@ We can also look at the mode for qualitative / categorical variables. If we take
 ```{r}
 score <- as.factor ( c ("C","C","A","B","A","C","B","B","A","C"))
 table(score)
+names(which.max(table(score)))
+```
+
+Note that, that the numeric case being a little complicated, we can see from the help that `table()` is based on `tabulate()` and find the following which is more direct for numeric examples:
+
+```{r}
+which.max(tabulate(Age))
+```
+
+We can assemble both factor and numeric cases in a single function, for example:
+
+```{r}
+mymode<-function(x){
+  ifelse(is.factor(x)==TRUE,
+         names(which.max(table(x))),
+         which.max(tabulate(x)))
+}
+mymode(Age)
+mymode(score)
 ```
 
 ## Measures of Dispersion
@@ -392,9 +418,7 @@ You notice the exponent to the level 4 applied to the deviations to the mean and
 
 In practice in R, the Kurtosis is similar to the skewness described above:
 
-$$\dfrac {\sum_{i=1}^{n} (x_i - \bar{x})^4} {n s^4}$$
-However it is adjusted with some correction for small sample sizes and for comparison to a normal distribution for which the result would be 3. See the help for how it is computed by default
-
+$$\dfrac {\sum_{i=1}^{n} (x_i - \bar{x})^4} {n s^4}$$ However it is adjusted with some correction for small sample sizes and for comparison to a normal distribution for which the result would be 3. See the help for how it is computed by default
 
 ```{r}
 set.seed(101)
@@ -403,8 +427,7 @@ e1071::kurtosis(x)
 e1071::kurtosis((x-100)/1000) #with this you see it is not dependent on scale 
 ```
 
-Using this implementation, a Kurtosis close to 0 then indicates a distribution similar in shape to a normal (bell-shaped) distribution. 
-A **positive kurtosis indicates a more peaked** distribution, also named **leptokurtic**.
+Using this implementation, a Kurtosis close to 0 then indicates a distribution similar in shape to a normal (bell-shaped) distribution. A **positive kurtosis indicates a more peaked** distribution, also named **leptokurtic**.
 
 A **negative kurtosis** indicates a **less peaked** shape, named **platykurtic**.
 
@@ -424,5 +447,3 @@ e1071::kurtosis(x)
 e1071::kurtosis(x_peaker)
 e1071::kurtosis(x_flatter)
 ```
-
-

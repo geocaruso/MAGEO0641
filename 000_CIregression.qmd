@@ -1,4 +1,4 @@
-# Confidence interval of a regression"
+# Confidence interval of a regression
 
 ## Load Data and Packages
 
@@ -52,7 +52,7 @@ $$RSE=\sqrt{\frac{\sum (\text{residuals(model)})^2}{\text{model degrees of freed
 
 The sum of squared residuals is divided by the degrees of freedom. In this case the degrees of freedom is 18 because we have n=20 individuals and p=2 estimated parameters: the slope (2.38mm/yr) and the intercept (elevation 895m).
 
-(NB: I understand the denominator n-p is where RSE differs from the Root Mean Square Error RMSE, which is often used to describe a fit, which is the mean, i.e. divided by n)
+(NB: I understand the denominator $n-p$ is where RSE differs from the Root Mean Square Error RMSE, which is often used to describe a fit, which is the mean, i.e. divided by $n$)
 
 We take the square root to get the RSE back to rainfall units, in this case it is equal to 243mm
 

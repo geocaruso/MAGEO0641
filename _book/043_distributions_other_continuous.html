@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; Usual Continuous Distributions – Introduction to data analysis and R for geographers</title>
+<title>16&nbsp; Usual Continuous Distributions – Introduction to data analysis and R for geographers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./050_graphics_ggplot.html" rel="next">
+<link href="./044_distributions_discrete.html" rel="next">
 <link href="./042_CLT_Standardisation.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -145,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./041_distributions_unif_normal.html">Part IV - Distributions and testing</a></li><li class="breadcrumb-item"><a href="./043_distributions_other_continuous.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./041_distributions_unif_normal.html">Part IV - Distributions</a></li><li class="breadcrumb-item"><a href="./043_distributions_other_continuous.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -294,12 +294,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Discretisation</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./034_cross_tabulation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Cross-tabulation</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Part IV - Distributions and testing</span></a>
+ <span class="menu-text">Part IV - Distributions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -308,19 +314,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./041_distributions_unif_normal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./042_CLT_Standardisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./043_distributions_other_continuous.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./044_distributions_discrete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Discrete functions</span></span></a>
   </div>
 </li>
       </ul>
@@ -337,53 +349,70 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./050_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part VI - Statistical inference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./061_inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Statistical Inference</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part VI - Bivariate and regression analysis</span></span>
+ <span class="menu-text">Part VII - Bivariate and regression analysis</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices, Tips, tricks and miscellaneous</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./903_summarizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summary tables</span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Summary tables</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Bibliography</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./999_references.html" class="sidebar-item-text sidebar-link">
@@ -402,19 +431,19 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exponential" id="toc-exponential" class="nav-link active" data-scroll-target="#exponential"><span class="header-section-number">15.1</span> Exponential</a></li>
-  <li><a href="#chi-square" id="toc-chi-square" class="nav-link" data-scroll-target="#chi-square"><span class="header-section-number">15.2</span> Chi-square</a></li>
-  <li><a href="#student-t-dsitribution" id="toc-student-t-dsitribution" class="nav-link" data-scroll-target="#student-t-dsitribution"><span class="header-section-number">15.3</span> Student t-dsitribution</a></li>
-  <li><a href="#fisher-snedecor" id="toc-fisher-snedecor" class="nav-link" data-scroll-target="#fisher-snedecor"><span class="header-section-number">15.4</span> Fisher-Snedecor</a></li>
+  <li><a href="#exponential" id="toc-exponential" class="nav-link active" data-scroll-target="#exponential"><span class="header-section-number">16.1</span> Exponential</a></li>
+  <li><a href="#chi-square" id="toc-chi-square" class="nav-link" data-scroll-target="#chi-square"><span class="header-section-number">16.2</span> Chi-square</a></li>
+  <li><a href="#student-t-distribution" id="toc-student-t-distribution" class="nav-link" data-scroll-target="#student-t-distribution"><span class="header-section-number">16.3</span> Student t-distribution</a></li>
+  <li><a href="#fisher-snedecor" id="toc-fisher-snedecor" class="nav-link" data-scroll-target="#fisher-snedecor"><span class="header-section-number">16.4</span> Fisher-Snedecor</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./041_distributions_unif_normal.html">Part IV - Distributions and testing</a></li><li class="breadcrumb-item"><a href="./043_distributions_other_continuous.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./041_distributions_unif_normal.html">Part IV - Distributions</a></li><li class="breadcrumb-item"><a href="./043_distributions_other_continuous.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></h1>
 </div>
 
 
@@ -432,11 +461,11 @@ window.Quarto = {
 
 
 <p>In addition to the normal and uniform distributions, a number of other continuous distributions are often used, corresponding to different assumptions about the processes that shape the population.</p>
-<section id="exponential" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="exponential"><span class="header-section-number">15.1</span> Exponential</h2>
+<section id="exponential" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="exponential"><span class="header-section-number">16.1</span> Exponential</h2>
 <p>A random variable <span class="math inline">\(X \in [0;+\infty[\)</span> following an exponential distribution with parameter <span class="math inline">\(\lambda &gt; 0\)</span> can be expressed as: <span class="math inline">\(X \sim \epsilon(\lambda)\)</span> with expectation <span class="math inline">\(E(X) = 1/ \lambda\)</span> and variance <span class="math inline">\(Var(X) = 1/ \lambda^2\)</span>.</p>
 <p>Its <strong>density function</strong> can be written as:</p>
-<p><span class="math display">\[f(x) = λ {e}^{- λ x} \text{ for } x \geq 0\]</span> <span class="math display">\[f(x) = 0 \text{ for } x &lt; 0\]</span>.</p>
+<p><span class="math display">\[f(x) = λ {e}^{- λ x} \text{ for } x \geq 0\]</span> <span class="math display">\[f(x) = 0 \text{ for } x &lt; 0\]</span></p>
 <p>Its <strong>cumulative distribution function</strong> is defined by:</p>
 <p><span class="math display">\[F_X(x) = 1 - \exp{(- \lambda x)} \text{ for } x \geq 0\]</span> <span class="math display">\[F_X(x) = 0 \text{ for } x &lt; 0\]</span></p>
 <div class="cell">
@@ -482,19 +511,21 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="chi-square" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="chi-square"><span class="header-section-number">15.2</span> Chi-square</h2>
-<p>A random variable <span class="math inline">\(X\)</span> following a chi-square (or khi-square) distribution can be expressed as: <span class="math inline">\(X \sim \chi^2(p)\)</span> with parameter <span class="math inline">\(p &gt; 0\)</span>, expectation <span class="math inline">\(E(X) = p\)</span>, variance <span class="math inline">\(Var(X) = 2p\)</span>.</p>
-<p>Its <strong>density function</strong> is</p>
-<p><span class="math display">\[f_X(x) = \dfrac {1} {2^{n/2} \gamma(n/2)} x^{(n/2)-1} \exp{(\dfrac{-x}{2})} \text{ for } x \geq 0\]</span></p>
+<section id="chi-square" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="chi-square"><span class="header-section-number">16.2</span> Chi-square</h2>
+<p>A random variable <span class="math inline">\(X\)</span> following a chi-square (or khi-square) distribution can be expressed as: <span class="math inline">\(X \sim \chi^2(k)\)</span> with parameter <span class="math inline">\(k&gt; 0\)</span>, expectation <span class="math inline">\(E(X) = k\)</span>, variance <span class="math inline">\(Var(X) = 2k\)</span>.</p>
+<p><span class="math inline">\(k\)</span> represents the degree of freedom.</p>
+<p>The <strong>density function</strong> is</p>
+<p><span class="math display">\[f_X(x) = \dfrac {1} {2^{k/2} \gamma(k/2)} x^{(k/2)-1} \exp{(\dfrac{-x}{2})} \text{ for } x \geq 0\]</span></p>
 <p><span class="math display">\[f_X(x) = 0 \text{ for } x &lt; 0\]</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">8</span>,<span class="fl">0.01</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dChiSq1 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="dv">1</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dChiSq2 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="dv">2</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dChiSq3 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="dv">3</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dChiSq6 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dChiSq1 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="at">df=</span><span class="dv">1</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dChiSq2 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="at">df=</span><span class="dv">2</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dChiSq3 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="at">df=</span><span class="dv">3</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dChiSq6 <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(x, <span class="at">df=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>We see (and know from the CLT) that when the degrees of freedom increases, the function gets closer to a normal distribution. However it is not symmetrical and the right hand side stays longer than in the normal distribution for quite some time.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, dChiSq1, <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">2</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">1.25</span>),</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Density function of X~Chi^2(p)'</span>, <span class="at">ylab =</span> <span class="st">'f(x)'</span>)</span>
@@ -502,7 +533,7 @@ window.Quarto = {
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dChiSq3, <span class="at">col =</span> <span class="st">'gold'</span>)</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dChiSq6, <span class="at">col =</span> <span class="st">'green'</span>)</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">lty =</span> <span class="dv">1</span>,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"p = 1"</span>, <span class="st">"p = 2"</span>, <span class="st">"p = 3"</span>, <span class="st">"p = 6"</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"k = 1"</span>, <span class="st">"k = 2"</span>, <span class="st">"k = 3"</span>, <span class="st">"k = 6"</span>),</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'green'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -512,14 +543,15 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>The cumulative density is as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="fu">pchisq</span>(x, <span class="dv">1</span>), <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">2</span>,</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="fu">pchisq</span>(x, <span class="at">df=</span><span class="dv">1</span>), <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">2</span>,</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Cumulative Distribution Function of X~Chi2(p)'</span>, <span class="at">ylab =</span> <span class="st">'F(x)'</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pchisq</span>(x, <span class="dv">2</span>), <span class="at">col=</span><span class="st">'darkorange'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pchisq</span>(x, <span class="dv">3</span>), <span class="at">col=</span><span class="st">'gold'</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pchisq</span>(x, <span class="dv">6</span>), <span class="at">col=</span><span class="st">'green'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pchisq</span>(x, <span class="at">df=</span><span class="dv">2</span>), <span class="at">col=</span><span class="st">'darkorange'</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pchisq</span>(x, <span class="at">df=</span><span class="dv">3</span>), <span class="at">col=</span><span class="st">'gold'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pchisq</span>(x, <span class="at">df=</span><span class="dv">6</span>), <span class="at">col=</span><span class="st">'green'</span>)</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">lty =</span> <span class="dv">1</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"p = 1"</span>, <span class="st">"p = 2"</span>, <span class="st">"p = 3"</span>, <span class="st">"p = 6"</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"k = 1"</span>, <span class="st">"k = 2"</span>, <span class="st">"k = 3"</span>, <span class="st">"k = 6"</span>),</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'green'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -529,11 +561,13 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>The chi-square distribution is typically used to test the independence of two variables. It is typically applied to a categorical or ordinal metric along two categories, e.g.&nbsp;the level of education of Luxembourg natives vs Luxembourg migrants or the counts of votes for Kamala Harris among young vs elders population or among urban vs rural population. It is thus often applied to contingency tables after the cross-tabulation of two factors in order to test if observed frequencies differ from expected frequencies.</p>
+<p>The df considered are usually low since it corresponds to the number of categories-1 (e.g.&nbsp;urban+rural, i.e.&nbsp;2 -1=1) times the types of output -1, (e.g.&nbsp;vote for Harris vs Trump, i.e.&nbsp;2-1=1). Thus far from a normal distribution.</p>
 </section>
-<section id="student-t-dsitribution" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="student-t-dsitribution"><span class="header-section-number">15.3</span> Student t-dsitribution</h2>
+<section id="student-t-distribution" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="student-t-distribution"><span class="header-section-number">16.3</span> Student t-distribution</h2>
 <p>A random variable <span class="math inline">\(X\)</span> following a student distribution, can be expressed as: <span class="math inline">\(X \sim t(n)\)</span> with parameter <span class="math inline">\(n\)</span> degrees of freedom.</p>
-<p>Its <strong>density function</strong>is</p>
+<p>Its <strong>density function</strong> is</p>
 <p><span class="math display">\[f(x) = \dfrac{1}{\sqrt{n\pi}} \dfrac {\gamma{(\dfrac{n+1}{2})}} {\gamma{(\dfrac{n}{2})}} \dfrac {1} {(1+\dfrac{x^2}{n})^{(n+1)/2}} \text{ for all } x\in R\]</span> We have: <span class="math display">\[E(X) = 0 \text{ for } n \ge 2\]</span> <span class="math display">\[Var(X) = \dfrac{n}{n-2} \text{ for } n \ge 3\]</span></p>
 <p>If we have a random variable <span class="math inline">\(U \sim N (0, 1)\)</span> and a random variable <span class="math inline">\(X \sim \chi^2(n)\)</span> which are independent, then the random variable <span class="math inline">\(T_n = \dfrac{U}{\sqrt{X/n}}\)</span> follows a student distribution <span class="math inline">\(t(n)\)</span></p>
 <div class="cell">
@@ -543,19 +577,21 @@ window.Quarto = {
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>dStudent4 <span class="ot">&lt;-</span> <span class="fu">dt</span>(x, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, dNorm01, <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>), <span class="at">lty =</span> <span class="dv">3</span>,</span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="fu">dnorm</span>(x), <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>), <span class="at">lty =</span> <span class="dv">3</span>,</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Density function of X~t(n)'</span>, <span class="at">ylab =</span> <span class="st">'f(x)'</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'dNorm01' not found</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dStudent4, <span class="at">col =</span> <span class="st">'gold'</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dStudent2, <span class="at">col =</span> <span class="st">'darkorange'</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dStudent1, <span class="at">col =</span> <span class="dv">2</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">lty =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dv">3</span>),</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"n = 1"</span>, <span class="st">"n = 2"</span>, <span class="st">"n = 4"</span>, <span class="st">"N(0,1)"</span>),</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'darkgray'</span>))</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in (function (s, units = "user", cex = NULL, font = NULL, vfont = NULL, : plot.new has not been called yet</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dStudent4, <span class="at">col =</span> <span class="st">'gold'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dStudent2, <span class="at">col =</span> <span class="st">'darkorange'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dStudent1, <span class="at">col =</span> <span class="dv">2</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">lty =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dv">3</span>),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"t(n = 1)"</span>, <span class="st">"t(n = 2)"</span>, <span class="st">"t(n = 4)"</span>, <span class="st">"N(0,1)"</span>),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'darkgray'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="043_distributions_other_continuous_files/figure-html/studentDensity-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="fu">pnorm</span>(x), <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lty =</span> <span class="dv">3</span>,</span>
@@ -564,7 +600,7 @@ window.Quarto = {
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pt</span>(x, <span class="dv">3</span>), <span class="at">col=</span><span class="st">'darkorange'</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pt</span>(x, <span class="dv">6</span>), <span class="at">col=</span><span class="dv">2</span>)</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">lty =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dv">3</span>),</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"n = 1"</span>, <span class="st">"n = 2"</span>, <span class="st">"n = 4"</span>, <span class="st">"N(0,1)"</span>),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"t(n = 1)"</span>, <span class="st">"t(n = 2)"</span>, <span class="st">"t(n = 4)"</span>, <span class="st">"N(0,1)"</span>),</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'darkgray'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -574,9 +610,11 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>Compared to the normal distribution, we can see the t-distribution depends solely on <span class="math inline">\(n\)</span>. It is used for continuous variables in the non-rare cases where the sample size is small and the variance of the population is unknown.</p>
+<p>t-Student’s tests are typically used to test whether two samples have different means or if a sample mean differ from a given value.</p>
 </section>
-<section id="fisher-snedecor" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="fisher-snedecor"><span class="header-section-number">15.4</span> Fisher-Snedecor</h2>
+<section id="fisher-snedecor" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="fisher-snedecor"><span class="header-section-number">16.4</span> Fisher-Snedecor</h2>
 <p>A random variable <span class="math inline">\(X\)</span> following a Fisher-Snedecor distribution can be expressed as <span class="math inline">\(X \sim F(n, p)\)</span> with parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> degrees of freedom.</p>
 <p>Its <strong>density function</strong> is</p>
 <p><span class="math display">\[f_X(x) = \dfrac {\gamma(\dfrac{n+p}{2})} {\gamma(\dfrac{n}{2}) \gamma(\dfrac{p}{2})} (\dfrac{n}{p})^{(n/2)} \dfrac{x^{\dfrac{n-2}{2}}}{(1 + \dfrac{n}{p}x)^{\dfrac{n-2}{2}}} \text{ for } x \geq 0\]</span> <span class="math display">\[f_X(x) = 0 \text{ for } x &lt; 0\]</span></p>
@@ -597,7 +635,7 @@ window.Quarto = {
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dF20, <span class="at">col =</span> <span class="st">'gold'</span>)</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, dF50, <span class="at">col =</span> <span class="st">'green'</span>)</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">lty =</span> <span class="dv">1</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"n = p = 1"</span>, <span class="st">"n = p = 10"</span>, <span class="st">"n = p = 20"</span>, <span class="st">"n = p = 50"</span>),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"F(n = p = 1)"</span>, <span class="st">"F(n = p = 10)"</span>, <span class="st">"F(n = p = 20)"</span>, <span class="st">"F(n = p = 50)"</span>),</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'green'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -614,7 +652,7 @@ window.Quarto = {
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pf</span>(x, <span class="dv">10</span>, <span class="dv">10</span>), <span class="at">col=</span><span class="st">'darkorange'</span>)</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">pf</span>(x, <span class="dv">1</span>, <span class="dv">1</span>), <span class="at">col=</span><span class="dv">2</span>)</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="at">lty =</span> <span class="dv">1</span>,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"n = p = 1"</span>, <span class="st">"n = p = 10"</span>, <span class="st">"n = p = 20"</span>, <span class="st">"n = p = 50"</span>),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"F(n = p = 1)"</span>, <span class="st">"F(n = p = 10)"</span>, <span class="st">"F(n = p = 20)"</span>, <span class="st">"F(n = p = 50)"</span>),</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="st">'darkorange'</span>, <span class="st">'gold'</span>, <span class="st">'green'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -624,6 +662,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>You will mostly encounter F-tests in association with the goodness of fit of a regression analysis. It is used to test whether a linear model better fits the data than a ‘intercept only’ model, i.e.&nbsp;one that contains no independent variables, i.e.&nbsp;whether your model provides any useful information for prediction.</p>
 
 
 </section>
@@ -1052,12 +1091,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./042_CLT_Standardisation.html" class="pagination-link" aria-label="Central Limit Theorem and standardisation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./050_graphics_ggplot.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./044_distributions_discrete.html" class="pagination-link" aria-label="Discrete functions">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Discrete functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

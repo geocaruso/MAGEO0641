@@ -1,0 +1,119 @@
+# Cross-tabulation {#sec-cross-tabulation}
+
+There are many instances where a particular variable numeric or factor is to be computed along or aggregated a categorical variable.
+
+## Case of 2 or several factors (contingency tables)
+
+Suppose a first data.frame is made with a single factor:
+
+```{r}
+D1<-data.frame(
+Score1=factor(c("A","A","B","B","C","C","C","C","D","A","A","B","B","C","C","C","C","D"))
+)
+```
+
+The function `table()` returns counts, i.e. frequencies:
+
+```{r}
+table(D1)
+```
+
+Let's add a second factor to this data-frame, we see the function table now returns a cross-tabulation, which we alsso call a contingency table (and to which we will later add significance tests)
+
+```{r}
+D2<-D1
+D2[,"Gender"]<-factor(c("M","F","M","F","M","F","M","F","F","F","M","F","M","F","M","F","F","M"))
+table(D2)
+```
+
+What happens if there are 3 and more factors?
+
+```{r}
+D3<-D2
+D3[,"Score2"]<-factor(c("B","B","C","C","C","C","D","A","A","B","B","C","C","C","C","D", "A","B"))
+D3[,"Country"]=factor(c("LU","DE","DE","DE","DE","FR","DE","LU","DE","BE","DE","FR","BE","FR","LU","LU","FR","DE"))
+
+table(D3)
+```
+
+The same cross-tabulation is undertaken (counts) but now for each level of the third one.
+
+### Margins
+
+A `table` object is supposed to store frequencies. In many cases one will need to also compute vertical and horizontal totals. This is doen by done by applying the `addmargins()` function to a table object. By default both margins are added
+
+```{r}
+addmargins(table(D2))
+addmargins(table(D2), margin = 1)
+addmargins(table(D2), margin = 2)
+```
+
+Similar functions are rowSums and rowCols. However, although they are more general as applicable to any data.frame, not just tables, they don't assemble the table with margins, they are simply vectors
+
+```{r}
+rowSums(table(D2))
+colSums(table(D2))
+class (rowSums)
+class (addmargins(table(D2)))
+```
+
+### Proportions
+
+In many instances as well, one needs to compute proportions rather than counts:
+
+The `prop.table()` function does it by deafutl across all the two dimensions of the table:
+
+```{r}
+prop.table(table(D2))
+addmargins(prop.table(table(D2)))
+```
+
+While you may need the proportions of columns or rows only:
+
+```{r}
+prop.table(table(D2),margin = 1)
+prop.table(table(D2),margin = 2)
+```
+
+Since they are table output you can also add margins to the proportions and make sure how it sums to 1:
+
+```{r}
+addmargins(prop.table(table(D2)))
+addmargins(prop.table(table(D2),margin = 1))
+addmargins(prop.table(table(D2),margin = 2))
+```
+
+## Case of a numeric vector
+
+Let's add a numeric vector to our data-frame:
+
+```{r}
+D3[,"Q"]<-c(rnorm(18, mean=12, sd=2))
+```
+
+Table is useless in this case
+
+```{r}
+table(D3[,c("Q")])
+table(D3[,c("Country", "Q")])
+```
+
+Aggregation of a numeric vector over factor levels require a certain statistcis to be computed, for example a center or dispersion indicator. We use the function aggregate for that purpose.
+
+```{r}
+meanCountry<-aggregate(D3["Q"], by=D3["Country"], FUN="mean")
+sdCountry<-aggregate(D3["Q"], by=D3["Country"], FUN="sd")
+cbind(meanCountry, sdCountry)
+```
+
+`aggregate()` essentially splits the data into subsets, and computes the requested summary statistics (FUN) for each.
+
+or even across several factors using a `formula` and the `data` argument rather than `by`
+
+```{r}
+meanCountry2<-aggregate(Q ~ Country, data=D3, FUN="mean")
+meanCountry2
+meanCountryGender<-aggregate(Q ~ Country + Gender, data=D3, FUN="mean")
+meanCountryGender
+
+```

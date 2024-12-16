@@ -1,0 +1,82 @@
+# Normality Test
+
+## Shapiro-Wilk Test
+
+**Testing**: $H_0: X$ is normally distributed
+
+The Shapiro-Wilk test assess how well an observed variable fits a normal distribution. It is similar to testing the correlation between the ordered sample values and the expected ones from a normal distribution.
+
+It computes a W statistic, which measures how well the ordered sample values match the expected values from the normal distribution. If they don't correlate well, the W statistic is significantly lower than expected and the null hypothesis of normality is rejected.
+
+## Basic example.
+
+Suppose a data of 10 values. We are not quite sure they are normally distributed after looking at the histogram or the qq plot against a normal distribution (`qqnorm()`)
+
+```{r}
+data <- c(5, 7, 8, 9, 11, 10, 7, 8, 9, 11)
+n<-length(data)
+
+hist(data)
+qqnorm(data)
+```
+
+We perform a shapiro-wilk test as follows:
+
+```{r}
+shapiro.test(data)
+```
+
+showing we can't reject the null hypothesis. There is no significant evidence against the data being normally distributed.
+
+## Decomposing Shapiro-wilk test
+
+We have seen earlier that an approach to check normality could be to use a chi-squared test after binning and checking observed counts and expected counts along a normal distribution (goodness of fit chi-squared). The approach of Shapiro-Wilk is technically closer to a correlation coefficient. See how the W statistic is obtained:
+
+First, the data is sorted and deviations to the mean computed:
+```{r}
+n <- length(data)
+sorted_data <- sort(data)
+dev_sort<-sorted_data-mean(data)
+dev_sort
+```
+
+Second, expected values from a standard normal distribution are computed based on `qnorm()` function:
+
+```{r}
+qnorm((1:n) / (n))
+
+expected_vals <- qnorm((1:n - 0.375) / (n + 0.25))
+expected_vals
+```
+As you can see the values are not exactly those from the `qnorm()` function to avoid an infinity and to correct for small sample size (see the addition of  -0.375 and 0.25 terms)
+
+Those expected values are then scaled after the sum of squares (and the units become irrelevant) to make expected weights 
+
+```{r}
+weights <- expected_vals / sqrt(sum(expected_vals^2))
+```
+
+Then those weights are multiplied by the observed deviations to the mean. This cross-product (see numerator) is where it is similar to a correlation coefficient: if both observed and expected vary together the value is high:
+
+```{r}
+numerator <- sum(weights * dev_sort)^2
+denominator <- sum(dev_sort^2)
+W<-numerator/denominator
+W
+```
+## Example:
+
+```{r}
+library(AER)
+data(Parade2005)
+attach(Parade2005)
+
+shapiro.test(earnings)
+shapiro.test(log(earnings))
+shapiro.test(earnings[celebrity=='no'])
+
+qqnorm(scale(earnings))
+qqnorm(scale(earnings[earnings < 100000]))
+```
+
+

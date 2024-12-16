@@ -50,43 +50,87 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/031_sample_population.html</loc>
-    <lastmod>2024-09-26T09:37:49.438Z</lastmod>
+    <lastmod>2024-11-18T07:24:46.382Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/032_univariate.html</loc>
-    <lastmod>2024-10-08T18:53:32.270Z</lastmod>
+    <lastmod>2024-11-13T15:24:14.461Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/033_discretisation.html</loc>
-    <lastmod>2024-10-07T17:32:06.184Z</lastmod>
+    <lastmod>2024-11-18T07:25:32.292Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/034_cross_tabulation.html</loc>
-    <lastmod>2024-11-11T12:57:17.277Z</lastmod>
+    <lastmod>2024-11-13T15:15:17.954Z</lastmod>
   </url>
   <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/041_distributions_unif_normal.html</loc>
-    <lastmod>2024-11-06T11:00:05.691Z</lastmod>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/040_graphics_ggplot.html</loc>
+    <lastmod>2024-11-13T15:28:58.279Z</lastmod>
   </url>
   <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/042_CLT_Standardisation.html</loc>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/051_distributions_unif_normal.html</loc>
+    <lastmod>2024-11-18T17:42:45.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/052_CLT_Standardisation.html</loc>
     <lastmod>2024-10-10T08:14:31.601Z</lastmod>
   </url>
   <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/043_distributions_other_continuous.html</loc>
-    <lastmod>2024-11-06T10:28:22.269Z</lastmod>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/053_distributions_other_continuous.html</loc>
+    <lastmod>2024-11-18T07:16:50.225Z</lastmod>
   </url>
   <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/044_distributions_discrete.html</loc>
-    <lastmod>2024-11-06T10:59:05.323Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quadtrees.lu/teaching/MAGEO0641/050_graphics_ggplot.html</loc>
-    <lastmod>2024-11-04T12:22:44.241Z</lastmod>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/054_distributions_discrete.html</loc>
+    <lastmod>2024-11-18T07:15:20.763Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/061_inference.html</loc>
-    <lastmod>2024-11-06T15:14:50.878Z</lastmod>
+    <lastmod>2024-12-04T11:23:37.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/062_hypotheses_test.html</loc>
+    <lastmod>2024-12-04T11:36:25.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/063_hypotheses_single_sample.html</loc>
+    <lastmod>2024-12-06T14:01:22.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/064_hypotheses_two_samples.html</loc>
+    <lastmod>2024-12-04T13:56:01.905Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/065_hypotheses_contingency.html</loc>
+    <lastmod>2024-12-06T11:46:44.317Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/066_hypotheses_normality.html</loc>
+    <lastmod>2024-12-06T15:46:23.526Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/067_power_contingency.html</loc>
+    <lastmod>2024-12-05T14:14:01.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/071_correlation.html</loc>
+    <lastmod>2024-12-09T23:07:24.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/072_regression.html</loc>
+    <lastmod>2024-12-10T18:42:26.495Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/073_CIregression.html</loc>
+    <lastmod>2024-12-10T17:17:01.835Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/074_multi_regression.html</loc>
+    <lastmod>2024-12-16T13:04:37.091Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/075_regression_diagnostics.html</loc>
+    <lastmod>2024-12-16T13:05:43.691Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/901_copy_paste.html</loc>
@@ -99,6 +143,10 @@
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/903_summarizing.html</loc>
     <lastmod>2024-11-04T12:23:15.284Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/904_curve.html</loc>
+    <lastmod>2024-11-18T18:44:58.667Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/999_references.html</loc>

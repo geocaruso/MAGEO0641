@@ -62,16 +62,18 @@ plot(x_sd_5, pal=mycolors)
 ```
 
 And with 7 classes using the "Jenks" method, similar to the one we find within Esri ArcGIS:
+
 ```{r}
 x_jenks_7<-classInt::classIntervals(x, n=7, style="jenks")
 x_jenks_7
 plot(x_jenks_7, pal=mycolors)
 ```
-Notice that ahead of plotting classInt expanded the number of colours, which we provided. In fact, 2 would be enough:
+
+Notice that, ahead of plotting, `classInt`\` expanded the number of colours, which we provided. In fact, 2 would be enough:
+
 ```{r}
 plot(x_jenks_7, pal=c("yellow","red"))
 ```
-
 
 Interestingly, rather that specifying a number of classes, one could also use the same breaks as a standard boxplot:
 
@@ -84,13 +86,25 @@ c(quantile(x,probs=0.25)-1.5*IQR(x),
 plot(x_box, pal=mycolors)
 ```
 
-
 One then retrieves a vector of the categories in which each values fall using `findCols()`, which we can easily add to a dataframe as a new column, or even a vector of colours for use anywhere else using `findColours()`.
 
-This is shown with our Jenks example:
+This is shown below with our Jenks example:
 
 ```{r}
 classInt::findCols(x_jenks_7)
 classInt::findColours(x_jenks_7, pal=c("yellow","red"))
 ```
 
+Finally,
+
+```{r}
+
+```
+
+Finally, you may find more convenient to use `classify_intervals()`, a wrapper for the sequence `classIntervals()` and `findCols()`, in order to issue directly the factor levels, as in `cut()`, rather than a more complex `classIntervals` object.
+
+```{r}
+k4<-classInt::classify_intervals(x, n=4, style="kmeans")
+k4
+class(k4)
+```

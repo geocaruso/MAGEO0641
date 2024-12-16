@@ -1,0 +1,121 @@
+# Correlation and regression
+
+The relationship between two processes (variables) that vary in space can be assessed visually through comparing maps. While maps are important geographical instruments, correlation and regression analyses can make the visual association more precise by defining:
+
+-   **How strong the association is**
+-   **What form of association it is**
+
+Maps are still very useful in suggesting processes to be associated and to identify new attributes for complementing correlation-regression (analysis of residuals)
+
+## Double objective:
+
+1.  **Explaining** the spatial distribution of a process using another or several other processes.
+
+-   A **correlation** examines the **degree of association** (no direction of causality)
+-   A **regression** identifies a process to be explained, represented by a **dependent variable** and one or several explanatory processes, the **independent variables**
+
+***Correlation comes first, it is more exploratory***
+
+2.  **Predicting**the spatial distribution of a process $Y$, given the spatial distribution of an associated process $X$
+
+-   **Not necessarily looking for explanations**
+-   But predicting with a **measured precision**
+
+## Covariation, Covariance and Correlation
+
+Let $X$ and $Y$ be - cardinal (ratio) numeric variables - varying across space, i.e. in every $i$ of $n$ places
+
+**To what degree do the two variables vary together ?**
+
+**To what degree are they interdependent ?**
+
+Let's define:
+
+-   Mean: $\bar{X}$, $\bar{Y}$
+
+-   Deviation to the mean: $x_i = X_i - \hat{X}$ and $y_i = Y_i - \hat{Y}$
+
+-   **Covariation**: sum over each place of the product of the deviations in $X$ and $Y$. $$Covariation (X,Y) = \sum_{i=1}^n x_i y_i$$
+
+The idea of a covariation is to create a value that increases when observations vary 'together' along the two variables. If an observation i is just above the mean in X but far above the mean in Y, the product is rather small. But if is far from the mean in both X and Y the product of both is very high. However, everything else equal, covariation increases with the number of observations
+
+-   **Covariance**: $$Cov(X,Y) = \dfrac {\sum_{i=1}^n x_i y_i} {n}$$
+
+The covariance embeds the same idea as the covariation but resolves the issue of sample size with $n$ at the denominator. Two samples of the same two variables can thus be compared even if they have different numbers of observations.
+
+However, if those two samples have different dispersion (e.g. weight measured over a different range of ages), the one with the larger dispersion will still have a larger covariance and impact our understanding of how $X$ and $Y$ are related.
+
+-   **Correlation** coefficient (Pearson… no assumption on random distribution): $$\rho_{XY} = \dfrac {Cov(X,Y)} {\sigma_X \sigma_Y}$$
+
+with $\sigma_X$ and $\sigma_Y$ the standard deviations.
+
+The correlation resolves the issue of a different dispersion by dividing the covariance by the product of the standard deviations. Doing so, the measurement units also disappear, hence it is comparable even if we would measure one of the variable using a different (linearly related) metric. For example if we had $X$ in \[kg\] and $Y$ in \[cm\], the covariance would be in \[kg x cm\] and not directly comparable to another set where \[g\] and \[mm\] would be used. With the correlation, we no longer care since we divide by the same product of units as the denominator
+
+## Correlation coefficient characteristics
+
+-   is a *pure* number (no units)
+
+-   is *invariant* to any linear transformation (including standardization)
+
+-   indicates whether there is a *linear* relationship between $X$ and $Y$.
+
+    $$−1≤ \rho_{XY} ≤1$$
+
+-   $\rho$ is close to 1 if the slope of the line that can be drawn in the plot is positive
+
+-   $\rho$ is close to -1 if the slope of the line that can be drawn in the plot is negative
+
+-   $\rho$ is close to 0 if the plot has no particular form. *Note that it does not mean that the variables are independent but that the relationship is non linear !*
+
+```{r}
+set.seed(123)
+x<-c(1,1.5,1.5,2,2.5,3,4,4,4.5,4.5,5.5,6,6.5)
+y1<-c(10,15,12,17,30,28,40,30,44,40,59,58,67)
+y2<-mean(y1)+runif(length(y1),min = -30, max=30)
+y3<-70-y1
+par(mfrow = c(1,3))
+plot(x,y1,ylim=c(1,70), col="black", pch=16)
+plot(x,y2,ylim=c(1,70), col="black", pch=16)
+plot(x,y3,ylim=c(1,70), col="black", pch=16)
+```
+On the above figure, the correlations are
+respectively:
+```{r}
+cor(x,y1)
+cor(x,y2)
+cor(x,y3)
+```
+See that the order of x and y doesn't matter and that if x (or y) is added a fixed number and multiplied by another, i.e. undergoes a linear transformation, the correlation coefficient doesn't change
+
+```{r}
+cor(y1,x)
+cor(5+10*x,y1)
+```
+
+## Correlation confidence
+
+If we have access to the total population, we know $X$ and $Y$ for every individual. The population correlation coefficient is usually denoted $\rho_{XY}$.
+
+Usually, however, only a sample of the population is observed. On that sample, we can calculate $r_{XY}$, which is an estimation of $\rho_{XY}$.
+
+From $r_{XY}$, confidence intervals can be calculated and thus hypotheses can be tested about $\rho_{XY}$.
+
+Test $H0: \rho_{XY} = 0$ (alternative: $H1: \rho_{XY} \ne0$)
+
+Suppose $X$, $Y$ follow a normal distribution (or at least one of them).
+
+Calculate $t$ statistic: $$t_0 = \dfrac {|r|\sqrt{n-2}}{\sqrt{1-r^2}} \sim t_{n-2}$$ If $t_0 \le t_{n-2}$
+
+$H0$ is rejected when $P(t_0 \le t_{n-2}) = \alpha$.
+
+The relevant t.test is included in the `cor.test()` function. The test is applied to our example graphs
+
+```{r}
+cor.test(x,y1)
+cor.test(x,y2)
+cor.test(x,y3)
+```
+The null hypothesis is well rejected in the first and third cases. It cannot be rejected in the second case, showing there is no correlation.
+
+
+Note: using ordinal data requires other measures, e.g. Spearman or Kendall. These measures can be used with continuous data as well and may help identifying data problems (strange values) or asymetric distributions.

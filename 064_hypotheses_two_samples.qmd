@@ -1,0 +1,164 @@
+# Hypotheses testing - Two samples tests
+
+## Tests about two means
+
+### Normal distribution and known variances (Z-test)
+
+We consider a random variable $X \sim N(\mu_1, \sigma_1^2)$ and a random variable $Y \sim N(\mu_2, \sigma_2^2)$ with $\mu_1$ and $\mu_2$ unknown, and $\sigma_1^2$ and $\sigma_2^2$ known. We use two samples of size $n_1$: $x = {x_1, x_2,..., x_{n_1}}$ and $n_2$: $y = {y_1, y_2,..., y_{n_2}}$ made of independent realizations of that random variables $X$ and $Y$. $n_1$ and $n_2$ can have different values.
+
+-   **Testing**: $H_0: \mu_1 = \mu_2$ against $H_1: \mu_1 \neq \mu_2$.
+-   **Test Statistic**: random variable defined by $$Z_{n_1, n_2} = \dfrac{\hat{\mu_1} - \hat{\mu_2}}{\sqrt{\dfrac{\sigma^2_1} {n_1} + \dfrac{\sigma^2_2} {n_2}}} \sim N(0, 1)$$
+-   **The critical values** are read on a standard normal distribution table.
+
+#### Example:
+
+```{r}
+set.seed(123) 
+sigma1 <- 2 # Standard deviation for X
+sigma2 <- 3 # Standard deviation for Y
+n1 <- 30
+n2 <- 40
+
+# Generate samples
+x <- rnorm(n1, mean = 5, sd = sigma1)
+y <- rnorm(n2, mean = 7, sd = sigma2)
+
+# Sample means
+mean_x <- mean(x)
+mean_y <- mean(y)
+
+# Test statistic
+z <- (mean_x - mean_y) / sqrt((sigma1^2 / n1) + (sigma2^2 / n2))
+
+# P-value for two-sided test
+p_value <- 2 * (1 - pnorm(abs(z)))
+p_value
+```
+
+The means are not the same!
+
+### Normal distribution and unknown, yet assumed equal, variances (pooled t-test)
+
+We consider a random variable $X \sim N(\mu_1, \sigma_1^2)$ and a random variable $Y \sim N(\mu_2, \sigma_2^2)$ with $\mu_1$, $\mu_2$, $\sigma_1^2$ and $\sigma_2^2$ unknown. We use two samples of size $n_1$: $x = {x_1, x_2,..., x_{n_1}}$ and $n_2$: $y = {y_1, y_2,..., y_{n_2}}$ made of independent realizations of that random variables $X$ and $Y$. $n_1$ and $n_2$ can have different values but we need $\sigma^2_1 = \sigma^2_2 = \sigma^2$ (to test this hypothesis, see the Fisher-Snedecor Test on two variances).
+
+-   **Testing**: $H_0: \mu_1 = \mu_2$ against $H_1: \mu_1 \neq \mu_2$.
+-   **Test Statistic**: random variable defined by $$T_{n_1 + n_2 - 2} = \dfrac{\hat{\mu_1} - \hat{\mu_2}}{\hat{\sigma} \sqrt{\dfrac{1} {n_1} + \dfrac{1} {n_2}}} \sim t(n_1 + n_2 - 2)$$ with $$\hat{\sigma} = \sqrt{ \dfrac{n_1 S^2_{n_1} + n_2 S^2_{n_2}}{n_1 + n_2 - 2} }$$
+-   **The critical values** are read on a t-student distribution table.
+
+Similarly to the one sample case, we can use the built-in function `t.test()` now indicating the two samples:
+
+#### Example:
+
+Suppose final exam score of students who completed their regular assignments and the exam scores of those who didn't. Note n differs for both
+
+```{r}
+# Exam scores for students who did their regular assignment
+assignment <- c(94, 81, 88, 90, 89, 91, 78, 83, 88, 88, 91, 90)
+
+# sample mean and sd
+mean(assignment)
+sd(assignment)
+
+# Exam scores for students who didn't do their regular assignment
+no_assignment <- c(71, 80, 84, 82, 88, 75, 86, 81, 84)
+
+# sample mean and sd
+mean(no_assignment)
+sd(no_assignment)
+```
+
+Is the difference in mean siginificant?
+
+```{r}
+t.test(assignment,no_assignment,var.equal=TRUE)
+```
+
+Yes, we reject the null hypothesis of equal mean. And we recommend you do your assignments!
+
+Usually the Welch test (below) is preferred because it is rare we can assume same variance from two samples. For using this pooled t-test, we need to know that most of the variance is due to measurements errors or due to the toolset that was used for building the two samples. In any case the Welch would work even if the variance is the same.
+
+### Normal distribution and unknown, possibly different, variances (Welch test)
+
+We consider a random variable $X \sim N(\mu_1, \sigma_1^2)$ and a random variable $Y \sim N(\mu_2, \sigma_2^2)$ with $\mu_1$, $\mu_2$, $\sigma_1^2$ and $\sigma_2^2$ unknown. We use two samples of size $n_1$: $x = {x_1, x_2,..., x_{n_1}}$ and $n_2$: $y = {y_1, y_2,..., y_{n_2}}$ made of independent realizations of that random variables $X$ and $Y$. $n_1$ and $n_2$ can have different values and we accept $\sigma^2_1 \ne \sigma^2_2$ (to test this hypothesis, see the Fisher-Snedecor Test).
+
+-   **Testing**: $H_0: \mu_1 = \mu_2$ against $H_1: \mu_1 \neq \mu_2$.
+-   **Test Statistic**: random variable defined by $$T_{v} = \dfrac{\hat{\mu_1} - \hat{\mu_2}}{\sqrt{\dfrac{S^2_{n_1}} {n_1 - 1} + \dfrac{S^2_{n_2}} {n_2 - 1}}} \sim t(v)$$
+
+with $v$ close to $(\dfrac{S^2_{n_1}} {n_1 - 1} + \dfrac{S^2_{n_2}} {n_2 - 1})^2 / (\dfrac{S^4_{n_1}} {(n_1 - 1)^3} + \dfrac{S^4_{n_2}} {(n_2 - 1)^3})$ - **The critical values** are read on a student distribution table.
+
+#### Example:
+
+Using the same example and the default t.test, we perform a Welch test:
+
+```{r}
+t.test(assignment, no_assignment)
+```
+
+The null hypothesis is again rejected. Which confirms you need to do your assignments!
+
+## Tests about two variances
+
+### Normal distribution and unknown means - F test (Fisher-Snedecor Test)
+
+We consider a random variable $X \sim N(\mu_1, \sigma_1^2)$ and a random variable $Y \sim N(\mu_2, \sigma_2^2)$ with $\mu_1$ and $\mu_2$ unknown, and $\sigma_1^2$ and $\sigma_2^2$ known. We use two samples of size $n_1$: $x = {x_1, x_2,..., x_{n_1}}$ and $n_n$: $y = {y_1, y_2,..., y_{n_2}}$ made of independent realizations of that random variables $X$ and $Y$. $n_1$ and $n_2$ can have different values.
+
+-   **Testing**: $H_0: \sigma^2_1 = \sigma^2_2$ against $H_1: \sigma^2_1 \neq  \sigma^2_2$.
+-   **Test Statistic**: random variable defined by $$F = \dfrac{S^2_{n_1,c}}{S^2_{n_2,c}} \sim F(n_1 - 1, n_2 - 1)$$
+-   **The critical values** are read on a Fisher distribution table.
+
+#### Example
+
+```{r}
+var.test(assignment, no_assignment)
+```
+
+The p-value is higher in this case than the default significance level (0.05) so you cannot reject the null hypothesis that the ratio of the two variances is 1 (i.e. equal variances). There is no difference in the variance of the exam results beween those who completed their regular assignments and those who didn't.
+
+## Tests about two proportions
+
+Similar to the one sample case, we can have two proportions and ask whether they equal (i.e. their ratio is one). They may have different sample size, which is a case you encounter quite often with a yes/no question asked to two imbalanced samples (two classes, smokers/non-smokers,...)
+
+```{r}
+prop.test(x = c(50, 60), n = c(150, 200))
+```
+
+In this case the null hypothesis is not rejected and proportions can be said to be similar.
+
+The test uses the chi-squared approximation, which may not be valid for smaller samples. See the warning here:
+
+```{r}
+prop.test(x = c(5, 6), n = c(15, 20))
+```
+
+In this case an exact test would be conducted. An exact `fisher.test()` can be performed but requires that the data is structured as a matrix: counts of "yes" and "no", rather than the "yes" and size "n" we provided so far to the `prop.test()`.
+
+We can rewrite our data as suggested for a `prop.test()` as well (see help `prop.test()`: *a two-dimensional table (or matrix) with 2 columns, giving the counts of successes and failures, respectively* ). It is usually the way we have it after a table or aggregate sum anyway. It is a **contingency table** where one of the factor is the yes/no answer. See our chapter on cross-tabulation.
+
+```{r}
+D<-matrix(c(5, 10, 6, 14),ncol=2)
+D
+addmargins(D)
+```
+
+The exact test:
+
+```{r}
+fisher.test(D)
+```
+
+And rerunning `prop.test()` for both the small and large dataset shows that using the contingency matrix structure holds the same result.
+
+```{r}
+prop.test(D)
+D2<-matrix(c(50, 100, 60, 140),ncol=2)
+prop.test(D2)
+```
+
+Note that applied to a 2x2 case, i.e. comparing the proportions of successes between two groups, is a particular case of more general case where we would test if there is a significant association between two categorical variables , irrespective of the number of levels, i.e. resulting from any contingency table. This more general independence test is a chi-squared test (see next chapter).
+
+Which means that the following two are technically equivalent:
+
+```{r}
+prop.test(D2)
+chisq.test(D2)
+```

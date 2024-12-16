@@ -1,0 +1,32 @@
+# Drawing curves in R
+
+`curve()` takes an expression, i.e. a quote or a function call, and evaluates it when drawing for a series of points between the from and to limits (default 0 to 1)
+
+```{r}
+curve((x))
+curve((x),from=-2, to=2)
+```
+
+```{r}
+par(pty="s") #square graphic
+curve((x),-10,10, axes = FALSE, xlim=c(-10,10),ylim=c(-10,10))
+axis(1, pos=0, col="grey")
+axis(2, pos=0, col="grey")
+curve(x^2, add=TRUE, col="blue")
+curve(x^3, add=TRUE, col="orange")
+curve(log, add=TRUE, col="red")
+curve(exp, add=TRUE, col="purple")
+```
+```{r}
+par(pty="s") #square graphic
+curve(tan,-5,5, col="gold",
+      axes = FALSE, xlim=c(-5,5),ylim=c(-2,2))
+axis(1, pos=0, col="grey")
+axis(2, pos=0, col="grey")
+curve(cos, add=TRUE, col="red")
+curve(sin, add=TRUE, col="blue")
+```
+
+```{r}
+curve((0.3*x^2-10*x+20), from=-10, to=30)
+```

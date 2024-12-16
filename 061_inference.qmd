@@ -1,6 +1,6 @@
 # Statistical Inference
 
-In this chapter, we first introduce point estimates and then confidence interval estimations
+In this chapter, we first introduce point estimates and then confidence interval estimations.
 
 We will use a census extract of the US population as the main dataset, `UScensus2000.txt` (see `data/US` folder)
 
@@ -13,35 +13,36 @@ summary(census)
 
 ## Point Estimates
 
-### Point Estimate
+To estimate the *population mean* $\bar{X}$ (or other metrics such as variance or median) based on a sample, we typically use the *sample mean*:
 
-In order to estimate the *population mean* $\bar{X}$ (or variance, median or any other metric) based on a sample, we use to take the *sample mean*: $$\bar{x} = \dfrac{1}{n} \sum_{i=1}^n x_i$$
+$$\bar{x} = \dfrac{1}{n} \sum_{i=1}^n x_i$$
 
-$\bar{x}$ is called a **point estimate** or punctual estimation of the *population mean*.
+The sample mean, $\bar{x}$, is known as a **point estimate** of the *population mean*.
 
 ### Problem
 
-If we take another sample from that same population and compute the new sample mean, we are likely to obtain a different point estimate. This difference is called **sampling variation**.
+If we draw another sample from the same population and calculate the new sample mean, we are likely to obtain a different point estimate. This difference is referred to as **sampling variation**.
 
-In other words, an estimate is close to the real value, without being exactly equal to the real (population) parameter value. Also, the sampling variation is supposed to decrease with the size of the sample. A point estimate tends to the population parameter value as the sample size increases and gets closer to the entire population size.
+In other words, an estimate is close to the true value but not exactly equal to the actual (population) parameter value. Additionally, sampling variation is expected to decrease as the sample size increases. A point estimate converges to the population parameter value as the sample size grows and approaches the size of the entire population.
 
-### Illustration
+### Example
 
-We suppose that the dataset $census$ contains our target population. Our aim is to estimate the population mean for the variable $age$ and the proportion of the different genders in the case of variable $sex$.
+We suppose that the dataset `census` contains our target population. Our aim is to estimate the population mean for the variable `age` and the proportion of the different genders in the case of variable `sex`.
 
-We look at the *running mean* of the variable $age$ and at the *running proportion* of men for the variable $sex$.
+We look at the *running mean* of the variable `age` and at the *running proportion* of men for the variable `sex`.
 
 We start by extracting from the total population a sample made of one observation: $n = 1$. At each step, we extract randomly a new sample with one additional observation. We use a sampling with replacement, i.e. the previous sample is not simply augmented: we take a new sample (made of completely new individuals) each time. We stop when we reach the total population, i.e. when $n = 500$ in our case.
 
-The key function for sampling in R is `sample()`, which randomly selects a number (arg `size`) of records for a given vector or data frame (or, if none are specified, outputs a vector of $1$ to $size$ integers in a random order).
+The key function for sampling in R is `sample()`, which randomly selects a number (arg `size`) of records for a given vector (or, if none are specified, outputs a vector of $1$ to $size$ integers in a random order, see below for examples of the `sample()` function).
 
-Note also that we introduce here a first "for loop" to iterate from 1 to $N$ (our total population)
+Note also that we introduce here a "for loop" to iterate from 1 to $N=500$ (our total population)
 
 ```{r runningMetrics}
 N <- nrow(census) #500
-mu_age <- mean(census$age)
-mu_men <- mean(census$sex == 'Male')
+mu_age <- mean(census$age) #our population mean (usually unknown)
+mu_men <- mean(census$sex == 'Male') #now our population proportion of males (usually unknown)
 
+#Prepare a vector of Means and Proportions
 rMeanAge = NULL
 rPropMale = NULL
 
@@ -52,54 +53,80 @@ for (i in 1:N) {
   rMeanAge[i] <- mean(sample$age)
   rPropMale[i] <- mean(sample$sex == "Male")
 }
-rm(sample) #we don't keep the last sample either
+rm(sample) #we don't keep the last sample
 
 plot(rMeanAge, type = 'l', col = 2, 
      xlab = 'Sample size', ylab = 'age', 
      main = 'Running mean')
 abline(h = mu_age, col = 'darkgray')
-text(500, age + 1.5, age, col = 'darkgray')
+text(500, mu_age + 1.5, mu_age, col = 'darkgray')
 
 plot(rPropMale, type = 'l', col = 4, 
      xlab = 'Sample size', ylab = 'men', 
      main = 'Running proportion')
 abline(h = mu_men, col = 'darkgray')
-text(500, men + .05, men, col = 'darkgray')
+text(500, mu_men + .05, mu_men, col = 'darkgray')
 ```
 
 ### Standard Error
 
-To quantify the uncertainty of a point estimate, we use its **standard error**. The standard error of an estimate is the **standard deviation** of its sampling distribution. For the sample mean, it is expressed as follows:
+To quantify the uncertainty of a point estimate, we use its **standard error**. The standard error of an estimate (e.g. the mean) is the **standard deviation of its sampling distribution**.
 
-$$SE_{\bar{x}} = \dfrac{s}{\sqrt{n}}$$ $s$ is used here because we usually don't know the standard deviation of the population ($\sigma_X$).
+The notion is not to be confused with the standard deviation of the sample: - the *standard error of the sample mean* indicates how far the sample mean is from the population mean. - the *standard deviation of the sample* indicates how far each individual data within the sample is from the sample mean.
 
-The denominator, $\sqrt{n}$ reflects how the variability of the sample mean decreases as the sample size increases. This is because the standard error measures the spread of the sample means around the population mean, not just the spread of individual data points within a single sample.
+The exact value of the standard error of the mean (or of the proportion) is $$SE_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}$$ which in our case can be computed, given we know the population:
 
 ```{r}
-n <- 50
-sample_age <- sample(census$age, n)
-SEage <- sd(sample_age) / sqrt(n)
-SEage
-
-sample_sex <- sample(census$sex, n)
-SEmen <- sd(sample_sex == 'Male') / sqrt(n)
-SEmen
+sd(census$age)/sqrt(N)
+sd(census$sex == "Male")/sqrt(N)
 ```
+
+However, the standard deviation of the population is usually not known and actually we would not need a point estimate and a standard error if we were knowing the total population.
+
+The standard error of the mean (or proportion) is thus estimated by replacing $\sigma$ in the definition with the standard deviation of the sample used to make the point estimate, i.e. $s$
+
+$$SE_{\bar{x}} = \dfrac{s}{\sqrt{n}}$$
+
+The denominator, $\sqrt{n}$, reflects how the variability of the sample mean decreases as the sample size increases. Also, due to the square root, we see that a willingness to reduce the error of the estimate by two requires four times as many observations.
+
+Suppose a sample of 25 or 100 observations, the standard error would be
+
+```{r}
+set.seed(101)
+sample_age25 <- sample(census$age, 25)
+SEage25 <- sd(sample_age25) / sqrt(25)
+SEage25
+
+sample_age100 <- sample(census$age, 100)
+SEage100 <- sd(sample_age100) / sqrt(100)
+SEage100
+
+sample_sex25 <- sample(census$sex, 25)
+SEmen25 <- sd(sample_sex25 == 'Male') / sqrt(25)
+SEmen25
+
+sample_sex100 <- sample(census$sex, 100)
+SEmen100 <- sd(sample_sex100 == 'Male') / sqrt(100)
+SEmen100
+```
+
+where we see the reduction in error due to sample size. From 100 to 25, the error is roughly halved The standard error of the mean of the sample tends to zero when the sample size is increased. Indeed we have seen earlier with the running means and proportions that sample means get very close to the population mean when sample size is increased and approaches the population.
 
 ### Sampling Distribution
 
-Let's now build the **sampling distribution** of the sampling mean. We generate $K = 1000$ samples of size $n = 50$.
+Let's now build the **sampling distribution** of the sample mean. So we can see the shape of that distribution and see that the standard error is indeed the **standard deviation of the sampling distribution**
 
-From a sampling distribution we can compute the same basic metrics as from any other distribution, with some differences. In our case, the distribution is symmetric and centred around the real value $\mu = 35.298$ (see `mu_mean` above).
+We draw $K = 1000$ samples of size $n = 50$ from the population.
 
-```{r samplingDistrib}
+```{r}
 K <- 1000
+N<-nrow(census)
+n<-50
 
 meanAge = NULL
 propMen = NULL
 
-set.seed(201292)
-
+set.seed(345)
 for (i in 1:K) {
   sample <- census[sample(N, n), ]
   meanAge[i] <- mean(sample$age)
@@ -109,18 +136,213 @@ rm(sample)
 
 hist(meanAge, breaks = 25,
      main = 'Sampling distribution of the mean age')
-abline(v = age, col = 2)
-text(38.5, 100, age, col = 2)
+abline(v = mu_age, col = 2)
+text(38.5, 100, mu_age, col = 2)
 
 hist(propMen, breaks = 20,
      main = 'Sampling distribution of the proportion of men')
-abline(v = men, col = 2)
-text(men + .1, 100, men, col = 2)
+abline(v = mu_men, col = 2)
+text(mu_men + .1, 100, mu_men, col = 2)
 ```
 
-Example:
+In our case, the distribution of the mean and of the proportion are symmetric and centered around the real value $\mu = 35.298$ (`mu_age`) and $\mu = 0.536$ (`mu_men`).
 
-We have a sample of 100 trees with measures of their diameter at breast height. We are interested in the mean value and standard error. The point estimate equals 164 with a empirical variance of 333221.
+Following the Central Limit Theorem, no matter whether the true population is normal or not, the sample mean is approximately normally distributed when sample size is large (we often see a value of $> 30$ to consider a sample is not small)
+
+Since we are lucky enough to have a large amount of samples, we can estimate the standard error directly form its definition, i.e. the standard deviation of the sample means.
+
+In this case:
+
+```{r}
+sd(meanAge) #standard deviation of the sample means
+sd(propMen) #standard deviation of the sample proportions
+```
+
+## Confidence Interval Estimation
+
+Due to the error in point estimates, it is often relevant to look at intervals instead of just the exact points. The range of values of estimates for a given parameter is called a **confidence interval** (CI). To build a confidence interval we need three elements:
+
+-   A point estimate $\hat{\theta}$ for the parameter of interest $\theta$
+-   The standard error associated with the point estimate $SE_{\hat{\theta}}$
+-   A confidence level $1 - \alpha$
+
+We know the first two elements. A confidence interval uses the information about the uncertainty of the point estimate to define the range of values such that we are confident at a level $1 - \alpha$ that it captures the true (population) parameter value. We call $1 - \alpha$ the **confidence level**.
+
+For $\alpha = 5\% = 0.05$, we can say that
+
+> *"We are 95% confident that the interval will capture the population parameter."*
+
+In other words:
+
+> *"If we generate 100 samples, and compute their confidence interval, in 95 cases, the interval will contain the parameter value".*
+
+When a point estimate $\hat{\theta}$ follows a normal distribution (case of a sufficiently sample size), its confidence interval is defined by: $$[\hat{\theta} \pm z_\alpha SE]$$
+
+Here, $z_\alpha SE$ is the **margin of error**.
+
+Under a normal distribution:
+
+-   $z_{0.1} = 1.645$: 90% confidence interval
+-   $z_{0.05} = 1.96$: 95% confidence interval
+-   $z_{0.001} = 2.58$: 99% confidence interval
+
+### Example
+
+In the case of the age variable of the census data, the intervals for each of our $K$ samples are
+
+```{r}
+CI95 <- data.frame(low = meanAge - 1.96 * sd(meanAge), 
+                   point = meanAge,
+                   high = meanAge + 1.96 * sd(meanAge))
+
+head(CI95)
+```
+
+While in most cases, the interval is within the 95% confidence range around $\mu = 35.298$, the upper bounds of the confidence intervals for some of the samples can exceed $\mu + 1.96 \times SE_{\text{age}}$, indicating that these samples have higher or lower sample means and greater variability, thus suggesting they are less reliable as estimates of the population mean.
+
+We can find out those cases for example as follow:
+
+```{r}
+abov<-which(CI95$low>mu_age)
+belo<-which(CI95$high<mu_age)
+abov
+belo
+```
+
+Interestingly, but not surprisingly, we can see there are roughly 25 cases where the CI range is too high and 25 where the CI range is too low. Well that is 50 out 1000 samples and the exact meaning of $\alpha=0.05$:
+
+> *If we generate 1000 samples, and compute their confidence interval, in 950 cases, the interval will contain the parameter value.*
+
+We show the confidence interval for 3 samples (out of the 95%) where the point estimate can be trusted to represent the population mean, followed by 3 of the too high cases and 3 of the too low cases.
+
+```{r, fig.cap = 'Population mean in red = 35.298 ; some of the point estimates in dark blue ; their corresponding confidence intervals at level 95% in gray'}
+a_subset<-c(1:3,abov[1:3],belo[1:3])
+plot(CI95[a_subset, 'low'], col = 'darkgray', lwd = .3, 
+     type = 'b', ylim = c(23,45), 
+     xlab = 'sample', ylab = 'mean age',
+     main = 'Confidence Intervals at level 95%',
+     xaxt="n")
+lines(CI95[a_subset, 'point'], col = 4, type = 'b')
+lines(CI95[a_subset, 'high'], col = 'darkgray', lwd = .75, , type = 'b')
+abline(h = mu_age, col = 2, lwd = 2)
+abline(v = 3.5, lwd = 0.5, col="grey10",lty=2)
+abline(v = 6.5, lwd = 0.5, col="grey10",lty=2)
+axis(1, at=1:length(a_subset), labels=a_subset,las=2)
+```
+
+Unfortunately, in the large majority of cases, we would not be able to compute the standard error this way as we would only have one or two samples. The only solution is then to use the standard deviation of the sample divided by the square root of the sample size (see earlier equations) as a best guess for the standard deviation of the distribution of sample means, i.e. to make up the standard error.
+
+So far, we haven't stored that information (i.e. standard deviation for each sample). We need to relaunch the exact same samples (luckily we used a seed). We do it for age only:
+
+```{r}
+K <- 1000
+meanAge = NULL
+sdAge = NULL
+
+set.seed(345)
+for (i in 1:K) {
+  sample <- census[sample(N, n), ]
+  meanAge[i] <- mean(sample$age)
+  sdAge[i] <- sd(sample$age)
+}
+```
+
+From each standard deviation, we compute the standard error:
+
+```{r}
+seAge<-sdAge/sqrt(n) #sample sd error 
+head(seAge)
+head(seAge>sd(meanAge)) #compare sample standard error and sampling distribution st dev
+```
+
+where we see there is variety which will also make the CI different (not constant) for each sample and thus change the decision on the relevance of each sample mean:
+
+```{r}
+CI95s <- data.frame(low = meanAge - 1.96 * seAge, 
+                   point = meanAge,
+                   high = meanAge + 1.96 * seAge)
+
+```
+
+```{r}
+abovs<-which(CI95s$low>mu_age)
+belos<-which(CI95s$high<mu_age)
+abovs
+belos
+```
+
+```{r, fig.cap = 'Population mean in red = 35.298 ; some of the point estimates in dark blue ; their corresponding confidence intervals at level 95% in gray'}
+a_subset<-c(1:3,abovs[1:3],belos[1:3])
+plot(CI95s[a_subset, 'low'], col = 'darkgray', lwd = .3, 
+     type = 'b', ylim = c(23,45), 
+     xlab = 'sample', ylab = 'mean age',
+     main = 'Confidence Intervals at level 95%',
+     xaxt="n")
+lines(CI95s[a_subset, 'point'], col = 4, type = 'b')
+lines(CI95s[a_subset, 'high'], col = 'darkgray', lwd = .75, , type = 'b')
+abline(h = mu_age, col = 2, lwd = 2)
+abline(v = 3.5, lwd = 0.5, col="grey10",lty=2)
+abline(v = 6.5, lwd = 0.5, col="grey10",lty=2)
+axis(1, at=1:length(a_subset), labels=a_subset,las=2)
+```
+
+The decision would have changed for some of the samples, for example 723 and 984, knowing `mu_age` is 35.298.
+
+```{r}
+rbind(CI95s[c(723),],CI95[c(723),],CI95s[c(984),],CI95[c(984),])
+```
+
+### Note on the `sample()` function
+
+When applied to a vector x, `sample()` selects a set of values within the vector. The size of this set (i.e. the size of the sample) is given though the argument `size`. Although there is no explicit default to the argument (see help), it is inferred from the length of x is not given. Hence when size is missing `sample(x)` provides a random permutation of the vector x. Don't forget to use `set.seed()` to keep a particular permutation
+
+```{r}
+set.seed(101)
+sample(c("A","B","C","D"))
+set.seed(102)
+sample(c("A","B","C","D"))
+```
+
+When size is explicit, a random subset is returned. In the case of a random draw withour replacement (default) size cannot be smaller than `length(x)`. It can if replacement is allowed:
+
+```{r}
+sample(c("A","B","C","D"),2)
+#sample(c("A","B","C","D"),6) error
+sample(c("A","B","C","D"),10, replace = TRUE)
+```
+
+When applied to a scalar x, sample returns a random permutation of values from 1 to x, or a subset of it if size is indicated:
+
+```{r}
+sample(7)
+sample(7)
+sample(7,size=3)
+sample(7,size=10, replace=TRUE)
+```
+
+It is useful as such but also when applied to a data.frame.
+
+For sampling a random set of rows over a data.frame you use sample with a scalar corresponding to the number of rows in the data.frame. This returns a random permutation of the identification of each row, which you can then use to reshuffle or subset the data set:
+
+```{r}
+data<-data.frame(Y=c("A","B","C","D"), Z=11:14)
+data
+
+set.seed(101)
+sample(nrow(data))
+
+#reshuffle (permutation)
+set.seed(101)
+data[sample(nrow(data)),]
+
+#random subset
+set.seed(101)
+data[sample(nrow(data),size=2),]
+```
+
+### Other example:
+
+We have a sample of 100 trees with measurements of their diameter at breast height. We are interested in the mean value and standard error. The point estimate equals 164 with an empirical variance of 333221.
 
 What is the standard error of the sample mean?
 
@@ -141,48 +363,3 @@ What is the standard error if the sample was made of 1000 trees?
 SE_mean <- s / sqrt(1000)
 SE_mean
 ```
-
-### Confidence Interval Estimation
-
-Due to the error in point estimates, it is often more relevant to look at intervals instead. The range of values of estimates for a given parameter is called a **confidence interval** (CI). To build a confidence interval we need three elements:
-
--   a point estimate $\hat{\theta}$ for the parameter of interest $\theta$
--   the standard error associated $SE_{\hat{\theta}}$
--   a confidence level $1 - \alpha$
-
-We know the first two elements. A confidence interval use the information of uncertainty of the point estimate in order to define the range of values such that we are certain at a level $1 - \alpha$ to capture the real (population) parameter value. We call $1 - \alpha$ the **confidence level**. For $\alpha = 5\% = (0.05)$, we say that "we are confident at level 95% that the interval will capture the population parameter"
-
-In other words, if we generate 100 samples, and compute their confidence interval, in 95 cases, the interval will contain the parameter value.
-
-When a point estimate $\hat{\theta}$ follows a normal distribution, its confidence interval is defined by: $$[\hat{\theta} \pm z_\alpha SE]$$
-
-With $z_\alpha SE$ the **margin of error**.
-
-Under a normal distribution:
-
--   $z_{0.1} = 1.645$: 90% in the interval
--   $z_{0.05} = 1.96$: 95% in the interval
--   $z_{0.001} = 2.58$: 99% in the interval
-
-In the case of the age variable of the census data, the intervals for each of our $K$ samples are
-
-```{r}
-CI95 <- data.frame(low = meanAge - 1.96 * SEage, 
-                   point = meanAge,
-                   high = meanAge + 1.96 * SEage)
-
-CI95[1:10, ]
-```
-
-```{r, fig.cap = 'The population mean in red = 35.298 ; the first 10 point estimates in dark blue ; their corresponding confidence intervals at level 95% in gray'}
-plot(CI95[1:10, 'low'], col = 'darkgray', lwd = .75, 
-     type = 'l', ylim = c(23,45), 
-     xlab = 'sample', ylab = 'mean age',
-     main = 'Confidence Intervals at level 95%')
-lines(CI95[1:10, 'point'], col = 4, type = 'b')
-lines(CI95[1:10, 'high'], col = 'darkgray', lwd = .75)
-abline(h = age, col = 2, lwd = 2)
-```
-
-While for most cases, the interval is within the 95% confidence around $\mu = 35.298$, the mean from samples 2 and 7 are a little too high.
-

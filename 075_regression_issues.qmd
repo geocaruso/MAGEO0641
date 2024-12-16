@@ -1,0 +1,43 @@
+# Regression problems
+
+-   Heteroskedasticity
+-   Non linearities
+
+=\> Variables transform
+
+```{r heteroskedasticity2, echo=FALSE, out.width = '100%', fig.align = 'center'}
+knitr::include_graphics("img/heteroskedasticity2.png")
+```
+
+### Geographical problems {#geo-pb}
+
+-   Spatial autocorrelation of residuals
+
+    -   If positive: overestimation of the quality of the fit
+    -   Can be resolved by mapping the residuals (usually standardized) =\> finding regressors to add to the model
+    -   …well, if the cause is a missing variable,
+    -   because it might also be that the “true” model has an autoregressive structure:
+
+    *The value of* $X$ in $i$ depends on the value of $X$ in neighbouring location $j$
+
+-   Surface and size effects
+
+-   =\> Use densities, or ratios as regressors
+
+-   =\> Transform variables
+
+-   =\> Group observations by size and conduct regressions for each
+
+-   \color{green}**Autocorrelation + units effect =\> Modifiable Areal Unit Problem and ecological fallacy**
+
+\color{black}
+
+### MAUP: a European example {#maup-lm}
+
+-   ESPON final report: <http://www.espon.eu/mmp/online/website/content/projects/261/431/file_2243/fr-3.4.3_maup_final_nov2006.pdf>
+
+<embed src="http://www.espon.eu/mmp/online/website/content/projects/261/431/file_2243/fr-3.4.3_maup_final_nov2006.pdf" width="500" height="375" />
+
+```{r exMAUPeurope, echo=FALSE, out.width = '100%', fig.align = 'center'}
+knitr::include_graphics("img/exMAUPeurope.png")
+```

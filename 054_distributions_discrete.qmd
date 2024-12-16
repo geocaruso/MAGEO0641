@@ -1,0 +1,215 @@
+# Discrete distributions
+
+## Discrete uniform distribution
+
+(to be done)
+
+## Discrete binomial distribution
+
+Throwing a coin holds two possible values and generates a so called Bernoulli random variable. We can represent the outcome by a 0 or 1. Let's suppose 1 (whichever side you choose) is what we consider a success. This is the usual convention.
+
+A binomial distribution is the sum of independent and identically distributed Bernoulli random variables.
+
+When there are $n$ Bernoulli trials (all independent), then the sum of those trials, each with the same probability of success $p$) is binomially distributed, with parameters $n$ and $p$. It is defined with the two parameters: $B(n, p)$ with parameter $p \in [0; 1]$, the probability that the event of interest (success) happens
+
+A Bernoulli random variable $X = \{0 ;1\}$ can thus be expressed as a binomial distribution with a single toss $n=1$, $X \sim B(1, p)$
+
+```         
+    X        1         0
+-------- --------- ---------
+$P(X=i)$    $p$    $q = 1-p$
+```
+
+The probability that $X$ takes any other value is null (unless the coin stays on its edge...)
+
+In a binomial distribution, the expectation is $E(X) = np$ and the variance is $Var(X) = npq$.
+
+The probability that one obtains $k$ successes over $n$ repetitions (experiences), is then given by $P(X=k) = (n|k) p^k q^{n-k}$.
+
+For an intuition we can simulate 3 trials and produce a tree of probabilities. Where we see that the probability of 3 successes is one of 8 possible outcomes,
+
+```         
+     1st      2nd     3rd         Total
+     result   result  result
+     
+                     --1--        3 successes
+              --1---|
+             |       --0--        2 successes
+     --1-----|
+    |        |       --1--        2 successes
+    |         --0---|
+    |                --0--        1 success
+----|
+    |                --1--        2 successes
+    |         --1---|
+    |        |       --0--        1 success
+     --0-----|
+             |       --1--        1 success
+              --0---|
+                     --0--        0 success
+```
+
+which in R is:
+
+```{r}
+dbinom(3, size=3, prob=0.5)
+```
+
+Other example: suppose we run a trial 10 times, knowing the probability of success is 0.5, what is the probability that the total number of successes will be exactly 3? or exactly 5 ? or 10?
+
+```{r}
+dbinom(3, size=10, prob=0.5)
+dbinom(5, size=10, prob=0.5)
+dbinom(10, size=10, prob=0.5)
+```
+
+Let's generalize a little for values from 1 to 100 and different probabilities:
+
+```{r}
+x <- 1:100
+dBer1 <- dbinom(x, size=100, prob=0.1)
+dBer2 <- dbinom(x, size=100, prob=0.25)
+dBer3 <- dbinom(x, size=100, prob=0.5)
+dBer4 <- dbinom(x, size=100, prob=0.75)
+dBer5 <- dbinom(x, size=100, prob=0.9)
+```
+
+With 100 trials, you can see the density 'curve' is symmetrical but shifted towards higher total success when the probability of success gets higher, and is flatter when closer to 0.5, (and symmetrical behaviour for cases for $p$ and $q=1-p$)
+
+```{r}
+plot(x, dBer1,main = 'Distribution of B(100, p)', ylab = 'f(x)', type="h", col = 'darkgreen')
+points(x, dBer2, col = 'lightgreen', type="h")
+points(x, dBer3, col = 'gold', type="h")
+points(x, dBer4, col = 'orange', type="h")
+points(x, dBer5, col = 'darkred', type="h")
+legend("top",pch=1,
+       legend = c("p = 0.10", "p = 0.25", "p = 0.50","p = 0.75", "p = 0.90"),
+       col = c("darkgreen","lightgreen", 'gold', 'orange',"darkred"))
+```
+
+Back to using $p=0.5$, we now look at the effect of sample size to see how from right-skewed it shifts to a normal distribution:
+
+```{r}
+dn1 <- dbinom(x, size=5, prob=0.5)
+dn2 <- dbinom(x, size=10, prob=0.5)
+dn3 <- dbinom(x, size=50, prob=0.5)
+dn4 <- dbinom(x, size=100, prob=0.5)
+```
+
+```{r}
+plot(x, dn1, col="lightblue", type="h",
+     main = 'Distribution of B(n, 0.5)', ylab = 'f(x)')
+points(x, dn2, col = 'blue', type="h")
+points(x, dn3, col = 'blue4', type="h")
+points(x, dn4, col = 'purple',  type="h")
+legend("top", pch = 1,
+       legend = c("n = 5", "n = 10", "n = 50", "n=100"),
+       col = c("lightblue", 'blue',"blue4", 'purple'))
+```
+
+While we have looked at the distribution of the probabilities for a total outcome after repetitions to be of a given "exact" value using the density function `dbinom()`, we can use the cumulative form `pbinom()` to know where the total outcome is smaller or equal to a given value. For example, after 100 experiments with probability 0.5, what is the probability I obtain less than 50 successes? Or $n/2$ successes depending on $n$ ?
+
+```{r}
+pbinom(50, size=100, prob=0.5)
+pbinom(5, size=10, prob=0.5)
+pbinom(5000000, size=10000000, prob=0.5)
+```
+
+The cumulative density function can be plotted as follows for different probabilities and a given size:
+
+```{r}
+plot(pbinom(1:100,size=100,prob=0.10), main = 'CDF of B(100, p)', ylab = 'f(x)', type="s", col = 'darkgreen')
+lines(pbinom(1:100,size=100,prob=0.25), type="s", col = 'lightgreen')
+lines(pbinom(1:100,size=100,prob=0.5), type="s", col = 'gold')
+lines(pbinom(1:100,size=100,prob=0.75), type="s", col = 'orange')
+lines(pbinom(1:100,size=100,prob=0.9), type="s", col = 'darkred')
+legend("bottomright",pch=1,
+       legend = c("p = 0.10", "p = 0.25", "p = 0.50","p = 0.75", "p = 0.90"),
+       col = c("darkgreen","lightgreen", 'gold', 'orange',"darkred"))
+
+```
+
+The binomial distribution is used in many cases where there are two potential outcomes that are mutually exclusive. For example when we try to explain why some plots of land are developed or not or why people use the car rather than an active mode of transport.
+
+## Discrete Poisson distribution
+
+The Poisson distribution is for rare discrete occurrence events. It is used when counting the occurrence of a certain event that appears randomly but at a known rate or density. The main statistical property of the Poisson distribution is that **its variance equals its mean**
+
+There are many uses in geography, transport or planning, such as the counting of cars passing a rural road segment over a certain time, or the distribution of points (trees, bees, houses...) over a homogeneous set of spatial polygons (grid cells)
+
+Suppose there are 100 houses or trees over 100 grid cells. The overall density ($\lambda$) is 1. What is the probability that a cell does not receive any single house? Or in other words what will be the proportion of cells without a single house or tree?
+
+```{r}
+ppois(lambda = 1,q=0)
+```
+
+How does this change when the overall density is even higher or lower? i.e. with 150 houses/trees or only 25?
+
+```{r}
+ppois(lambda = 1.5,q=0)
+ppois(lambda = 0.5,q=0)
+ppois(lambda = 0.25,q=0)
+```
+
+Let's generate such cases and get the frequency of counts to "see" those occurrences:
+
+```{r}
+pois025<-rpois(100,0.25)
+pois025
+table(pois025)
+pois150<-rpois(100,1.5)
+pois150
+table(pois150)
+```
+
+We examine how the probability of different counts (not just 0 or more) changes when lambda changes:
+
+```{r}
+lambdan<-data.frame(n=rep(1:4,4),lambda=rep(seq(1,0.25,by=-0.25),each=4))
+lambdan$d<-dpois(lambdan$n,lambdan$lambda)
+lambdan
+```
+
+Interesingly, the distribution depends on the segments of observations or, in space, the rsolution of the grid, i.e. the modifiable areal unit problem (MAUP)
+
+Consider the following:
+
+Let's define a grid of 100 (10x10) cells over a mixed forest. Suppose a poisson process with mean and variance = 1 gives the number of coniferous trees within that forest. We can expect around 37 % of cells to have at least a coniferous, right? (see above).
+
+Now suppose the mean and variance increase to 2, we are still in a poisson process because the number of events is still quite rare even there are less empty cells.
+
+```{r}
+ppois(lambda=1, q=0)
+ppois(lambda=2, q=0)
+```
+
+But if we now groups cells to make them larger, say divide the space into 25 cells (5 x 5) rather than 100. Then you see that lambda is multiplied by 4 and the probability of a zero count:
+
+```{r}
+ppois(lambda=2*4, q=0)
+```
+
+Again, following the the Central Limit Theorem, the higher will be the mean (λ) and thus the spatial aggregation, the closer the distribution of coniferous will be to a normal distribution.
+
+```{r}
+r2_100<-rpois(lambda=2, n=100)
+r2_100
+par(mfrow = c(1, 2))
+image(matrix(r2_100, 10),asp=1)
+image(matrix(r2_100, 10)>1, asp=1)
+```
+
+Re-aggregated:
+
+```{r}
+large<-matrix(rep(1:5,each=20)*10+rep(rep(1:5, each=2),10),10)
+large
+
+sumbylarge<-aggregate(r2_100, by=list(matrix(large)), FUN=sum)
+
+matrix(sumbylarge$x,5)
+
+par(mfrow = c(1, 2))
+image(matrix(sumbylarge$x,5))
+image(matrix(sumbylarge$x,5)>1)
+```

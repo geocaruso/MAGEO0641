@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./901_copy_paste.html" rel="next">
-<link href="./050_graphics_ggplot.html" rel="prev">
+<link href="./062_hypotheses_test.html" rel="next">
+<link href="./054_distributions_discrete.html" rel="prev">
 <link href="./images/cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -279,7 +279,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./031_sample_population.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sample and Population</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sample and population</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -305,7 +305,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Part IV - Distributions</span></a>
+ <span class="menu-text">Part IV - Graphics with ggplot</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -313,26 +313,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./041_distributions_unif_normal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./042_CLT_Standardisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./043_distributions_other_continuous.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Usual Continuous Distributions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./044_distributions_discrete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Discrete functions</span></span></a>
+  <a href="./040_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,7 +322,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Part V - Graphics with ggplot</span></a>
+ <span class="menu-text">Part V - Distributions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -348,8 +330,26 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./050_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+  <a href="./051_distributions_unif_normal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uniform and normal distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./052_CLT_Standardisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Central Limit Theorem and standardisation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./053_distributions_other_continuous.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Continuous distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./054_distributions_discrete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Discrete distributions</span></span></a>
   </div>
 </li>
       </ul>
@@ -369,11 +369,84 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Statistical Inference</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./062_hypotheses_test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Hypotheses testing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./063_hypotheses_single_sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Hypotheses testing - One sample tests</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./064_hypotheses_two_samples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Hypotheses testing - Two samples tests</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./065_hypotheses_contingency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Hypotheses testing - contingency tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./066_hypotheses_normality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Normality Test</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./067_power_contingency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Power analysis - contingency table</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">Part VII - Bivariate and regression analysis</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part VII - Bivariate and regression analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./071_correlation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Correlation and regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./072_regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./073_CIregression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Confidence interval of a regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./074_multi_regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Multiple Regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./075_regression_diagnostics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Regression diagnostics</span></span></a>
+  </div>
+</li>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -387,19 +460,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./901_copy_paste.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./902_making_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Making data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./903_summarizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Summary tables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Summary tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./904_curve.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Drawing curves in R</span></span></a>
   </div>
 </li>
       </ul>
@@ -433,12 +512,16 @@ window.Quarto = {
   <ul>
   <li><a href="#point-estimates" id="toc-point-estimates" class="nav-link active" data-scroll-target="#point-estimates"><span class="header-section-number">19.1</span> Point Estimates</a>
   <ul class="collapse">
-  <li><a href="#point-estimate" id="toc-point-estimate" class="nav-link" data-scroll-target="#point-estimate"><span class="header-section-number">19.1.1</span> Point Estimate</a></li>
-  <li><a href="#problem" id="toc-problem" class="nav-link" data-scroll-target="#problem"><span class="header-section-number">19.1.2</span> Problem</a></li>
-  <li><a href="#illustration" id="toc-illustration" class="nav-link" data-scroll-target="#illustration"><span class="header-section-number">19.1.3</span> Illustration</a></li>
-  <li><a href="#standard-error" id="toc-standard-error" class="nav-link" data-scroll-target="#standard-error"><span class="header-section-number">19.1.4</span> Standard Error</a></li>
-  <li><a href="#sampling-distribution" id="toc-sampling-distribution" class="nav-link" data-scroll-target="#sampling-distribution"><span class="header-section-number">19.1.5</span> Sampling Distribution</a></li>
-  <li><a href="#confidence-interval-estimation" id="toc-confidence-interval-estimation" class="nav-link" data-scroll-target="#confidence-interval-estimation"><span class="header-section-number">19.1.6</span> Confidence Interval Estimation</a></li>
+  <li><a href="#problem" id="toc-problem" class="nav-link" data-scroll-target="#problem"><span class="header-section-number">19.1.1</span> Problem</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">19.1.2</span> Example</a></li>
+  <li><a href="#standard-error" id="toc-standard-error" class="nav-link" data-scroll-target="#standard-error"><span class="header-section-number">19.1.3</span> Standard Error</a></li>
+  <li><a href="#sampling-distribution" id="toc-sampling-distribution" class="nav-link" data-scroll-target="#sampling-distribution"><span class="header-section-number">19.1.4</span> Sampling Distribution</a></li>
+  </ul></li>
+  <li><a href="#confidence-interval-estimation" id="toc-confidence-interval-estimation" class="nav-link" data-scroll-target="#confidence-interval-estimation"><span class="header-section-number">19.2</span> Confidence Interval Estimation</a>
+  <ul class="collapse">
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="header-section-number">19.2.1</span> Example</a></li>
+  <li><a href="#note-on-the-sample-function" id="toc-note-on-the-sample-function" class="nav-link" data-scroll-target="#note-on-the-sample-function"><span class="header-section-number">19.2.2</span> Note on the <code>sample()</code> function</a></li>
+  <li><a href="#other-example" id="toc-other-example" class="nav-link" data-scroll-target="#other-example"><span class="header-section-number">19.2.3</span> Other example:</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -465,7 +548,7 @@ window.Quarto = {
 </header>
 
 
-<p>In this chapter, we first introduce point estimates and then confidence interval estimations</p>
+<p>In this chapter, we first introduce point estimates and then confidence interval estimations.</p>
 <p>We will use a census extract of the US population as the main dataset, <code>UScensus2000.txt</code> (see <code>data/US</code> folder)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>census <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"data/US/UScensus2000.txt"</span>, </span>
@@ -492,44 +575,44 @@ window.Quarto = {
 </div>
 <section id="point-estimates" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="point-estimates"><span class="header-section-number">19.1</span> Point Estimates</h2>
-<section id="point-estimate" class="level3" data-number="19.1.1">
-<h3 data-number="19.1.1" class="anchored" data-anchor-id="point-estimate"><span class="header-section-number">19.1.1</span> Point Estimate</h3>
-<p>In order to estimate the <em>population mean</em> <span class="math inline">\(\bar{X}\)</span> (or variance, median or any other metric) based on a sample, we use to take the <em>sample mean</em>: <span class="math display">\[\bar{x} = \dfrac{1}{n} \sum_{i=1}^n x_i\]</span></p>
-<p><span class="math inline">\(\bar{x}\)</span> is called a <strong>point estimate</strong> or punctual estimation of the <em>population mean</em>.</p>
+<p>To estimate the <em>population mean</em> <span class="math inline">\(\bar{X}\)</span> (or other metrics such as variance or median) based on a sample, we typically use the <em>sample mean</em>:</p>
+<p><span class="math display">\[\bar{x} = \dfrac{1}{n} \sum_{i=1}^n x_i\]</span></p>
+<p>The sample mean, <span class="math inline">\(\bar{x}\)</span>, is known as a <strong>point estimate</strong> of the <em>population mean</em>.</p>
+<section id="problem" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="problem"><span class="header-section-number">19.1.1</span> Problem</h3>
+<p>If we draw another sample from the same population and calculate the new sample mean, we are likely to obtain a different point estimate. This difference is referred to as <strong>sampling variation</strong>.</p>
+<p>In other words, an estimate is close to the true value but not exactly equal to the actual (population) parameter value. Additionally, sampling variation is expected to decrease as the sample size increases. A point estimate converges to the population parameter value as the sample size grows and approaches the size of the entire population.</p>
 </section>
-<section id="problem" class="level3" data-number="19.1.2">
-<h3 data-number="19.1.2" class="anchored" data-anchor-id="problem"><span class="header-section-number">19.1.2</span> Problem</h3>
-<p>If we take another sample from that same population and compute the new sample mean, we are likely to obtain a different point estimate. This difference is called <strong>sampling variation</strong>.</p>
-<p>In other words, an estimate is close to the real value, without being exactly equal to the real (population) parameter value. Also, the sampling variation is supposed to decrease with the size of the sample. A point estimate tends to the population parameter value as the sample size increases and gets closer to the entire population size.</p>
-</section>
-<section id="illustration" class="level3" data-number="19.1.3">
-<h3 data-number="19.1.3" class="anchored" data-anchor-id="illustration"><span class="header-section-number">19.1.3</span> Illustration</h3>
-<p>We suppose that the dataset <span class="math inline">\(census\)</span> contains our target population. Our aim is to estimate the population mean for the variable <span class="math inline">\(age\)</span> and the proportion of the different genders in the case of variable <span class="math inline">\(sex\)</span>.</p>
-<p>We look at the <em>running mean</em> of the variable <span class="math inline">\(age\)</span> and at the <em>running proportion</em> of men for the variable <span class="math inline">\(sex\)</span>.</p>
+<section id="example" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="example"><span class="header-section-number">19.1.2</span> Example</h3>
+<p>We suppose that the dataset <code>census</code> contains our target population. Our aim is to estimate the population mean for the variable <code>age</code> and the proportion of the different genders in the case of variable <code>sex</code>.</p>
+<p>We look at the <em>running mean</em> of the variable <code>age</code> and at the <em>running proportion</em> of men for the variable <code>sex</code>.</p>
 <p>We start by extracting from the total population a sample made of one observation: <span class="math inline">\(n = 1\)</span>. At each step, we extract randomly a new sample with one additional observation. We use a sampling with replacement, i.e.&nbsp;the previous sample is not simply augmented: we take a new sample (made of completely new individuals) each time. We stop when we reach the total population, i.e.&nbsp;when <span class="math inline">\(n = 500\)</span> in our case.</p>
-<p>The key function for sampling in R is <code>sample()</code>, which randomly selects a number (arg <code>size</code>) of records for a given vector or data frame (or, if none are specified, outputs a vector of <span class="math inline">\(1\)</span> to <span class="math inline">\(size\)</span> integers in a random order).</p>
-<p>Note also that we introduce here a first “for loop” to iterate from 1 to <span class="math inline">\(N\)</span> (our total population)</p>
+<p>The key function for sampling in R is <code>sample()</code>, which randomly selects a number (arg <code>size</code>) of records for a given vector (or, if none are specified, outputs a vector of <span class="math inline">\(1\)</span> to <span class="math inline">\(size\)</span> integers in a random order, see below for examples of the <code>sample()</code> function).</p>
+<p>Note also that we introduce here a “for loop” to iterate from 1 to <span class="math inline">\(N=500\)</span> (our total population)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fu">nrow</span>(census) <span class="co">#500</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mu_age <span class="ot">&lt;-</span> <span class="fu">mean</span>(census<span class="sc">$</span>age)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>mu_men <span class="ot">&lt;-</span> <span class="fu">mean</span>(census<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">'Male'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mu_age <span class="ot">&lt;-</span> <span class="fu">mean</span>(census<span class="sc">$</span>age) <span class="co">#our population mean (usually unknown)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>mu_men <span class="ot">&lt;-</span> <span class="fu">mean</span>(census<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">'Male'</span>) <span class="co">#now our population proportion of males (usually unknown)</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rMeanAge <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>rPropMale <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">201292</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> census[<span class="fu">sample</span>(N, i), ]</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  rMeanAge[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>age)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  rPropMale[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sample) <span class="co">#we don't keep the last sample either</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rMeanAge, <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">2</span>, </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Sample size'</span>, <span class="at">ylab =</span> <span class="st">'age'</span>, </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Running mean'</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> mu_age, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Prepare a vector of Means and Proportions</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>rMeanAge <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>rPropMale <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">201292</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N) {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> census[<span class="fu">sample</span>(N, i), ]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  rMeanAge[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>age)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  rPropMale[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">"Male"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sample) <span class="co">#we don't keep the last sample</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rMeanAge, <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">2</span>, </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Sample size'</span>, <span class="at">ylab =</span> <span class="st">'age'</span>, </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Running mean'</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> mu_age, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">500</span>, mu_age <span class="sc">+</span> <span class="fl">1.5</span>, mu_age, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -537,13 +620,12 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">500</span>, age <span class="sc">+</span> <span class="fl">1.5</span>, age, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'age' not found</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rPropMale, <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">4</span>, </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Sample size'</span>, <span class="at">ylab =</span> <span class="st">'men'</span>, </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Running proportion'</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> mu_men, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rPropMale, <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">col =</span> <span class="dv">4</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Sample size'</span>, <span class="at">ylab =</span> <span class="st">'men'</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Running proportion'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> mu_men, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">500</span>, mu_men <span class="sc">+</span> .<span class="dv">05</span>, mu_men, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -551,153 +633,339 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">500</span>, men <span class="sc">+</span> .<span class="dv">05</span>, men, <span class="at">col =</span> <span class="st">'darkgray'</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'men' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="standard-error" class="level3" data-number="19.1.4">
-<h3 data-number="19.1.4" class="anchored" data-anchor-id="standard-error"><span class="header-section-number">19.1.4</span> Standard Error</h3>
-<p>To quantify the uncertainty of a point estimate, we use its <strong>standard error</strong>. The standard error of an estimate is the <strong>standard deviation</strong> of its sampling distribution. For the sample mean, it is expressed as follows:</p>
-<p><span class="math display">\[SE_{\bar{x}} = \dfrac{s}{\sqrt{n}}\]</span> <span class="math inline">\(s\)</span> is used here because we usually don’t know the standard deviation of the population (<span class="math inline">\(\sigma_X\)</span>).</p>
-<p>The denominator, <span class="math inline">\(\sqrt{n}\)</span> reflects how the variability of the sample mean decreases as the sample size increases. This is because the standard error measures the spread of the sample means around the population mean, not just the spread of individual data points within a single sample.</p>
+<section id="standard-error" class="level3" data-number="19.1.3">
+<h3 data-number="19.1.3" class="anchored" data-anchor-id="standard-error"><span class="header-section-number">19.1.3</span> Standard Error</h3>
+<p>To quantify the uncertainty of a point estimate, we use its <strong>standard error</strong>. The standard error of an estimate (e.g.&nbsp;the mean) is the <strong>standard deviation of its sampling distribution</strong>.</p>
+<p>The notion is not to be confused with the standard deviation of the sample: - the <em>standard error of the sample mean</em> indicates how far the sample mean is from the population mean. - the <em>standard deviation of the sample</em> indicates how far each individual data within the sample is from the sample mean.</p>
+<p>The exact value of the standard error of the mean (or of the proportion) is <span class="math display">\[SE_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}\]</span> which in our case can be computed, given we know the population:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">50</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sample_age <span class="ot">&lt;-</span> <span class="fu">sample</span>(census<span class="sc">$</span>age, n)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>SEage <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample_age) <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>SEage</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3.440362</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>sample_sex <span class="ot">&lt;-</span> <span class="fu">sample</span>(census<span class="sc">$</span>sex, n)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>SEmen <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample_sex <span class="sc">==</span> <span class="st">'Male'</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>SEmen</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.07091242</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(census<span class="sc">$</span>age)<span class="sc">/</span><span class="fu">sqrt</span>(N)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.9754678</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(census<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">"Male"</span>)<span class="sc">/</span><span class="fu">sqrt</span>(N)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.02232498</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>However, the standard deviation of the population is usually not known and actually we would not need a point estimate and a standard error if we were knowing the total population.</p>
+<p>The standard error of the mean (or proportion) is thus estimated by replacing <span class="math inline">\(\sigma\)</span> in the definition with the standard deviation of the sample used to make the point estimate, i.e.&nbsp;<span class="math inline">\(s\)</span></p>
+<p><span class="math display">\[SE_{\bar{x}} = \dfrac{s}{\sqrt{n}}\]</span></p>
+<p>The denominator, <span class="math inline">\(\sqrt{n}\)</span>, reflects how the variability of the sample mean decreases as the sample size increases. Also, due to the square root, we see that a willingness to reduce the error of the estimate by two requires four times as many observations.</p>
+<p>Suppose a sample of 25 or 100 observations, the standard error would be</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sample_age25 <span class="ot">&lt;-</span> <span class="fu">sample</span>(census<span class="sc">$</span>age, <span class="dv">25</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>SEage25 <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample_age25) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">25</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>SEage25</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 4.464631</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>sample_age100 <span class="ot">&lt;-</span> <span class="fu">sample</span>(census<span class="sc">$</span>age, <span class="dv">100</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>SEage100 <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample_age100) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">100</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>SEage100</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2.174494</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>sample_sex25 <span class="ot">&lt;-</span> <span class="fu">sample</span>(census<span class="sc">$</span>sex, <span class="dv">25</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>SEmen25 <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample_sex25 <span class="sc">==</span> <span class="st">'Male'</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">25</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>SEmen25</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.09797959</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>sample_sex100 <span class="ot">&lt;-</span> <span class="fu">sample</span>(census<span class="sc">$</span>sex, <span class="dv">100</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>SEmen100 <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample_sex100 <span class="sc">==</span> <span class="st">'Male'</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">100</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>SEmen100</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.04988877</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>where we see the reduction in error due to sample size. From 100 to 25, the error is roughly halved The standard error of the mean of the sample tends to zero when the sample size is increased. Indeed we have seen earlier with the running means and proportions that sample means get very close to the population mean when sample size is increased and approaches the population.</p>
 </section>
-<section id="sampling-distribution" class="level3" data-number="19.1.5">
-<h3 data-number="19.1.5" class="anchored" data-anchor-id="sampling-distribution"><span class="header-section-number">19.1.5</span> Sampling Distribution</h3>
-<p>Let’s now build the <strong>sampling distribution</strong> of the sampling mean. We generate <span class="math inline">\(K = 1000\)</span> samples of size <span class="math inline">\(n = 50\)</span>.</p>
-<p>From a sampling distribution we can compute the same basic metrics as from any other distribution, with some differences. In our case, the distribution is symmetric and centred around the real value <span class="math inline">\(\mu = 35.298\)</span> (see <code>mu_mean</code> above).</p>
+<section id="sampling-distribution" class="level3" data-number="19.1.4">
+<h3 data-number="19.1.4" class="anchored" data-anchor-id="sampling-distribution"><span class="header-section-number">19.1.4</span> Sampling Distribution</h3>
+<p>Let’s now build the <strong>sampling distribution</strong> of the sample mean. So we can see the shape of that distribution and see that the standard error is indeed the <strong>standard deviation of the sampling distribution</strong></p>
+<p>We draw <span class="math inline">\(K = 1000\)</span> samples of size <span class="math inline">\(n = 50\)</span> from the population.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>K <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>meanAge <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>propMen <span class="ot">=</span> <span class="cn">NULL</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">201292</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>N<span class="ot">&lt;-</span><span class="fu">nrow</span>(census)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">50</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>meanAge <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>propMen <span class="ot">=</span> <span class="cn">NULL</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>K) {</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> census[<span class="fu">sample</span>(N, n), ]</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  meanAge[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>age)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  propMen[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">'Male'</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sample)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(meanAge, <span class="at">breaks =</span> <span class="dv">25</span>,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Sampling distribution of the mean age'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">345</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>K) {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> census[<span class="fu">sample</span>(N, n), ]</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  meanAge[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>age)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  propMen[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>sex <span class="sc">==</span> <span class="st">'Male'</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sample)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(meanAge, <span class="at">breaks =</span> <span class="dv">25</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Sampling distribution of the mean age'</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> mu_age, <span class="at">col =</span> <span class="dv">2</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">38.5</span>, <span class="dv">100</span>, mu_age, <span class="at">col =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="061_inference_files/figure-html/samplingDistrib-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="061_inference_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> age, <span class="at">col =</span> <span class="dv">2</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'age' not found</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">38.5</span>, <span class="dv">100</span>, age, <span class="at">col =</span> <span class="dv">2</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'age' not found</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(propMen, <span class="at">breaks =</span> <span class="dv">20</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Sampling distribution of the proportion of men'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(propMen, <span class="at">breaks =</span> <span class="dv">20</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Sampling distribution of the proportion of men'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> mu_men, <span class="at">col =</span> <span class="dv">2</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(mu_men <span class="sc">+</span> .<span class="dv">1</span>, <span class="dv">100</span>, mu_men, <span class="at">col =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="061_inference_files/figure-html/samplingDistrib-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="061_inference_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> men, <span class="at">col =</span> <span class="dv">2</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'men' not found</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(men <span class="sc">+</span> .<span class="dv">1</span>, <span class="dv">100</span>, men, <span class="at">col =</span> <span class="dv">2</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'men' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Example:</p>
-<p>We have a sample of 100 trees with measures of their diameter at breast height. We are interested in the mean value and standard error. The point estimate equals 164 with a empirical variance of 333221.</p>
-<p>What is the standard error of the sample mean?</p>
+<p>In our case, the distribution of the mean and of the proportion are symmetric and centered around the real value <span class="math inline">\(\mu = 35.298\)</span> (<code>mu_age</code>) and <span class="math inline">\(\mu = 0.536\)</span> (<code>mu_men</code>).</p>
+<p>Following the Central Limit Theorem, no matter whether the true population is normal or not, the sample mean is approximately normally distributed when sample size is large (we often see a value of <span class="math inline">\(&gt; 30\)</span> to consider a sample is not small)</p>
+<p>Since we are lucky enough to have a large amount of samples, we can estimate the standard error directly form its definition, i.e.&nbsp;the standard deviation of the sample means.</p>
+<p>In this case:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>variance <span class="ot">&lt;-</span> <span class="dv">333221</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># compute sample standard deviation</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(variance)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>s</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 577.253</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># compute standard error of the sample mean</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>SE_mean <span class="ot">&lt;-</span> s <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>SE_mean</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 57.7253</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>What is the standard error if the sample was made of 1000 trees?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>SE_mean <span class="ot">&lt;-</span> s <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">1000</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>SE_mean</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 18.25434</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(meanAge) <span class="co">#standard deviation of the sample means</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 2.970229</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(propMen) <span class="co">#standard deviation of the sample proportions</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.06858092</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="confidence-interval-estimation" class="level3" data-number="19.1.6">
-<h3 data-number="19.1.6" class="anchored" data-anchor-id="confidence-interval-estimation"><span class="header-section-number">19.1.6</span> Confidence Interval Estimation</h3>
-<p>Due to the error in point estimates, it is often more relevant to look at intervals instead. The range of values of estimates for a given parameter is called a <strong>confidence interval</strong> (CI). To build a confidence interval we need three elements:</p>
+</section>
+<section id="confidence-interval-estimation" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="confidence-interval-estimation"><span class="header-section-number">19.2</span> Confidence Interval Estimation</h2>
+<p>Due to the error in point estimates, it is often relevant to look at intervals instead of just the exact points. The range of values of estimates for a given parameter is called a <strong>confidence interval</strong> (CI). To build a confidence interval we need three elements:</p>
 <ul>
-<li>a point estimate <span class="math inline">\(\hat{\theta}\)</span> for the parameter of interest <span class="math inline">\(\theta\)</span></li>
-<li>the standard error associated <span class="math inline">\(SE_{\hat{\theta}}\)</span></li>
-<li>a confidence level <span class="math inline">\(1 - \alpha\)</span></li>
+<li>A point estimate <span class="math inline">\(\hat{\theta}\)</span> for the parameter of interest <span class="math inline">\(\theta\)</span></li>
+<li>The standard error associated with the point estimate <span class="math inline">\(SE_{\hat{\theta}}\)</span></li>
+<li>A confidence level <span class="math inline">\(1 - \alpha\)</span></li>
 </ul>
-<p>We know the first two elements. A confidence interval use the information of uncertainty of the point estimate in order to define the range of values such that we are certain at a level <span class="math inline">\(1 - \alpha\)</span> to capture the real (population) parameter value. We call <span class="math inline">\(1 - \alpha\)</span> the <strong>confidence level</strong>. For <span class="math inline">\(\alpha = 5\% = (0.05)\)</span>, we say that “we are confident at level 95% that the interval will capture the population parameter”</p>
-<p>In other words, if we generate 100 samples, and compute their confidence interval, in 95 cases, the interval will contain the parameter value.</p>
-<p>When a point estimate <span class="math inline">\(\hat{\theta}\)</span> follows a normal distribution, its confidence interval is defined by: <span class="math display">\[[\hat{\theta} \pm z_\alpha SE]\]</span></p>
-<p>With <span class="math inline">\(z_\alpha SE\)</span> the <strong>margin of error</strong>.</p>
+<p>We know the first two elements. A confidence interval uses the information about the uncertainty of the point estimate to define the range of values such that we are confident at a level <span class="math inline">\(1 - \alpha\)</span> that it captures the true (population) parameter value. We call <span class="math inline">\(1 - \alpha\)</span> the <strong>confidence level</strong>.</p>
+<p>For <span class="math inline">\(\alpha = 5\% = 0.05\)</span>, we can say that</p>
+<blockquote class="blockquote">
+<p><em>“We are 95% confident that the interval will capture the population parameter.”</em></p>
+</blockquote>
+<p>In other words:</p>
+<blockquote class="blockquote">
+<p><em>“If we generate 100 samples, and compute their confidence interval, in 95 cases, the interval will contain the parameter value”.</em></p>
+</blockquote>
+<p>When a point estimate <span class="math inline">\(\hat{\theta}\)</span> follows a normal distribution (case of a sufficiently sample size), its confidence interval is defined by: <span class="math display">\[[\hat{\theta} \pm z_\alpha SE]\]</span></p>
+<p>Here, <span class="math inline">\(z_\alpha SE\)</span> is the <strong>margin of error</strong>.</p>
 <p>Under a normal distribution:</p>
 <ul>
-<li><span class="math inline">\(z_{0.1} = 1.645\)</span>: 90% in the interval</li>
-<li><span class="math inline">\(z_{0.05} = 1.96\)</span>: 95% in the interval</li>
-<li><span class="math inline">\(z_{0.001} = 2.58\)</span>: 99% in the interval</li>
+<li><span class="math inline">\(z_{0.1} = 1.645\)</span>: 90% confidence interval</li>
+<li><span class="math inline">\(z_{0.05} = 1.96\)</span>: 95% confidence interval</li>
+<li><span class="math inline">\(z_{0.001} = 2.58\)</span>: 99% confidence interval</li>
 </ul>
+<section id="example-1" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">19.2.1</span> Example</h3>
 <p>In the case of the age variable of the census data, the intervals for each of our <span class="math inline">\(K\)</span> samples are</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>CI95 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">low =</span> meanAge <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> SEage, </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">point =</span> meanAge,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">high =</span> meanAge <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> SEage)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>CI95[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, ]</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;         low point     high</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1  23.21689 29.96 36.70311</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2  34.27689 41.02 47.76311</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  28.59689 35.34 42.08311</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  29.53689 36.28 43.02311</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  28.71689 35.46 42.20311</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  27.31689 34.06 40.80311</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  32.31689 39.06 45.80311</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  24.65689 31.40 38.14311</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  29.83689 36.58 43.32311</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 31.05689 37.80 44.54311</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>CI95 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">low =</span> meanAge <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fu">sd</span>(meanAge), </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">point =</span> meanAge,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">high =</span> meanAge <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fu">sd</span>(meanAge))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(CI95)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;        low point     high</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 29.89835 35.72 41.54165</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 25.25835 31.08 36.90165</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 30.87835 36.70 42.52165</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 22.39835 28.22 34.04165</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 28.71835 34.54 40.36165</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 29.07835 34.90 40.72165</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>While in most cases, the interval is within the 95% confidence range around <span class="math inline">\(\mu = 35.298\)</span>, the upper bounds of the confidence intervals for some of the samples can exceed <span class="math inline">\(\mu + 1.96 \times SE_{\text{age}}\)</span>, indicating that these samples have higher or lower sample means and greater variability, thus suggesting they are less reliable as estimates of the population mean.</p>
+<p>We can find out those cases for example as follow:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(CI95[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="st">'low'</span>], <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lwd =</span> .<span class="dv">75</span>, </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">'l'</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">45</span>), </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'sample'</span>, <span class="at">ylab =</span> <span class="st">'mean age'</span>,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Confidence Intervals at level 95%'</span>)</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(CI95[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="st">'point'</span>], <span class="at">col =</span> <span class="dv">4</span>, <span class="at">type =</span> <span class="st">'b'</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(CI95[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="st">'high'</span>], <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lwd =</span> .<span class="dv">75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>abov<span class="ot">&lt;-</span><span class="fu">which</span>(CI95<span class="sc">$</span>low<span class="sc">&gt;</span>mu_age)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>belo<span class="ot">&lt;-</span><span class="fu">which</span>(CI95<span class="sc">$</span>high<span class="sc">&lt;</span>mu_age)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>abov</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  57  68 172 175 190 209 244 277 477 505 548 571 606 631 692 748 786 810 839</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [20] 841 857 976 984</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>belo</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   4  12  81  93 137 139 148 187 197 261 380 400 432 461 633 644 763 773 853</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [20] 876 886</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Interestingly, but not surprisingly, we can see there are roughly 25 cases where the CI range is too high and 25 where the CI range is too low. Well that is 50 out 1000 samples and the exact meaning of <span class="math inline">\(\alpha=0.05\)</span>:</p>
+<blockquote class="blockquote">
+<p><em>If we generate 1000 samples, and compute their confidence interval, in 950 cases, the interval will contain the parameter value.</em></p>
+</blockquote>
+<p>We show the confidence interval for 3 samples (out of the 95%) where the point estimate can be trusted to represent the population mean, followed by 3 of the too high cases and 3 of the too low cases.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a_subset<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,abov[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],belo[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(CI95[a_subset, <span class="st">'low'</span>], <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lwd =</span> .<span class="dv">3</span>, </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">'b'</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">45</span>), </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'sample'</span>, <span class="at">ylab =</span> <span class="st">'mean age'</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Confidence Intervals at level 95%'</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xaxt=</span><span class="st">"n"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(CI95[a_subset, <span class="st">'point'</span>], <span class="at">col =</span> <span class="dv">4</span>, <span class="at">type =</span> <span class="st">'b'</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(CI95[a_subset, <span class="st">'high'</span>], <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lwd =</span> .<span class="dv">75</span>, , <span class="at">type =</span> <span class="st">'b'</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> mu_age, <span class="at">col =</span> <span class="dv">2</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fl">3.5</span>, <span class="at">lwd =</span> <span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"grey10"</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fl">6.5</span>, <span class="at">lwd =</span> <span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"grey10"</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>, <span class="at">at=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(a_subset), <span class="at">labels=</span>a_subset,<span class="at">las=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="061_inference_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption>The population mean in red = 35.298 ; the first 10 point estimates in dark blue ; their corresponding confidence intervals at level 95% in gray</figcaption>
+<p><img src="061_inference_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Population mean in red = 35.298 ; some of the point estimates in dark blue ; their corresponding confidence intervals at level 95% in gray</figcaption>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> age, <span class="at">col =</span> <span class="dv">2</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'age' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>While for most cases, the interval is within the 95% confidence around <span class="math inline">\(\mu = 35.298\)</span>, the mean from samples 2 and 7 are a little too high.</p>
+<p>Unfortunately, in the large majority of cases, we would not be able to compute the standard error this way as we would only have one or two samples. The only solution is then to use the standard deviation of the sample divided by the square root of the sample size (see earlier equations) as a best guess for the standard deviation of the distribution of sample means, i.e.&nbsp;to make up the standard error.</p>
+<p>So far, we haven’t stored that information (i.e.&nbsp;standard deviation for each sample). We need to relaunch the exact same samples (luckily we used a seed). We do it for age only:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>K <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>meanAge <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>sdAge <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">345</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>K) {</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  sample <span class="ot">&lt;-</span> census[<span class="fu">sample</span>(N, n), ]</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  meanAge[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sample<span class="sc">$</span>age)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  sdAge[i] <span class="ot">&lt;-</span> <span class="fu">sd</span>(sample<span class="sc">$</span>age)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>From each standard deviation, we compute the standard error:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>seAge<span class="ot">&lt;-</span>sdAge<span class="sc">/</span><span class="fu">sqrt</span>(n) <span class="co">#sample sd error </span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(seAge)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 3.112849 2.517504 3.298144 2.995001 3.229483 2.931775</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(seAge<span class="sc">&gt;</span><span class="fu">sd</span>(meanAge)) <span class="co">#compare sample standard error and sampling distribution st dev</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1]  TRUE FALSE  TRUE  TRUE  TRUE FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>where we see there is variety which will also make the CI different (not constant) for each sample and thus change the decision on the relevance of each sample mean:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>CI95s <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">low =</span> meanAge <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> seAge, </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">point =</span> meanAge,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">high =</span> meanAge <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> seAge)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>abovs<span class="ot">&lt;-</span><span class="fu">which</span>(CI95s<span class="sc">$</span>low<span class="sc">&gt;</span>mu_age)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>belos<span class="ot">&lt;-</span><span class="fu">which</span>(CI95s<span class="sc">$</span>high<span class="sc">&lt;</span>mu_age)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>abovs</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]  57  68 172 175 190 209 277 477 505 548 571 606 748 786 792 810 813 839 857</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [20] 976</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>belos</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1]   4  12  80  81  93 117 137 139 148 187 197 261 278 380 400 432 461 471 633</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [20] 638 644 705 723 763 773 853 876 886</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a_subset<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,abovs[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],belos[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(CI95s[a_subset, <span class="st">'low'</span>], <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lwd =</span> .<span class="dv">3</span>, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">'b'</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">45</span>), </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'sample'</span>, <span class="at">ylab =</span> <span class="st">'mean age'</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'Confidence Intervals at level 95%'</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xaxt=</span><span class="st">"n"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(CI95s[a_subset, <span class="st">'point'</span>], <span class="at">col =</span> <span class="dv">4</span>, <span class="at">type =</span> <span class="st">'b'</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(CI95s[a_subset, <span class="st">'high'</span>], <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">lwd =</span> .<span class="dv">75</span>, , <span class="at">type =</span> <span class="st">'b'</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> mu_age, <span class="at">col =</span> <span class="dv">2</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fl">3.5</span>, <span class="at">lwd =</span> <span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"grey10"</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fl">6.5</span>, <span class="at">lwd =</span> <span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"grey10"</span>,<span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>, <span class="at">at=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(a_subset), <span class="at">labels=</span>a_subset,<span class="at">las=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="061_inference_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Population mean in red = 35.298 ; some of the point estimates in dark blue ; their corresponding confidence intervals at level 95% in gray</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The decision would have changed for some of the samples, for example 723 and 984, knowing <code>mu_age</code> is 35.298.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(CI95s[<span class="fu">c</span>(<span class="dv">723</span>),],CI95[<span class="fu">c</span>(<span class="dv">723</span>),],CI95s[<span class="fu">c</span>(<span class="dv">984</span>),],CI95[<span class="fu">c</span>(<span class="dv">984</span>),])</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;           low point     high</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 723  24.19980 29.72 35.24020</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7231 23.89835 29.72 35.54165</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 984  35.09008 41.56 48.02992</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9841 35.73835 41.56 47.38165</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="note-on-the-sample-function" class="level3" data-number="19.2.2">
+<h3 data-number="19.2.2" class="anchored" data-anchor-id="note-on-the-sample-function"><span class="header-section-number">19.2.2</span> Note on the <code>sample()</code> function</h3>
+<p>When applied to a vector x, <code>sample()</code> selects a set of values within the vector. The size of this set (i.e.&nbsp;the size of the sample) is given though the argument <code>size</code>. Although there is no explicit default to the argument (see help), it is inferred from the length of x is not given. Hence when size is missing <code>sample(x)</code> provides a random permutation of the vector x. Don’t forget to use <code>set.seed()</code> to keep a particular permutation</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>))</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "A" "D" "B" "C"</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">102</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>))</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "C" "B" "A" "D"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When size is explicit, a random subset is returned. In the case of a random draw withour replacement (default) size cannot be smaller than <code>length(x)</code>. It can if replacement is allowed:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>),<span class="dv">2</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "D" "C"</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">#sample(c("A","B","C","D"),6) error</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>),<span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] "A" "D" "B" "D" "C" "C" "C" "A" "C" "C"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When applied to a scalar x, sample returns a random permutation of values from 1 to x, or a subset of it if size is indicated:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">7</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 6 5 4 7 1 2 3</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">7</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 6 2 7 3 4 1 5</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">7</span>,<span class="at">size=</span><span class="dv">3</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5 3 4</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">7</span>,<span class="at">size=</span><span class="dv">10</span>, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] 3 1 2 1 7 1 2 7 3 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>It is useful as such but also when applied to a data.frame.</p>
+<p>For sampling a random set of rows over a data.frame you use sample with a scalar corresponding to the number of rows in the data.frame. This returns a random permutation of the identification of each row, which you can then use to reshuffle or subset the data set:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Y=</span><span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>), <span class="at">Z=</span><span class="dv">11</span><span class="sc">:</span><span class="dv">14</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Y  Z</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 A 11</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 B 12</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 C 13</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 D 14</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="fu">nrow</span>(data))</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1 4 2 3</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co">#reshuffle (permutation)</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>data[<span class="fu">sample</span>(<span class="fu">nrow</span>(data)),]</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Y  Z</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 A 11</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 D 14</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 B 12</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 C 13</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="co">#random subset</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>data[<span class="fu">sample</span>(<span class="fu">nrow</span>(data),<span class="at">size=</span><span class="dv">2</span>),]</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Y  Z</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 A 11</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 D 14</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="other-example" class="level3" data-number="19.2.3">
+<h3 data-number="19.2.3" class="anchored" data-anchor-id="other-example"><span class="header-section-number">19.2.3</span> Other example:</h3>
+<p>We have a sample of 100 trees with measurements of their diameter at breast height. We are interested in the mean value and standard error. The point estimate equals 164 with an empirical variance of 333221.</p>
+<p>What is the standard error of the sample mean?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>variance <span class="ot">&lt;-</span> <span class="dv">333221</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># compute sample standard deviation</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(variance)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>s</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 577.253</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># compute standard error of the sample mean</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>SE_mean <span class="ot">&lt;-</span> s <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>SE_mean</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 57.7253</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>What is the standard error if the sample was made of 1000 trees?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>SE_mean <span class="ot">&lt;-</span> s <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">1000</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>SE_mean</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 18.25434</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
@@ -1126,13 +1394,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./050_graphics_ggplot.html" class="pagination-link" aria-label="ggplot graphics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span>
+      <a href="./054_distributions_discrete.html" class="pagination-link" aria-label="Discrete distributions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Discrete distributions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./901_copy_paste.html" class="pagination-link" aria-label="Copy-pasting">
-        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Copy-pasting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./062_hypotheses_test.html" class="pagination-link" aria-label="Hypotheses testing">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Hypotheses testing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

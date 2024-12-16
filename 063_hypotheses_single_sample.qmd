@@ -1,0 +1,344 @@
+# Hypotheses testing - One sample tests
+
+## Tests about a Mean
+
+### Mean of normal distribution with known variance (Z-Test)
+
+We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ unknown but $\sigma^2$ being known - *a very unrealistic case in practice*. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
+
+-   **Testing**: $H_0: \mu = \mu_0$ against $H_1: \mu \neq \mu_0$.
+-   **Test Statistic**: random variable defined by $$Z_n = \dfrac{\hat{\mu_n} - \mu_0}{\sigma / \sqrt{n}} \sim N(0, 1)$$
+-   **The critical values** are read on a standard normal distribution table.
+
+#### Example (using summary description of sample):
+
+Suppose a population with the following characteristics:
+
+```{r}
+mu_0 <- 50 #hypothesized population mean against which the test is made
+sigma <- 10 #population sd
+```
+
+And a sample of 25 records with a mean of 55
+
+```{r}
+n <- 25 #sample size
+sample_mean <- 55
+```
+
+The test statistic is
+
+```{r}
+Z_n <- (sample_mean - mu_0) / (sigma / sqrt(n))
+Z_n
+```
+
+With a given significance level, you then decide to reject or not the null hypothesis (equal means)
+
+```{r}
+alpha <- 0.05
+# Determine the critical value and decide:
+Z_alpha <- qnorm(1 - alpha / 2)
+Z_alpha
+reject_H0 <- abs(Z_n) > Z_alpha
+reject_H0
+
+# or Calculate the p-value and decide:
+p_value <- 2 * (1 - pnorm(abs(Z_n)))
+p_value
+reject_H0 <- p_value < alpha
+reject_H0
+```
+
+Suppose another example with sample mean closer to the hypothesized population mean, then
+
+```{r}
+sample_mean <- 51
+Z_n <- (sample_mean - mu_0) / (sigma / sqrt(n))
+p_value <- 2 * (1 - pnorm(abs(Z_n)))
+p_value
+reject_H0 <- p_value < alpha
+reject_H0
+```
+
+### Mean of normal distribution with unknown variance (t-test)
+
+In reality, it is far more likely you don't know the population variance.
+
+We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ and $\sigma^2$ unknown. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
+
+-   **Testing**: $H_0: \mu = \mu_0$ against $H_1: \mu \neq \mu_0$.
+-   **Test Statistic**: random variable defined by $$T_{n-1} = \dfrac{\hat{\mu_n} - \mu_0}{S_{n,c} / \sqrt{n}} \sim t(n-1)$$
+-   **Decision rule**: the critical value $c_\alpha$ is read on a student distribution table.
+-   **The critical values** are read on a t-student distribution table, which we know doesn't need a variance to be defined.
+
+#### Example (using a summary description of a sample)
+
+Suppose the same example as for the Z-test but this time we don't know the population variance. We can't use $\sigma$ but can still compute the sample variance (or standard deviation)
+
+```{r}
+sample_mean <- 55
+sample_sd <- 10
+```
+
+and then the t-test:
+
+```{r}
+T_n <- (sample_mean - mu_0) / (sample_sd / sqrt(n))
+T_n
+```
+
+So we can now decide (using the p-value)
+
+```{r}
+p_value <- 2 * (1 - pt(abs(T_n), df = n - 1))
+p_value
+reject_H0 <- p_value < alpha
+reject_H0
+```
+
+Again, if the sample mean was closer to the population one, for this same observed variance, we would have:
+
+```{r}
+sample_mean <- 51
+T_n <- (sample_mean - mu_0) / (sample_sd / sqrt(n))
+p_value <- 2 * (1 - pt(abs(T_n), df = n - 1))
+p_value
+reject_H0 <- p_value < alpha
+reject_H0
+```
+
+#### Example (using the sample data itself)
+
+Suppose we have the actual sample data instead of just the summary statistics. We can perform the t-test using the `t.test()` function in R (still using the hypothesized mean of 50), with the advantage of not having to compute the sample mean and staandard deviation and a reporting of bot p-value and confidence interval
+
+```{r}
+sample_data <- c(55, 51, 49, 52, 56, 54, 50, 53, 57, 58)
+t.test(sample_data, mu = mu_0)
+```
+
+which holds the same result as our earlier "manual" method using the summary statistics of the sample, see:
+
+```{r}
+n<-length(sample_data)
+sample_mean<-mean(sample_data)
+sample_sd<-sd(sample_data)
+p_value <- 2 * (1 - pt(abs((sample_mean - mu_0) / (sample_sd / sqrt(n))), df = n - 1))
+p_value
+```
+
+## Tests about a Variance
+
+### Variance of normal distribution with known mean (chi-squared test n df)
+
+We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ known and $\sigma^2$ unknown - *quite rare in practice*. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
+
+-   **Testing**: $H_0: \sigma^2 = \sigma^2_0$ against $H_1: \sigma^2 \neq \sigma^2_0$.
+-   **Test Statistic**: random variable defined by $$\chi^2_{n} = \dfrac{(n) \hat{\sigma^2_n}}{\sigma^2} \sim \chi^2(n)$$
+-   **The critical values** are read on a chi-squared distribution table. After a sampling from a normal distribution, the distribution of the sample variance is known to follow a chi-squared distribution.
+
+#### Example:
+
+Considering the same hypothetical population and a generated normal sample of 30 observations (for which the true standard deviation is higher, i.e. 15).
+
+```{r}
+set.seed(123)
+n<-30
+x <- rnorm(n, mean = 50, sd = 15)
+sample_variance <- var(x)
+sd(x)
+```
+
+```{r}
+sigma_0<-10
+chi_squared_stat <- (n * sample_variance) / sigma_0^2
+chi_squared_stat
+```
+
+```{r}
+alpha<-0.05
+critical_value_lower <- qchisq(alpha / 2, df = n)
+critical_value_upper <- qchisq(1 - alpha / 2, df = n)
+c(critical_value_lower,critical_value_upper)
+
+#or p-value
+pchisq(chi_squared_stat, df = n)
+p_value <- 2 * min(pchisq(chi_squared_stat, df = n), 1 - pchisq(chi_squared_stat, df = n))
+p_value
+
+reject_H0 <- p_value < alpha
+reject_H0
+```
+
+Suppose another sample (generated with its true standard deviation, the same as the population's)
+
+```{r}
+set.seed(101112)
+n<-30
+x <- rnorm(n, mean = 50, sd = 10)
+sample_variance <- var(x)
+sd(x)
+```
+
+```{r}
+chi_squared_stat <- (n * sample_variance) / sigma_0^2
+chi_squared_stat
+```
+
+```{r}
+critical_value_lower <- qchisq(alpha / 2, df = n)
+critical_value_upper <- qchisq(1 - alpha / 2, df = n)
+c(critical_value_lower,critical_value_upper)
+
+#or p-value
+pchisq(chi_squared_stat, df = n - 1)
+p_value <- 2 * min(pchisq(chi_squared_stat, df = n), 1 - pchisq(chi_squared_stat, df = n))
+p_value
+
+reject_H0 <- p_value < alpha
+reject_H0
+```
+
+This time the null hypothesis is not rejected. The sample variance cannot be said to differ from the population variance.
+
+### Variance of normal distribution with unknown mean (chi-squared test n-1 df)
+
+We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ and $\sigma^2$ unknown - *more likely case*. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
+
+-   **Testing**: $H_0: \sigma^2 = \sigma^2_0$ against $H_1: \sigma^2 \neq \sigma^2_0$.
+
+-   **Test Statistic**: random variable defined by $$\chi^2_{n-1,c} = \dfrac{n S^2_{n,c}}{\sigma^2} \sim \chi^2(n-1)$$
+
+-   **The critical values** are read on a chi-squared distribution table.
+
+The test needs to include the fact we need a degree of freedom to estimate the mean:
+
+#### Example
+
+```{r}
+chi_squared_stat <- ((n - 1) * sample_variance) / sigma_0^2
+chi_squared_stat
+```
+
+## Tests about a Proportion
+
+### Proportion from a small samples (Binomial test)
+
+We consider a random variable $X$. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
+
+-   **Testing**: $H_0: \pi_A = \pi_0$ against $H_1: \pi_A \neq \pi_0$.
+-   **Test Statistic**: random variable defined by $$n_A = n \hat{\pi_{n,A}} \sim B(n, \pi_0)$$
+-   **The critical values** are read on a binomial distribution table.
+
+#### Example
+
+```{r}
+n <- 30
+pi_0 <- 0.5
+x1 <- 20 # Observed successes
+x2 <- 15 # Observed successes
+binom_test1 <- binom.test(x1, n, p = pi_0, alternative = "two.sided")
+binom_test1
+binom_test2 <- binom.test(x2, n, p = pi_0, alternative = "two.sided")
+binom_test2
+```
+
+The null hypothesis is rejected in the first case and thus the proportions are different to 0.5, i.e. there is not the same amount of successes and failures. It is not rejected in the second case.
+
+### Proportion from a large sample (Normal approximation test)
+
+We consider a random variable $X$. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$ such that the following inequalities are respected: $n \ge 50$, $n\pi_0 \ge 16$ and $n(1-\pi_0) \ge 16$.
+
+-   **Testing**: $H_0: \pi_A = \pi_0$ against $H_1: \pi_A \neq \pi_0$.
+-   **Test Statistic**: random variable defined by $$Z_n = \dfrac{\hat{\pi_{n,A}} - \pi_0}{\sqrt{\dfrac{\pi_0 (1-\pi_0)}{n}}} \# N(0, 1)$$
+-   **The critical values** are read on a standard normal distribution table.
+
+#### Example
+
+In practice, there are two ways for approximating the distribution of the test statistic. They lead to similar result but are not calculated the same way, leading to some difference in p-values.
+
+-   The first method (the least practical) is to compute a z-test with the normal distribution directly.
+
+```{r}
+n <- 100 #now sufficiently large
+x <- 70 # Observed successes #70 to reject the null hypothesis, (try 51 and 60)
+pi_0 <- 0.5 #the expected proportion
+sample_prop<-x / n #sample proportion
+
+ztest <- (sample_prop - pi_0) / sqrt(pi_0 * (1 - pi_0) / n)
+
+p_value <- 2 * (1 - pnorm(abs(ztest)))
+p_value
+```
+
+With 70 successes out of 100, the p-value is very small and it is unlikely that the result is from a trial where there is a fifty-fifty chance of success, i.e. the null probability. (If it is a coin, check it is not biased ;-) )
+
+-   The second method (recommended for ease of use) is to use a chi-square test within the `prop.test()` function. It is similar in structure to the `binom.test()` used when sample size is small. The chi-squared test within `prop.test()` uses (by default) the so-called Yates' correction, which corrects for small values in the case of 2 x 2 matrices (e.g. success x failure and male x female, see later) where one cell of the matrix would have rare events and for which the continuous approximation would lead to overestimation. In our single sample case, we turn this default correction off:
+
+```{r}
+prop.test(x, n, p = pi_0, alternative = "two.sided", correct = FALSE)
+```
+
+Note that in a proportion test, the expected probability does not need to be 0.5. Suppose there are 3 equally common species of the "tilia" tree genus in our cities (say cordata, platyphyllos and tomentosa for example). So if you count 25 with small leafs (cordata) out of 70 (the others you cannot recognize because their leafs are large) in a neighbourhood, is it surprising?
+
+```{r}
+prop.test(25, 70, p = 0.33, alternative = "two.sided", correct = FALSE)
+```
+
+You can't reject the null hypothesis. It is not really a surprise, i.e. an over or under planting of that species.
+
+### Chi-squared test of goodness of fit
+
+We can see the `prop.test()` above wraps a chi-squared test, which could also be directly computed if the counts of "yes" and "no" are provided as counts in a vector
+
+With our earlier example, we obtain the same result by doing:
+
+```{r}
+n <- 100 #now sufficiently large
+x <- 70 # Observed successes #70 to reject the null hypothesis, (try 51 and 60)
+pi_0 <- 0.5 #the expected proportion
+chisq.test(c(x,n-x), correct = FALSE) 
+```
+
+This is the so-called **Chi-squared test of goodness of fit** (conformity/adequacy), which is more general than the two proportions' test:
+
+From a random qualitative/factorial variable $X$, we want to test if the frequencies are equally distributed or distributed along a known theoretical distribution function, i.e., if we have the same number of observations for each possible categories than expected from a given (including uniform) distribution.
+
+Let $X$ having $I$ categories $i$ and $n$ observations, and assume we expect a uniform distribution. We thus expect to see $obs_i = exp_i$ individuals for each category ($\forall i$) where $exp_i$ are the so called theoretical frequencies.
+
+In the uniform case, $exp_i$ is simply $n p_i$ with $p_i=\dfrac{1}{I}$ and so $exp_i=n/I$.
+
+**Testing**:
+
+$$H_0: obs_i = exp_i = n/I$ $\forall i$$
+
+$$H_0 (\text{uniform case}): obs_i = n/I$ $\forall i$$
+
+**Test Statistic**: random variable defined by
+
+$$\chi^2(obs) = \sum^I_{i=1} \dfrac{(obs_i - exp_i)^2}{exp_i}$$
+
+$$\chi^2(obs) (\text{uniform case})= \sum^I_{i=1} \dfrac{(obs_i - n/I)^2}{exp_i} $$
+and $$\chi^2(obs) \sim \chi^2(I-1) $$
+The computed statistic being compare to a chi-squared value with $I-1$ degrees of freedom.
+
+#### Example:
+
+Suppose there would be 3 categories in our previous example, with the 30 non-success being subdivided into two types of fails:
+
+```{r}
+chisq.test(c(70,20,10))
+```
+
+which assumes, each category has equal chances by default, i.e. 1/3, i.e. fit to a unifrom distribution. Hence it is obviously rejected. But we may suppose a different set of probabilities. See:
+
+```{r}
+chisq.test(c(70,20,10), p=c(1/3,1/3,1/3))
+chisq.test(c(70,20,10), p=c(0.65,0.25,0.10))
+```
+
+Since we can have different probabilities for the different counts, we are just one step away to using a chi-squared test to test the normality of a distribution. For a distribution to be normal, we know what share of the data should fall within -1 and +1 standard deviation, +2 and -2, etc.. We can thus compare counts to the expected ones along a normal distribution using the same chi-squared function. This methods however has been demonstrated to be powerful for discrete data but is not performing as well as other tests for the normality of a continuous variable after binning (to obtain counts). We will be using the Shapiro-Wilk test for testing normality rather than the chi-squared test.
+
+
+
+

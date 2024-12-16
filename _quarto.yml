@@ -34,32 +34,38 @@ book:
       - 032_univariate.qmd
       - 033_discretisation.qmd
       - 034_cross_tabulation.qmd
-    - part: "Part IV - Distributions"
+    - part: "Part IV - Graphics with ggplot"
       chapters:
-      - 041_distributions_unif_normal.qmd
-      - 042_CLT_Standardisation.qmd
-      - 043_distributions_other_continuous.qmd
-      - 044_distributions_discrete.qmd
-    - part: "Part V - Graphics with ggplot"
+      - 040_graphics_ggplot.qmd
+    - part: "Part V - Distributions"
       chapters:
-      - 050_graphics_ggplot.qmd
+      - 051_distributions_unif_normal.qmd
+      - 052_CLT_Standardisation.qmd
+      - 053_distributions_other_continuous.qmd
+      - 054_distributions_discrete.qmd
     - part: "Part VI - Statistical inference"
       chapters:
       - 061_inference.qmd
-      #062_hypothesis_test.qmd
-      #Mean and xhi2 tests
-      
+      - 062_hypotheses_test.qmd
+      - 063_hypotheses_single_sample.qmd
+      - 064_hypotheses_two_samples.qmd
+      - 065_hypotheses_contingency.qmd
+      - 066_hypotheses_normality.qmd
+      - 067_power_contingency.qmd
     - part: "Part VII - Bivariate and regression analysis"
-      #chapters:
-      #- Cross-tabulation and xhi2
-      #- correlation.qmd
-      #- regression.qmd
-      #- CIregression.qmd
+      chapters:
+      - 071_correlation.qmd
+      - 072_regression.qmd
+      - 073_CIregression.qmd
+      - 074_multi_regression.qmd
+      - 075_regression_diagnostics.qmd
+      #- 075_regression_issues.qmd
     - part: "Appendices, Tips, tricks and miscellaneous"
       chapters: 
       - 901_copy_paste.qmd
       - 902_making_data.qmd
       - 903_summarizing.qmd
+      - 904_curve.qmd
     - part: "Bibliography"
       chapters:
       - 999_references.qmd

@@ -1,0 +1,85 @@
+# Regression diagnostics
+
+
+## Stressing the visual: Anscombe
+
+Consider the following 4 datasets (constructed in 1973 by the statistician Francis Anscombe).
+
+```{r}
+anscombe
+```
+
+In each case the mean and variance of $Xs$ an $Ys$ are almost exactly the same:
+
+```{r}
+sapply(anscombe, mean)
+sapply(anscombe, var)
+```
+
+We estimate 4 OLS models:
+
+```{r}
+# code from R help
+ff <- y ~ x
+mods <- setNames(as.list(1:4), paste0("lm", 1:4))
+for (i in 1:4) {
+    ff[2:3] <- lapply(paste0(c("y", "x"), i), as.name)
+    mods[[i]] <- lmi <- lm(ff, data = anscombe)
+    print(summary(lmi))
+}
+```
+
+The quality of the  fit and the regression coefficients are very similar across the 4 cases.
+But looking at it more closely, you see why a visual inspection is always needed:
+
+
+```{r}
+# code from R help
+op <- par(mfrow = c(2, 2), mar = 0.1 + c(4, 4, 1, 1), oma = c(0, 0, 2, 0))
+for (i in 1:4) {
+    ff[2:3] <- lapply(paste0(c("y", "x"), i), as.name)
+    plot(ff, data = anscombe, col = "red", pch = 21, bg = "orange", cex = 1.2, 
+        xlim = c(3, 19), ylim = c(3, 13))
+    abline(mods[[i]], col = "blue")
+}
+mtext("Anscombe's 4 Regression data sets", outer = TRUE, cex = 1.5)
+```
+
+
+## Visual diagnostics:
+
+### Example
+
+```{r}
+RainScotland<-read.csv("data/Ferguson/RainScotland.csv")
+OLS2<-lm(Rainfall~Elevation+DistanceE,data=RainScotland)
+summary(OLS2)
+```
+
+### Plots
+
+`Plot()` applied to a `lm` object results in a sequence of 4 plots that are most useful for a visual inspection of the relationship you uncovered, as well as assessing whether the regression is valid and if any data behave as an outlier.
+
+```{r}
+par(mfrow=c(2,2))
+plot(OLS2)
+```
+
+- Plot 1 shows the distribution of residuals against the predicted $Y$ values. For a linear relationship, one expects that the residuals are equally distributed along the fitted values, i.e. spread similarly around the dashed horizontal line. Typically  if the trend red curve would be clearly upward or downward sloping, or show (inverted-) U or V -shaped, that would mean the linearity assumption is not good. Some transformation or additional explanatory variables might be needed.
+
+- Plot 2 is a `qqplot` against the theoretical normal distribution (`qqnorm`). While we have seen that variations are more likely at the extremes, one expect the general shape of the curve to follow 1 to 1 straight line.
+
+- Plot 3 is often similar to plot 1, but more specifically aimed at finding if residuals are **homoscedastic**, i.e. have equal variance. The residuals are standardized (studentized) and the  smoothed red line indicates changes in the variance. Again we expect it to be horizontal and the points to be equally distributed within a horizontal rectangle buffer.
+
+- Plot 4 shows standardized residuals (same as Plot 2) now plotted against `leverage`, indicating whether some points may influence the fit more than others. Points spotted far on the right side of the plot may deserve some attention, as their absence may significantly affect the coefficients of the model. In addition, isolines (0.5, 1, ...) of Cook's distance statistic is provided. Again values beyond those lines must be investigated as potentially too influential.
+
+
+### Plots for Anscombe data
+
+
+## Normality and homoscedasticity tests
+
+
+
+
+

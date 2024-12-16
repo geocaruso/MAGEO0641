@@ -1,0 +1,87 @@
+## Multiple Regression
+
+Extension to use **several independent variables (regressors)**
+
+$$Y = \alpha + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 ...$$ \## Key points:
+
+-   The model does not represent a straight line but a hyperplan.
+
+-   The calculation of the quality of the fit ($R^2$) must be adjusted (particularly if lots of regressors and few observations)
+
+-   The independent variables $X_1,X_2, X_3,…$ should be **independent** from each other
+
+-   The independent variables are not necessarily continuous ! See interpretation in case of factors
+
+## Example with two continuous regressors
+
+Let's remind our first model with a single independent variable:
+
+```{r}
+RainScotland<-read.csv("data/Ferguson/RainScotland.csv")
+OLS1<-lm(Rainfall~Elevation,data=RainScotland)
+summary(OLS1)
+```
+
+We think that we can improve the model if we include the distance (eastward) from the Western coastline and augment our model:
+
+```{r}
+OLS2<-lm(Rainfall~Elevation+DistanceE,data=RainScotland)
+summary(OLS2)
+```
+
+Compare the two models. What do you see?
+
+First, the model is of higher quality and predictions will be better: - More of the total variance is explained: the R-squared increased from 0.61 to 0.83 (adjusted). - the residual standard error drops from 243 to 156 mm
+
+Second, the distance to the coast is significant and negative. It is expressed in km, hence we interpret it as: "when you get farther from the Western coast, every km inland will reduce rainfall by 5.22 mm".
+
+Third, we could expect an interaction between elevation and distance from the sea. We observe that introducing the distance indeed changes our estimate of the elevation effect: from 2.38 mm of water for every m higher, we now estimate the effect of elevation to be a 1.82 mm per m. The effect remain well significant although it is reduced. We usually say that this new estimate is "**cleared from** the effect of distance" or "this is the effect of elevation **after controlling** for the effect of distance from the sea".
+
+**DANGER ZONE** - **DON'T COMPARE COEFFICIENTS DIRECTLY**. You cannot say that the effect of distance is 4 times larger than the effect of elevation! - **BEAR THE UNITS IN MIND!** $\beta$ coefficients have units. For example, the coefficient associated to distance is mm/km in this case. If you had measured distance in m, the coefficient would be -0.00522, which looks lower than the effect of elevation and much closer to zero, but it is not!
+
+## Example with one continuous and one categorical regressor
+
+Suppose you were not able to measure the distance between the meteorological station and the sea, but you had a variable indicating the station is in the Western part or the Eastern part of the country
+
+Say the West variable is 1 when the collection site is on the Western side of Scotland and 0 on the Eastern side. It is important to represent those categorical variables as factors so their coding and effect are not seen as a continuous one. You can also use your prefereed reference category (here East then)
+
+```{r}
+RainScotland$West<-as.factor(as.numeric(RainScotland$DistanceE<90))
+```
+
+And we estimate a new model:
+
+```{r}
+OLS3<-lm(Rainfall~Elevation+West,data=RainScotland)
+summary(OLS3)
+```
+
+This model 3 is less effective than model 2 in general (R-squared is lower) but better than model 1. Also with this **"specification"**, the elevation effect is now around 2mm.
+
+How do you interpret the West variable coefficient? It is not continuous so one can't phrase it as "for every increase in...", rather we will say that
+
+**"Being in the Western part of Scotland, one can expect to add 307mm of water relative to the level of rain in the Eastern part"**
+
+Note that now the intercept (now 849mm) refers to the level in the Eastern part. If there were several categorical variables, it would relate to the combined references across all variables.
+
+Graphically you also see that introducing a categorical variable this way leads to a fixed amount of water (307mm) to be added everywhere to the relationship between elevation and rainfall (In some fields this is actually called a "fixed effect" model):
+
+See in red the Western point and the corresponding fit, parallel to the corresponding fit for the Eastern stations in black.
+
+The dashed blue line is the estimation from our first model (OLS1) for comparison.
+
+```{r}
+plot(x=RainScotland$Elevation, y=RainScotland$Rainfall,
+     col=RainScotland$West,
+    xlab="X : Elevation (m)", ylab="Y : Rainfall (mm)")
+abline(a=OLS3$coefficients[1],b=OLS3$coefficients[2], col="black")
+abline(a=OLS3$coefficients[1]+OLS3$coefficients[3],b=OLS3$coefficients[2], col="red")
+abline(a=OLS1$coefficients[1],b=OLS1$coefficients[2], col="blue", lty=2)
+```
+
+
+## Exercise
+
+Using the dataset Lux116.csv within the data folder.
+- Test the hypothesis that employment per municipality is related to 'urbanness' (using density), distance the main jobs (using road distance) and percentage of foreigners.
+- Test whether there could be a specific effect (downward or upward) of any the 3 districts?

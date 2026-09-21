@@ -13,7 +13,7 @@ In class demonstration of how to
 - Understanding help (necessary arguments and default options)
 
 ::: {.callout-note title=""}
-Fancy the same colors as mine? I have a modified monokai theme version here:)
+Fancy the same colors as mine? I have a modified monokai theme version here: <https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme> )
 :::
 
 ## Projects and workflows
@@ -164,10 +164,9 @@ In all case, be concise but specific and consistent within a project or even acr
 
 ![](images/clipboard-1674048195.png)
 
-
 ## Session and run information
 
-Before wrapping up any script or document, it's good practice to record the **when** and **where** it was run, and **with what**. In an open and transparent science environement, this matters more than it may sound: R updates, packages change behavior, operating systems handle paths differently, and `but it worked on my machine' is a real problem in collaborative and reproducible research.
+Before wrapping up any script or document, it's good practice to record the **when** and **where** it was run, and **with what**. In an open and transparent science environement, this matters more than it may sound: R updates, packages change behavior, operating systems handle paths differently, and \`but it worked on my machine' is a real problem in collaborative and reproducible research.
 
 ```{r echo=TRUE}
 # When was this run?
@@ -196,15 +195,15 @@ sessionInfo()
 A good habit is therefore to end your script or document with a `sessionInfo()` call, so anyone reading your output later (including yourself!) knows exactly what produced it.
 
 ## EXERCISE {.unnumbered}
-::: {.callout-tip title="Exercise: your project setup"}
 
+::: {.callout-tip title="Exercise: your project setup"}
 This exercise is meant to practice with objects, working directories, relative paths, and recognize errors (before getting more specific, as so far you don't know much object types)
 
 **Deliverables (send all three by email):**
 
-1. Your R script (`01_setup_project_YOURNAME.R`)
-2. Your Quarto source (`01_setup_project_YOURNAME.qmd`)
-3. The rendered PDF from the `.qmd`
+1.  Your R script (`01_setup_project_YOURNAME.R`)
+2.  Your Quarto source (`01_setup_project_YOURNAME.qmd`)
+3.  The rendered PDF from the `.qmd`
 
 No code template provided, but a series of steps to undertake. Write every line yourself, in both the `.R` script and the `.qmd` document, following the naming conventions covered in class. Comment and structure clearly.
 
@@ -215,8 +214,7 @@ Create a new Rproj. Inside it, create a `data/` subfolder and an `R/` subfolder,
 **Step 2 — Objects: ask your neighbours**
 
 - Create an object called `MyAge` holding your own age.
-- Ask the person sitting to your **left** for his/her name and age.
-  Create an object named after them, using UpperCamelCase and their name and age e.g. `GeoffreyAgeLeft`
+- Ask the person sitting to your **left** for his/her name and age. Create an object named after them, using UpperCamelCase and their name and age e.g. `GeoffreyAgeLeft`
 - Do the same for the person to your **right** (e.g. `LeandreAgeRight`).
 - Create an object called `AgeSum` that computes the sum of all three ages.
 - Build a sentence with `paste()` that reports the sum in words, and store it in an object called `a_sentence`

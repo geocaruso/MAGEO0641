@@ -16,4 +16,4 @@ For better introductory material, we recommend
 
 -   @long
 
--   @wickham (including RStudio introduction) (Note it uses a tidyverse approach while we rather stick to base R where possible, except for graphics (ggplot))
+-   @wickham (including RStudio introduction) (Note it uses a tidyverse approach while we rather stick to base R except for graphics (ggplot))

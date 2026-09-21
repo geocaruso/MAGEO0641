@@ -4,13 +4,17 @@
 
 In class demonstration of how to
 
--   Get R and RStudio installed
--   Navigating the R studio interface
--   Scripting area, console, files,...
--   Using colors and TOC outline in RStudio
--   Auto-completion using tabs
--   Navigating history with the up/down arrows
--   Understanding help (necessary arguments and default options)
+- Get R and RStudio installed
+- Navigating the R studio interface
+- Scripting area, console, files,...
+- Using colors and TOC outline in RStudio
+- Auto-completion using tabs
+- Navigating history with the up/down arrows
+- Understanding help (necessary arguments and default options)
+
+::: {.callout-note title=""}
+Fancy the same colors as mine? I have a modified monokai theme version here:)
+:::
 
 ## Projects and workflows
 
@@ -43,9 +47,9 @@ x # x is lower case and does not exist
 
 IMPORTANT:
 
--   Always worry about **Errors**. They stop your process.
+- Always worry about **Errors**. They stop your process.
 
--   Always **read** and try to understand **Warnings**. They do not stop your process but usually indicate the result may not be as expected!
+- Always **read** and try to understand **Warnings**. They do not stop your process but usually indicate the result may not be as expected!
 
 ## Working directory!!!
 
@@ -54,6 +58,14 @@ Suppose we want to produce a text from the above and save it to a file:
 ```{r echo=TRUE}
 a_sentence<-paste("I have computed a sum, which equals", a)
 a_sentence #Let's see this in the console
+
+#Or write to the console
+write(a_sentence, "")
+# And write to a file
+write(a_sentence,file="brol/a_sentence.txt")
+
+# write() calls cat() with further options when full datasets are given.
+# At this stage the following is the same:
 cat(a_sentence,file="brol/a_sentence.txt")
 ```
 
@@ -104,50 +116,125 @@ A folder of file named **"source data" or "data_für_rémi" are not great ideas.
 
 In general, I personally like files to be all lowercase with underscores and using action verbs to explain what is done in the R file, such as
 
--   estimate_model.R
--   get_statec_data.R
+- estimate_model.R
+- get_statec_data.R
 
 Files numbering can be of good help for heavier projects where there is a logical sequence (time)
 
--   01_estimate_model.R
+- 01_estimate_model.R
 
--   02_get_statec_data.R
+- 02_get_statec_data.R
 
 For variable names and objects I tend to use the "UpperCamelCase" form especially for vectors
 
--   LuxCities
+- LuxCities
 
--   GrowthRates
+- GrowthRates
 
 and tend to add an "df" *or "\_*lst" to disambiguate where needs be between some classes
 
--   LuxCities_df
+- LuxCities_df
 
--   LuxCities_lst
+- LuxCities_lst
 
 I also like to use lowercase single letters for input parameters, such as a pvalue or number of neighbours, e.g.
 
--   p\<-0.05
+- p\<-0.05
 
--   k\<-2
+- k\<-2
 
 or Greec symbols written in full, especially when there is a theoretical link
 
--   beta \<-model\$coefficient\[1\]
+- beta \<-model\$coefficient\[1\]
 
--   rho \<- 0.5
+- rho \<- 0.5
 
 For functions (see later) I also like to use action verbs and include dots, such as:
 
--   plot.bmi()
--   extract.boundary()
+- plot.bmi()
+- extract.boundary()
 
 In all case, be concise but specific and consistent within a project or even across.
 
--   NeighboursCompute_Europe.Paris_project3 would be very long and inconsistent
+- NeighboursCompute_Europe.Paris_project3 would be very long and inconsistent
 
--   df_new2bis not to use both as an object or a file
+- df_new2bis not to use both as an object or a file
 
 ...but to to be honest I have quite a number of tests.r and plot.test2.jpg files peppered in my machine.
 
 ![](images/clipboard-1674048195.png)
+
+
+## Session and run information
+
+Before wrapping up any script or document, it's good practice to record the **when** and **where** it was run, and **with what**. In an open and transparent science environement, this matters more than it may sound: R updates, packages change behavior, operating systems handle paths differently, and `but it worked on my machine' is a real problem in collaborative and reproducible research.
+
+```{r echo=TRUE}
+# When was this run?
+Sys.time()
+
+# Where am I running from? What machine?
+getwd() # working directory
+
+Sys.info() # machine/user-level info (OS, username, machine name)
+
+# What R version, OS, and packages are loaded?
+
+R.version.string   #(no bracket) just the R version, as a short string
+
+sessionInfo()
+```
+
+**Why this matters:**
+
+- `Sys.time()` timestamps your work — useful when comparing versions of an output, or proving when something was actually run
+
+- `getwd()` anchors your work to a specific folder. If this doesn't match your Rproj's root (when using relative paths), something is wrong.
+
+- `sessionInfo()` is the single most useful (and often required) thing to include when asking for help or reporting a bug as it tells others exactly what R version, OS, and package versions you were using.
+
+A good habit is therefore to end your script or document with a `sessionInfo()` call, so anyone reading your output later (including yourself!) knows exactly what produced it.
+
+## EXERCISE {.unnumbered}
+::: {.callout-tip title="Exercise: your project setup"}
+
+This exercise is meant to practice with objects, working directories, relative paths, and recognize errors (before getting more specific, as so far you don't know much object types)
+
+**Deliverables (send all three by email):**
+
+1. Your R script (`01_setup_project_YOURNAME.R`)
+2. Your Quarto source (`01_setup_project_YOURNAME.qmd`)
+3. The rendered PDF from the `.qmd`
+
+No code template provided, but a series of steps to undertake. Write every line yourself, in both the `.R` script and the `.qmd` document, following the naming conventions covered in class. Comment and structure clearly.
+
+**Step 1 — Setup (do this in your Finder/Explorer or RStudio, not in code):**
+
+Create a new Rproj. Inside it, create a `data/` subfolder and an `R/` subfolder, using the lowercase_underscore naming convention for folders and files.
+
+**Step 2 — Objects: ask your neighbours**
+
+- Create an object called `MyAge` holding your own age.
+- Ask the person sitting to your **left** for his/her name and age.
+  Create an object named after them, using UpperCamelCase and their name and age e.g. `GeoffreyAgeLeft`
+- Do the same for the person to your **right** (e.g. `LeandreAgeRight`).
+- Create an object called `AgeSum` that computes the sum of all three ages.
+- Build a sentence with `paste()` that reports the sum in words, and store it in an object called `a_sentence`
+
+**Step 3 — Where and when**
+
+- Print `getwd()` and `Sys.time()` so it's clear where and when this was run.
+
+**Step 4 — Write to file**
+
+- Write `a_sentence` to a file inside your `data/` folder, using `write()` and **a relative path**, never a full path from your own machine.
+
+**Step 5 — Trigger and explain an Error**
+
+- Deliberately reference an object that does not exist (for example, misspell a version of one of your age objects). Run it once so you see the real error message, then comment the line out. In your .R script, comment the line with #. In your .qmd, either comment it or set the chunk's `eval=FALSE` so the rest of the document still runs.
+- In your own words, underneath, explain what caused the Error and how you fixed it.
+
+**Step 6 — Close with session info**
+
+- End your script and document with `sessionInfo()`.
+:::

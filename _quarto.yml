@@ -3,9 +3,9 @@ project:
 
 book:
   title: "Introduction to data analysis and R for geographers"
-  subtitle: "MAGEO0641 (2024-2025 vintage)"
+  subtitle: "MAGEO0641 (2025-2026 vintage)"
   author: "Geoffrey Caruso and Léandre Fabri"
-  date: "9/10/2024"
+  date: "2025-09-22"
   cover-image: images/cover.png
   favicon: images/cover.png
   site-url: https://quadtrees.lu/teaching/MAGEO0641

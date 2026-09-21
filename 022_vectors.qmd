@@ -77,10 +77,14 @@ Sometimes, depending on some calculations, you may need to transform the type of
 A<-c(1,2,3)
 B<-c(1L,2L,3L)
 C<-c("1","2","3")
+
+c(mode(A), typeof(A),mode(B), typeof(B),mode(C), typeof(C))
+
 A+B
 A+C
 A+as.numeric(C)
 as.character(A)
+as.integer(A)
 ```
 
 ### Length
@@ -452,7 +456,8 @@ Let's explore some of those for x being a numeric, a logical and character. *In 
 
 It is sometimes difficult to remember differences between `sort(x)`,`order(x)` and `rank(x)`
 
-See two examples below 
+See two examples below
+
 ```{r}
 set.seed(101)
 x<-round(runif(10,100,200))

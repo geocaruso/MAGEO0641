@@ -31,7 +31,7 @@ We suppose that the dataset `census` contains our target population. Our aim is 
 
 We look at the *running mean* of the variable `age` and at the *running proportion* of men for the variable `sex`.
 
-We start by extracting from the total population a sample made of one observation: $n = 1$. At each step, we extract randomly a new sample with one additional observation. We use a sampling with replacement, i.e. the previous sample is not simply augmented: we take a new sample (made of completely new individuals) each time. We stop when we reach the total population, i.e. when $n = 500$ in our case.
+We start by extracting from the total population a sample made of one observation: $n = 1$. At each step, we extract randomly a new sample with one additional observation. We use a sampling with replacement, i.e. the previous sample is not simply augmented: we take a new sample each time, only potentially comprising individuals that were selected previously. We stop when we reach the total population, i.e. when $n = 500$ in our case.
 
 The key function for sampling in R is `sample()`, which randomly selects a number (arg `size`) of records for a given vector (or, if none are specified, outputs a vector of $1$ to $size$ integers in a random order, see below for examples of the `sample()` function).
 
@@ -70,9 +70,9 @@ text(500, mu_men + .05, mu_men, col = 'darkgray')
 
 ### Standard Error
 
-To quantify the uncertainty of a point estimate, we use its **standard error**. The standard error of an estimate (e.g. the mean) is the **standard deviation of its sampling distribution**.
+To quantify the uncertainty of a point estimate, we use its **standard error**. The standard error of an estimate, for example the mean, is the **standard deviation of its sampling distribution**, in other words it is simply the square root of the variance of the mean.
 
-The notion is not to be confused with the standard deviation of the sample: - the *standard error of the sample mean* indicates how far the sample mean is from the population mean. - the *standard deviation of the sample* indicates how far each individual data within the sample is from the sample mean.
+The notion is not to be confused with the standard deviation of the sample: - the *standard error of the sample mean* indicates how far the sample mean is from the population mean. - the *standard deviation of the sample* indicates how far each individual data within each sample is from the sample mean.
 
 The exact value of the standard error of the mean (or of the proportion) is $$SE_{\bar{x}} = \dfrac{\sigma}{\sqrt{n}}$$ which in our case can be computed, given we know the population:
 
@@ -87,7 +87,7 @@ The standard error of the mean (or proportion) is thus estimated by replacing $\
 
 $$SE_{\bar{x}} = \dfrac{s}{\sqrt{n}}$$
 
-The denominator, $\sqrt{n}$, reflects how the variability of the sample mean decreases as the sample size increases. Also, due to the square root, we see that a willingness to reduce the error of the estimate by two requires four times as many observations.
+The denominator, $\sqrt{n}$ reflects how the variability of the sample mean decreases as the sample size increases. The square rootcomes from the fact that the SE is defined as a standard deviation, rather than a variance. Due to this square root, we see that a willingness to reduce the error of the estimate by two requires four times as many observations!
 
 Suppose a sample of 25 or 100 observations, the standard error would be
 

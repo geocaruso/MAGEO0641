@@ -84,4 +84,11 @@ abline(a=OLS1$coefficients[1],b=OLS1$coefficients[2], col="blue", lty=2)
 
 Using the dataset Lux116.csv within the data folder.
 - Test the hypothesis that employment per municipality is related to 'urbanness' (using density), distance the main jobs (using road distance) and percentage of foreigners.
-- Test whether there could be a specific effect (downward or upward) of any the 3 districts?
+- Interpret the coefficients and global fit
+- Test whether there could be a specific effect (downward or upward) of being within any the 3 districts? or of belonging to Canton Luxembourg city vs elsewhere ?
+
+## Examples of multiple linear regressions from various papers
+
+In class discussion including showing how a series of diffrent specifications are usually presented in research papers.
+
+

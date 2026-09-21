@@ -27,8 +27,12 @@ On completion, each student should be able to
 
 -   Individual
 
--   **20% Continuous assessment**: small tests in class and weekly exercises:
+-   **20% Continuous assessment**: small tests in class and / homework exercises:
 
 -   **40% R exam** (3h) in GIS room, perform R analysis, answer a questionnaire and provide script
 
 -   **40% Oral exam** (30min): presenting a paper and answering questions about its details and the course
+
+(Those weights may sligthly be revised as the semester progresses depending on formative assessments).
+
+Marks will compensate each other but achieving a minimum 8/20 in both the R exam and in the Oral exam is necessary in all case for the course to be considered successful. Students who would fail (\<10/20) only one of either R or Oral exam can eventually retake the failed part only in the next semesters, while the mark from the other part is carried over.

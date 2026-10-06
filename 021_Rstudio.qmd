@@ -13,7 +13,8 @@ In class demonstration of how to
 - Understanding help (necessary arguments and default options)
 
 ::: {.callout-note title=""}
-Fancy the same colors as mine? I have a modified monokai theme version here: <https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme> )
+Fancy the same colors as mine? I have a modified monokai theme version here: <https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme>
+Or go have a look at <https://www.garrickadenbuie.com/project/rsthemes/>)
 :::
 
 ## Projects and workflows
@@ -205,13 +206,13 @@ This exercise is meant to practice with objects, working directories, relative p
 2.  Your Quarto source (`01_setup_project_YOURNAME.qmd`)
 3.  The rendered PDF from the `.qmd`
 
-No code template provided, but a series of steps to undertake. Write every line yourself, in both the `.R` script and the `.qmd` document, following the naming conventions covered in class. Comment and structure clearly.
+No code template provided, but a series of steps to undertake. Write every line yourself, in both the `.R` script and the `.qmd` document, following the naming conventions covered above. Comment and structure clearly.
 
-**Step 1 — Setup (do this in your Finder/Explorer or RStudio, not in code):**
+**Step 1: Setup (do this in your Finder/Explorer or RStudio, not by coding):**
 
 Create a new Rproj. Inside it, create a `data/` subfolder and an `R/` subfolder, using the lowercase_underscore naming convention for folders and files.
 
-**Step 2 — Objects: ask your neighbours**
+**Step 2: Objects: ask your neighbours**
 
 - Create an object called `MyAge` holding your own age.
 - Ask the person sitting to your **left** for his/her name and age. Create an object named after them, using UpperCamelCase and their name and age e.g. `GeoffreyAgeLeft`
@@ -219,18 +220,18 @@ Create a new Rproj. Inside it, create a `data/` subfolder and an `R/` subfolder,
 - Create an object called `AgeSum` that computes the sum of all three ages.
 - Build a sentence with `paste()` that reports the sum in words, and store it in an object called `a_sentence`
 
-**Step 3 — Where and when**
+**Step 3: Print where and when**
 
 - Print `getwd()` and `Sys.time()` so it's clear where and when this was run.
 
-**Step 4 — Write to file**
+**Step 4: Write a file**
 
 - Write `a_sentence` to a file inside your `data/` folder, using `write()` and **a relative path**, never a full path from your own machine.
 
-**Step 5 — Trigger and explain an Error**
+**Step 5: Trigger and explain an Error**
 
 - Deliberately reference an object that does not exist (for example, misspell a version of one of your age objects). Run it once so you see the real error message, then comment the line out. In your .R script, comment the line with #. In your .qmd, either comment it or set the chunk's `eval=FALSE` so the rest of the document still runs.
-- In your own words, underneath, explain what caused the Error and how you fixed it.
+- In your own words as a comment, explain what caused the Error and how you fixed it.
 
 **Step 6 — Close with session info**
 

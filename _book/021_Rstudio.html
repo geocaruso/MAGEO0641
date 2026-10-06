@@ -544,7 +544,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Fancy the same colors as mine? I have a modified monokai theme version here: <a href="https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme" class="uri">https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme</a> )</p>
+<p>Fancy the same colors as mine? I have a modified monokai theme version here: <a href="https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme" class="uri">https://github.com/geocaruso/MAGEO0641/blob/main/data/Misc/Monokai%20SD_mod2025.tmTheme</a> Or go have a look at <a href="https://www.garrickadenbuie.com/project/rsthemes/" class="uri">https://www.garrickadenbuie.com/project/rsthemes/</a>)</p>
 </div>
 </div>
 </section>
@@ -677,7 +677,7 @@ Note
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># When was this run?</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "2026-09-21 20:41:18 CEST"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "2026-10-06 16:46:39 CEST"</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Where am I running from? What machine?</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># working directory</span></span>
@@ -725,9 +725,10 @@ Note
 <span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
 <span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
-<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] compiler_4.6.1  fastmap_1.2.0   cli_3.6.6       tools_4.6.1    </span></span>
-<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] htmltools_0.5.9 rmarkdown_2.32  knitr_1.52      jsonlite_2.0.0 </span></span>
-<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] xfun_0.61       digest_0.6.39   rlang_1.3.0     evaluate_1.0.5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] htmlwidgets_1.6.4 compiler_4.6.1    fastmap_1.2.0     cli_3.6.6        </span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [5] tools_4.6.1       htmltools_0.5.9   otel_0.2.0        rstudioapi_0.19.0</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [9] rmarkdown_2.32    knitr_1.52        jsonlite_2.0.0    xfun_0.61        </span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [13] digest_0.6.39     rlang_1.3.0       evaluate_1.0.5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Why this matters:</strong></p>
 <ul>
@@ -756,10 +757,10 @@ Note
 <li>Your Quarto source (<code>01_setup_project_YOURNAME.qmd</code>)</li>
 <li>The rendered PDF from the <code>.qmd</code></li>
 </ol>
-<p>No code template provided, but a series of steps to undertake. Write every line yourself, in both the <code>.R</code> script and the <code>.qmd</code> document, following the naming conventions covered in class. Comment and structure clearly.</p>
-<p><strong>Step 1 — Setup (do this in your Finder/Explorer or RStudio, not in code):</strong></p>
+<p>No code template provided, but a series of steps to undertake. Write every line yourself, in both the <code>.R</code> script and the <code>.qmd</code> document, following the naming conventions covered above. Comment and structure clearly.</p>
+<p><strong>Step 1: Setup (do this in your Finder/Explorer or RStudio, not by coding):</strong></p>
 <p>Create a new Rproj. Inside it, create a <code>data/</code> subfolder and an <code>R/</code> subfolder, using the lowercase_underscore naming convention for folders and files.</p>
-<p><strong>Step 2 — Objects: ask your neighbours</strong></p>
+<p><strong>Step 2: Objects: ask your neighbours</strong></p>
 <ul>
 <li>Create an object called <code>MyAge</code> holding your own age.</li>
 <li>Ask the person sitting to your <strong>left</strong> for his/her name and age. Create an object named after them, using UpperCamelCase and their name and age e.g.&nbsp;<code>GeoffreyAgeLeft</code></li>
@@ -767,18 +768,18 @@ Note
 <li>Create an object called <code>AgeSum</code> that computes the sum of all three ages.</li>
 <li>Build a sentence with <code>paste()</code> that reports the sum in words, and store it in an object called <code>a_sentence</code></li>
 </ul>
-<p><strong>Step 3 — Where and when</strong></p>
+<p><strong>Step 3: Print where and when</strong></p>
 <ul>
 <li>Print <code>getwd()</code> and <code>Sys.time()</code> so it’s clear where and when this was run.</li>
 </ul>
-<p><strong>Step 4 — Write to file</strong></p>
+<p><strong>Step 4: Write a file</strong></p>
 <ul>
 <li>Write <code>a_sentence</code> to a file inside your <code>data/</code> folder, using <code>write()</code> and <strong>a relative path</strong>, never a full path from your own machine.</li>
 </ul>
-<p><strong>Step 5 — Trigger and explain an Error</strong></p>
+<p><strong>Step 5: Trigger and explain an Error</strong></p>
 <ul>
 <li>Deliberately reference an object that does not exist (for example, misspell a version of one of your age objects). Run it once so you see the real error message, then comment the line out. In your .R script, comment the line with #. In your .qmd, either comment it or set the chunk’s <code>eval=FALSE</code> so the rest of the document still runs.</li>
-<li>In your own words, underneath, explain what caused the Error and how you fixed it.</li>
+<li>In your own words as a comment, explain what caused the Error and how you fixed it.</li>
 </ul>
 <p><strong>Step 6 — Close with session info</strong></p>
 <ul>

@@ -8,9 +8,9 @@ Vectors, being a combination of values, are created by the **combine** (or conca
 
 There are two kinds of vectors:
 
--   **Atomic vectors** (which we tend to refer to simply as vectors), which are homogeneous in the sense that they contain only one "type" of data, such as characters or numbers.
+- **Atomic vectors** (which we tend to refer to simply as vectors), which are homogeneous in the sense that they contain only one "type" of data, such as characters or numbers.
 
--   **Lists**, which can have heterogeneous contents.
+- **Lists**, which can have heterogeneous contents.
 
 This chapter is about atomic vectors, we will introduce lists later.
 
@@ -23,7 +23,7 @@ Ages<-c(20,25,22,22,49)
 mode(Ages)
 ```
 
-Note that in case you would have a long list to input manually, the `scan()` function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources...(if you fancy less transparent clicking approaches, be curious and find out, for example here: @sec-copy-pasting ;-), most of the times anyway we rather read values from readable text files).
+Note that in case you would have a long list to input manually, the `scan()` function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources...(if you like less transparent clicking approaches, be curious and find out, for example here: @sec-copy-pasting ;-), most of the times anyway we rather read values from readable text files).
 
 ## Attributes of vectors
 
@@ -135,15 +135,15 @@ attributes(Countries)
 
 Remember from the introduction, that we (in geography and elsewhere) usually consider **discrete and continuous data**, each type being split into 2 measurement levels:
 
--   Discrete: **nominal** (*blue, green*) or **ordinal** (*high, low*)
+- Discrete: **nominal** (*blue, green*) or **ordinal** (*high, low*)
 
--   Continuous: **interval** (*10°C, 20°C*) or **ratio** (*10 apples, 20 apples*) (difference being that 20 apples is twice as much as much as 10 apples, but 20°C is not twice as hot as 10°C because zero is not the absolute zero, hence a ratio in this case makes little sense, only differences are sensical).
+- Continuous: **interval** (*10°C, 20°C*) or **ratio** (*10 apples, 20 apples*) (difference being that 20 apples is twice as much as much as 10 apples, but 20°C is not twice as hot as 10°C because zero is not the absolute zero, hence a ratio in this case makes little sense, only differences are sensical).
 
 This vocabulary is not used directly in R:
 
--   **Continuous (ratio/interval) data is coded as numeric or integer**
+- **Continuous (ratio/interval) data is coded as numeric or integer**
 
--   **Discrete (categorical) data (nominal/ordinal) is preferably coded as a factor.**
+- **Discrete (categorical) data (nominal/ordinal) is preferably coded as a factor.**
 
 Nominal data can still be in the "character" type, but the idea of a "factor" is that there is only a limited set of characters' strings that you will find in a vector (e.g. set of countries, set of land uses) and you are able (willing) to enumerate them. For ordinal data, the order is important, hence it gets closer to an integer set than to a character (e.g. education levels: *primary, secondary tertiary education*), yet you can sum integer data but should not sum ordinal data.
 
@@ -639,3 +639,70 @@ plot(x=x,y=y)
 #although you could use curve() here as well:
 curve(1000 - 0.001*x^2 + 0.3*x, from=1, to=500)
 ```
+
+
+## EXERCISES {.unnumbered}
+
+::: {.callout-tip title="Vectors Exercise 1"}
+
+**Exploring and sorting**
+
+Consider the following distances travelled by students, in km: 4.2, 12.5, 7.8, 3.1, 15.4, 8.6, 5.0, 21.3, 6.7, 11.2
+
+1. Create a `distance` vector. What's its length?
+2. What is the minimum, maximum and range?
+3. Calculate the mean and median.
+4. Create a vector of distances in m
+5. Find the position in the vector of the student who travelled the furthest.
+6. Create a new vector containing only distances above 10 km.
+7. How many students travelled more than 10 km?
+8. Sort the distances from largest to smallest.
+
+Tips: think of functions `length()`, `min()`, `max()`,`range()`, `mean()`, `median()`, `which.max()`, `sort()`.
+:::
+
+::: {.callout-tip title="Vectors Exercise 2"}
+**Logical vectors and indexing**
+
+Consider the following land-use vector:
+
+```{r}
+landuse <- c("urban", "forest", "agriculture", "urban",
+             "water", "forest", "urban", "agriculture",
+             "forest", "water")
+```
+
+1. Create a logical vector indicating which observations are `"urban"`.
+2. Use it to extract only the urban observations.
+3. Do the same for `"forest"` **or** `"water"`.
+4. Check whether `"industrial"` occurs in the vector.
+5. Replace all `"agriculture"` observations by `"cropland"`.
+6. Create a factor from the resulting vector.
+7. How many observations belong to each land-use category?
+
+Tips: think of functions `==`, `|`, `%in%`, `!`, `factor()`, `table()`
+:::
+
+::: {.callout-tip title="Vectors Exercise 3"}
+**Sequences, repetitions and vector calculation**
+
+You want to simulate a **one-week observation schedule**, with measurements every 2 hours.
+
+1. Create a vector containing the hours (every 2dn one) from 0 to 22.
+2. Repeat this sequence for 7 days using.
+3. Create a corresponding vector of day numbers (`1` to `7`).
+4. Create a third vector (logical) indicating whether each observation takes place during the day, defined here as 08:00 to 18:00 (inclusive)
+5. Create a vector of temperatures using:
+
+```{r}
+set.seed(123)
+temperature <- round(rnorm(84, mean = 12, sd = 4), 1)
+# 84 is 7 x 12
+```
+
+6. Extract the temperatures measured during the day.
+7. Create a vector that identifies the observations where the temperature is below 5°C.
+8. Find the position of the highest temperature and the corresponding day and hour.
+
+Tips: think of functions `seq()`, `rep()`, `set.seed()`, `rnorm()`, `which.max()`
+:::

@@ -534,6 +534,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#indexing-and-subsetting" id="toc-indexing-and-subsetting" class="nav-link" data-scroll-target="#indexing-and-subsetting"><span class="header-section-number">6.6</span> Indexing and subsetting</a></li>
   <li><a href="#sequences-and-repetitions" id="toc-sequences-and-repetitions" class="nav-link" data-scroll-target="#sequences-and-repetitions"><span class="header-section-number">6.7</span> Sequences and repetitions</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">EXERCISES</a></li>
   </ul>
 </nav>
     </div>
@@ -578,7 +579,7 @@ div.csl-indent {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(Ages)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] "numeric"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Note that in case you would have a long list to input manually, the <code>scan()</code> function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources…(if you fancy less transparent clicking approaches, be curious and find out, for example here: <a href="901_copy_paste.html" class="quarto-xref"><span>Chapter 31</span></a> ;-), most of the times anyway we rather read values from readable text files).</p>
+<p>Note that in case you would have a long list to input manually, the <code>scan()</code> function is a little more interactive. Try! (I also have heard there are ways to copy-paste from external sources…(if you like less transparent clicking approaches, be curious and find out, for example here: <a href="901_copy_paste.html" class="quarto-xref"><span>Chapter 31</span></a> ;-), most of the times anyway we rather read values from readable text files).</p>
 </section>
 <section id="attributes-of-vectors" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="attributes-of-vectors"><span class="header-section-number">6.2</span> Attributes of vectors</h2>
@@ -1410,6 +1411,95 @@ div.csl-indent {
 <p><img src="022_vectors_files/figure-html/unnamed-chunk-48-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
+</div>
+</div>
+</section>
+<section id="exercises" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercises">EXERCISES</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Vectors Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Vectors Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Exploring and sorting</strong></p>
+<p>Consider the following distances travelled by students, in km: 4.2, 12.5, 7.8, 3.1, 15.4, 8.6, 5.0, 21.3, 6.7, 11.2</p>
+<ol type="1">
+<li>Create a <code>distance</code> vector. What’s its length?</li>
+<li>What is the minimum, maximum and range?</li>
+<li>Calculate the mean and median.</li>
+<li>Create a vector of distances in m</li>
+<li>Find the position in the vector of the student who travelled the furthest.</li>
+<li>Create a new vector containing only distances above 10 km.</li>
+<li>How many students travelled more than 10 km?</li>
+<li>Sort the distances from largest to smallest.</li>
+</ol>
+<p>Tips: think of functions <code>length()</code>, <code>min()</code>, <code>max()</code>,<code>range()</code>, <code>mean()</code>, <code>median()</code>, <code>which.max()</code>, <code>sort()</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Vectors Exercise 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Vectors Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Logical vectors and indexing</strong></p>
+<p>Consider the following land-use vector:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>landuse <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"forest"</span>, <span class="st">"agriculture"</span>, <span class="st">"urban"</span>,</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">"water"</span>, <span class="st">"forest"</span>, <span class="st">"urban"</span>, <span class="st">"agriculture"</span>,</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">"forest"</span>, <span class="st">"water"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol type="1">
+<li>Create a logical vector indicating which observations are <code>"urban"</code>.</li>
+<li>Use it to extract only the urban observations.</li>
+<li>Do the same for <code>"forest"</code> <strong>or</strong> <code>"water"</code>.</li>
+<li>Check whether <code>"industrial"</code> occurs in the vector.</li>
+<li>Replace all <code>"agriculture"</code> observations by <code>"cropland"</code>.</li>
+<li>Create a factor from the resulting vector.</li>
+<li>How many observations belong to each land-use category?</li>
+</ol>
+<p>Tips: think of functions <code>==</code>, <code>|</code>, <code>%in%</code>, <code>!</code>, <code>factor()</code>, <code>table()</code></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Vectors Exercise 3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Vectors Exercise 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Sequences, repetitions and vector calculation</strong></p>
+<p>You want to simulate a <strong>one-week observation schedule</strong>, with measurements every 2 hours.</p>
+<ol type="1">
+<li>Create a vector containing the hours (every 2dn one) from 0 to 22.</li>
+<li>Repeat this sequence for 7 days using.</li>
+<li>Create a corresponding vector of day numbers (<code>1</code> to <code>7</code>).</li>
+<li>Create a third vector (logical) indicating whether each observation takes place during the day, defined here as 08:00 to 18:00 (inclusive)</li>
+<li>Create a vector of temperatures using:</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>temperature <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">84</span>, <span class="at">mean =</span> <span class="dv">12</span>, <span class="at">sd =</span> <span class="dv">4</span>), <span class="dv">1</span>)</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 84 is 7 x 12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="6" type="1">
+<li>Extract the temperatures measured during the day.</li>
+<li>Create a vector that identifies the observations where the temperature is below 5°C.</li>
+<li>Find the position of the highest temperature and the corresponding day and hour.</li>
+</ol>
+<p>Tips: think of functions <code>seq()</code>, <code>rep()</code>, <code>set.seed()</code>, <code>rnorm()</code>, <code>which.max()</code></p>
 </div>
 </div>
 

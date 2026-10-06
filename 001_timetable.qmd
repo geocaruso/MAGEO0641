@@ -4,19 +4,21 @@ The course is made of 12 sessions. Each session comprises 5 (teaching) units of 
 
 **Monday 10:15 to 11:45 ; lunch break; 13:15 to 15:30**
 
+with an additional 2 units for extended sessions from **15.45 to 17.15**
+
 Lunch break time may however vary a little based on contents and progress. We have attempted to balance theoretical explanations and R practice within each session.
 
-The 2025-2026 schedule is set as follows. Please refer to your *student guichet* and your emails (potentially sent through *Moodle*) for potential changes during the semester.
+The 2026-2027 schedule is set as follows. Please refer to your *student guichet* and your emails (potentially sent through *Moodle*) for potential changes during the semester.
 
 - 21 Sept
 - 28 Sept
 - 05 Oct
-- 12 Oct TO BE RESCHEDULED
-- 02 Nov TO BE CONFIRMED / RESCHEDULED
-- 09 Nov
-- 16 Nov
-- 23 Nov
-- 30 Nov
+- 12 Oct - extended to 17.15
+- gap
+- 09 Nov - extended to 17.15
+- 16 Nov - extended to 17.15
+- 23 Nov - extended to 17.15
+- 30 Nov - extended to 17.15
 - 07 Dec
 - 14 Dec
 - *Q&A early January ahead of the R exam*

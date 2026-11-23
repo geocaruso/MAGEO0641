@@ -88,8 +88,13 @@ where we see it increases with the global variance (variance of residuals) of th
 
 Leaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root and define the leverage of an observation (and simplify the standard error writing)
 
-$$L=\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}\\
-\text{SE}(\hat{y}) = RSE\sqrt{L}$$
+$$\begin{aligned}
+
+L&=&\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2} \\
+
+\text{SE}(\hat{y}) &=& RSE\sqrt{L}
+
+\end{aligned}$$
 
 Leverage values range between $\frac{1}{n}$ and 1, with higher values indicating greater influence on the regression model. 1 is for an observation that would stand extremely far from the mean and taking most of the variation in x.
 
@@ -163,8 +168,10 @@ Finally, note that there is another interval to be used for prediction when we g
 
 The standard error one uses here has the same ingredients but a slightly different definition:
 
-$$\text{SE}(\hat{y}) = RSE\sqrt{1+ \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}}\\
-   \text{SE}(\hat{y}) = RSE\sqrt{1+L}$$
+$$\begin{aligned}
+\text{SE}(\hat{y}) &=& RSE\sqrt{1+ \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}} \\
+   \text{SE}(\hat{y}) &=& RSE\sqrt{1+L}
+   \end{aligned}$$
 
 While the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model.
 

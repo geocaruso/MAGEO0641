@@ -56,13 +56,13 @@ sort(Age2)
 
 Second,
 
--   For an **odd** set of numbers (Age2), find the number in the middle of the vector, this is the empirical median. The number to take is also given by: $(n + 1) / 2 = 10 / 2$ , i.e. the 5th value, 27
+- For an **odd** set of numbers (Age2), find the number in the middle of the vector, this is the empirical median. The number to take is also given by: $(n + 1) / 2 = 10 / 2$ , i.e. the 5th value, 27
 
 ```{r}
 sort(Age2)[5]
 ```
 
--   For an **even** set of numbers (Age), find the two numbers in the middle and compute their average value, this is the empirical median, i.e. $(27 + 27) / 2 = 27$
+- For an **even** set of numbers (Age), find the two numbers in the middle and compute their average value, this is the empirical median, i.e. $(27 + 27) / 2 = 27$
 
 ```{r}
 sort(Age)[c(5,6)]
@@ -278,10 +278,10 @@ We have seen some graphics already above and we are going to produce improved gr
 
 A boxplot visually provides a number of information about the distribution of a variable
 
--   the median value (thick black line),
--   the inter-quartile range (IQR) (the black box),
--   the minimum and maximum values or 1.5 times the IQR (horizontal lines),
--   the outlier(s) (dots out of the whiskers).
+- the median value (thick black line),
+- the inter-quartile range (IQR) (the black box),
+- the minimum and maximum values or 1.5 times the IQR (horizontal lines),
+- the outlier(s) (dots out of the whiskers).
 
 Values are considered outliers when they fall outside the whiskers, that is outside a distance of 1.5 times the IQR. In absence of such outliers the horizontal lines show the extrema (min and max).
 
@@ -346,6 +346,24 @@ For a numeric variable, a call to plot, shows values along the vertical axis and
 ```{r}
 plot(x)
 ```
+
+
+
+## EXERCISE {.unnumbered}
+::: {.callout-tip title="Quantile based subset and histogram"}
+
+**Quantile subset**
+
+It is not rare one is willing to remove extreme values at head or tail before computing a central statistic or drawing a histogram.
+
+Generate a random sample of students age, based on a normal distribution with mean age 27 and a standard deviation of 3 years.
+
+Compute the empirical mean and median. Remove the upper and lower 2.5 % of values to obtain a subset of the data and compute again the central values.
+
+Draw an histogram of the data subset.  
+
+:::
+
 
 ## The shape of distributions: Skewness and Kurtosis
 

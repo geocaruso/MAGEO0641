@@ -322,7 +322,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
       </ul>
@@ -920,8 +920,8 @@ window.Quarto = {
 <p>Let <span class="math inline">\(X\)</span> having <span class="math inline">\(I\)</span> categories <span class="math inline">\(i\)</span> and <span class="math inline">\(n\)</span> observations, and assume we expect a uniform distribution. We thus expect to see <span class="math inline">\(obs_i = exp_i\)</span> individuals for each category (<span class="math inline">\(\forall i\)</span>) where <span class="math inline">\(exp_i\)</span> are the so called theoretical frequencies.</p>
 <p>In the uniform case, <span class="math inline">\(exp_i\)</span> is simply <span class="math inline">\(n p_i\)</span> with <span class="math inline">\(p_i=\dfrac{1}{I}\)</span> and so <span class="math inline">\(exp_i=n/I\)</span>.</p>
 <p><strong>Testing</strong>:</p>
-<p><span class="math display">\[H_0: obs_i = exp_i = n/I$ $\forall i\]</span></p>
-<p><span class="math display">\[H_0 (\text{uniform case}): obs_i = n/I$ $\forall i\]</span></p>
+<p><span class="math display">\[H_0: obs_i = exp_i = n/I \ \ \forall i\]</span></p>
+<p><span class="math display">\[H_0 (\text{uniform case}): obs_i = n/I \ \ \forall i\]</span></p>
 <p><strong>Test Statistic</strong>: random variable defined by</p>
 <p><span class="math display">\[\chi^2(obs) = \sum^I_{i=1} \dfrac{(obs_i - exp_i)^2}{exp_i}\]</span></p>
 <p><span class="math display">\[\chi^2(obs) (\text{uniform case})= \sum^I_{i=1} \dfrac{(obs_i - n/I)^2}{exp_i} \]</span> and <span class="math display">\[\chi^2(obs) \sim \chi^2(I-1) \]</span> The computed statistic being compare to a chi-squared value with <span class="math inline">\(I-1\)</span> degrees of freedom.</p>

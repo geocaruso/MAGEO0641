@@ -74,9 +74,11 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
-
+  typst:
+    toc: true
+    papersize: a4
+    fig-format: png
+    
 editor: visual
 
 number-depth: 3
@@ -85,6 +87,7 @@ knitr:
   opts_chunk: 
     collapse: true
     comment: "#>"
+    dev: ragg_png
 
 execute:
   error: true

@@ -293,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
       </ul>
@@ -490,8 +490,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#reading-delimited-files" id="toc-reading-delimited-files" class="nav-link active" data-scroll-target="#reading-delimited-files"><span class="header-section-number">9.1</span> Reading delimited files</a></li>
-  <li><a href="#files-form-specific-software" id="toc-files-form-specific-software" class="nav-link" data-scroll-target="#files-form-specific-software"><span class="header-section-number">9.2</span> Files form specific software</a></li>
+  <li><a href="#files-from-specific-software" id="toc-files-from-specific-software" class="nav-link" data-scroll-target="#files-from-specific-software"><span class="header-section-number">9.2</span> Files from specific software</a></li>
   <li><a href="#writing-a-dataframe-to-a-file" id="toc-writing-a-dataframe-to-a-file" class="nav-link" data-scroll-target="#writing-a-dataframe-to-a-file"><span class="header-section-number">9.3</span> Writing a dataframe to a file</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">EXERCISE</a></li>
+  <li><a href="#long-and-wide-datasets" id="toc-long-and-wide-datasets" class="nav-link" data-scroll-target="#long-and-wide-datasets"><span class="header-section-number">9.4</span> Long and wide datasets</a>
+  <ul class="collapse">
+  <li><a href="#a-typical-case" id="toc-a-typical-case" class="nav-link" data-scroll-target="#a-typical-case"><span class="header-section-number">9.4.1</span> A typical case</a></li>
+  <li><a href="#a-more-complex-case-to-compare-reshape-and-pivot" id="toc-a-more-complex-case-to-compare-reshape-and-pivot" class="nav-link" data-scroll-target="#a-more-complex-case-to-compare-reshape-and-pivot"><span class="header-section-number">9.4.2</span> A more complex case to compare reshape and pivot</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -548,8 +554,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">dec =</span> <span class="st">","</span>, <span class="at">fill =</span> <span class="cn">TRUE</span>, <span class="at">comment.char =</span> <span class="st">""</span>, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="files-form-specific-software" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="files-form-specific-software"><span class="header-section-number">9.2</span> Files form specific software</h2>
+<section id="files-from-specific-software" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="files-from-specific-software"><span class="header-section-number">9.2</span> Files from specific software</h2>
 <p>Some databases are exported from other software and have atypical formats.</p>
 <ul>
 <li>You first need to install (once per machine) and load the R package <code>foreign</code>.</li>
@@ -583,6 +589,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the SAS data</span></span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>mySASData <span class="ot">&lt;-</span> <span class="fu">read.sas7bdat</span>(<span class="st">"example.sas7bdat"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>A recurrent use case for geographers is to read the table component of a ‘shapefile’ i.e.&nbsp;a dbf file. You use the read.dbf functrion from the foreign package to do so.</p>
 </section>
 <section id="writing-a-dataframe-to-a-file" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="writing-a-dataframe-to-a-file"><span class="header-section-number">9.3</span> Writing a dataframe to a file</h2>
@@ -597,8 +604,323 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(heartSA,<span class="st">"data/SAheart/NewSAheart.rds"</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>NewSAheart<span class="ot">&lt;-</span><span class="fu">readRDS</span>(<span class="st">"data/SAheart/NewSAheart.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="exercise" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise">EXERCISE</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Read and save a dbf">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Read and save a dbf
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Read and subset the columns of dbf file</strong></p>
+<p>Go and download the admin0, ie. countries, dataset from the Natural Earth website : https://www.naturalearthdata.com/downloads/110m-cultural-vectors/</p>
+<p>Save the entire shapefile (i.e.&nbsp;remember shp,shx,dbf+prj ?) in your project data folder.</p>
+<p>Create a mydf dataframe using read.dbf. See it contains over a hundred columns.</p>
+<p>Subset the dataframe to make a mydf2 object that contains only a few variables: “SOVEREIGNT”, “SOV_A3”,“POP_EST”, and “ECONOMY”</p>
+<p>What is the least populated nonG7 country according to this definition? (retrieve this information with code, not View())</p>
+<p><strong>Save to files</strong></p>
+<p>Save the simplified dataframe (4 variables) into a csv file and a rds file</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Read and re-organize a csv">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Read and re-organize a csv
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>csv from statec</strong></p>
+<ul>
+<li>Download the ‘Natural movement of the population by canton and municipality’ table from statec website.</li>
+</ul>
+<p>(Source: https://lustat.statec.lu/vis?lc=en&amp;tm=DF_X024&amp;pg=0&amp;snb=1&amp;df[ds]=ds-release&amp;df[id]=DF_X024&amp;df[ag]=LU1&amp;df[vs]=1.1&amp;dq=A..&amp;pd=2021%2C&amp;to[TIME_PERIOD]=false&amp;isAvailabilityDisabled=false)</p>
+<p>The data comprises the number of births, deaths and natural population balance per municipality and canton (groups of municipality) yearly for 2021 to 2025.</p>
+<p>When downloaded (using filtered csv option) you get 15 rows for each municipality corresponding to 5 years x 3 data (birth, death, balance). You also get 15 rows for each Canton.</p>
+<ul>
+<li><p>Create a data frame containing one row for each commune (not the canton) with a variable indicating their name (say “COMMUNE”) and 5 other variables (say “B2021”, “B2022”,…) for each yearly natural balance.</p></li>
+<li><p>Export to a csv file: “Balance_communes_lux.csv”</p></li>
+<li><p>Plot (with ggplot) the evolution of the balance using a line plot: one line per commune with balance in the Y-axis and years in the X-axis.</p></li>
+</ul>
+<p><strong>NOTE 1: ggplot probably prefers the long format data set, i.e.&nbsp;5 rows for each commune</strong>.</p>
+<p><strong>NOTE 2: The balance for Luxembourg municipality is much larger than for most other communes, which is problematic for a single Y-axis. Make it relative to the value of each commune in 2021 (times 100) to make a start at 100 for each municipality (i.e.&nbsp;relative change)</strong>.</p>
+<ul>
+<li>Send the Balance_communes_lux.csv file, the plot as a pdf and your R-script to the instructor. The csv file and the plot making should re-run smoothly on its computer after simply changing an object named “mypath” where the downloaded csv file will sit.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="long-and-wide-datasets" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="long-and-wide-datasets"><span class="header-section-number">9.4</span> Long and wide datasets</h2>
+<p>Coming from the spreadsheet world you are most probably used to see each variable of interest to be presented as a separate column.</p>
+<section id="a-typical-case" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="a-typical-case"><span class="header-section-number">9.4.1</span> A typical case</h3>
+<p>A typical case is a that of a variable X, varying across spatial units or across individuals, for which the evolution is followed through time. For example you have n countries, each being a row, and several years at which the X variable was recorded, each year being a column with title indicating X and the year (e.g.&nbsp;<code>X.2006</code>, <code>X.2016</code>, <code>X.2026</code>). They are typically appended on the right side of a variable titled <code>Country.Name</code> In that case, the data is said to be in <code>wide</code> format. Its <code>long</code> version would be a case where you have a n (coutries) x 3 (years) rows and the columns are <code>Country.Name</code>, <code>X</code> and <code>time</code>.</p>
+<p>The <code>wide</code> data:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>wide <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Country.Name =</span> <span class="fu">c</span>(<span class="st">"Australia"</span>, <span class="st">"Brazil"</span>, <span class="st">"South Africa"</span>, <span class="st">"Argentina"</span>, <span class="st">"New Zealand"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">X.2006 =</span> <span class="fu">c</span>(<span class="fl">20.7</span>, <span class="fl">186.1</span>, <span class="fl">47.9</span>, <span class="fl">39.3</span>, <span class="fl">4.2</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">X.2016 =</span> <span class="fu">c</span>(<span class="fl">24.2</span>, <span class="fl">205.2</span>, <span class="fl">56.2</span>, <span class="fl">43.6</span>, <span class="fl">4.7</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">X.2026 =</span> <span class="fu">c</span>(<span class="fl">27.0</span>, <span class="fl">217.0</span>, <span class="fl">63.0</span>, <span class="fl">47.0</span>, <span class="fl">5.3</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>wide</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Country.Name X.2006 X.2016 X.2026</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1    Australia   20.7   24.2   27.0</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2       Brazil  186.1  205.2  217.0</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 South Africa   47.9   56.2   63.0</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4    Argentina   39.3   43.6   47.0</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  New Zealand    4.2    4.7    5.3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>And its <code>long</code> version built after repeating the countries and years and combining X vectors one below each other.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>long<span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Country.Name =</span> <span class="fu">rep</span>(wide<span class="sc">$</span>Country.Name, <span class="at">each =</span> <span class="dv">3</span>),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Year =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">2006</span>, <span class="dv">2016</span>, <span class="dv">2026</span>), <span class="at">times =</span> <span class="fu">nrow</span>(wide)),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">X =</span> <span class="fu">c</span>(<span class="fu">rbind</span>(wide<span class="sc">$</span>X<span class="fl">.2006</span>, wide<span class="sc">$</span>X<span class="fl">.2016</span>, wide<span class="sc">$</span>X<span class="fl">.2026</span>))</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>long</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Country.Name Year     X</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     Australia 2006  20.7</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2     Australia 2016  24.2</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3     Australia 2026  27.0</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4        Brazil 2006 186.1</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5        Brazil 2016 205.2</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6        Brazil 2026 217.0</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  South Africa 2006  47.9</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  South Africa 2016  56.2</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  South Africa 2026  63.0</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10    Argentina 2006  39.3</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11    Argentina 2016  43.6</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12    Argentina 2026  47.0</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13  New Zealand 2006   4.2</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14  New Zealand 2016   4.7</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15  New Zealand 2026   5.3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Building this dataset can become tedius or risky since you want to keep the right order of countries and years and X values.</p>
+<p>Fortunately there is a <code>reshaping</code> function that makes the transformation from wide to long or log to wide easier.</p>
+<p>See:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">reshape</span>(wide, <span class="at">direction =</span> <span class="st">"long"</span>, <span class="at">varying =</span> <span class="fu">c</span>(<span class="st">"X.2006"</span>, <span class="st">"X.2016"</span>, <span class="st">"X.2026"</span>), <span class="at">idvar =</span> <span class="st">"Country.Name"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(long) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>long</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Country.Name time     X</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1     Australia 2006  20.7</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2        Brazil 2006 186.1</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  South Africa 2006  47.9</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4     Argentina 2006  39.3</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5   New Zealand 2006   4.2</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6     Australia 2016  24.2</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7        Brazil 2016 205.2</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  South Africa 2016  56.2</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9     Argentina 2016  43.6</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10  New Zealand 2016   4.7</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11    Australia 2026  27.0</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12       Brazil 2026 217.0</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 South Africa 2026  63.0</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14    Argentina 2026  47.0</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15  New Zealand 2026   5.3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>And vice-versa</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>wide <span class="ot">&lt;-</span> <span class="fu">reshape</span>(long, <span class="at">direction =</span> <span class="st">"wide"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>wide</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Country.Name X.2006 X.2016 X.2026</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1    Australia   20.7   24.2   27.0</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2       Brazil  186.1  205.2  217.0</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 South Africa   47.9   56.2   63.0</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4    Argentina   39.3   43.6   47.0</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  New Zealand    4.2    4.7    5.3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="a-more-complex-case-to-compare-reshape-and-pivot" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="a-more-complex-case-to-compare-reshape-and-pivot"><span class="header-section-number">9.4.2</span> A more complex case to compare reshape and pivot</h3>
+<p>The reshape function was built to handle time varying data, hence the naming of the arguments. It can be applied to variations non related to time and for more complex with some easy tricks. To some, its <code>tidy</code> counterparts may seem more practical when handling more complex cases where the widening, especially when the lengthening takes several variables (at the expense of having to call a package, using two separate functions and a different way of handling variable names).</p>
+<p>Suppose 4 students rated 2 holiday types across 2 years. Let’s generate the data consisting of 16 rows, i.e.&nbsp;4 students x 2 types x 2 years</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Name =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Jorge"</span>, <span class="st">"Celine"</span>, <span class="st">"Mariam"</span>, <span class="st">"Elvira"</span>), <span class="at">each =</span> <span class="dv">4</span>),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Holiday =</span> <span class="fu">rep</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Mountain"</span>, <span class="st">"Beach"</span>), <span class="at">times =</span> <span class="dv">2</span>), <span class="at">times =</span> <span class="dv">4</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Year =</span> <span class="fu">rep</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">2026</span>, <span class="dv">2027</span>), <span class="at">each =</span> <span class="dv">2</span>), <span class="at">times =</span> <span class="dv">4</span>),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Recommendation =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="cn">NA</span>, <span class="fl">3.5</span>, <span class="cn">NA</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                     <span class="dv">4</span>, <span class="fl">3.5</span>, <span class="fl">4.5</span>, <span class="dv">4</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                     <span class="dv">5</span>, <span class="dv">4</span>, <span class="fl">4.5</span>, <span class="fl">4.5</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                     <span class="fl">4.5</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>long</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      Name  Holiday Year Recommendation</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1   Jorge Mountain 2026            3.0</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2   Jorge    Beach 2026             NA</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3   Jorge Mountain 2027            3.5</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4   Jorge    Beach 2027             NA</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  Celine Mountain 2026            4.0</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  Celine    Beach 2026            3.5</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  Celine Mountain 2027            4.5</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  Celine    Beach 2027            4.0</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  Mariam Mountain 2026            5.0</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Mariam    Beach 2026            4.0</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Mariam Mountain 2027            4.5</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Mariam    Beach 2027            4.5</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Elvira Mountain 2026            4.5</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Elvira    Beach 2026            5.0</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Elvira Mountain 2027            4.0</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 16 Elvira    Beach 2027            5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="partial-long-to-wide" class="level4">
+<h4 class="anchored" data-anchor-id="partial-long-to-wide">Partial Long to Wide:</h4>
+<p>Holiday is spread into columns. Name and Year stay as identifier columns, giving 8 rows.</p>
+<p>Base R case:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>wide_b <span class="ot">&lt;-</span> <span class="fu">reshape</span>(long, <span class="at">idvar =</span> <span class="fu">c</span>(<span class="st">"Name"</span>, <span class="st">"Year"</span>), <span class="at">timevar =</span> <span class="st">"Holiday"</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">v.names =</span> <span class="st">"Recommendation"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">direction =</span> <span class="st">"wide"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>wide_b</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      Name Year Recommendation.Mountain Recommendation.Beach</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1   Jorge 2026                     3.0                   NA</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3   Jorge 2027                     3.5                   NA</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  Celine 2026                     4.0                  3.5</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  Celine 2027                     4.5                  4.0</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  Mariam 2026                     5.0                  4.0</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Mariam 2027                     4.5                  4.5</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Elvira 2026                     4.5                  5.0</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Elvira 2027                     4.0                  5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The new columns are called <code>Recommendation.Mountain</code> and <code>Recommendation.Beach</code>.</p>
+<p>The tidyr way:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>wide_t <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(long, <span class="at">names_from =</span> Holiday, <span class="at">values_from =</span> Recommendation)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>wide_t</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 8 × 4</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Name    Year Mountain Beach</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Jorge   2026      3    NA  </span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Jorge   2027      3.5  NA  </span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Celine  2026      4     3.5</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Celine  2027      4.5   4  </span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 Mariam  2026      5     4  </span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 Mariam  2027      4.5   4.5</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7 Elvira  2026      4.5   5  </span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8 Elvira  2027      4     5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The new columns here are called <code>Mountain</code> and <code>Beach</code>.</p>
+</section>
+<section id="partial-wide-to-long" class="level4">
+<h4 class="anchored" data-anchor-id="partial-wide-to-long">Partial Wide to Long</h4>
+<p>With base R, <code>reshape()</code> stores the information needed for the reverse step as an attribute of the wide table. Calling it on the wide table without any argument restores the original variable names (see also above with the country example) . The column order can differ from the original, the names do not.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># base R: no arguments, no renaming</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>long_b <span class="ot">&lt;-</span> <span class="fu">reshape</span>(wide_b)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(long_b) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>long_b</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      Name Year  Holiday Recommendation</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1   Jorge 2026 Mountain            3.0</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2   Jorge 2027 Mountain            3.5</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3  Celine 2026 Mountain            4.0</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4  Celine 2027 Mountain            4.5</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  Mariam 2026 Mountain            5.0</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6  Mariam 2027 Mountain            4.5</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 7  Elvira 2026 Mountain            4.5</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 8  Elvira 2027 Mountain            4.0</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9   Jorge 2026    Beach             NA</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10  Jorge 2027    Beach             NA</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Celine 2026    Beach            3.5</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Celine 2027    Beach            4.0</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Mariam 2026    Beach            4.0</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Mariam 2027    Beach            4.5</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Elvira 2026    Beach            5.0</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 16 Elvira 2027    Beach            5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>pivot_longer()</code> keeps no memory of the earlier transformation, so the columns and the new names are to be specified again.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tidyr</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>long_t <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(wide_t, <span class="at">cols =</span> <span class="fu">c</span>(Mountain, Beach),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">names_to =</span> <span class="st">"Holiday"</span>, <span class="at">values_to =</span> <span class="st">"Recommendation"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>long_t</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 16 × 4</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Name    Year Holiday  Recommendation</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1 Jorge   2026 Mountain            3  </span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  2 Jorge   2026 Beach              NA  </span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3 Jorge   2027 Mountain            3.5</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  4 Jorge   2027 Beach              NA  </span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  5 Celine  2026 Mountain            4  </span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  6 Celine  2026 Beach               3.5</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  7 Celine  2027 Mountain            4.5</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  8 Celine  2027 Beach               4  </span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  9 Mariam  2026 Mountain            5  </span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 10 Mariam  2026 Beach               4  </span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 11 Mariam  2027 Mountain            4.5</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 12 Mariam  2027 Beach               4.5</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Elvira  2026 Mountain            4.5</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 14 Elvira  2026 Beach               5  </span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 15 Elvira  2027 Mountain            4  </span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 16 Elvira  2027 Beach               5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="full-long-to-wide" class="level4">
+<h4 class="anchored" data-anchor-id="full-long-to-wide">Full Long to Wide</h4>
+<p>Both variables are spread, leaving one row per Name (4 rows). In base R, <code>timevar</code> must be a single variable, so a key <code>HolidayYear</code> must be defined first. In <code>tidyr</code>, <code>names_from</code> accepts several variables.</p>
+<p>With base R:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>long_k <span class="ot">&lt;-</span> long <span class="co">#to keep long unchanged</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>long_k<span class="sc">$</span>HolidayYear <span class="ot">&lt;-</span> <span class="fu">paste</span>(long_k<span class="sc">$</span>Holiday, long_k<span class="sc">$</span>Year, <span class="at">sep =</span> <span class="st">"."</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>full_b <span class="ot">&lt;-</span> <span class="fu">reshape</span>(long_k[, <span class="fu">c</span>(<span class="st">"Name"</span>, <span class="st">"Recommendation"</span>,<span class="st">"HolidayYear"</span>)],</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">idvar =</span> <span class="st">"Name"</span>, <span class="at">timevar =</span> <span class="st">"HolidayYear"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">v.names =</span> <span class="st">"Recommendation"</span>, <span class="at">direction =</span> <span class="st">"wide"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>full_b</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      Name Recommendation.Mountain.2026 Recommendation.Beach.2026</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1   Jorge                          3.0                        NA</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5  Celine                          4.0                       3.5</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9  Mariam                          5.0                       4.0</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13 Elvira                          4.5                       5.0</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Recommendation.Mountain.2027 Recommendation.Beach.2027</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1                           3.5                        NA</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5                           4.5                       4.0</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 9                           4.5                       4.5</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 13                          4.0                       5.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>With tidy R</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>full_t <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(long, <span class="at">names_from =</span> <span class="fu">c</span>(Holiday, Year),</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">values_from =</span> Recommendation)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>full_t</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 4 × 5</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Name   Mountain_2026 Beach_2026 Mountain_2027 Beach_2027</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Jorge            3         NA             3.5       NA  </span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Celine           4          3.5           4.5        4  </span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Mariam           5          4             4.5        4.5</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 Elvira           4.5        5             4          5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Read and re-organize a csv">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Read and re-organize a csv
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>csv from statec with reshape</strong></p>
+<p>You can now easily adapt your Statec data from the previous exercise. You noticed that grouping (e.g.&nbsp;using colors) in ggplot required a long format while you downloaded the data as wide. Just transform frome one to the other and vice-versa using <code>reshape</code> or <code>pivot</code> functions.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

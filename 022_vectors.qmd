@@ -640,23 +640,21 @@ plot(x=x,y=y)
 curve(1000 - 0.001*x^2 + 0.3*x, from=1, to=500)
 ```
 
-
 ## EXERCISES {.unnumbered}
 
 ::: {.callout-tip title="Vectors Exercise 1"}
-
 **Exploring and sorting**
 
 Consider the following distances travelled by students, in km: 4.2, 12.5, 7.8, 3.1, 15.4, 8.6, 5.0, 21.3, 6.7, 11.2
 
-1. Create a `distance` vector. What's its length?
-2. What is the minimum, maximum and range?
-3. Calculate the mean and median.
-4. Create a vector of distances in m
-5. Find the position in the vector of the student who travelled the furthest.
-6. Create a new vector containing only distances above 10 km.
-7. How many students travelled more than 10 km?
-8. Sort the distances from largest to smallest.
+1.  Create a `distance` vector. What's its length?
+2.  What is the minimum, maximum and range?
+3.  Calculate the mean and median.
+4.  Create a vector of distances in m
+5.  Find the position in the vector of the student who travelled the furthest.
+6.  Create a new vector containing only distances above 10 km.
+7.  How many students travelled more than 10 km?
+8.  Sort the distances from largest to smallest.
 
 Tips: think of functions `length()`, `min()`, `max()`,`range()`, `mean()`, `median()`, `which.max()`, `sort()`.
 :::
@@ -672,13 +670,13 @@ landuse <- c("urban", "forest", "agriculture", "urban",
              "forest", "water")
 ```
 
-1. Create a logical vector indicating which observations are `"urban"`.
-2. Use it to extract only the urban observations.
-3. Do the same for `"forest"` **or** `"water"`.
-4. Check whether `"industrial"` occurs in the vector.
-5. Replace all `"agriculture"` observations by `"cropland"`.
-6. Create a factor from the resulting vector.
-7. How many observations belong to each land-use category?
+1.  Create a logical vector indicating which observations are `"urban"`.
+2.  Use it to extract only the urban observations.
+3.  Do the same for `"forest"` **or** `"water"`.
+4.  Check whether `"industrial"` occurs in the vector.
+5.  Replace all `"agriculture"` observations by `"cropland"`.
+6.  Create a factor from the resulting vector.
+7.  How many observations belong to each land-use category?
 
 Tips: think of functions `==`, `|`, `%in%`, `!`, `factor()`, `table()`
 :::
@@ -688,11 +686,11 @@ Tips: think of functions `==`, `|`, `%in%`, `!`, `factor()`, `table()`
 
 You want to simulate a **one-week observation schedule**, with measurements every 2 hours.
 
-1. Create a vector containing the hours (every 2dn one) from 0 to 22.
-2. Repeat this sequence for 7 days using.
-3. Create a corresponding vector of day numbers (`1` to `7`).
-4. Create a third vector (logical) indicating whether each observation takes place during the day, defined here as 08:00 to 18:00 (inclusive)
-5. Create a vector of temperatures using:
+1.  Create a vector containing the hours (every 2dn one) from 0 to 22.
+2.  Repeat this sequence for 7 days using.
+3.  Create a corresponding vector of day numbers (`1` to `7`).
+4.  Create a third vector (logical) indicating whether each observation takes place during the day, defined here as 08:00 to 18:00 (inclusive)
+5.  Create a vector of temperatures using:
 
 ```{r}
 set.seed(123)
@@ -700,9 +698,9 @@ temperature <- round(rnorm(84, mean = 12, sd = 4), 1)
 # 84 is 7 x 12
 ```
 
-6. Extract the temperatures measured during the day.
-7. Create a vector that identifies the observations where the temperature is below 5°C.
-8. Find the position of the highest temperature and the corresponding day and hour.
+6.  Extract the temperatures measured during the day.
+7.  Create a vector that identifies the observations where the temperature is below 5°C.
+8.  Find the position of the highest temperature and the corresponding day and hour.
 
 Tips: think of functions `seq()`, `rep()`, `set.seed()`, `rnorm()`, `which.max()`
 :::

@@ -322,7 +322,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
       </ul>
@@ -628,8 +628,15 @@ window.Quarto = {
    \]</span></p>
 <p>where we see it increases with the global variance (variance of residuals) of the model, i.e.&nbsp;RSE, decreases with the sample size n, and increases with the distance to the mean along the x variable, which is the relative deviation quantity we just computed (compare 7 and 18).</p>
 <p>Leaving aside the RSE, which we already calculated, we can combine the last two terms present under the square root and define the leverage of an observation (and simplify the standard error writing)</p>
-<p><span class="math display">\[L=\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}\\
-\text{SE}(\hat{y}) = RSE\sqrt{L}\]</span></p>
+$$
+<span class="math display">\[\begin{aligned}
+
+L&amp;=&amp;\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2} \\
+
+\text{SE}(\hat{y}) &amp;=&amp; RSE\sqrt{L}
+
+\end{aligned}\]</span>
+<p>$$</p>
 <p>Leverage values range between <span class="math inline">\(\frac{1}{n}\)</span> and 1, with higher values indicating greater influence on the regression model. 1 is for an observation that would stand extremely far from the mean and taking most of the variation in x.</p>
 <p>Points farther from the mean of x have higher leverage, have a greater influence on the regression line and thus can increase the uncertainty of the predicted line. In Greene (p.99) ’s terms:</p>
 <blockquote class="blockquote">
@@ -696,8 +703,10 @@ window.Quarto = {
 <h2 data-number="28.4" class="anchored" data-anchor-id="prediction-interval-versus-confidence-interval"><span class="header-section-number">28.4</span> Prediction interval versus confidence interval</h2>
 <p>Finally, note that there is another interval to be used for prediction when we get new data, i.e.&nbsp;the prediction interval. You can get this interval from the predict function with the prediction option instead of confidence.</p>
 <p>The standard error one uses here has the same ingredients but a slightly different definition:</p>
-<p><span class="math display">\[\text{SE}(\hat{y}) = RSE\sqrt{1+ \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}}\\
-   \text{SE}(\hat{y}) = RSE\sqrt{1+L}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+\text{SE}(\hat{y}) &amp;=&amp; RSE\sqrt{1+ \frac{1}{n} + \frac{(x - \bar{x})^2}{\sum (x_i - \bar{x})^2}} \\
+   \text{SE}(\hat{y}) &amp;=&amp; RSE\sqrt{1+L}
+   \end{aligned}\]</span></p>
 <p>While the confidence interval we have computed previously tells you how confident you can be that the fitted model represents well the data that was used for estimating the model, the prediction interval is for use when you want to infer a value for a new data based on the fitted model.</p>
 <p>Suppose you need to infer the rainfall for a 400m elevation. You can input the elevation (and all the other predictor variables in case of a multiple regression) in the predict function to find the range within which you can be 95% confident that the new observation is included, and thus for which the model is a reasonable tool to predict the rainfall.</p>
 <div class="cell">

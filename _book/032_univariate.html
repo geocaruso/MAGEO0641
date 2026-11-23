@@ -322,7 +322,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040_graphics_ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">ggplot graphics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
       </ul>
@@ -537,6 +537,7 @@ window.Quarto = {
   <li><a href="#stem-and-leaf" id="toc-stem-and-leaf" class="nav-link" data-scroll-target="#stem-and-leaf"><span class="header-section-number">11.3.2</span> Stem and leaf</a></li>
   <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">11.3.3</span> Histogram</a></li>
   </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">EXERCISE</a></li>
   <li><a href="#the-shape-of-distributions-skewness-and-kurtosis" id="toc-the-shape-of-distributions-skewness-and-kurtosis" class="nav-link" data-scroll-target="#the-shape-of-distributions-skewness-and-kurtosis"><span class="header-section-number">11.4</span> The shape of distributions: Skewness and Kurtosis</a>
   <ul class="collapse">
   <li><a href="#first-and-second-moments" id="toc-first-and-second-moments" class="nav-link" data-scroll-target="#first-and-second-moments"><span class="header-section-number">11.4.1</span> First and second moments:</a></li>
@@ -951,6 +952,26 @@ window.Quarto = {
 </div>
 </section>
 </section>
+<section id="exercise" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise">EXERCISE</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Quantile based subset and histogram">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Quantile based subset and histogram
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Quantile subset</strong></p>
+<p>It is not rare one is willing to remove extreme values at head or tail before computing a central statistic or drawing a histogram.</p>
+<p>Generate a random sample of students age, based on a normal distribution with mean age 27 and a standard deviation of 3 years.</p>
+<p>Compute the empirical mean and median. Remove the upper and lower 2.5 % of values to obtain a subset of the data and compute again the central values.</p>
+<p>Draw an histogram of the data subset</p>
+</div>
+</div>
+</section>
 <section id="the-shape-of-distributions-skewness-and-kurtosis" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="the-shape-of-distributions-skewness-and-kurtosis"><span class="header-section-number">11.4</span> The shape of distributions: Skewness and Kurtosis</h2>
 <section id="first-and-second-moments" class="level3" data-number="11.4.1">
@@ -978,13 +999,11 @@ window.Quarto = {
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(x)</span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 49.72804</span></span>
 <span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>(x)</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>((x<span class="dv">-100</span>)<span class="sc">/</span><span class="dv">1000</span>) <span class="co">#with this you see it is not influenced by any rescaling</span></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>((x<span class="sc">-</span><span class="fu">mean</span>(x))<span class="sc">^</span><span class="dv">3</span>)<span class="sc">/</span>(<span class="fu">sd</span>(x)<span class="sc">^</span><span class="dv">3</span><span class="sc">*</span><span class="fu">length</span>(x)) <span class="co">#manual computation</span></span>
-<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.004246246</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.004246246</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>((x<span class="dv">-100</span>)<span class="sc">/</span><span class="dv">1000</span>) <span class="co">#with this you see it is not influenced by any rescaling</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.004246246</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>((x<span class="sc">-</span><span class="fu">mean</span>(x))<span class="sc">^</span><span class="dv">3</span>)<span class="sc">/</span>(<span class="fu">sd</span>(x)<span class="sc">^</span><span class="dv">3</span><span class="sc">*</span><span class="fu">length</span>(x)) <span class="co">#manual computation</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.004246246</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>When the skewness is <span class="math inline">\(&gt;0\)</span>, the tail of the distribution is heavier on the right side. This means there are more extreme values on the higher end. The mean is greater than the median.</p>
 <p>When the skewness is <span class="math inline">\(&lt;0\)</span>, the tail of the distribution is heavier on the left side. This means there are more extreme values on the lower end. The mean is lower than the median.</p>
@@ -1020,14 +1039,11 @@ window.Quarto = {
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>(x)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>(right_skewed)</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>(left_skewed)</span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.004246246</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>(right_skewed)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 1.350504</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">skewness</span>(left_skewed)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.5836373</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="fourth-moment-kurtosis" class="level3" data-number="11.4.3">
@@ -1041,11 +1057,9 @@ window.Quarto = {
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">101</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean=</span><span class="dv">50</span>,<span class="at">sd=</span><span class="dv">5</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>((x<span class="dv">-100</span>)<span class="sc">/</span><span class="dv">1000</span>) <span class="co">#with this you see it is not dependent on scale </span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.119472</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>((x<span class="dv">-100</span>)<span class="sc">/</span><span class="dv">1000</span>) <span class="co">#with this you see it is not dependent on scale </span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.119472</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Using this implementation, a Kurtosis close to 0 then indicates a distribution similar in shape to a normal (bell-shaped) distribution. A <strong>positive kurtosis indicates a more peaked</strong> distribution, also named <strong>leptokurtic</strong>.</p>
 <p>A <strong>negative kurtosis</strong> indicates a <strong>less peaked</strong> shape, named <strong>platykurtic</strong>.</p>
@@ -1082,14 +1096,11 @@ window.Quarto = {
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x_peaker)</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x_flatter)</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `loadNamespace()`:</span></span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! there is no package called 'e1071'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 0.07423458</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x_peaker)</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] 5.789643</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x_flatter)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] -0.1829135</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 

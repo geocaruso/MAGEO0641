@@ -6,9 +6,9 @@
 
 We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ unknown but $\sigma^2$ being known - *a very unrealistic case in practice*. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
 
--   **Testing**: $H_0: \mu = \mu_0$ against $H_1: \mu \neq \mu_0$.
--   **Test Statistic**: random variable defined by $$Z_n = \dfrac{\hat{\mu_n} - \mu_0}{\sigma / \sqrt{n}} \sim N(0, 1)$$
--   **The critical values** are read on a standard normal distribution table.
+- **Testing**: $H_0: \mu = \mu_0$ against $H_1: \mu \neq \mu_0$.
+- **Test Statistic**: random variable defined by $$Z_n = \dfrac{\hat{\mu_n} - \mu_0}{\sigma / \sqrt{n}} \sim N(0, 1)$$
+- **The critical values** are read on a standard normal distribution table.
 
 #### Example (using summary description of sample):
 
@@ -67,10 +67,10 @@ In reality, it is far more likely you don't know the population variance.
 
 We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ and $\sigma^2$ unknown. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
 
--   **Testing**: $H_0: \mu = \mu_0$ against $H_1: \mu \neq \mu_0$.
--   **Test Statistic**: random variable defined by $$T_{n-1} = \dfrac{\hat{\mu_n} - \mu_0}{S_{n,c} / \sqrt{n}} \sim t(n-1)$$
--   **Decision rule**: the critical value $c_\alpha$ is read on a student distribution table.
--   **The critical values** are read on a t-student distribution table, which we know doesn't need a variance to be defined.
+- **Testing**: $H_0: \mu = \mu_0$ against $H_1: \mu \neq \mu_0$.
+- **Test Statistic**: random variable defined by $$T_{n-1} = \dfrac{\hat{\mu_n} - \mu_0}{S_{n,c} / \sqrt{n}} \sim t(n-1)$$
+- **Decision rule**: the critical value $c_\alpha$ is read on a student distribution table.
+- **The critical values** are read on a t-student distribution table, which we know doesn't need a variance to be defined.
 
 #### Example (using a summary description of a sample)
 
@@ -133,9 +133,9 @@ p_value
 
 We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ known and $\sigma^2$ unknown - *quite rare in practice*. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
 
--   **Testing**: $H_0: \sigma^2 = \sigma^2_0$ against $H_1: \sigma^2 \neq \sigma^2_0$.
--   **Test Statistic**: random variable defined by $$\chi^2_{n} = \dfrac{(n) \hat{\sigma^2_n}}{\sigma^2} \sim \chi^2(n)$$
--   **The critical values** are read on a chi-squared distribution table. After a sampling from a normal distribution, the distribution of the sample variance is known to follow a chi-squared distribution.
+- **Testing**: $H_0: \sigma^2 = \sigma^2_0$ against $H_1: \sigma^2 \neq \sigma^2_0$.
+- **Test Statistic**: random variable defined by $$\chi^2_{n} = \dfrac{(n) \hat{\sigma^2_n}}{\sigma^2} \sim \chi^2(n)$$
+- **The critical values** are read on a chi-squared distribution table. After a sampling from a normal distribution, the distribution of the sample variance is known to follow a chi-squared distribution.
 
 #### Example:
 
@@ -205,11 +205,11 @@ This time the null hypothesis is not rejected. The sample variance cannot be sai
 
 We consider a random variable $X \sim N(\mu, \sigma^2)$ with $\mu$ and $\sigma^2$ unknown - *more likely case*. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
 
--   **Testing**: $H_0: \sigma^2 = \sigma^2_0$ against $H_1: \sigma^2 \neq \sigma^2_0$.
+- **Testing**: $H_0: \sigma^2 = \sigma^2_0$ against $H_1: \sigma^2 \neq \sigma^2_0$.
 
--   **Test Statistic**: random variable defined by $$\chi^2_{n-1,c} = \dfrac{n S^2_{n,c}}{\sigma^2} \sim \chi^2(n-1)$$
+- **Test Statistic**: random variable defined by $$\chi^2_{n-1,c} = \dfrac{n S^2_{n,c}}{\sigma^2} \sim \chi^2(n-1)$$
 
--   **The critical values** are read on a chi-squared distribution table.
+- **The critical values** are read on a chi-squared distribution table.
 
 The test needs to include the fact we need a degree of freedom to estimate the mean:
 
@@ -226,9 +226,9 @@ chi_squared_stat
 
 We consider a random variable $X$. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$.
 
--   **Testing**: $H_0: \pi_A = \pi_0$ against $H_1: \pi_A \neq \pi_0$.
--   **Test Statistic**: random variable defined by $$n_A = n \hat{\pi_{n,A}} \sim B(n, \pi_0)$$
--   **The critical values** are read on a binomial distribution table.
+- **Testing**: $H_0: \pi_A = \pi_0$ against $H_1: \pi_A \neq \pi_0$.
+- **Test Statistic**: random variable defined by $$n_A = n \hat{\pi_{n,A}} \sim B(n, \pi_0)$$
+- **The critical values** are read on a binomial distribution table.
 
 #### Example
 
@@ -249,15 +249,15 @@ The null hypothesis is rejected in the first case and thus the proportions are d
 
 We consider a random variable $X$. We use a sample of size $n$: $x = {x_1, x_2,..., x_n}$ made of independent realizations of that random variable $X$ such that the following inequalities are respected: $n \ge 50$, $n\pi_0 \ge 16$ and $n(1-\pi_0) \ge 16$.
 
--   **Testing**: $H_0: \pi_A = \pi_0$ against $H_1: \pi_A \neq \pi_0$.
--   **Test Statistic**: random variable defined by $$Z_n = \dfrac{\hat{\pi_{n,A}} - \pi_0}{\sqrt{\dfrac{\pi_0 (1-\pi_0)}{n}}} \# N(0, 1)$$
--   **The critical values** are read on a standard normal distribution table.
+- **Testing**: $H_0: \pi_A = \pi_0$ against $H_1: \pi_A \neq \pi_0$.
+- **Test Statistic**: random variable defined by $$Z_n = \dfrac{\hat{\pi_{n,A}} - \pi_0}{\sqrt{\dfrac{\pi_0 (1-\pi_0)}{n}}} \# N(0, 1)$$
+- **The critical values** are read on a standard normal distribution table.
 
 #### Example
 
 In practice, there are two ways for approximating the distribution of the test statistic. They lead to similar result but are not calculated the same way, leading to some difference in p-values.
 
--   The first method (the least practical) is to compute a z-test with the normal distribution directly.
+- The first method (the least practical) is to compute a z-test with the normal distribution directly.
 
 ```{r}
 n <- 100 #now sufficiently large
@@ -273,7 +273,7 @@ p_value
 
 With 70 successes out of 100, the p-value is very small and it is unlikely that the result is from a trial where there is a fifty-fifty chance of success, i.e. the null probability. (If it is a coin, check it is not biased ;-) )
 
--   The second method (recommended for ease of use) is to use a chi-square test within the `prop.test()` function. It is similar in structure to the `binom.test()` used when sample size is small. The chi-squared test within `prop.test()` uses (by default) the so-called Yates' correction, which corrects for small values in the case of 2 x 2 matrices (e.g. success x failure and male x female, see later) where one cell of the matrix would have rare events and for which the continuous approximation would lead to overestimation. In our single sample case, we turn this default correction off:
+- The second method (recommended for ease of use) is to use a chi-square test within the `prop.test()` function. It is similar in structure to the `binom.test()` used when sample size is small. The chi-squared test within `prop.test()` uses (by default) the so-called Yates' correction, which corrects for small values in the case of 2 x 2 matrices (e.g. success x failure and male x female, see later) where one cell of the matrix would have rare events and for which the continuous approximation would lead to overestimation. In our single sample case, we turn this default correction off:
 
 ```{r}
 prop.test(x, n, p = pi_0, alternative = "two.sided", correct = FALSE)
@@ -310,17 +310,15 @@ In the uniform case, $exp_i$ is simply $n p_i$ with $p_i=\dfrac{1}{I}$ and so $e
 
 **Testing**:
 
-$$H_0: obs_i = exp_i = n/I$ $\forall i$$
+$$H_0: obs_i = exp_i = n/I \ \ \forall i$$
 
-$$H_0 (\text{uniform case}): obs_i = n/I$ $\forall i$$
+$$H_0 (\text{uniform case}): obs_i = n/I \ \ \forall i$$
 
 **Test Statistic**: random variable defined by
 
 $$\chi^2(obs) = \sum^I_{i=1} \dfrac{(obs_i - exp_i)^2}{exp_i}$$
 
-$$\chi^2(obs) (\text{uniform case})= \sum^I_{i=1} \dfrac{(obs_i - n/I)^2}{exp_i} $$
-and $$\chi^2(obs) \sim \chi^2(I-1) $$
-The computed statistic being compare to a chi-squared value with $I-1$ degrees of freedom.
+$$\chi^2(obs) (\text{uniform case})= \sum^I_{i=1} \dfrac{(obs_i - n/I)^2}{exp_i} $$ and $$\chi^2(obs) \sim \chi^2(I-1) $$ The computed statistic being compare to a chi-squared value with $I-1$ degrees of freedom.
 
 #### Example:
 
@@ -338,7 +336,3 @@ chisq.test(c(70,20,10), p=c(0.65,0.25,0.10))
 ```
 
 Since we can have different probabilities for the different counts, we are just one step away to using a chi-squared test to test the normality of a distribution. For a distribution to be normal, we know what share of the data should fall within -1 and +1 standard deviation, +2 and -2, etc.. We can thus compare counts to the expected ones along a normal distribution using the same chi-squared function. This methods however has been demonstrated to be powerful for discrete data but is not performing as well as other tests for the normality of a continuous variable after binning (to obtain counts). We will be using the Shapiro-Wilk test for testing normality rather than the chi-squared test.
-
-
-
-

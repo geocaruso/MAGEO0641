@@ -6,6 +6,7 @@ As of today, an overall assemblage is made but additions and fine tuning are sti
 
 The general structure and base material shown here have been organized by Geoffrey Caruso, who originally inherited teaching material from Dominique Peeters. We are grateful to the teaching assistants who were in charge before Léandre Fabri: Mirjam Schindler, Marlène Boura, David Dabin and Jonathan Jones. We remain solely responsible for any mistake or incoherence one would find.
 
-The course is made available online at <https://quadtrees.lu/teaching/MAGEO0641>.
+The course is available as online at <https://quadtrees.lu/teaching/MAGEO0641> as an html. It is also compiled as a single pdf available at <https://quadtrees.lu/teaching/MAGEO0641/Introduction-to-data-analysis-and-R-for-geographers.pdf>.
+
 
 Its associated repository is at: <https://github.com/geocaruso/MAGEO0641> where students will also find the data folder for the examples and exercises.

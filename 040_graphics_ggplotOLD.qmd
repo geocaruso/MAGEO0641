@@ -1,0 +1,452 @@
+# ggplot graphics {#sec-introduction}
+
+ggplot2 is an **extension of the tidyverse** that enables the generation of charts with a consistent and powerful syntax. It requires learning an additional **'mini-language'** but allows for the efficient construction of complex graphs.
+
+## Library
+
+Here, we simply load the various packages that will allow us to **manipulate data tables** and **create figures**:
+
+-   `tidyverse` is a package that contains several packages designed for data manipulation in R (stringr, dplyr, ggplot2)
+
+-   `ggplot2` which allows you to create **complex graphics** and **observing data** with visuals
+
+In **ggplot2**, a **geom** (short for “geometric object”) is a layer that defines how data points are visually represented in a plot. Each type of plot, such as points, lines, bars, etc., is created using a specific geom function. Here are some common examples:
+
+-   **`geom_point()`**: for scatter plots.
+
+-   **`geom_bar()`**: for bar charts.
+
+-   **`geom_histogram()`**: for histograms.
+
+-   **`geom_boxplot()`**: for box plots.
+
+These functions are added to a basic ggplot object using the `+` operator.
+
+Example of code :
+
+ggplot() +
+
+geom\_............(data, aes(x = x, y = y, fill = color)) +
+
+labs(title = "title", x = "abs", y = "ord") +
+
+theme_bw()
+
+```{r, warning = FALSE}
+#| label: Library
+#| #| label: load-packages
+
+library(ggplot2)
+library(agridat) # oats data
+library(questionr) # insee data
+library(dplyr) 
+library(RColorBrewer)
+library(readr) 
+library(viridis)
+library(tidyr)
+
+display.brewer.all()
+```
+
+## Data
+
+We will present different code examples with 2 datasets to show that the methods are applicable to all datasets. Therefore, it is important to save our codes properly so that we can copy them for other data. Here are the two datasets :
+
+The table below comes from the library **'agridat'** shows the grain yield with 3 types of species. The **'yield'** column represents the yield in quarter-pounds (lbs), and the **'grain'** column represents the yield in pounds (lbs), (1lbs = 453 g). You can display the first lines of the table using the `head()` function.
+
+-   Oat yield (grain, straw)
+
+-   Nitrogen dose
+
+-   Genotype (variety)
+
+-   Blocks defined for experimentation
+
+The file **'rp2018'** contains, for all the municipalities in France in 2018, the following variables.
+
+-   pop_tot (population)
+
+-   etud (student)
+
+-   cadres (senior executive)
+
+-   locataire (tenant)
+
+```{r}
+
+data(yates.oats)
+head(yates.oats)
+
+data(rp2018)
+head(rp2018)
+
+```
+
+## Basic plot - ggplot
+
+Here, we indicate to R that we want to plot a scatterplot, so we need to specify a "x" and “y” for our graph. Here the example of the basic R plot, and the ggplot plot.
+
+```{r}
+
+plot(yates.oats$grain, yates.oats$straw) # plot(x, y)
+
+ggplot() + 
+  geom_point(data = yates.oats, aes(x = grain, y = straw))
+```
+
+## Histogram
+
+Usually, when you're interested in a variable, you look at its distribution. First, a classic basic histogram: you specify the data table in the `ggplot()` function, and the components of the table that will be used to create the plot in the `aes()` function. For example, we need to specify which column of the table will be represented on the `x-axis`, on the `y-axis`, or which column will allow us to color certain elements or modify the shape of the points, for instance. We then add successive layers to the graph using the `+` sign to achieve the desired rendering.
+
+Here, we indicate to R that we want to plot a histogram, so we don’t need to specify a “y” for our graph:
+
+```{r}
+
+ggplot(yates.oats, aes(x = grain)) +
+  geom_histogram()
+
+```
+
+The problem is that the figure is quite unattractive, isn’t it? So, we will modify it with options: `fill` for the bar fill, `color` for the border, and `alpha` for transparency. The theme allows us to change the overall appearance of the figure. Here you can see all theme : <https://ggplot2.tidyverse.org/reference/ggtheme.html>
+
+Below, `geom_histogram()` is used to plot a histogram.
+
+-   We can also modify the number of classes represented by the histogram with the `bins` option.
+
+-   To modify the size of the classes represented by the histogram, we use the `binwidth` option.
+
+Try both codes below:
+
+```{r}
+
+
+ggplot(yates.oats, aes(x = grain)) +
+  geom_histogram(fill = "lightblue",
+                 color = "black",
+                 bins = 10, # bar numbers (number of classes)
+                 alpha = 0.5) + 
+  labs(title = "Grain yield", 
+       x = "Grain (lbs)", 
+       y = "Count") + 
+  theme_bw() 
+
+
+ggplot(rp2018, aes(x = etud)) +
+  geom_histogram(fill = "red",
+                 color = "black",
+                 binwidth = 5, # reduce or increase the width of the bar (number of classes)
+                 alpha = 0.5) + 
+  labs(title = "Student proportion in France per municipalities", 
+       x = "Student (%)", 
+       y = "Count") + 
+  theme_bw() 
+
+
+```
+
+## Density
+
+`geom_density()` is used to plot the density curve.
+
+```{r}
+
+ggplot(yates.oats, aes(x = grain)) +
+  geom_density(fill = "lightblue",
+                 color = "black",
+                 alpha = 0.5) +
+  labs(title = "Grain yield", 
+       x = "lbs", 
+       y = "Count") + 
+  theme_bw()
+
+
+ggplot(rp2018, aes(x = etud)) +
+  geom_density(fill = "red",
+                 color = "black",
+                 alpha = 0.5) + 
+  labs(title = "Student proportion in France per municipalities", 
+       x = "Student (%)", 
+       y = "Count") + 
+  theme_bw() 
+```
+
+## QQplot
+
+A `QQ plot` indicates a normal distribution when the points closely follow a straight line, suggesting that the quantiles of the data match the quantiles of a **normal distribution**. Here is a good QQ-plot reference : <https://www.tjmahr.com/quantile-quantile-plots-from-scratch/>
+
+```{r}
+
+ggplot(yates.oats, aes(sample = grain)) +
+  geom_qq(color = "blue") +
+  labs(x = "yield (lbs)") +
+  theme_bw()
+
+ggplot(rp2018, aes(sample = etud)) +
+  geom_qq(color = "red") +
+  labs(x = "Student (%)") +
+  theme_bw()
+```
+
+## Boxplot
+
+Let's look at the yields in the form of **boxplots** for each variety. To do this, we use the `geom_boxplot()` function. Please note that the color of boxplots and barplots is managed not with `color` but with `fill` (points and lines are managed with 'color'). Other palettes are available at the following address: <https://bookdown.org/rdpeng/exdata/plotting-and-color-in-r.html>
+
+```{r}
+
+
+ggplot(yates.oats, aes(x = gen, y = grain, fill = gen)) +
+  geom_boxplot() +
+  labs(title = "Grain yield", x = "Genotype", y = "Yield (lbs)") + 
+  scale_fill_brewer(palette = "Set1") + # color
+  theme_bw()
+
+
+ggplot(data = rp2018, aes(x = code_region, y = etud, fill = region)) +
+  geom_boxplot() +
+  labs(title = "Proportion of students per region", x = "Region", y = "Student(%)", fill = "Region") + 
+  scale_fill_brewer(palette = "Set1") + # color
+  theme_bw() 
+
+
+```
+
+The `colorRampPalette()` function in manner similar to `colorRamp(()`, however the function that it returns gives you a fixed number of colors that interpolate the palette. Again we have a function pal() that was returned by colorRampPalette(), this time interpolating a palette containing the colors red and yellow. But now, the pal() function takes an integer argument specifing the number of interpolated colors to return.
+
+The reference for the packages legocolors : <https://cran.r-project.org/web/packages/legocolors/readme/README.html>
+
+```{r, message = FALSE}
+
+ggplot(yates.oats, aes(x = gen, y = grain, fill = gen)) +
+  geom_boxplot() +
+  labs(title = "Grain yield", x = "Genotype", y = "Yield (lbs)") + 
+  scale_fill_manual(values = c("black", "red", "yellow"),
+                    limits = c("GoldenRain", "Marvellous", "Victory")) + # color
+  theme_bw()
+
+pal1 <- colorRampPalette(c("lightblue", "purple", "red", "green"))
+pal2 <- colorRampPalette(brewer.pal(9, "Set1")) # 9 to use all colors
+
+library(legocolors)
+pal3 <- colorRampPalette(legoCols$hex[2:13])
+
+# length(rp2018$code_region)
+# length(unique(rp2018$code_region))
+
+ggplot(data = rp2018, aes(x = code_region, y = etud, fill = region)) +
+  geom_boxplot() +
+  labs(title = "Proportion of students per region", x = "Region", y = "Student(%)", fill = "Region") + 
+  scale_fill_manual(values = pal3(17)) + # you can change the pal() here (see above)
+  theme_bw()
+```
+
+## Boxplot with point
+
+To display points on a boxplot, you can use the `geom_jitter()` function, which displays the points by offsetting them from each other to avoid overlap. When displaying the points, you should add the `'outlier.shape = NA'` option in the `geom_boxplot()`function to prevent displaying the same points twice.
+
+```{r}
+ggplot(yates.oats, aes(x = gen, y = grain, fill = gen)) +
+  geom_boxplot(outlier.shape = NA) + #exclude point outlier
+  geom_jitter(width = 0.1, color = "black") + # jitter allows to arrange the place of the point comparaing to the geom_point
+  labs(title = "Grain yield", x = "Genotype", y = "Yield (lbs)") +
+  scale_fill_brewer(palette = "Set1") +
+  theme_bw()
+```
+
+## Multi-boxplot
+
+We could also put the blocks in x, and color according to the varieties. Or conversely, the varieties on the `x-axis` and the `blocks` in color.
+
+```{r}
+
+ggplot(yates.oats, aes(x = block, y = grain, fill = gen)) +
+  geom_boxplot() +
+  labs(title = "Grain yield", x = "Blocks", y = "Yield (lbs)") +
+  scale_fill_brewer(palette = "Set1") +
+  theme_bw()
+
+
+ggplot(yates.oats, aes(x = gen, y = grain, fill = block)) +
+  geom_boxplot() +
+  labs(title = "Grain yield", x = "Blocks", y = "Yield (lbs)") +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_bw()
+
+```
+
+For the **'rp2018'** data, we can create categories based on regions or departments; however, this still results in a large number. In the example below, I still made the boxplot graph but removed the legend. This is an example of data observation to see a marked trend at first glance, but it is rarely used for reports.
+
+```{r}
+ggplot(rp2018, aes(x = code_region, y = etud, fill = code_departement)) +
+  geom_boxplot(outlier.shape = NA) + 
+  labs(title = "Department in the region", x = "Region", y = "Student(%)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+# 44 Grand-Est, 76 Occitanie, 53 Bretagne, 28 Normandie
+
+rp2018_reg44 <- rp2018[rp2018$code_region == "44",]
+
+g44 <- ggplot(rp2018_reg44, aes(x = code_departement, y = etud, fill = code_departement)) +
+  geom_boxplot() + 
+  labs(title = "Grand Est", x = "Department", y = "Student(%)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+rp2018_reg76 <- rp2018[rp2018$code_region == "76",]
+
+g76 <- ggplot(rp2018_reg76, aes(x = code_departement, y = etud, fill = code_departement)) +
+  geom_boxplot() + 
+  labs(title = "Occitanie", x = "Department", y = "Student(%)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+rp2018_reg53 <- rp2018[rp2018$code_region == "53",]
+
+g53 <- ggplot(rp2018_reg53, aes(x = code_departement, y = etud, fill = code_departement)) +
+  geom_boxplot() + 
+  labs(title = "Bretagne", x = "Department", y = "Student(%)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+rp2018_reg28 <- rp2018[rp2018$code_region == "28",]
+
+g28 <- ggplot(rp2018_reg28, aes(x = code_departement, y = etud, fill = code_departement)) +
+  geom_boxplot() + 
+  labs(title = "Normandie", x = "Department", y = "Student(%)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+library(gridExtra)
+grid.arrange(g44, g76, g53, g28,
+          nrow = 2, ncol = 2)
+```
+
+## Violinplot
+
+One last one, the violin plot, which shows us the distribution curve. We use the `geom_violin()` function for this. On it, we could display the mean and the standard deviation, for example. For this, we use the `stat_summary()` function, in which we specify the function used (`fun.data`), the number of standard deviations represented by the error bars (`fun.args`), the geometry of the representation (`geom`), and the color, of course.
+
+```{r}
+
+ggplot(yates.oats, aes(x = gen, y = grain, fill = gen)) +
+  geom_violin() +
+  geom_jitter(width = .1) + 
+    stat_summary(fun.data = "mean_sdl", # mean representation + standard deviation
+               fun.args = list(mult = 1), # number of standard deviation
+               geom = "pointrange", # geometry 
+               color = "grey") +
+  labs(title = "Grain yield", x = "Genotype", y = "Yield (lbs)") +
+  scale_fill_brewer(palette = "Set1") +
+  theme_bw()
+```
+
+## Scatterplot
+
+We can also create a scatterplot (a graph with points) between **straw** yield and **grain** yield, or **etud** and **cadres** for example. The `geom_point()` option allows us to display points (with continuous data, for instance).
+
+The `scale_color_gradient()` here allows us to directly detect the numerical values of the variables and produce a continuous color palette for data visualization. This allows us to integrate another variable on the points of the graph, and we can also apply it to the size to compare the x-axis and y-axis of the data to find the effect of other variables. For example, we can see that the higher the proportion of students, the more apartment rentals we observe. The `scale_color_gradientn()`here allows to
+
+```{r}
+ggplot(yates.oats, aes(x = straw, y = grain, color = yield)) + # the color is set with 'color' 
+  geom_point() + 
+  scale_color_gradient("yield", low = "white", high = "blue") +
+  theme_classic()
+
+ggplot(yates.oats, aes(x = straw, y = grain, color = yield)) +  
+  geom_point() + 
+  scale_color_gradientn(colors = c("white", "lightblue", "blue", "black"), 
+                        limits = c(min(yates.oats$yield), max(yates.oats$yield)),
+                        values = NULL) +
+  theme_classic()
+
+ggplot(rp2018, aes(x = etud, y = cadres, color = locataire, size = pop_tot)) + 
+  geom_point() + 
+  scale_color_gradient("locataire", low = "white", high = "blue") +
+  theme_classic()
+```
+
+## Scatterplot and regression line
+
+We can also try to put the color of the points according to the variable (to color points, use `color`), and we add regression lines with the `geom_smooth()` for each **genotype**, also for the **students** and the **cadres**. The `scale_color_brewer()` function defines the color palette to color the points.
+
+```{r}
+ggplot(yates.oats, aes(x = straw, y = grain, color = gen)) +
+    geom_point(shape = 1) + # ajust the size and choose the shape
+    geom_smooth(method = "lm", se = F) + #regression line
+    scale_fill_viridis() + # ajust a linear color with numerics values
+    theme_bw() +
+    labs(title = "Grain vs Straw", x = "Straw yield (lbs)", y = "Grain yield (lbs)")
+
+
+ggplot(rp2018, aes(x = etud, y = cadres, color = locataire)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = F) +
+  scale_color_gradient("locataire", low = "white", high = "blue") +
+  theme_classic()
+  
+
+```
+
+## Barplot
+
+Here’s a quick example to understand the proportion of forest area in each canton of Luxembourg:
+
+For instance, you can create a bar chart where the x-axis represents the cantons and the y-axis represents the proportion of forest area. Using a function like `geom_bar()` to create a barplot.
+
+To specify that we want the height of the barplot to represent the value indicated in our data frame, we need to add `stat = "identity` in the `geom_bar()` function. Normally, `geom_bar()` counts the number of cases at each x position (**as an histogram**), but with `stat = "identity"`, it uses the values in the data directly. The **'width'** option allows you to adjust the width of the barplot.
+
+```{r}
+forest_area <- read.csv2("data/statec/forest_area_canton.csv", sep = ",") 
+
+ggplot(forest_area, aes(x = GEO..Géographie, y = OBS_VALUE, fill = GEO..Géographie )) +
+  geom_bar(stat = "identity",
+           width = 0.5) + # width of the bar
+  theme_bw() +
+  labs(title = "Area of the afforestation rate", x = "Cantons", y = "Afforestation rate") +
+  scale_fill_manual(values = pal2(17)) +
+  theme(legend.position = "none") 
+
+
+ggplot(forest_area, aes(x = GEO..Géographie, y = OBS_VALUE, fill = GEO..Géographie )) +
+  geom_bar(stat = "identity",
+           width = 0.5) + # width of the bar
+  theme_bw() +
+  labs(title = "Area of the afforestation rate", x = "Cantons", y = "Afforestation rate") +
+  scale_fill_manual(values = pal2(17)) +
+  theme(legend.position = "none") +
+  coord_flip() # allow to keep the real name of the canton
+
+```
+
+## To help you
+
+[data-to-viz](https://www.data-to-viz.com/)
+
+[r-graph-gallery](https://r-graph-gallery.com/)
+
+[cookbook-r](http://www.cookbook-r.com/Graphs/ "cookbook-r")
+
+#### **Data of the classes** :
+
+library(agridat) -\> yates.oats
+
+library(questionr) -\> rp2018
+
+url air bnb data -\> [githubusercontent.com](https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv)
+
+Forest area by canton and commune -\> [lustat.statec.lu](https://lustat.statec.lu/vis?fs%5B0%5D=Th%C3%A8mes%2C1%7CTerritoire%20environnement%20et%20%C3%A9nergie%23A%23%7CEnvironnement%23A3%23&pg=20&fc=Th%C3%A8mes&df%5Bds%5D=ds-release&df%5Bid%5D=DF_X038&df%5Bag%5D=LU1&df%5Bvs%5D=1.0&pd=2010%2C2010&dq=..A)
+
+## Your turn!
+
+-   Go take the data on land use proportions for some cities in the ouest of Europe : `land_use_EU_ouest.rds`
+
+-   Create a few plots with a '**ggplot2**' style.
+
+The data comes from the **urban atlas 2018** shows the proportion and the area of different classes of land use per city.
+
+-   **p\_**.... is the proportion in %
+
+-   **area\_**..... is the surface in m²
+
+-   **pop_tot** of the city
+
+-   **perimeter_tot** and **area_tot** of the city

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/index.html</loc>
-    <lastmod>2026-09-21T18:37:54.463Z</lastmod>
+    <lastmod>2026-11-12T23:49:20.956Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/001_timetable.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/002_learning.html</loc>
-    <lastmod>2025-09-22T05:18:59.000Z</lastmod>
+    <lastmod>2026-11-12T23:51:22.296Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/010_intro.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/022_vectors.html</loc>
-    <lastmod>2026-09-21T19:57:06.392Z</lastmod>
+    <lastmod>2026-11-16T16:00:42.570Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/023_df_lst.html</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/025_read_write.html</loc>
-    <lastmod>2024-10-07T10:33:38.000Z</lastmod>
+    <lastmod>2026-11-23T21:36:32.086Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/031_sample_population.html</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/032_univariate.html</loc>
-    <lastmod>2024-11-13T15:24:14.000Z</lastmod>
+    <lastmod>2026-11-23T22:14:59.924Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/033_discretisation.html</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/040_graphics_ggplot.html</loc>
-    <lastmod>2024-11-13T15:28:58.000Z</lastmod>
+    <lastmod>2026-11-09T08:59:49.592Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/051_distributions_unif_normal.html</loc>
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/063_hypotheses_single_sample.html</loc>
-    <lastmod>2024-12-06T14:01:22.000Z</lastmod>
+    <lastmod>2026-11-13T00:18:07.332Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/064_hypotheses_two_samples.html</loc>
@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/073_CIregression.html</loc>
-    <lastmod>2024-12-10T17:17:01.000Z</lastmod>
+    <lastmod>2026-11-13T00:13:45.972Z</lastmod>
   </url>
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/074_multi_regression.html</loc>
@@ -159,5 +159,9 @@
   <url>
     <loc>https://quadtrees.lu/teaching/MAGEO0641/999_references.html</loc>
     <lastmod>2024-09-10T08:15:39.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quadtrees.lu/teaching/MAGEO0641/Introduction-to-data-analysis-and-R-for-geographers.pdf</loc>
+    <lastmod>2026-11-23T22:15:27.632Z</lastmod>
   </url>
 </urlset>

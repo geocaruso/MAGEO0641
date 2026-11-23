@@ -1,0 +1,178 @@
+"";"SOVEREIGNT";"SOV_A3";"POP_EST";"ECONOMY";"POP100k"
+"1";"Fiji";"FJI";889953;"6. Developing region";8,89953
+"2";"United Republic of Tanzania";"TZA";58005463;"7. Least developed region";580,05463
+"3";"Western Sahara";"SAH";603253;"7. Least developed region";6,03253
+"4";"Canada";"CAN";37589262;"1. Developed region: G7";375,89262
+"5";"United States of America";"US1";328239523;"1. Developed region: G7";3282,39523
+"6";"Kazakhstan";"KA1";18513930;"6. Developing region";185,1393
+"7";"Uzbekistan";"UZB";33580650;"6. Developing region";335,8065
+"8";"Papua New Guinea";"PNG";8776109;"6. Developing region";87,76109
+"9";"Indonesia";"IDN";270625568;"4. Emerging region: MIKT";2706,25568
+"10";"Argentina";"ARG";44938712;"5. Emerging region: G20";449,38712
+"11";"Chile";"CHL";18952038;"5. Emerging region: G20";189,52038
+"12";"Democratic Republic of the Congo";"COD";86790567;"7. Least developed region";867,90567
+"13";"Somalia";"SOM";10192317,3;"7. Least developed region";101,923173
+"14";"Kenya";"KEN";52573973;"5. Emerging region: G20";525,73973
+"15";"Sudan";"SDN";42813238;"6. Developing region";428,13238
+"16";"Chad";"TCD";15946876;"7. Least developed region";159,46876
+"17";"Haiti";"HTI";11263077;"7. Least developed region";112,63077
+"18";"Dominican Republic";"DOM";10738958;"6. Developing region";107,38958
+"19";"Russia";"RUS";144373535;"3. Emerging region: BRIC";1443,73535
+"20";"The Bahamas";"BHS";389482;"6. Developing region";3,89482
+"21";"United Kingdom";"GB1";3398;"2. Developed region: nonG7";0,03398
+"22";"Norway";"NOR";5347896;"2. Developed region: nonG7";53,47896
+"23";"Denmark";"DN1";56225;"2. Developed region: nonG7";0,56225
+"24";"France";"FR1";140;"6. Developing region";0,0014
+"25";"East Timor";"TLS";1293119;"7. Least developed region";12,93119
+"26";"South Africa";"ZAF";58558270;"5. Emerging region: G20";585,5827
+"27";"Lesotho";"LSO";2125268;"7. Least developed region";21,25268
+"28";"Mexico";"MEX";127575529;"4. Emerging region: MIKT";1275,75529
+"29";"Uruguay";"URY";3461734;"5. Emerging region: G20";34,61734
+"30";"Brazil";"BRA";211049527;"3. Emerging region: BRIC";2110,49527
+"31";"Bolivia";"BOL";11513100;"5. Emerging region: G20";115,131
+"32";"Peru";"PER";32510453;"5. Emerging region: G20";325,10453
+"33";"Colombia";"COL";50339443;"6. Developing region";503,39443
+"34";"Panama";"PAN";4246439;"6. Developing region";42,46439
+"35";"Costa Rica";"CRI";5047561;"5. Emerging region: G20";50,47561
+"36";"Nicaragua";"NIC";6545502;"6. Developing region";65,45502
+"37";"Honduras";"HND";9746117;"6. Developing region";97,46117
+"38";"El Salvador";"SLV";6453553;"6. Developing region";64,53553
+"39";"Guatemala";"GTM";16604026;"6. Developing region";166,04026
+"40";"Belize";"BLZ";390353;"6. Developing region";3,90353
+"41";"Venezuela";"VEN";28515829;"5. Emerging region: G20";285,15829
+"42";"Guyana";"GUY";782766;"6. Developing region";7,82766
+"43";"Suriname";"SUR";581363;"6. Developing region";5,81363
+"44";"France";"FR1";67059887;"1. Developed region: G7";670,59887
+"45";"Ecuador";"ECU";17373662;"6. Developing region";173,73662
+"46";"United States of America";"US1";3193694;"6. Developing region";31,93694
+"47";"Jamaica";"JAM";2948279;"6. Developing region";29,48279
+"48";"Cuba";"CU1";11333483;"5. Emerging region: G20";113,33483
+"49";"Zimbabwe";"ZWE";14645468;"5. Emerging region: G20";146,45468
+"50";"Botswana";"BWA";2303697;"6. Developing region";23,03697
+"51";"Namibia";"NAM";2494530;"6. Developing region";24,9453
+"52";"Senegal";"SEN";16296364;"7. Least developed region";162,96364
+"53";"Mali";"MLI";19658031;"7. Least developed region";196,58031
+"54";"Mauritania";"MRT";4525696;"7. Least developed region";45,25696
+"55";"Benin";"BEN";11801151;"7. Least developed region";118,01151
+"56";"Niger";"NER";23310715;"7. Least developed region";233,10715
+"57";"Nigeria";"NGA";200963599;"5. Emerging region: G20";2009,63599
+"58";"Cameroon";"CMR";25876380;"6. Developing region";258,7638
+"59";"Togo";"TGO";8082366;"7. Least developed region";80,82366
+"60";"Ghana";"GHA";30417856;"6. Developing region";304,17856
+"61";"Ivory Coast";"CIV";25716544;"6. Developing region";257,16544
+"62";"Guinea";"GIN";12771246;"7. Least developed region";127,71246
+"63";"Guinea-Bissau";"GNB";1920922;"7. Least developed region";19,20922
+"64";"Liberia";"LBR";4937374;"7. Least developed region";49,37374
+"65";"Sierra Leone";"SLE";7813215;"7. Least developed region";78,13215
+"66";"Burkina Faso";"BFA";20321378;"7. Least developed region";203,21378
+"67";"Central African Republic";"CAF";4745185;"7. Least developed region";47,45185
+"68";"Republic of the Congo";"COG";5380508;"6. Developing region";53,80508
+"69";"Gabon";"GAB";2172579;"6. Developing region";21,72579
+"70";"Equatorial Guinea";"GNQ";1355986;"7. Least developed region";13,55986
+"71";"Zambia";"ZMB";17861030;"7. Least developed region";178,6103
+"72";"Malawi";"MWI";18628747;"7. Least developed region";186,28747
+"73";"Mozambique";"MOZ";30366036;"7. Least developed region";303,66036
+"74";"eSwatini";"SWZ";1148130;"6. Developing region";11,4813
+"75";"Angola";"AGO";31825295;"7. Least developed region";318,25295
+"76";"Burundi";"BDI";11530580;"7. Least developed region";115,3058
+"77";"Israel";"IS1";9053300;"2. Developed region: nonG7";90,533
+"78";"Lebanon";"LBN";6855713;"6. Developing region";68,55713
+"79";"Madagascar";"MDG";26969307;"7. Least developed region";269,69307
+"80";"Israel";"IS1";4685306;"6. Developing region";46,85306
+"81";"Gambia";"GMB";2347706;"7. Least developed region";23,47706
+"82";"Tunisia";"TUN";11694719;"6. Developing region";116,94719
+"83";"Algeria";"DZA";43053054;"6. Developing region";430,53054
+"84";"Jordan";"JOR";10101694;"6. Developing region";101,01694
+"85";"United Arab Emirates";"ARE";9770529;"6. Developing region";97,70529
+"86";"Qatar";"QAT";2832067;"6. Developing region";28,32067
+"87";"Kuwait";"KWT";4207083;"6. Developing region";42,07083
+"88";"Iraq";"IRQ";39309783;"6. Developing region";393,09783
+"89";"Oman";"OMN";4974986;"6. Developing region";49,74986
+"90";"Vanuatu";"VUT";299882;"7. Least developed region";2,99882
+"91";"Cambodia";"KHM";16486542;"7. Least developed region";164,86542
+"92";"Thailand";"THA";69625582;"5. Emerging region: G20";696,25582
+"93";"Laos";"LAO";7169455;"7. Least developed region";71,69455
+"94";"Myanmar";"MMR";54045420;"7. Least developed region";540,4542
+"95";"Vietnam";"VNM";96462106;"5. Emerging region: G20";964,62106
+"96";"North Korea";"PRK";25666161;"7. Least developed region";256,66161
+"97";"South Korea";"KOR";51709098;"4. Emerging region: MIKT";517,09098
+"98";"Mongolia";"MNG";3225167;"6. Developing region";32,25167
+"99";"India";"IND";1366417754;"3. Emerging region: BRIC";13664,17754
+"100";"Bangladesh";"BGD";163046161;"7. Least developed region";1630,46161
+"101";"Bhutan";"BTN";763092;"7. Least developed region";7,63092
+"102";"Nepal";"NPL";28608710;"7. Least developed region";286,0871
+"103";"Pakistan";"PAK";216565318;"5. Emerging region: G20";2165,65318
+"104";"Afghanistan";"AFG";38041754;"7. Least developed region";380,41754
+"105";"Tajikistan";"TJK";9321018;"6. Developing region";93,21018
+"106";"Kyrgyzstan";"KGZ";6456900;"6. Developing region";64,569
+"107";"Turkmenistan";"TKM";5942089;"6. Developing region";59,42089
+"108";"Iran";"IRN";82913906;"5. Emerging region: G20";829,13906
+"109";"Syria";"SYR";17070135;"6. Developing region";170,70135
+"110";"Armenia";"ARM";2957731;"6. Developing region";29,57731
+"111";"Sweden";"SWE";10285453;"2. Developed region: nonG7";102,85453
+"112";"Belarus";"BLR";9466856;"6. Developing region";94,66856
+"113";"Ukraine";"UKR";44385155;"6. Developing region";443,85155
+"114";"Poland";"POL";37970874;"2. Developed region: nonG7";379,70874
+"115";"Austria";"AUT";8877067;"2. Developed region: nonG7";88,77067
+"116";"Hungary";"HUN";9769949;"2. Developed region: nonG7";97,69949
+"117";"Moldova";"MDA";2657637;"6. Developing region";26,57637
+"118";"Romania";"ROU";19356544;"2. Developed region: nonG7";193,56544
+"119";"Lithuania";"LTU";2786844;"2. Developed region: nonG7";27,86844
+"120";"Latvia";"LVA";1912789;"2. Developed region: nonG7";19,12789
+"121";"Estonia";"EST";1326590;"2. Developed region: nonG7";13,2659
+"122";"Germany";"DEU";83132799;"1. Developed region: G7";831,32799
+"123";"Bulgaria";"BGR";6975761;"2. Developed region: nonG7";69,75761
+"124";"Greece";"GRC";10716322;"2. Developed region: nonG7";107,16322
+"125";"Turkey";"TUR";83429615;"4. Emerging region: MIKT";834,29615
+"126";"Albania";"ALB";2854191;"6. Developing region";28,54191
+"127";"Croatia";"HRV";4067500;"2. Developed region: nonG7";40,675
+"128";"Switzerland";"CHE";8574832;"2. Developed region: nonG7";85,74832
+"129";"Luxembourg";"LUX";619896;"2. Developed region: nonG7";6,19896
+"130";"Belgium";"BEL";11484055;"2. Developed region: nonG7";114,84055
+"131";"Netherlands";"NL1";17332850;"2. Developed region: nonG7";173,3285
+"132";"Portugal";"PRT";10269417;"2. Developed region: nonG7";102,69417
+"133";"Spain";"ESP";47076781;"2. Developed region: nonG7";470,76781
+"134";"Ireland";"IRL";4941444;"2. Developed region: nonG7";49,41444
+"135";"France";"FR1";287800;"6. Developing region";2,878
+"136";"Solomon Islands";"SLB";669823;"7. Least developed region";6,69823
+"137";"New Zealand";"NZ1";4917000;"2. Developed region: nonG7";49,17
+"138";"Australia";"AU1";25364307;"2. Developed region: nonG7";253,64307
+"139";"Sri Lanka";"LKA";21803000;"6. Developing region";218,03
+"140";"China";"CH1";1397715000;"3. Emerging region: BRIC";13977,15
+"141";"Taiwan";"TWN";23568378;"2. Developed region: nonG7";235,68378
+"142";"Italy";"ITA";60297396;"1. Developed region: G7";602,97396
+"143";"Denmark";"DN1";5818553;"2. Developed region: nonG7";58,18553
+"144";"United Kingdom";"GB1";66834405;"1. Developed region: G7";668,34405
+"145";"Iceland";"ISL";361313;"2. Developed region: nonG7";3,61313
+"146";"Azerbaijan";"AZE";10023318;"6. Developing region";100,23318
+"147";"Georgia";"GEO";3720382;"6. Developing region";37,20382
+"148";"Philippines";"PHL";108116615;"5. Emerging region: G20";1081,16615
+"149";"Malaysia";"MYS";31949777;"6. Developing region";319,49777
+"150";"Brunei";"BRN";433285;"6. Developing region";4,33285
+"151";"Slovenia";"SVN";2087946;"2. Developed region: nonG7";20,87946
+"152";"Finland";"FI1";5520314;"2. Developed region: nonG7";55,20314
+"153";"Slovakia";"SVK";5454073;"2. Developed region: nonG7";54,54073
+"154";"Czechia";"CZE";10669709;"2. Developed region: nonG7";106,69709
+"155";"Eritrea";"ERI";6081196;"7. Least developed region";60,81196
+"156";"Japan";"JPN";126264931;"1. Developed region: G7";1262,64931
+"157";"Paraguay";"PRY";7044636;"5. Emerging region: G20";70,44636
+"158";"Yemen";"YEM";29161922;"7. Least developed region";291,61922
+"159";"Saudi Arabia";"SAU";34268528;"2. Developed region: nonG7";342,68528
+"160";"Antarctica";"ATA";4490;"6. Developing region";0,0449
+"161";"Northern Cyprus";"CYN";326000;"6. Developing region";3,26
+"162";"Cyprus";"CYP";1198575;"6. Developing region";11,98575
+"163";"Morocco";"MAR";36471769;"6. Developing region";364,71769
+"164";"Egypt";"EGY";100388073;"5. Emerging region: G20";1003,88073
+"165";"Libya";"LBY";6777452;"6. Developing region";67,77452
+"166";"Ethiopia";"ETH";112078730;"7. Least developed region";1120,7873
+"167";"Djibouti";"DJI";973560;"7. Least developed region";9,7356
+"168";"Somaliland";"SOL";5096159;"6. Developing region";50,96159
+"169";"Uganda";"UGA";44269594;"7. Least developed region";442,69594
+"170";"Rwanda";"RWA";12626950;"7. Least developed region";126,2695
+"171";"Bosnia and Herzegovina";"BIH";3301000;"6. Developing region";33,01
+"172";"North Macedonia";"MKD";2083459;"6. Developing region";20,83459
+"173";"Republic of Serbia";"SRB";6944975;"6. Developing region";69,44975
+"174";"Montenegro";"MNE";622137;"6. Developing region";6,22137
+"175";"Kosovo";"KOS";1794248;"6. Developing region";17,94248
+"176";"Trinidad and Tobago";"TTO";1394973;"6. Developing region";13,94973
+"177";"South Sudan";"SDS";11062113;"7. Least developed region";110,62113
